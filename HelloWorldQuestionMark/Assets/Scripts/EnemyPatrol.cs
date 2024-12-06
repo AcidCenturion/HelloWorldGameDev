@@ -14,12 +14,6 @@ public class EnemyPatrol : MonoBehaviour {
     [Header("Speed")]
     [SerializeField] private float enemySpeed;
 
-    void Start () {
-        Debug.Log("Right Patrol Point: " + RightPatrolPoint.position);
-        Debug.Log("Left Patrol Point: " + LeftPatrolPoint.position);
-        Debug.Log("Enemy Start Position: " + enemy.position);
-    }
-
     void Update () {
         if (isMovingLeft) {
             if (enemy.position.x >= LeftPatrolPoint.position.x) {
