@@ -13,6 +13,7 @@ public class LedgePatrol : MonoBehaviour {
     public int verticalRays = 5;
     float horizontalRaySpacing;
     float verticalRaySpacing;
+    public float skinWidth = 0.2f;
     private bool isMovingLeft;
 
     [Header("Enemy")]
@@ -51,11 +52,12 @@ public class LedgePatrol : MonoBehaviour {
         verticalRays = Mathf.Clamp(verticalRays, 2, int.MaxValue);
 
         horizontalRaySpacing = bounds.size.y / (horizontalRays - 1);
+        verticalRaySpacing = (bounds.size.x + 2 * skinWidth) / (verticalRays - 1);
     }
 
-    //TODO detect vertical and horizontal collisions
+    //Detects horizontal collisions with walls
     void HorizontalCollisions (int direction) {
-        float rayLength = enemySpeed;
+        float rayLength = skinWidth;
 
         for (int i = 0; i < horizontalRays; i++) {
             Vector2 rayOrigin = (direction < 0)?rayCastOrigins.bottomLeft : rayCastOrigins.bottomRight;
@@ -77,6 +79,29 @@ public class LedgePatrol : MonoBehaviour {
             }
         }
     }
+
+    //Detects vertical collisions with floors
+    void VerticalCollisions (int direction) {
+        float rayLength = skinWidth;
+
+        for (int i = 0; i < verticalRays; i++) {
+            Vector2 rayOrigin = (direction == 1)? rayCastOrigins.bottomLeft : rayCastOrigins.bottomRight;
+            rayOrigin += Vector2.right * (verticalRaySpacing * i * direction);
+            rayOrigin += Vector2.right * (skinWidth * direction);
+            RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.down, rayLength, wallMask);
+
+            //Visibly displays rays
+            Debug.DrawRay(rayOrigin, Vector2.down * rayLength, Color.blue);
+            Debug.DrawLine(rayCastOrigins.bottomLeft, rayCastOrigins.bottomRight, Color.blue);
+            Debug.DrawLine(rayCastOrigins.topLeft, rayCastOrigins.topRight, Color.blue);
+            if (!hit) {
+                //Checks if not touching the floor
+                Debug.Log($"No floor");
+                ChangeDirection();
+                return;
+            }
+        }
+    }
     
     void UpdateRayCast () {
         Bounds bounds = collider.bounds;
@@ -87,9 +112,9 @@ public class LedgePatrol : MonoBehaviour {
         rayCastOrigins.bottomRight = new Vector2(bounds.max.x, bounds.min.y);
     }
 
-    //TODO Make enemy movement
     void Movement (int direction) {
         HorizontalCollisions(direction);
+        VerticalCollisions(direction);
         enemy.position = new Vector2(enemy.position.x + Time.deltaTime * direction * enemySpeed, enemy.position.y);
     }
 
