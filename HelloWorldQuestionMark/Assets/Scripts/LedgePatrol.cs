@@ -1,7 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 
@@ -13,7 +10,7 @@ public class LedgePatrol : MonoBehaviour {
     public int verticalRays = 5;
     float horizontalRaySpacing;
     float verticalRaySpacing;
-    public float skinWidth = 0.2f;
+    public float skinWidth = 0.1f;
     private bool isMovingLeft;
 
     [Header("Enemy")]
@@ -30,8 +27,7 @@ public class LedgePatrol : MonoBehaviour {
         CalculateRaySpacing();
     }
 
-    //Makes enemy switch direction if it it bumps into an object
-    //TODO or leaves the ground
+    //Makes enemy switch direction if it it bumps into an object or leaves the ground
     void Update () {
         UpdateRayCast();
         collision.Reset();
