@@ -1,6 +1,7 @@
 using UnityEngine;
 
-public class EnemyPatrol : MonoBehaviour {
+public class EnemyPatrol : MonoBehaviour
+{
 
     private bool isMovingLeft;
 
@@ -14,28 +15,40 @@ public class EnemyPatrol : MonoBehaviour {
     [Header("Speed")]
     [SerializeField] private float enemySpeed;
 
-    void Update () {
-        if (isMovingLeft) {
-            if (enemy.position.x >= LeftPatrolPoint.position.x) {
+    void Update ()
+    {
+        if (isMovingLeft)
+        {
+            if (enemy.position.x >= LeftPatrolPoint.position.x)
+            {
                 Movement(-1);
-            } else {
+            }
+            else
+            {
                 ChangeDirection();
             }
-        } else {
-             if (enemy.position.x <= RightPatrolPoint.position.x) {
+        }
+        else
+        {
+             if (enemy.position.x <= RightPatrolPoint.position.x)
+             {
                  Movement(1);
-             } else {
-                 ChangeDirection();
+             }
+             else
+             {
+                ChangeDirection();
              }
          }
 
     }
 
-    void Movement (int direction) {
+    void Movement (int direction)
+    {
         enemy.position = new Vector2(enemy.position.x + Time.deltaTime * direction * enemySpeed, enemy.position.y);
     }
 
-    void ChangeDirection () {
+    void ChangeDirection ()
+    {
         isMovingLeft = !isMovingLeft;
     }
 }
