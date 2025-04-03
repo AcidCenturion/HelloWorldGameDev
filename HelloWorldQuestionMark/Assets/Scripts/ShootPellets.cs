@@ -5,13 +5,14 @@ public class ShootPellets : MonoBehaviour
     //Script assigned to player game object
 
     [Header("Directional Input Keys")]
-    [SerializeField] private KeyCode left;
-    [SerializeField] private KeyCode right;
-    [SerializeField] private KeyCode up;
-    [SerializeField] private KeyCode shoot;
+    [SerializeField] private KeyCode left = KeyCode.LeftArrow;
+    [SerializeField] private KeyCode right = KeyCode.RightArrow;
+    [SerializeField] private KeyCode up = KeyCode.UpArrow;
+    [SerializeField] private KeyCode shoot = KeyCode.Space;
 
-    private string direction;
-    private int rotation = 0;
+    //Pellets are shot to the right by default, changeable via input keys
+    private string direction = "right";
+    private int rotation = 270;
     public GameObject pellet;
     private Vector2 spawnLocation;
     public float spawnDistance;
@@ -20,6 +21,12 @@ public class ShootPellets : MonoBehaviour
     private float lastTimeShot = 0;
     [SerializeField] private float cooldown = 0.5f;
 
+    void Start()
+    {
+        //sets default spawn location
+        spawnLocation = new Vector2(transform.position.x + spawnDistance, transform.position.y);
+        
+    }
     void Update()
     {
         ChangeDirection();
