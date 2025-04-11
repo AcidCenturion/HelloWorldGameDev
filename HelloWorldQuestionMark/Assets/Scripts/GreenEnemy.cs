@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class EnemyPatrol : MonoBehaviour
+public class GreenEnemy : MonoBehaviour
 {
 
     private bool isMovingLeft;

@@ -3,7 +3,7 @@ using UnityEngine;
 
 
 [RequireComponent(typeof(CircleCollider2D))]
-public class LedgePatrol : MonoBehaviour
+public class RedEnemy : MonoBehaviour
 {
 
     public LayerMask wallMask;
@@ -25,7 +25,7 @@ public class LedgePatrol : MonoBehaviour
     void Start ()
     {
         collider = GetComponent<CircleCollider2D> ();
-        wallMask = LayerMask.GetMask("Walls");
+        wallMask = LayerMask.GetMask("Default");
         CalculateRaySpacing();
     }
 
@@ -65,14 +65,14 @@ public class LedgePatrol : MonoBehaviour
 
         for (int i = 0; i < horizontalRays; i++)
         {
-            Vector2 rayOrigin = (direction < 0)?rayCastOrigins.bottomLeft : rayCastOrigins.bottomRight;
+            Vector2 rayOrigin = (direction < 0) ? rayCastOrigins.bottomLeft : rayCastOrigins.bottomRight;
             rayOrigin += Vector2.up * (horizontalRaySpacing * i);
             RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.right * direction, rayLength, wallMask);
 
             //Visibly displays rays
-            Debug.DrawRay(rayOrigin, Vector2.right * direction * rayLength, Color.green);
-            Debug.DrawLine(rayCastOrigins.bottomLeft, rayCastOrigins.topLeft, Color.blue);
-            Debug.DrawLine(rayCastOrigins.bottomRight, rayCastOrigins.topRight, Color.blue);
+            // Debug.DrawRay(rayOrigin, Vector2.right * direction * rayLength, Color.green);
+            // Debug.DrawLine(rayCastOrigins.bottomLeft, rayCastOrigins.topLeft, Color.blue);
+            // Debug.DrawLine(rayCastOrigins.bottomRight, rayCastOrigins.topRight, Color.blue);
             if (hit)
             {
                 rayLength = hit.distance;
@@ -80,7 +80,7 @@ public class LedgePatrol : MonoBehaviour
                 //Checks for walls
                 if (hit.collider != null)
                 {
-                    Debug.Log($"Wall detected at: {hit.point}");
+                    // Debug.Log($"Wall detected at: {hit.point}");
                     ChangeDirection();
                 }
             }
@@ -100,13 +100,13 @@ public class LedgePatrol : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.down, rayLength, wallMask);
 
             //Visibly displays rays
-            Debug.DrawRay(rayOrigin, Vector2.down * rayLength, Color.blue);
-            Debug.DrawLine(rayCastOrigins.bottomLeft, rayCastOrigins.bottomRight, Color.blue);
-            Debug.DrawLine(rayCastOrigins.topLeft, rayCastOrigins.topRight, Color.blue);
+            // Debug.DrawRay(rayOrigin, Vector2.down * rayLength, Color.blue);
+            // Debug.DrawLine(rayCastOrigins.bottomLeft, rayCastOrigins.bottomRight, Color.blue);
+            // Debug.DrawLine(rayCastOrigins.topLeft, rayCastOrigins.topRight, Color.blue);
             if (!hit)
             {
                 //Checks if not touching the floor
-                Debug.Log($"No floor");
+                // Debug.Log($"No floor");
                 ChangeDirection();
                 return;
             }
