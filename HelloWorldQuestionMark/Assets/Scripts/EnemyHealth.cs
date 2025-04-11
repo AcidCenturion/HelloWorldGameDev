@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(BoxCollider2D))]
-public class Health
+public class EnemyHealth
 {
 
     [SerializeField] private int damage;
@@ -13,34 +13,37 @@ public class Health
     {
         get
         {
-            return currentHealth;
+            return this.currentHealth;
         }
 
         set
         {
-            currentHealth = value;
+            this.currentHealth = value;
         }
     }
 
-    public Health(int maxHealth)
+    public EnemyHealth(int maxHealth)
     {
         this.currentHealth = maxHealth;
         this.maxHealth = maxHealth;
     }
 
+    //Reduces enemy health
     void takeDamage(int damageAmount)
     {
-        if (currentHealth > 0)
+        if (this.currentHealth > 0)
         {
-            currentHealth -= damageAmount;
+            this.currentHealth -= damageAmount;
         }
 
-        if (currentHealth <= 0)
+        //Resets health to 0 so health is never negative
+        if (this.currentHealth <= 0)
         {
-            currentHealth = 0;
+            this.currentHealth = 0;
         }
     }
 
+    //Can heal damage?
     void healDamage(int damageAmount)
     {
         if (currentHealth > 0)
@@ -48,14 +51,10 @@ public class Health
             currentHealth += damageAmount;
         }
 
+        //Sets health back to maximum so current health never exceeds the maximum
         if (currentHealth > maxHealth)
         {
             currentHealth = maxHealth;
         }
     }
-    
-
-    //TODO check if the player got hit and from which direction
-    //TODO give the player iframes
-    //TODO add knockback to the player
 }
