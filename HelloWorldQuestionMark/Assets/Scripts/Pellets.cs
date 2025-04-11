@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Pellets : MonoBehaviour
 {
-    private GameObject player;
+
     public string direction;    //direction initialized in ShootPellets Script
     private int xMovement;
     private int yMovement;

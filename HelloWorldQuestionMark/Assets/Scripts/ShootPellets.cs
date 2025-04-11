@@ -21,14 +21,14 @@ public class ShootPellets : MonoBehaviour
     private float lastTimeShot = 0;
     [SerializeField] private float cooldown = 0.5f;
 
-    void Start()
-    {
-        //sets default spawn location
-        spawnLocation = new Vector2(transform.position.x + spawnDistance, transform.position.y);
-        
-    }
+
     void Update()
     {
+        //sets spawn location incase player never touched directional keys
+        spawnLocation = new Vector2(transform.position.x + spawnDistance, transform.position.y);
+        DefaultDirection();
+
+        //changes direction based on input keys
         ChangeDirection();
         if (Input.GetKeyDown(shoot))
         {
@@ -41,36 +41,37 @@ public class ShootPellets : MonoBehaviour
         if (Input.GetKey(left) && Input.GetKey(up))
         {
             direction = "leftUp";
-            rotation = 45;
+            rotation = 315;
             float temp = Mathf.Sqrt(Mathf.Pow(spawnDistance, 2) + Mathf.Pow(spawnDistance, 2)) / 2;
             spawnLocation = new Vector2(transform.position.x - temp, transform.position.y + temp);
         }
         else if (Input.GetKey(right) && Input.GetKey(up))
         {
             direction = "rightUp";
-            rotation = -45;
+            rotation = 225;
             float temp = Mathf.Sqrt(Mathf.Pow(spawnDistance, 2) + Mathf.Pow(spawnDistance, 2)) / 2;
             spawnLocation = new Vector2(transform.position.x + temp, transform.position.y + temp);
         }
         else if (Input.GetKey(left))
         {
             direction = "left";
-            rotation = 90;
+            rotation = 0;
             spawnLocation = new Vector2(transform.position.x - spawnDistance, transform.position.y);
         }
         else if (Input.GetKey(up))
         {
             direction = "up";
-            rotation = 0;
+            rotation = 270;
             spawnLocation = new Vector2(transform.position.x, transform.position.y + spawnDistance);
         }
         else if (Input.GetKey(right))
         {
             direction = "right";
-            rotation = 270;
+            rotation = 180;
             spawnLocation = new Vector2(transform.position.x + spawnDistance, transform.position.y);
         }
         //Debug.Log(direction);
+
     }
 
     private void Shoot()
@@ -89,4 +90,10 @@ public class ShootPellets : MonoBehaviour
         lastTimeShot = Time.time;
     }
 
+    private void DefaultDirection()
+    {
+        direction = "right";
+        rotation = 270;
+        spawnLocation = new Vector2(transform.position.x + spawnDistance, transform.position.y);
+    }
 }
