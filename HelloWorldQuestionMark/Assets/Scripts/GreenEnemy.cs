@@ -50,5 +50,13 @@ public class GreenEnemy : MonoBehaviour
     void ChangeDirection ()
     {
         isMovingLeft = !isMovingLeft;
+        if (isMovingLeft)
+        {
+            enemy.transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
+        else
+        {
+            enemy.transform.rotation = Quaternion.Euler(0, 180, 0);
+        }
     }
 }

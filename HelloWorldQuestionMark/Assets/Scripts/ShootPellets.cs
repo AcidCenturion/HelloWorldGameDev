@@ -93,7 +93,7 @@ public class ShootPellets : MonoBehaviour
     private void DefaultDirection()
     {
         direction = "right";
-        rotation = 270;
+        rotation = 180;
         spawnLocation = new Vector2(transform.position.x + spawnDistance, transform.position.y);
     }
 }

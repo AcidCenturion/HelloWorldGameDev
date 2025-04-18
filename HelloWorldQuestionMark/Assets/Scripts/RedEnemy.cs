@@ -70,9 +70,9 @@ public class RedEnemy : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.right * direction, rayLength, wallMask);
 
             //Visibly displays rays
-            // Debug.DrawRay(rayOrigin, Vector2.right * direction * rayLength, Color.green);
-            // Debug.DrawLine(rayCastOrigins.bottomLeft, rayCastOrigins.topLeft, Color.blue);
-            // Debug.DrawLine(rayCastOrigins.bottomRight, rayCastOrigins.topRight, Color.blue);
+            Debug.DrawRay(rayOrigin, Vector2.right * direction * rayLength, Color.green);
+            Debug.DrawLine(rayCastOrigins.bottomLeft, rayCastOrigins.topLeft, Color.blue);
+            Debug.DrawLine(rayCastOrigins.bottomRight, rayCastOrigins.topRight, Color.blue);
             if (hit)
             {
                 rayLength = hit.distance;
@@ -100,9 +100,9 @@ public class RedEnemy : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.down, rayLength, wallMask);
 
             //Visibly displays rays
-            // Debug.DrawRay(rayOrigin, Vector2.down * rayLength, Color.blue);
-            // Debug.DrawLine(rayCastOrigins.bottomLeft, rayCastOrigins.bottomRight, Color.blue);
-            // Debug.DrawLine(rayCastOrigins.topLeft, rayCastOrigins.topRight, Color.blue);
+            Debug.DrawRay(rayOrigin, Vector2.down * rayLength, Color.blue);
+            Debug.DrawLine(rayCastOrigins.bottomLeft, rayCastOrigins.bottomRight, Color.blue);
+            Debug.DrawLine(rayCastOrigins.topLeft, rayCastOrigins.topRight, Color.blue);
             if (!hit)
             {
                 //Checks if not touching the floor
@@ -133,6 +133,14 @@ public class RedEnemy : MonoBehaviour
     void ChangeDirection ()
     {
         isMovingLeft = !isMovingLeft;
+        if (isMovingLeft)
+        {
+            transform.rotation = Quaternion.Euler(transform.rotation.x, 0, transform.rotation.z);
+        }
+        else
+        {
+            transform.rotation = Quaternion.Euler(transform.rotation.x, 180, transform.rotation.z);
+        }
     }
 
     struct RayCast
