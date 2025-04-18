@@ -60,12 +60,15 @@ public class Pellets : MonoBehaviour
     
         if (collider.gameObject.CompareTag("Breakable"))
         {
-            collider.gameObject.GetComponent<Breakable>().DecreaseDurability(dmg);
+            //Trigger in Breakable Objects always in a child object of the breakable object
+            collider.gameObject.GetComponentInParent<Breakable>().DecreaseDurability(dmg);
+            
         }
         else if (collider.gameObject.CompareTag("Enemy"))
         {
-            //Kills enemy, subject to change
-            Destroy(collider.gameObject);
+            //Trigger in Enemy Objects always in a child object of the enemy object
+            //subject to change; depends if shots are oneshot or not
+            Destroy(collider.transform.parent.gameObject);
         }
         else if (collider.gameObject.CompareTag("Boss"))
         {
@@ -74,5 +77,6 @@ public class Pellets : MonoBehaviour
 
         Destroy(gameObject);
     }
+    
 
 }
