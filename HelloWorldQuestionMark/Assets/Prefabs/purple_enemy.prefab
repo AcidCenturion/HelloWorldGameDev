@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4794282179150159348
+--- !u!1 &3351822470476488556
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,40 +8,39 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4284351631728321704}
-  - component: {fileID: 663790607690050149}
-  - component: {fileID: 7162195211945738041}
-  - component: {fileID: 1700758263739160117}
-  - component: {fileID: 8358912361568507279}
-  m_Layer: 8
-  m_Name: red_enemy
+  - component: {fileID: 3407300094084056836}
+  - component: {fileID: 649975243762697337}
+  - component: {fileID: 4261025966708237773}
+  - component: {fileID: 6057688056387442694}
+  m_Layer: 0
+  m_Name: purple_enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4284351631728321704
+--- !u!4 &3407300094084056836
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4794282179150159348}
+  m_GameObject: {fileID: 3351822470476488556}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.5400724, y: -0.5650002, z: 0}
+  m_LocalRotation: {x: -0, y: -0.002624912, z: -0, w: 0.99999654}
+  m_LocalPosition: {x: -11.67, y: -0.56, z: -0.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &663790607690050149
+  m_LocalEulerAnglesHint: {x: 0, y: -0.301, z: 0}
+--- !u!212 &649975243762697337
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4794282179150159348}
+  m_GameObject: {fileID: 3351822470476488556}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -79,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4107826327890550477, guid: 5fdd7389c747a2b4e9e19d3504f7a346, type: 3}
+  m_Sprite: {fileID: 1811704029881148630, guid: f1e468fd71f9c424193ede0e7a4f8bd7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -90,13 +89,13 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &7162195211945738041
+--- !u!58 &4261025966708237773
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4794282179150159348}
+  m_GameObject: {fileID: 3351822470476488556}
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
@@ -126,50 +125,23 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.51
---- !u!114 &1700758263739160117
+--- !u!114 &6057688056387442694
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4794282179150159348}
+  m_GameObject: {fileID: 3351822470476488556}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27150597e3dacce4fa41df92c7d859ca, type: 3}
+  m_Script: {fileID: 11500000, guid: 2b409ee5fec0df9409e18d225176ae44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   wallMask:
     serializedVersion: 2
-    m_Bits: 1
-  horizontalRays: 5
+    m_Bits: 0
   verticalRays: 5
   skinWidth: 0.1
-  enemy: {fileID: 4284351631728321704}
+  enemy: {fileID: 3407300094084056836}
   enemySpeed: 5
---- !u!50 &8358912361568507279
-Rigidbody2D:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4794282179150159348}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
+  health: 1
