@@ -2,12 +2,18 @@ using UnityEngine;
 
 public class Breakable : MonoBehaviour
 {
-    //      ---Special Notes---
-    //  Only broken by pellets (and boss??)
-    //  Must contain a 2D Collider & 2D Rigidbody Component
-    //  Assign breakable objects the "Breakable" tag
-    
-    [SerializeField] private int durability = 1;
+  //      ---Special Notes---
+  //  How to Apply:
+  //  Script applied to Root of Breakable object
+  //  Breakable objects should contain another gameObject within that contains a 2DCollider w/ isTrigger set true
+  //  Parent must contain a 2D Collider & 2D Rigidbody (kinematic) Component
+  //  Assign breakable objects the "Breakable" tag
+  //  
+  //  Only broken by pellets (and boss??)
+ 
+
+
+  [SerializeField] private int durability = 1;
 
     //Method called by pellets 
     public void DecreaseDurability(int dmg)
@@ -16,6 +22,7 @@ public class Breakable : MonoBehaviour
 
         if (durability <= 0)
         {
+            //Destroys the breakable object
             Destroy(gameObject);
         }
     }

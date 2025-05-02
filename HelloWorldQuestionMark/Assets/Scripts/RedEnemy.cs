@@ -34,9 +34,6 @@ public class RedEnemy : MonoBehaviour
 
         spriteRenderer = GetComponent<SpriteRenderer>();
         enemyHealth = new EnemyHealth(health);
-
-        // Ensures the enemy always starts facing the right direction
-        Flip();
     }
 
     // Makes enemy switch direction if it it bumps into an object or leaves the ground
@@ -143,20 +140,13 @@ public class RedEnemy : MonoBehaviour
     void ChangeDirection ()
     {
         isMovingLeft = !isMovingLeft;
-
-        Flip();
-    }
-
-    void Flip()
-    {
-        // Flips the enemy sprite
         if (isMovingLeft)
         {
-            spriteRenderer.flipX = false;
+            transform.rotation = Quaternion.Euler(transform.rotation.x, 0, transform.rotation.z);
         }
         else
         {
-            spriteRenderer.flipX = true;
+            transform.rotation = Quaternion.Euler(transform.rotation.x, 180, transform.rotation.z);
         }
     }
 

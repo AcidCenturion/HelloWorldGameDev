@@ -21,9 +21,6 @@ public class GreenEnemy : MonoBehaviour
     {
         enemyHealth = new EnemyHealth(health);
         spriteRenderer = enemy.GetComponent<SpriteRenderer>();
-
-        // Ensuresthe enemy starts facing the right direction
-        Flip();
     }
 
     void Update ()
@@ -66,21 +63,13 @@ public class GreenEnemy : MonoBehaviour
 
         // Changes the direction the enemy moves
         isMovingLeft = !isMovingLeft;
-
-        // Flips the enemy sprite
-        Flip();
-    }
-
-    void Flip()
-    {
-        // Flips the enemy sprite
         if (isMovingLeft)
         {
-            spriteRenderer.flipX = false;
+            enemy.transform.rotation = Quaternion.Euler(0, 0, 0);
         }
         else
         {
-            spriteRenderer.flipX = true;
+            enemy.transform.rotation = Quaternion.Euler(0, 180, 0);
         }
     }
 }
