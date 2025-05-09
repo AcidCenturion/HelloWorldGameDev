@@ -5,8 +5,6 @@ using UnityEngine;
 [RequireComponent(typeof(CircleCollider2D))]
 public class PurpleEnemy : MonoBehaviour
 {
-
-    public LayerMask wallMask;
     public int verticalRays = 5;
     float verticalRaySpacing;
     public float skinWidth = 0.1f;
@@ -15,6 +13,7 @@ public class PurpleEnemy : MonoBehaviour
 
     [Header("Enemy")]
     [SerializeField] private Transform enemy;
+    [SerializeField] private LayerMask collidableLayer;
     [SerializeField] public float enemySpeed = 5f;
     [SerializeField] public int health = 1;
 
@@ -28,7 +27,6 @@ public class PurpleEnemy : MonoBehaviour
     void Start ()
     {
         collider = GetComponent<CircleCollider2D> ();
-        wallMask = LayerMask.GetMask("Default");
         enemyHealth = new EnemyHealth(health);
         CalculateRaySpacing();
     }
@@ -79,7 +77,7 @@ public class PurpleEnemy : MonoBehaviour
             rayOrigin += Vector2.right * (skinWidth * direction);
 
             // Detects if the rays interact with anything on the "Default" layer
-            RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.down, rayLength, wallMask);
+            RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.down, rayLength, collidableLayer);
 
             // Visibly displays rays
             Debug.DrawRay(rayOrigin, Vector2.down * direction * rayLength, Color.blue);
