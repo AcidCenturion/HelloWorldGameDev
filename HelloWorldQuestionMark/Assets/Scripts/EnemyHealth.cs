@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(BoxCollider2D))]
-public class EnemyHealth
+public class EnemyHealth : MonoBehaviour
 {
 
     [SerializeField] private int damage;
@@ -28,30 +28,33 @@ public class EnemyHealth
         this.maxHealth = maxHealth;
     }
 
-    //Reduces enemy health
-    void takeDamage(int damageAmount)
+    // Reduces enemy health
+    public bool takeDamage(int damageAmount)
     {
         if (this.currentHealth > 0)
         {
             this.currentHealth -= damageAmount;
+            return false;
         }
 
-        //Resets health to 0 so health is never negative
+        // Destroys the enemy if it runs out of health
         if (this.currentHealth <= 0)
         {
-            this.currentHealth = 0;
+            return true;
         }
+
+        return false;
     }
 
-    //Can heal damage?
-    void healDamage(int damageAmount)
+    // Can heal damage?
+    public void healDamage(int damageAmount)
     {
         if (currentHealth > 0)
         {
             currentHealth += damageAmount;
         }
 
-        //Sets health back to maximum so current health never exceeds the maximum
+        // Sets health back to maximum so current health never exceeds the maximum
         if (currentHealth > maxHealth)
         {
             currentHealth = maxHealth;

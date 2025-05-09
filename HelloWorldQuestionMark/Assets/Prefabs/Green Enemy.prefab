@@ -205,6 +205,7 @@ MonoBehaviour:
   LeftPatrolPoint: {fileID: 6886113279631926513}
   enemy: {fileID: 4871914675738585554}
   enemySpeed: 3.5
+  health: 0
 --- !u!58 &3017874350310894324
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -279,7 +280,7 @@ GameObject:
   - component: {fileID: 418648755459773664}
   m_Layer: 0
   m_Name: Green Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
