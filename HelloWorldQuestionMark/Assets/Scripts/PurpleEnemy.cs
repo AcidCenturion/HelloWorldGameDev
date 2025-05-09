@@ -19,7 +19,7 @@ public class PurpleEnemy : MonoBehaviour
     [SerializeField] public int health = 1;
 
     [Header("")]
-    [SerializeField] Get;
+    
 
     CircleCollider2D collider;
     RayCast rayCastOrigins;
