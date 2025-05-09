@@ -67,8 +67,9 @@ public class Pellets : MonoBehaviour
         else if (collider.gameObject.CompareTag("Enemy"))
         {
             //Trigger in Enemy Objects always in a child object of the enemy object
-            //subject to change; depends if shots are oneshot or not
-            Destroy(collider.transform.parent.gameObject);
+            //Makes the enemy take 1 point of damage; enemy will die once health <= 0
+            EnemyHealth enemyHealth = collider.gameObject.GetComponentInParent<EnemyHealth>();
+            enemyHealth.takeDamage(1);
         }
         else if (collider.gameObject.CompareTag("Boss"))
         {

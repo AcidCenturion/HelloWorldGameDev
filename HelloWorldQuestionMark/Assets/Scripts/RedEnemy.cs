@@ -14,7 +14,7 @@ public class RedEnemy : MonoBehaviour
     private float verticalRaySpacing;
     private bool isMovingLeft;
     private SpriteRenderer spriteRenderer;
-    private EnemyHealth enemyHealth;
+    public EnemyHealth enemyHealth;
 
     [Header("Enemy")]
     [SerializeField] private Transform enemy;

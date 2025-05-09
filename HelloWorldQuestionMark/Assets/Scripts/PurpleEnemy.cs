@@ -11,12 +11,15 @@ public class PurpleEnemy : MonoBehaviour
     float verticalRaySpacing;
     public float skinWidth = 0.1f;
     private bool isMovingDown;
-    private EnemyHealth enemyHealth;
+    public EnemyHealth enemyHealth;
 
     [Header("Enemy")]
     [SerializeField] private Transform enemy;
     [SerializeField] public float enemySpeed = 5f;
     [SerializeField] public int health = 1;
+
+    [Header("")]
+    [SerializeField] Get;
 
     CircleCollider2D collider;
     RayCast rayCastOrigins;
@@ -33,6 +36,10 @@ public class PurpleEnemy : MonoBehaviour
     // Makes enemy switch direction if it it bumps into an object or leaves the ground
     void Update ()
     {
+        if (this.enemyHealth.entityHealth == 0) {
+            Destroy(this);
+        }
+
         UpdateRayCast();
         collision.Reset();
 

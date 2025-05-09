@@ -3,7 +3,7 @@ using UnityEngine;
 public class GreenEnemy : MonoBehaviour
 {
     private bool isMovingLeft;
-    private EnemyHealth enemyHealth;
+    public EnemyHealth enemyHealth;
     private SpriteRenderer spriteRenderer;
 
     [Header("Patrol Points")]
@@ -15,7 +15,7 @@ public class GreenEnemy : MonoBehaviour
 
     [Header("Speed")]
     [SerializeField] private float enemySpeed;
-    [SerializeField] private int health;
+    [SerializeField] public int health;
 
     void Start()
     {
