@@ -5,8 +5,6 @@ using UnityEngine;
 [RequireComponent(typeof(CircleCollider2D))]
 public class RedEnemy : MonoBehaviour
 {
-
-    public LayerMask wallMask;
     public int horizontalRays = 5;
     public int verticalRays = 5;
     public float skinWidth = 0.1f;
@@ -20,6 +18,7 @@ public class RedEnemy : MonoBehaviour
     [SerializeField] private Transform enemy;
     [SerializeField] private float enemySpeed = 5f;
     [SerializeField] private int health = 1;
+    [SerializeField] public LayerMask collideableLayer;
 
     CircleCollider2D collider;
     RayCast rayCastOrigins;
@@ -29,7 +28,6 @@ public class RedEnemy : MonoBehaviour
     {
         // Sets up enemy collissions with RayCasting
         collider = GetComponent<CircleCollider2D> ();
-        wallMask = LayerMask.GetMask("Default");
         CalculateRaySpacing();
 
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -74,7 +72,7 @@ public class RedEnemy : MonoBehaviour
         {
             Vector2 rayOrigin = (direction < 0) ? rayCastOrigins.bottomLeft : rayCastOrigins.bottomRight;
             rayOrigin += Vector2.up * (horizontalRaySpacing * i);
-            RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.right * direction, rayLength, wallMask);
+            RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.right * direction, rayLength, collideableLayer);
 
             // Visibly displays rays
             // Debug.DrawRay(rayOrigin, Vector2.right * direction * rayLength, Color.green);
@@ -104,7 +102,7 @@ public class RedEnemy : MonoBehaviour
             Vector2 rayOrigin = (direction == 1)? rayCastOrigins.bottomLeft : rayCastOrigins.bottomRight;
             rayOrigin += Vector2.right * (verticalRaySpacing * i * direction);
             rayOrigin += Vector2.right * (skinWidth * direction);
-            RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.down, rayLength, wallMask);
+            RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.down, rayLength, collideableLayer);
 
             // Visibly displays rays
             // Debug.DrawRay(rayOrigin, Vector2.down * rayLength, Color.blue);
