@@ -1,17 +1,15 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class BossBehavior : MonoBehaviour
 {
-    //Add parameter for how many circles the boss should do for a normal roll or a fast roll
-    //Need to add enemy health script
-
 
     //Speed Variables
     [Header("Speed Variables")]
     public float speed = 15f;
     private float currentSpeed;
     public float maxRollSpeed = 400f;
-    public float timeForFastSpeed = 2;
+    public float rateForFastSpeed = 2;
     public float jumpSpeed = 8f;
     public float swaySpeed = 4f;
     public float swayAmount = 5f;
@@ -28,6 +26,7 @@ public class BossBehavior : MonoBehaviour
     private bool reachedAboveFirstPoint = false;
     private bool reachedFirstPoint = false;
     public float jumpHeightBeforeRolling = 7f;
+    public float swayRotation = 90;
     
     //Attacking timeframe variables
     [Header("Attack timeframe Variables")]
@@ -35,6 +34,7 @@ public class BossBehavior : MonoBehaviour
     private int currentAttack;
     private float timeSinceAttack = 0;
     public float attackCooldown = 3f;
+    public float timeToLook = 2f;
     
     [Header("Player Variables")]
     public GameObject player;
@@ -47,62 +47,93 @@ public class BossBehavior : MonoBehaviour
     public float groundDistance = 2f;
 
     //Miscellaneous
-    private EnemyHealth enemyHealth;
+    //private EnemyHealth enemyHealth;
+    private SpriteRenderer sr;
     private Vector3 lastPosition;
+    private Quaternion lastRotation;
     public int health = 5;
-    
-
+    public int damage = 1;
+    private CircleCollider2D hitbox;
+    public float hitboxCooldown = 1;
+    private float hitboxTimer = 0;
 
     enum Attacks
     {
         Roll, Jump, FastRoll
     }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
     void Start()
     {
-        enemyHealth = new EnemyHealth(health);
+        //does this vv work??
+        //enemyHealth = new EnemyHealth(health);
+
         currentSpeed = speed;
-        ground = LayerMask.GetMask("Default");
+        hitbox = GetComponent<CircleCollider2D>();
+        ground = LayerMask.GetMask("Floor");
         rb = GetComponent<Rigidbody2D>();
-        Debug.Log(rollPoints.Length);
         ChooseMoves();
+        sr = GetComponent<SpriteRenderer>();
         
     }
 
     // Update is called once per frame
     void Update()
     {
+        hitboxTimer += Time.deltaTime;
+
         if (isAttacking)
         {
             switch (currentAttack)
             {
                 case (int) Attacks.Roll:
 
+                    //rolls in default speed
                     currentSpeed = speed;
                     Roll(MaxNumOfRolls);
                     break;
                 case (int) Attacks.Jump:
+                    //boss faces left/right depending on player x coord
+                    if (transform.position.x > playerPosition.x)
+                    {
+                        sr.flipX = false;
+                    }
+                    else
+                    {
+                        sr.flipX = true;
+                    }
+
+                    //give player time to change location
+                    if (timeSinceAttack < attackCooldown + timeToLook)
+                    {
+                        timeSinceAttack += Time.deltaTime;
+                        return;
+                    }
+
+                    //if boss hasn't reached jump location
                     if (!reachedPlayerPosition)
                     {
                         //First jumps to players position
                         JumpTo(playerPosition);
+
                         if ((Vector2)transform.position == playerPosition)
                         {
                             //enables gravity
-                            rb.bodyType = RigidbodyType2D.Dynamic;
-
+                            //rb.bodyType = RigidbodyType2D.Dynamic;
                             reachedPlayerPosition = true;
+                            transform.rotation = Quaternion.identity;
                         }
 
                         return;
                     }
                     else
                     {
-                        
+                        //"Falls" to the ground
+                        transform.position = new Vector3(transform.position.x, transform.position.y - Time.deltaTime * jumpSpeed, transform.position.z);
+
                         //check if its grounded, if so then set isAttacking to false and then chooseMoves()
                         if (Physics2D.BoxCast(transform.position, groundCheck, 0, -transform.up, groundDistance, ground))
                         {
-                            isAttacking = false;
+                            //resets boss properties
                             reachedPlayerPosition = false;
                             rb.bodyType = RigidbodyType2D.Kinematic;
                             ChooseMoves();
@@ -116,52 +147,58 @@ public class BossBehavior : MonoBehaviour
                     //Speed builds up over time
                     if (currentSpeed < maxRollSpeed)
                     {
-                        currentSpeed += Time.deltaTime * timeForFastSpeed;
+                        currentSpeed += Time.deltaTime * rateForFastSpeed;
                     }
+
                     Roll(MaxNumOfFastRolls);
                     break;
             }
         }
         else if (timeSinceAttack > attackCooldown)
         {
-            ChooseMoves();
+
+            //adding after showcase (cus im rlly busy...) if statement once boss is fully upright
+
             isAttacking = true;
+
+            //resets rotation from swaying
+            transform.rotation = Quaternion.identity;
         }
         else
         {
-            timeSinceAttack += Time.deltaTime;
+            //boss faces left/right depending on player x coord
+            if (transform.position.x > playerPosition.x)
+            {
+                sr.flipX = false;
+            }
+            else
+            {
+                sr.flipX = true;
             
-            if (SinAmount() < 0)
-            {
-                //faces left
-                transform.rotation = Quaternion.Euler(0,0,0);
             }
-            else    
-            {
-                //faces right
-                transform.rotation = Quaternion.Euler(0,180,0);
-            }
+            timeSinceAttack += Time.deltaTime;
 
-            //Boss moves left and right
+            //Boss sways left and right
             transform.position = new Vector3(lastPosition.x + SinAmount(), lastPosition.y, lastPosition.z);
+            transform.rotation = Quaternion.Euler(lastRotation.x, lastRotation.y, swayRotation * -SinAmount());
 
         }
 
         
     }
 
-    //Visualize GroundChecker (Optional)
-//   void OnDrawGizmos()
-//   {
-//     Gizmos.DrawCube(transform.position - transform.up * groundDistance, groundCheck);
-//   }
+  //Visualize GroundChecker (Optional)
+  void OnDrawGizmos()
+  {
+    Gizmos.DrawCube(transform.position - transform.up * groundDistance, groundCheck);
+  }
 
   private void RollInCircle(float maxAmount) {
-        //thinking of adding when on the last roll, randomly lunges towards player
 
+        //if path hasnt finished & theres still more rounds to complete
         if (rollPointsIndex <= rollPoints.Length && numOfRolls < maxAmount)
         {
-            //boss rolls to next point
+            //boss rolls/spins to next point
             transform.Rotate(transform.rotation.x, transform.rotation.y,  -Time.deltaTime * currentSpeed * rotationSpeed);
             transform.position = Vector2.MoveTowards(transform.position, rollPoints[rollPointsIndex].transform.position, Time.deltaTime * currentSpeed);
 
@@ -170,7 +207,7 @@ public class BossBehavior : MonoBehaviour
             {
                 rollPointsIndex++;
 
-                //boss did a whole roll
+                //boss completed a round
                 if (rollPointsIndex >= rollPoints.Length)
                 {
                     rollPointsIndex = 0;
@@ -183,10 +220,7 @@ public class BossBehavior : MonoBehaviour
         }
 
         //resets variables
-        isAttacking = false;
         numOfRolls = 0;
-        rollPointsIndex = 0;
-        transform.rotation = Quaternion.Euler(0,0,0);
         currentSpeed = speed;
         ChooseMoves();
     }
@@ -212,7 +246,7 @@ public class BossBehavior : MonoBehaviour
                 transform.position = Vector2.MoveTowards(transform.position, rollPoints[0].position, Time.deltaTime * speed / 1.5f);
                 if (transform.position == rollPoints[0].position)
                 {
-                        reachedFirstPoint = true;
+                    reachedFirstPoint = true;
                 }
             }
             else
@@ -222,6 +256,8 @@ public class BossBehavior : MonoBehaviour
         }
     }
 
+  
+    //---helper functions---
     private void JumpTo(Vector2 position) //jumps to player or middle of stage
     {
 
@@ -240,13 +276,17 @@ public class BossBehavior : MonoBehaviour
     
     private void ChooseMoves()
     {
+        hitbox.enabled = true;
+
         //stores lasts instance of boss' position
         lastPosition = transform.position;
+        lastRotation = transform.rotation;
 
         //Randomly chooses an attack
-        currentAttack = Random.Range(0,3);
+        currentAttack = Random.Range(1,2);
 
         //resets variables
+        transform.rotation = Quaternion.identity;
         if (currentAttack == (int)Attacks.Roll)
         {
             reachedAboveFirstPoint = false;
@@ -257,7 +297,6 @@ public class BossBehavior : MonoBehaviour
         {
             playerPosition = player.transform.position;
             reachedPlayerPosition = false;
-            Debug.Log(playerPosition);
         }
         else if (currentAttack == (int)Attacks.FastRoll)
         {
@@ -268,6 +307,25 @@ public class BossBehavior : MonoBehaviour
 
         //Resets timer
         timeSinceAttack = 0;
+        isAttacking = false;
 
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        //if boss touches player
+        if (collision.CompareTag("Player"))
+        {
+            if (hitboxTimer < hitboxCooldown)
+            {
+                return;
+            }
+
+            //hitbox disabled until next attack
+            hitbox.enabled = false;
+            hitboxTimer = 0;
+
+            collision.gameObject.GetComponent<PlayerHealth>().TakeDamage(damage);
+        }
     }
 }
