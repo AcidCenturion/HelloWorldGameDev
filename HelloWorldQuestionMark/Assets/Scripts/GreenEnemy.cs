@@ -3,7 +3,7 @@ using UnityEngine;
 public class GreenEnemy : MonoBehaviour
 {
     private bool isMovingLeft;
-    public EnemyHealth enemyHealth;
+    private EnemyHealth enemyHealth;
     private SpriteRenderer spriteRenderer;
 
     [Header("Patrol Points")]
@@ -19,15 +19,18 @@ public class GreenEnemy : MonoBehaviour
 
     void Start()
     {
-        enemyHealth = new EnemyHealth(health);
+        // Creates a new EnemyHealth
+        enemyHealth = enemy.GetComponent<EnemyHealth>();
+        enemyHealth.Init(health);
+
         spriteRenderer = enemy.GetComponent<SpriteRenderer>();
     }
 
     void Update ()
     {
+        // If the enemy is left of the patrol point and moving left it keeps moving left else moves right
         if (isMovingLeft)
         {
-            // If the enemy is left of the patrol point and moving left it keeps moving left
             if (enemy.position.x >= LeftPatrolPoint.position.x)
             {
                 Movement(-1);
@@ -38,7 +41,7 @@ public class GreenEnemy : MonoBehaviour
             }
         }
 
-        // If the enemy is right of the patrol point and moving right it keeps moving right
+        // If the enemy is right of the patrol point and moving right it keeps moving right else moves left
         else
         {
              if (enemy.position.x <= RightPatrolPoint.position.x)
@@ -61,7 +64,7 @@ public class GreenEnemy : MonoBehaviour
     void ChangeDirection ()
     {
 
-        // Changes the direction the enemy moves
+        // Changes the direction the enemy faces
         isMovingLeft = !isMovingLeft;
         if (isMovingLeft)
         {

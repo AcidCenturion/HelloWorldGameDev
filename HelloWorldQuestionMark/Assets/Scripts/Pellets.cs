@@ -58,6 +58,7 @@ public class Pellets : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collider)
     {
     
+        // Debug.Log("Object hit");
         if (collider.gameObject.CompareTag("Breakable"))
         {
             //Trigger in Breakable Objects always in a child object of the breakable object
@@ -68,12 +69,10 @@ public class Pellets : MonoBehaviour
         {
             //Trigger in Enemy Objects always in a child object of the enemy object
             //Makes the enemy take 1 point of damage; enemy will die once health <= 0
+            //Works for Bosses too
+            // Debug.Log("Enemy detected");
             EnemyHealth enemyHealth = collider.gameObject.GetComponentInParent<EnemyHealth>();
             enemyHealth.takeDamage(1);
-        }
-        else if (collider.gameObject.CompareTag("Boss"))
-        {
-            //decrease boss health by dmg amount(??)
         }
 
         Destroy(gameObject);

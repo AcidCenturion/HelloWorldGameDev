@@ -12,7 +12,7 @@ public class RedEnemy : MonoBehaviour
     private float verticalRaySpacing;
     private bool isMovingLeft;
     private SpriteRenderer spriteRenderer;
-    public EnemyHealth enemyHealth;
+    private EnemyHealth enemyHealth;
 
     [Header("Enemy")]
     [SerializeField] private Transform enemy;
@@ -26,12 +26,15 @@ public class RedEnemy : MonoBehaviour
 
     void Start ()
     {
-        // Sets up enemy collissions with RayCasting
+        // Creates a new EnemyHealth
+        enemyHealth = enemy.GetComponent<EnemyHealth>();
+        enemyHealth.Init(health);
+
+        // Sets up enemy collisions with RayCasting
         collider = GetComponent<CircleCollider2D> ();
         CalculateRaySpacing();
 
         spriteRenderer = GetComponent<SpriteRenderer>();
-        enemyHealth = new EnemyHealth(health);
     }
 
     // Makes enemy switch direction if it it bumps into an object or leaves the ground
@@ -118,6 +121,7 @@ public class RedEnemy : MonoBehaviour
         }
     }
     
+    // Calculates the bounds of the RayCast
     void UpdateRayCast ()
     {
         Bounds bounds = collider.bounds;
@@ -128,6 +132,7 @@ public class RedEnemy : MonoBehaviour
         rayCastOrigins.bottomRight = new Vector2(bounds.max.x, bounds.min.y);
     }
 
+    // Moves the enemy left or right depending on direction and speed
     void Movement (int direction)
     {
         HorizontalCollisions(direction);
@@ -135,9 +140,12 @@ public class RedEnemy : MonoBehaviour
         enemy.position = new Vector2(enemy.position.x + Time.deltaTime * direction * enemySpeed, enemy.position.y);
     }
 
+    // Changes the Enemy to move left or right
     void ChangeDirection ()
     {
         isMovingLeft = !isMovingLeft;
+
+        // Changes the direction the Enemy is facing
         if (isMovingLeft)
         {
             transform.rotation = Quaternion.Euler(transform.rotation.x, 0, transform.rotation.z);

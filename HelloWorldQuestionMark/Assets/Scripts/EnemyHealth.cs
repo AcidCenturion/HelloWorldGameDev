@@ -1,6 +1,5 @@
 using UnityEngine;
 
-[RequireComponent(typeof(BoxCollider2D))]
 public class EnemyHealth : MonoBehaviour
 {
 
@@ -22,42 +21,43 @@ public class EnemyHealth : MonoBehaviour
         }
     }
 
-    public EnemyHealth(int maxHealth)
+    // Initializes health values
+    public void Init(int health)
     {
-        this.currentHealth = maxHealth;
-        this.maxHealth = maxHealth;
+        currentHealth = health;
+        maxHealth = health;
     }
 
     // Reduces enemy health
-    public bool takeDamage(int damageAmount)
+    public void takeDamage(int damageAmount)
     {
         if (this.currentHealth > 0)
         {
             this.currentHealth -= damageAmount;
-            return false;
         }
+
+        // Debug check to see that the Enemy is taking the corect amount of damage
+        Debug.Log("Enemy took damage: " + this.currentHealth);
 
         // Destroys the enemy if it runs out of health
         if (this.currentHealth <= 0)
         {
-            return true;
+            Destroy(gameObject);
         }
-
-        return false;
     }
 
     // Can heal damage?
     public void healDamage(int damageAmount)
     {
-        if (currentHealth > 0)
+        if (this.currentHealth > 0)
         {
-            currentHealth += damageAmount;
+            this.currentHealth += damageAmount;
         }
 
         // Sets health back to maximum so current health never exceeds the maximum
-        if (currentHealth > maxHealth)
+        if (this.currentHealth > this.maxHealth)
         {
-            currentHealth = maxHealth;
+            this.currentHealth = this.maxHealth;
         }
     }
 }

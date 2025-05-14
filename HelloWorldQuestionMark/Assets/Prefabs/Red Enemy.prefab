@@ -81,6 +81,7 @@ GameObject:
   - component: {fileID: 7162195211945738041}
   - component: {fileID: 1700758263739160117}
   - component: {fileID: 8358912361568507279}
+  - component: {fileID: 416384906241433715}
   m_Layer: 8
   m_Name: Red Enemy
   m_TagString: Enemy
@@ -207,14 +208,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27150597e3dacce4fa41df92c7d859ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wallMask:
-    serializedVersion: 2
-    m_Bits: 1
   horizontalRays: 5
   verticalRays: 5
   skinWidth: 0.1
+  enemyHealth: {fileID: 0}
   enemy: {fileID: 4284351631728321704}
   enemySpeed: 3.5
+  health: 1
+  collideableLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!50 &8358912361568507279
 Rigidbody2D:
   serializedVersion: 5
@@ -242,3 +245,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &416384906241433715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4794282179150159348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbbcf367554d7e845b4f6cb2e68cab62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
+  maxHealth: 0

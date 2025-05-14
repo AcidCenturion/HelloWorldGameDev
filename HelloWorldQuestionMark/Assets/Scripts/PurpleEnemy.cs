@@ -9,15 +9,13 @@ public class PurpleEnemy : MonoBehaviour
     float verticalRaySpacing;
     public float skinWidth = 0.1f;
     private bool isMovingDown;
-    public EnemyHealth enemyHealth;
+    private EnemyHealth enemyHealth;
 
     [Header("Enemy")]
     [SerializeField] private Transform enemy;
     [SerializeField] private LayerMask collidableLayer;
     [SerializeField] public float enemySpeed = 5f;
     [SerializeField] public int health = 1;
-
-    [Header("")]
     
 
     CircleCollider2D collider;
@@ -26,18 +24,17 @@ public class PurpleEnemy : MonoBehaviour
 
     void Start ()
     {
+        // Creates a new EnemyHealth
+        enemyHealth = enemy.GetComponent<EnemyHealth>();
+        enemyHealth.Init(health);
+
         collider = GetComponent<CircleCollider2D> ();
-        enemyHealth = new EnemyHealth(health);
         CalculateRaySpacing();
     }
 
-    // Makes enemy switch direction if it it bumps into an object or leaves the ground
+    // Makes enemy switch direction if it it bumps into a floor or ceiling
     void Update ()
     {
-        if (this.enemyHealth.entityHealth == 0) {
-            Destroy(this);
-        }
-
         UpdateRayCast();
         collision.Reset();
 
@@ -90,7 +87,7 @@ public class PurpleEnemy : MonoBehaviour
                 rayLength = hit.distance;
 
                 // Checks if not touching the floor
-                Debug.Log("Wall");
+                // Debug.Log("Floor/Ceiling");
                 ChangeDirection();
                 return;
             }
