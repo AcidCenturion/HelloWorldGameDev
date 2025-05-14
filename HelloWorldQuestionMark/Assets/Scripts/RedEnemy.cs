@@ -121,6 +121,14 @@ public class RedEnemy : MonoBehaviour
             }
         }
     }
+
+    void OnTriggerEnter2D(Collider2D collider)
+    {
+        if (collider.gameObject.CompareTag("Enemy"))
+        {
+            ChangeDirection();
+        }
+    }
     
     // Calculates the bounds of the RayCast
     void UpdateRayCast ()

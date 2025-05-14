@@ -211,13 +211,13 @@ MonoBehaviour:
   horizontalRays: 5
   verticalRays: 5
   skinWidth: 0.1
-  enemyHealth: {fileID: 0}
   enemy: {fileID: 4284351631728321704}
-  enemySpeed: 3.5
-  health: 1
   collideableLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
+  health: 1
+  damage: 1
+  enemySpeed: 3.5
 --- !u!50 &8358912361568507279
 Rigidbody2D:
   serializedVersion: 5
@@ -257,5 +257,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbbcf367554d7e845b4f6cb2e68cab62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0
-  maxHealth: 0
