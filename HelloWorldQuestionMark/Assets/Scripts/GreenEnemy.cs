@@ -12,16 +12,15 @@ public class GreenEnemy : MonoBehaviour
 
     [Header("Enemy")]
     [SerializeField] private Transform enemy;
-
-    [Header("Speed")]
+    [SerializeField] public int health = 1;
+    [SerializeField] public int damage = 1;
     [SerializeField] private float enemySpeed;
-    [SerializeField] public int health;
 
     void Start()
     {
         // Creates a new EnemyHealth
         enemyHealth = enemy.GetComponent<EnemyHealth>();
-        enemyHealth.Init(health);
+        enemyHealth.Init(health, damage);
 
         spriteRenderer = enemy.GetComponent<SpriteRenderer>();
     }

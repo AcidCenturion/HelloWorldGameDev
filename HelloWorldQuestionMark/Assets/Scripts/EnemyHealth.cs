@@ -2,10 +2,9 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
-
-    [SerializeField] private int damage;
-    [SerializeField] private int maxHealth;
+    private int maxHealth;
     private int currentHealth;
+    private int damage;
     private bool isInvulnerable;
 
     public int entityHealth
@@ -21,11 +20,25 @@ public class EnemyHealth : MonoBehaviour
         }
     }
 
-    // Initializes health values
-    public void Init(int health)
+    public int entityDamage
     {
-        currentHealth = health;
-        maxHealth = health;
+        get
+        {
+            return this.damage;
+        }
+
+        set
+        {
+            this.damage = value;
+        }
+    }
+
+    // Initializes health values
+    public void Init(int health, int damage)
+    {
+        this.currentHealth = health;
+        this.maxHealth = health;
+        this.damage = damage;
     }
 
     // Reduces enemy health

@@ -16,9 +16,10 @@ public class RedEnemy : MonoBehaviour
 
     [Header("Enemy")]
     [SerializeField] private Transform enemy;
-    [SerializeField] private float enemySpeed = 5f;
-    [SerializeField] private int health = 1;
     [SerializeField] public LayerMask collideableLayer;
+    [SerializeField] public int health = 1;
+    [SerializeField] public int damage = 1;
+    [SerializeField] private float enemySpeed = 5f;
 
     CircleCollider2D collider;
     RayCast rayCastOrigins;
@@ -28,7 +29,7 @@ public class RedEnemy : MonoBehaviour
     {
         // Creates a new EnemyHealth
         enemyHealth = enemy.GetComponent<EnemyHealth>();
-        enemyHealth.Init(health);
+        enemyHealth.Init(health, damage);
 
         // Sets up enemy collisions with RayCasting
         collider = GetComponent<CircleCollider2D> ();

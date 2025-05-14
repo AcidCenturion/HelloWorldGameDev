@@ -19,7 +19,7 @@ public class PlayerHealth : MonoBehaviour
         if (currentHealth <= 0)
         {
             playerRespawn.Respawn();
-            //Die();
+            // Die();
         }
     }
 
@@ -30,6 +30,17 @@ public class PlayerHealth : MonoBehaviour
     public void ResetHealth() {
         currentHealth = maxHealth;
         Debug.Log("Health Reset to: " + currentHealth);
+    }
+
+    // Takes damage when colliding with enemies
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            EnemyHealth enemyHealth = collision.gameObject.GetComponentInParent<EnemyHealth>();
+            Debug.Log("Player took damage: " + enemyHealth.entityDamage);
+            TakeDamage(enemyHealth.entityDamage);
+        }
     }
 
 }

@@ -14,8 +14,9 @@ public class PurpleEnemy : MonoBehaviour
     [Header("Enemy")]
     [SerializeField] private Transform enemy;
     [SerializeField] private LayerMask collidableLayer;
-    [SerializeField] public float enemySpeed = 5f;
     [SerializeField] public int health = 1;
+    [SerializeField] public int damage = 1;
+    [SerializeField] public float enemySpeed = 5f;
     
 
     CircleCollider2D collider;
@@ -26,7 +27,7 @@ public class PurpleEnemy : MonoBehaviour
     {
         // Creates a new EnemyHealth
         enemyHealth = enemy.GetComponent<EnemyHealth>();
-        enemyHealth.Init(health);
+        enemyHealth.Init(health, damage);
 
         collider = GetComponent<CircleCollider2D> ();
         CalculateRaySpacing();
@@ -37,6 +38,13 @@ public class PurpleEnemy : MonoBehaviour
     {
         UpdateRayCast();
         collision.Reset();
+
+        // Mostly stops the enemy from being moved horizontally
+        Rigidbody2D rb = collider.gameObject.GetComponentInParent<Rigidbody2D>();
+        if (rb != null)
+        {
+            rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
+        }
 
         // Determines movement and checks for if hitting objects
         if (isMovingDown)
@@ -77,9 +85,9 @@ public class PurpleEnemy : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.down, rayLength, collidableLayer);
 
             // Visibly displays rays
-            Debug.DrawRay(rayOrigin, Vector2.down * direction * rayLength, Color.blue);
-            Debug.DrawLine(rayCastOrigins.bottomLeft, rayCastOrigins.bottomRight, Color.blue);
-            Debug.DrawLine(rayCastOrigins.topLeft, rayCastOrigins.topRight, Color.blue);
+            // Debug.DrawRay(rayOrigin, Vector2.down * direction * rayLength, Color.blue);
+            // Debug.DrawLine(rayCastOrigins.bottomLeft, rayCastOrigins.bottomRight, Color.blue);
+            // Debug.DrawLine(rayCastOrigins.topLeft, rayCastOrigins.topRight, Color.blue);
 
             // Checks if the enemy has hit anything that isn't itelf
             if (hit && hit.collider != collider)
