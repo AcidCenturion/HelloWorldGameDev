@@ -15,6 +15,7 @@ public class BossBehavior : MonoBehaviour
     public float swayAmount = 5f;
     Rigidbody2D rb;
 
+    public Transform bossEnemy;
     //Roll Variables
     [Header("Roll Variables")]
     public Transform[] rollPoints;
@@ -47,11 +48,11 @@ public class BossBehavior : MonoBehaviour
     public float groundDistance = 2f;
 
     //Miscellaneous
-    //private EnemyHealth enemyHealth;
+    private EnemyHealth enemyHealth;
     private SpriteRenderer sr;
     private Vector3 lastPosition;
     private Quaternion lastRotation;
-    public int health = 5;
+    public int health = 30;
     public int damage = 1;
     private CircleCollider2D hitbox;
     public float hitboxCooldown = 1;
@@ -64,8 +65,9 @@ public class BossBehavior : MonoBehaviour
 
     void Start()
     {
-        //does this vv work??
-        //enemyHealth = new EnemyHealth(health);
+        //Initializes the EnemyHealth and damage
+        enemyHealth = bossEnemy.GetComponent<EnemyHealth>();
+        enemyHealth.Init(health, damage);
 
         currentSpeed = speed;
         hitbox = GetComponent<CircleCollider2D>();

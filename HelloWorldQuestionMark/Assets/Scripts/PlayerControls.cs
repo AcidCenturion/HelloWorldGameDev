@@ -8,6 +8,7 @@ public class PlayerControls : MonoBehaviour
     public float jumpHeight = 10.0f;
     public float gravityScale = 1.0f;
     private const float gravityValue = -9.81f;
+    private bool isMovingRight = true;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -19,6 +20,7 @@ public class PlayerControls : MonoBehaviour
     void FixedUpdate()
     {
         InputMove();
+        FlipPlayer();
         InputJump();
 
         if (rb.linearVelocityX == 0)
@@ -47,10 +49,12 @@ public class PlayerControls : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
         {
             rb.linearVelocity = playerSpeed * Vector2.right;
+            isMovingRight = true;
         }
         else if (Input.GetKey(KeyCode.A))
         {
             rb.linearVelocity = playerSpeed * Vector2.left;
+            isMovingRight = false;
         }
     }
 
@@ -59,6 +63,20 @@ public class PlayerControls : MonoBehaviour
         if (Input.GetKey(KeyCode.W) && isGrounded())
         {
             rb.linearVelocityY = jumpHeight;
+        }
+    }
+
+    // Changes the Player to look left or right
+    void FlipPlayer ()
+    {
+        // Changes the direction the Player is facing
+        if (isMovingRight)
+        {
+            transform.rotation = Quaternion.Euler(transform.rotation.x, 0, transform.rotation.z);
+        }
+        else
+        {
+            transform.rotation = Quaternion.Euler(transform.rotation.x, 180, transform.rotation.z);
         }
     }
 }
