@@ -57,6 +57,7 @@ public class BossBehavior : MonoBehaviour
     private CircleCollider2D hitbox;
     public float hitboxCooldown = 1;
     private float hitboxTimer = 0;
+    AudioSource rollSound;
 
     enum Attacks
     {
@@ -75,6 +76,9 @@ public class BossBehavior : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         ChooseMoves();
         sr = GetComponent<SpriteRenderer>();
+
+        //change later when more than one sound is needed
+        rollSound = GetComponent<AudioSource>();
         
     }
 
@@ -222,6 +226,7 @@ public class BossBehavior : MonoBehaviour
         }
 
         //resets variables
+        rollSound.Pause();
         numOfRolls = 0;
         currentSpeed = speed;
         ChooseMoves();
@@ -249,6 +254,7 @@ public class BossBehavior : MonoBehaviour
                 if (transform.position == rollPoints[0].position)
                 {
                     reachedFirstPoint = true;
+                    rollSound.Play();
                 }
             }
             else
