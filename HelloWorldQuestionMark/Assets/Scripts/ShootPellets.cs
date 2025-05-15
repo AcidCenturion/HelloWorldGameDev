@@ -20,8 +20,12 @@ public class ShootPellets : MonoBehaviour
     //Cooldown Variables
     private float lastTimeShot = 0;
     [SerializeField] private float cooldown = 0.5f;
+    private AudioSource sound;
 
-
+    void Start()
+    {
+        sound = GetComponent<AudioSource>();
+    }
     void Update()
     {
         //sets spawn location incase player never touched directional keys
@@ -84,6 +88,7 @@ public class ShootPellets : MonoBehaviour
         //Instantiates pellet with direction
         GameObject pel = Instantiate(pellet, spawnLocation, Quaternion.Euler(0,0,rotation));
         pel.GetComponent<Pellets>().direction = this.direction;
+        sound.Play();
         //Debug.Log(spawnLocation);
 
         //starts cooldown
