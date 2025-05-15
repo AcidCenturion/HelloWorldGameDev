@@ -3,6 +3,7 @@ using UnityEngine;
 public class PreBossCutScene : MonoBehaviour
 {
     public GameObject boss;
+    public Transform bossSpawn;
     public GameObject player;
     public float rollSpeed;
     public float rotationSpeed = 25f;
@@ -15,10 +16,18 @@ public class PreBossCutScene : MonoBehaviour
     private float timer;
     public float pauseAfterReached = 1;
     public AudioSource voiceline;
-    void Start()
+
+    void OnEnable()
     {
+        Debug.Log("Enabled");
+        GetComponent<BoxCollider2D>().enabled = true;
+        boss.SetActive(false);
+        boss.transform.position = bossSpawn.position;
         rollPoints[0] = boss.transform;
         voiceline = GetComponent<AudioSource>();
+        isActivated = false;
+        reachedLocation = false;
+        rollPointIndex = 0;
     }
 
     // Update is called once per frame
@@ -45,8 +54,10 @@ public class PreBossCutScene : MonoBehaviour
             EnableBoss();
 
             //set this script to false
-            //GetComponent<PreBossCutScene>().enabled = false;
-            Destroy(gameObject);
+            GetComponent<PreBossCutScene>().enabled = false;
+            GetComponent<BoxCollider2D>().enabled = false;
+            
+            //Destroy(gameObject);
         }
         else
         {
@@ -78,16 +89,12 @@ public class PreBossCutScene : MonoBehaviour
   {
     if (collision.CompareTag("Player"))
     {
-        Debug.Log("COLLIDED");
         isActivated = true;
 
         //boss is set active but unable to move
-        boss.SetActive(true); //not working...
+        boss.SetActive(true); 
         boss.GetComponent<BossBehavior>().enabled = false;
-        boss.GetComponent<BossBehavior>().sr = boss.GetComponent<SpriteRenderer>();
-        //boss.GetComponent<BossBehavior>().enemyHealth = boss.GetComponent<EnemyHealth>();
-        //boss.GetComponent<BossBehavior>().enemyHealth.Init(boss.GetComponent<BossBehavior>().health, boss.GetComponent<BossBehavior>().damage);
-
+ 
         //player unable to move
         player.GetComponent<PlayerControls>().enabled = false;
         player.GetComponent<ShootPellets>().enabled = false;

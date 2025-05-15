@@ -58,27 +58,45 @@ public class BossBehavior : MonoBehaviour
     public float hitboxCooldown = 1;
     private float hitboxTimer = 0;
     AudioSource rollSound;
+    public GameObject cutsceneManager;
 
     enum Attacks
     {
         Roll, Jump, FastRoll
     }
 
-    void Start()
+    void OnEnable()
     {
         //Initializes the EnemyHealth and damage
         enemyHealth = bossEnemy.GetComponent<EnemyHealth>();
         enemyHealth.Init(health, damage);
-
-        currentSpeed = speed;
         hitbox = GetComponent<CircleCollider2D>();
         ground = LayerMask.GetMask("Floor");
         rb = GetComponent<Rigidbody2D>();
         ChooseMoves();
         sr = GetComponent<SpriteRenderer>();
-
-        //change later when more than one sound is needed
         rollSound = GetComponent<AudioSource>();
+
+    }
+  void OnDisable()
+  {
+        numOfRolls = 0;
+  }
+  void Start()
+    {
+        // //Initializes the EnemyHealth and damage
+        // enemyHealth = bossEnemy.GetComponent<EnemyHealth>();
+        // enemyHealth.Init(health, damage);
+
+        currentSpeed = speed;
+        // hitbox = GetComponent<CircleCollider2D>();
+        // ground = LayerMask.GetMask("Floor");
+        // rb = GetComponent<Rigidbody2D>();
+        // ChooseMoves();
+        // sr = GetComponent<SpriteRenderer>();
+
+        // //change later when more than one sound is needed
+        // rollSound = GetComponent<AudioSource>();
         
     }
 
@@ -333,7 +351,6 @@ public class BossBehavior : MonoBehaviour
             hitbox.enabled = false;
             hitboxTimer = 0;
 
-            collision.gameObject.GetComponent<PlayerHealth>().TakeDamage(damage);
         }
     }
 }

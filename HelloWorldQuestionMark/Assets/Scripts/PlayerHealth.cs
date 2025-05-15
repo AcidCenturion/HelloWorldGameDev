@@ -34,11 +34,13 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    public void Die() {
+    public void Die()
+    {
         Debug.Log("Player is dead");
     }
 
-    public void ResetHealth() {
+    public void ResetHealth()
+    {
         currentHealth = maxHealth;
         Debug.Log("Health Reset to: " + currentHealth);
     }
@@ -53,6 +55,11 @@ public class PlayerHealth : MonoBehaviour
             TakeDamage(enemyHealth.entityDamage);
             invulnTimerVal = invulnTimerMax;
         }
+    }
+
+    public int GetHealth()
+    {
+        return this.currentHealth;
     }
 
 }
