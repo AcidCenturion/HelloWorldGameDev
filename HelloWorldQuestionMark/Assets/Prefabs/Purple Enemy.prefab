@@ -12,8 +12,10 @@ GameObject:
   - component: {fileID: 649975243762697337}
   - component: {fileID: 4261025966708237773}
   - component: {fileID: 6057688056387442694}
+  - component: {fileID: 2271883443060887624}
+  - component: {fileID: -7949791554501082490}
   m_Layer: 0
-  m_Name: purple_enemy
+  m_Name: Purple Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -137,11 +139,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b409ee5fec0df9409e18d225176ae44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wallMask:
-    serializedVersion: 2
-    m_Bits: 0
   verticalRays: 5
   skinWidth: 0.1
   enemy: {fileID: 3407300094084056836}
-  enemySpeed: 5
+  collidableLayer:
+    serializedVersion: 2
+    m_Bits: 64
   health: 1
+  damage: 1
+  enemySpeed: 3
+--- !u!50 &2271883443060887624
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3351822470476488556}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!114 &-7949791554501082490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3351822470476488556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbbcf367554d7e845b4f6cb2e68cab62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

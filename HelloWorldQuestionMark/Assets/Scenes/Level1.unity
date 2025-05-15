@@ -1340,11 +1340,24 @@ PrefabInstance:
       propertyPath: m_Name
       value: Green Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 6686002988646479575, guid: 35b3efc86bc7b6a48b08f29d396361a3, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
     - target: {fileID: 8217144383007194578, guid: 35b3efc86bc7b6a48b08f29d396361a3, type: 3}
       propertyPath: m_Constraints
       value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8679565700492859607, guid: 35b3efc86bc7b6a48b08f29d396361a3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.49
+      objectReference: {fileID: 0}
+    - target: {fileID: 8679565700492859607, guid: 35b3efc86bc7b6a48b08f29d396361a3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.35
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 3589728723682013121, guid: 35b3efc86bc7b6a48b08f29d396361a3, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -18164,9 +18177,10 @@ GameObject:
   - component: {fileID: 1700848374}
   - component: {fileID: 1700848373}
   - component: {fileID: 1700848372}
+  - component: {fileID: 1700848377}
   m_Layer: 0
   m_Name: Boss
-  m_TagString: Boss
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18232,7 +18246,7 @@ MonoBehaviour:
   groundDistance: 1.26
   enemyHealth: {fileID: 0}
   sr: {fileID: 1700848376}
-  health: 5
+  health: 10
   damage: 1
   hitboxCooldown: 1
 --- !u!61 &1700848373
@@ -18399,6 +18413,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1700848377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700848370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbbcf367554d7e845b4f6cb2e68cab62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1740052472
 GameObject:
   m_ObjectHideFlags: 0
@@ -19122,6 +19148,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3594290786685777759, guid: 8736c9f5bc6291841b1955f7f66c94a1, type: 3}
+      propertyPath: jumpHeight
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3849577728917053158, guid: 8736c9f5bc6291841b1955f7f66c94a1, type: 3}
       propertyPath: m_Name
       value: Player1
@@ -19129,6 +19159,10 @@ PrefabInstance:
     - target: {fileID: 5012658564386193437, guid: 8736c9f5bc6291841b1955f7f66c94a1, type: 3}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 9027038262518551333, guid: 8736c9f5bc6291841b1955f7f66c94a1, type: 3}
+      propertyPath: m_GravityScale
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

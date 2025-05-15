@@ -52,7 +52,7 @@ public class BossBehavior : MonoBehaviour
     public SpriteRenderer sr;
     private Vector3 lastPosition;
     private Quaternion lastRotation;
-    public int health = 30;
+    public int health = 10;
     public int damage = 1;
     private CircleCollider2D hitbox;
     public float hitboxCooldown = 1;
@@ -65,9 +65,9 @@ public class BossBehavior : MonoBehaviour
 
     void Start()
     {
-        //Initializes the EnemyHealth and damage; I NEEDS TO FIGURE OUT HOW TO MAKE THIS WORK
-        // enemyHealth = bossEnemy.GetComponent<EnemyHealth>();
-        // enemyHealth.Init(health, damage);
+        //Initializes the EnemyHealth and damage
+        enemyHealth = bossEnemy.GetComponent<EnemyHealth>();
+        enemyHealth.Init(health, damage);
 
         currentSpeed = speed;
         hitbox = GetComponent<CircleCollider2D>();

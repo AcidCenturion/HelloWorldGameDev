@@ -80,7 +80,7 @@ GameObject:
   m_Layer: 0
   m_Name: Right Bounds
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -112,6 +112,7 @@ GameObject:
   - component: {fileID: 3347844527231362425}
   - component: {fileID: 3017874350310894324}
   - component: {fileID: 8217144383007194578}
+  - component: {fileID: 3589728723682013121}
   m_Layer: 0
   m_Name: green_enemy
   m_TagString: Enemy
@@ -205,8 +206,9 @@ MonoBehaviour:
   RightPatrolPoint: {fileID: 8679565700492859607}
   LeftPatrolPoint: {fileID: 6886113279631926513}
   enemy: {fileID: 4871914675738585554}
-  enemySpeed: 3.5
   health: 0
+  damage: 1
+  enemySpeed: 3.5
 --- !u!58 &3017874350310894324
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -270,6 +272,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &3589728723682013121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4633209371874702363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbbcf367554d7e845b4f6cb2e68cab62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6144305821861181843
 GameObject:
   m_ObjectHideFlags: 0
@@ -316,7 +330,7 @@ GameObject:
   m_Layer: 0
   m_Name: Left Bounds
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
