@@ -48,8 +48,8 @@ public class BossBehavior : MonoBehaviour
     public float groundDistance = 2f;
 
     //Miscellaneous
-    private EnemyHealth enemyHealth;
-    private SpriteRenderer sr;
+    public EnemyHealth enemyHealth;
+    public SpriteRenderer sr;
     private Vector3 lastPosition;
     private Quaternion lastRotation;
     public int health = 30;
@@ -65,9 +65,9 @@ public class BossBehavior : MonoBehaviour
 
     void Start()
     {
-        //Initializes the EnemyHealth and damage
-        enemyHealth = bossEnemy.GetComponent<EnemyHealth>();
-        enemyHealth.Init(health, damage);
+        //Initializes the EnemyHealth and damage; I NEEDS TO FIGURE OUT HOW TO MAKE THIS WORK
+        // enemyHealth = bossEnemy.GetComponent<EnemyHealth>();
+        // enemyHealth.Init(health, damage);
 
         currentSpeed = speed;
         hitbox = GetComponent<CircleCollider2D>();
@@ -285,7 +285,7 @@ public class BossBehavior : MonoBehaviour
         lastRotation = transform.rotation;
 
         //Randomly chooses an attack
-        currentAttack = Random.Range(1,2);
+        currentAttack = Random.Range(0,3);
 
         //resets variables
         transform.rotation = Quaternion.identity;
