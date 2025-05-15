@@ -147,7 +147,7 @@ MonoBehaviour:
     m_Bits: 64
   health: 1
   damage: 1
-  enemySpeed: 2
+  speed: 3.5
 --- !u!50 &2271883443060887624
 Rigidbody2D:
   serializedVersion: 5

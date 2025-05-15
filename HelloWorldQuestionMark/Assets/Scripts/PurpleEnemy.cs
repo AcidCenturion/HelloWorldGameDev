@@ -1,4 +1,4 @@
-using System;
+using System.Collections;
 using UnityEngine;
 
 
@@ -10,27 +10,31 @@ public class PurpleEnemy : MonoBehaviour
     public float skinWidth = 0.1f;
     private bool isMovingDown;
     private EnemyHealth enemyHealth;
+    private float enemySpeed;
 
     [Header("Enemy")]
     [SerializeField] private Transform enemy;
     [SerializeField] private LayerMask collidableLayer;
     [SerializeField] public int health = 1;
     [SerializeField] public int damage = 1;
-    [SerializeField] public float enemySpeed = 5f;
+    [SerializeField] public float speed;
     
 
     CircleCollider2D collider;
     RayCast rayCastOrigins;
     public CollisionDetection collision;
 
-    void Start ()
+    void Start()
     {
         // Creates a new EnemyHealth
         enemyHealth = enemy.GetComponent<EnemyHealth>();
         enemyHealth.Init(health, damage);
 
-        collider = GetComponent<CircleCollider2D> ();
+        collider = GetComponent<CircleCollider2D>();
         CalculateRaySpacing();
+
+        // Sets enemySpeed 5 seconds after starting to account for lag without the enemy flying out of the map
+        StartCoroutine(UpdateEnemySpeed());
     }
 
     // Makes enemy switch direction if it it bumps into a floor or ceiling
@@ -110,6 +114,13 @@ public class PurpleEnemy : MonoBehaviour
         rayCastOrigins.topRight = new Vector2(bounds.max.x, bounds.max.y);
         rayCastOrigins.bottomLeft = new Vector2(bounds.min.x, bounds.min.y);
         rayCastOrigins.bottomRight = new Vector2(bounds.max.x, bounds.min.y);
+    }
+
+    // Sets the enemySpeed later to stop the enemy from flying out of the map due to lag
+    IEnumerator UpdateEnemySpeed()
+    {
+        yield return new WaitForSeconds(5f);
+        this.enemySpeed = speed;
     }
 
     void Movement (int direction)

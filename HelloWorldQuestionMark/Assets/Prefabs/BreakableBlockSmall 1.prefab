@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -5811357949374069614}
   - component: {fileID: -406457855888196202}
   - component: {fileID: 7462485701289240896}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BreakableBlockSmall 1
   m_TagString: Breakable
   m_Icon: {fileID: 0}
