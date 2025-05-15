@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: aede1d01bb4634b41a177aa46f5dec5e
+guid: adffb7808873da14f93afbeec3156dca
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5445275936761299233
-    second: BreakableBlocks_0
-  - first:
-      213: -3976364126116353224
-    second: BreakableBlocks_1
+      213: 2653601169181414648
+    second: BreakableBlockSmall_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +48,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 16
@@ -103,33 +100,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BreakableBlocks_0
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 34
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 121c3aa3d91819b40800000000000000
-      internalID: 5445275936761299233
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BreakableBlocks_1
+      name: BreakableBlockSmall_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 18
+        y: 0
         width: 16
         height: 16
       alignment: 0
@@ -140,52 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 83b6a3d15ed11d8c0800000000000000
-      internalID: -3976364126116353224
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BreakableBlocks_2
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 18
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8b1e04a86e5b49f40a7614aacd888bd1
-      internalID: -1275418734
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BreakableBlocks_3
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 2
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3416bc8622473c34e9c6e11d1c03a477
-      internalID: 1145698770
+      spriteID: 8f49e98343c73d420800000000000000
+      internalID: 2653601169181414648
       vertices: []
       indices: 
       edges: []
@@ -194,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: a20d4228fce41b74a91a2b56715fea97
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -204,10 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      BreakableBlocks_0: 5445275936761299233
-      BreakableBlocks_1: -3976364126116353224
-      BreakableBlocks_2: -1275418734
-      BreakableBlocks_3: 1145698770
+      BreakableBlockSmall_0: 2653601169181414648
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
