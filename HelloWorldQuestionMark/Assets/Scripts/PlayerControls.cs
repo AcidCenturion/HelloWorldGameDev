@@ -48,12 +48,12 @@ public class PlayerControls : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.D))
         {
-            rb.linearVelocity = playerSpeed * Vector2.right;
+            rb.linearVelocityX = playerSpeed;
             isMovingRight = true;
         }
         else if (Input.GetKey(KeyCode.A))
         {
-            rb.linearVelocity = playerSpeed * Vector2.left;
+            rb.linearVelocityX = playerSpeed * -1;
             isMovingRight = false;
         }
     }

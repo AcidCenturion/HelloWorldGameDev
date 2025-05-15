@@ -155,6 +155,8 @@ GameObject:
   - component: {fileID: 898381669166368206}
   - component: {fileID: 3594290786685777759}
   - component: {fileID: 7354872676231984258}
+  - component: {fileID: 7694379650496105639}
+  - component: {fileID: 3013298104832311198}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -340,5 +342,30 @@ MonoBehaviour:
   up: 273
   shoot: 32
   pellet: {fileID: 6009197037816656813, guid: e1d15de0945eb50409df64eeb53a2276, type: 3}
-  spawnDistance: 0
+  spawnDistance: 1
   cooldown: 0.5
+--- !u!114 &7694379650496105639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5012658564386193437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc8255c4cf71d431987357c01c508145, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 3
+--- !u!114 &3013298104832311198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5012658564386193437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83e4ca396d16d48fd949c4e092a803cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
