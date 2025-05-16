@@ -5,7 +5,8 @@ public class PlayerRespawn : MonoBehaviour
     private PlayerHealth playerHealth;
     private Vector2 respawnPoint;
     public GameObject boss; //For Boss cutscene
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+                            // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public GameObject bgm;
     private void Start()
     {
         respawnPoint = transform.position; // Initial spawn position
@@ -27,6 +28,10 @@ public class PlayerRespawn : MonoBehaviour
         if (boss != null)
         {
             boss.GetComponent<PreBossCutScene>().enabled = true;
+        }
+        if (bgm != null)
+        {
+            bgm.GetComponent<AudioSource>().Play();
         }
         Debug.Log("Respawned! Health reset.");
     }

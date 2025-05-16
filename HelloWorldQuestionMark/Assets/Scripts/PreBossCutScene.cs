@@ -7,7 +7,7 @@ public class PreBossCutScene : MonoBehaviour
     public GameObject player;
     public float rollSpeed;
     public float rotationSpeed = 25f;
-    public Transform[] rollPoints; 
+    public Transform[] rollPoints;
     int rollPointIndex = 0;
     [Header("Temp Variables")]
     bool isActivated = false;
@@ -16,6 +16,8 @@ public class PreBossCutScene : MonoBehaviour
     private float timer;
     public float pauseAfterReached = 1;
     public AudioSource voiceline;
+    public AudioSource bossMusic;
+    public GameObject NormalBGM;
 
     void OnEnable()
     {
@@ -28,6 +30,14 @@ public class PreBossCutScene : MonoBehaviour
         isActivated = false;
         reachedLocation = false;
         rollPointIndex = 0;
+
+        AudioSource[] audiolist = GetComponents<AudioSource>();
+        voiceline = audiolist[0];
+        bossMusic = audiolist[1];
+
+        //Makes sure boss music is always paused
+        bossMusic.Pause();
+
     }
 
     // Update is called once per frame
@@ -56,13 +66,13 @@ public class PreBossCutScene : MonoBehaviour
             //set this script to false
             GetComponent<PreBossCutScene>().enabled = false;
             GetComponent<BoxCollider2D>().enabled = false;
-            
+
             //Destroy(gameObject);
         }
         else
         {
             boss.transform.position = Vector3.MoveTowards(boss.transform.position, rollPoints[rollPointIndex].position, Time.deltaTime * rollSpeed);
-            boss.transform.Rotate(boss.transform.rotation.x, boss.transform.rotation.y,  Time.deltaTime * rollSpeed * rotationSpeed);
+            boss.transform.Rotate(boss.transform.rotation.x, boss.transform.rotation.y, Time.deltaTime * rollSpeed * rotationSpeed);
 
             if (boss.transform.position == rollPoints[rollPointIndex].position)
             {
@@ -75,29 +85,32 @@ public class PreBossCutScene : MonoBehaviour
                 boss.transform.rotation = Quaternion.identity;
                 voiceline.Play();
             }
-            
+
         }
-        
+
     }
 
     //After showcase, method called after dialogue is finished
     public void EnableBoss()
     {
         boss.GetComponent<BossBehavior>().enabled = true;
+        NormalBGM.GetComponent<AudioSource>().Pause();
+        bossMusic.Play();
     }
-  void OnTriggerEnter2D(Collider2D collision)
-  {
-    if (collision.CompareTag("Player"))
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        isActivated = true;
+        if (collision.CompareTag("Player"))
+        {
+            isActivated = true;
 
-        //boss is set active but unable to move
-        boss.SetActive(true); 
-        boss.GetComponent<BossBehavior>().enabled = false;
- 
-        //player unable to move
-        player.GetComponent<PlayerControls>().enabled = false;
-        player.GetComponent<ShootPellets>().enabled = false;
+            //boss is set active but unable to move
+            boss.SetActive(true);
+            boss.GetComponent<BossBehavior>().enabled = false;
+
+            //player unable to move
+            player.GetComponent<PlayerControls>().enabled = false;
+            player.GetComponent<ShootPellets>().enabled = false;
+        }
     }
-  }
 }
+//Note When Reset, restart normalBGM and stop bossMusic

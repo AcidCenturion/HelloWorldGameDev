@@ -28,7 +28,7 @@ public class BossBehavior : MonoBehaviour
     private bool reachedFirstPoint = false;
     public float jumpHeightBeforeRolling = 7f;
     public float swayRotation = 90;
-    
+
     //Attacking timeframe variables
     [Header("Attack timeframe Variables")]
     private bool isAttacking = false;
@@ -36,7 +36,7 @@ public class BossBehavior : MonoBehaviour
     private float timeSinceAttack = 0;
     public float attackCooldown = 3f;
     public float timeToLook = 2f;
-    
+
     [Header("Player Variables")]
     public GameObject player;
     Vector2 playerPosition;
@@ -58,6 +58,7 @@ public class BossBehavior : MonoBehaviour
     public float hitboxCooldown = 1;
     private float hitboxTimer = 0;
     AudioSource rollSound;
+    AudioSource jumpSound;
     public GameObject cutsceneManager;
 
     enum Attacks
@@ -77,27 +78,18 @@ public class BossBehavior : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
         rollSound = GetComponent<AudioSource>();
 
+        AudioSource[] aSources = GetComponents<AudioSource>();
+        rollSound = aSources[0];
+        jumpSound = aSources[1];
+
     }
-  void OnDisable()
-  {
-        numOfRolls = 0;
-  }
-  void Start()
+    void OnDisable()
     {
-        // //Initializes the EnemyHealth and damage
-        // enemyHealth = bossEnemy.GetComponent<EnemyHealth>();
-        // enemyHealth.Init(health, damage);
-
+        numOfRolls = 0;
+    }
+    void Start()
+    {
         currentSpeed = speed;
-        // hitbox = GetComponent<CircleCollider2D>();
-        // ground = LayerMask.GetMask("Floor");
-        // rb = GetComponent<Rigidbody2D>();
-        // ChooseMoves();
-        // sr = GetComponent<SpriteRenderer>();
-
-        // //change later when more than one sound is needed
-        // rollSound = GetComponent<AudioSource>();
-        
     }
 
     // Update is called once per frame
@@ -109,13 +101,13 @@ public class BossBehavior : MonoBehaviour
         {
             switch (currentAttack)
             {
-                case (int) Attacks.Roll:
+                case (int)Attacks.Roll:
 
                     //rolls in default speed
                     currentSpeed = speed;
                     Roll(MaxNumOfRolls);
                     break;
-                case (int) Attacks.Jump:
+                case (int)Attacks.Jump:
                     //boss faces left/right depending on player x coord
                     if (transform.position.x > playerPosition.x)
                     {
@@ -132,6 +124,8 @@ public class BossBehavior : MonoBehaviour
                         timeSinceAttack += Time.deltaTime;
                         return;
                     }
+
+                    jumpSound.Play();
 
                     //if boss hasn't reached jump location
                     if (!reachedPlayerPosition)
@@ -162,11 +156,11 @@ public class BossBehavior : MonoBehaviour
                             rb.bodyType = RigidbodyType2D.Kinematic;
                             ChooseMoves();
                         }
-                        
+
                     }
                     break;
 
-                case (int) Attacks.FastRoll:
+                case (int)Attacks.FastRoll:
 
                     //Speed builds up over time
                     if (currentSpeed < maxRollSpeed)
@@ -198,7 +192,7 @@ public class BossBehavior : MonoBehaviour
             else
             {
                 sr.flipX = true;
-            
+
             }
             timeSinceAttack += Time.deltaTime;
 
@@ -208,22 +202,23 @@ public class BossBehavior : MonoBehaviour
 
         }
 
-        
+
     }
 
-  //Visualize GroundChecker (Optional)
-  void OnDrawGizmos()
-  {
-    Gizmos.DrawCube(transform.position - transform.up * groundDistance, groundCheck);
-  }
+    //Visualize GroundChecker (Optional)
+    void OnDrawGizmos()
+    {
+        Gizmos.DrawCube(transform.position - transform.up * groundDistance, groundCheck);
+    }
 
-  private void RollInCircle(float maxAmount) {
+    private void RollInCircle(float maxAmount)
+    {
 
         //if path hasnt finished & theres still more rounds to complete
         if (rollPointsIndex <= rollPoints.Length && numOfRolls < maxAmount)
         {
             //boss rolls/spins to next point
-            transform.Rotate(transform.rotation.x, transform.rotation.y,  -Time.deltaTime * currentSpeed * rotationSpeed);
+            transform.Rotate(transform.rotation.x, transform.rotation.y, -Time.deltaTime * currentSpeed * rotationSpeed);
             transform.position = Vector2.MoveTowards(transform.position, rollPoints[rollPointsIndex].transform.position, Time.deltaTime * currentSpeed);
 
             //if new point reached, set index to next point
@@ -253,9 +248,9 @@ public class BossBehavior : MonoBehaviour
     private void Roll(float maxAmount)
     {
         //Jumps to area above rolling path's first location
-        if ((Vector2)transform.position != new Vector2(rollPoints[0].position.x, rollPoints[0].position.y + jumpHeightBeforeRolling ) && !reachedAboveFirstPoint)
+        if ((Vector2)transform.position != new Vector2(rollPoints[0].position.x, rollPoints[0].position.y + jumpHeightBeforeRolling) && !reachedAboveFirstPoint)
         {
-            JumpTo(new Vector2(rollPoints[0].position.x, rollPoints[0].position.y + jumpHeightBeforeRolling ));
+            JumpTo(new Vector2(rollPoints[0].position.x, rollPoints[0].position.y + jumpHeightBeforeRolling));
             return;
         }
         else
@@ -282,7 +277,7 @@ public class BossBehavior : MonoBehaviour
         }
     }
 
-  
+
     //---helper functions---
     private void JumpTo(Vector2 position) //jumps to player or middle of stage
     {
@@ -292,14 +287,14 @@ public class BossBehavior : MonoBehaviour
         {
             transform.position = Vector2.MoveTowards(transform.position, position, jumpSpeed * Time.deltaTime);
         }
-        
+
     }
     private float SinAmount()
     {
         return Mathf.Sin(Time.time * swaySpeed) * swayAmount;
     }
-    
-    
+
+
     private void ChooseMoves()
     {
         hitbox.enabled = true;
@@ -309,7 +304,7 @@ public class BossBehavior : MonoBehaviour
         lastRotation = transform.rotation;
 
         //Randomly chooses an attack
-        currentAttack = Random.Range(0,3);
+        currentAttack = Random.Range(0, 3);
 
         //resets variables
         transform.rotation = Quaternion.identity;
@@ -353,4 +348,6 @@ public class BossBehavior : MonoBehaviour
 
         }
     }
+    
+    //when boss dies, play normal bgm
 }
