@@ -2667,7 +2667,7 @@ MonoBehaviour:
   - {fileID: 948871497}
   - {fileID: 823711140}
   destination: {fileID: 0}
-  pauseAfterReached: 3
+  pauseAfterReached: 12
   voiceline: {fileID: 0}
   bossMusic: {fileID: 0}
   NormalBGM: {fileID: 1956339493}
@@ -2681,8 +2681,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 49daf98b20f48df4497a5e007e43b6e5, type: 3}
-  m_Resource: {fileID: 8300000, guid: 49daf98b20f48df4497a5e007e43b6e5, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 224453219f4dfde43aa7434afab02971, type: 3}
+  m_Resource: {fileID: 8300000, guid: 224453219f4dfde43aa7434afab02971, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -21101,7 +21101,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 1f4e9d65d896ebf41ac6d50a4295246c, type: 3}
   m_Resource: {fileID: 8300000, guid: 1f4e9d65d896ebf41ac6d50a4295246c, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.6
+  m_Volume: 0.139
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -21579,7 +21579,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3004010351046849166, guid: 8736c9f5bc6291841b1955f7f66c94a1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.4
+      value: 98.9
       objectReference: {fileID: 0}
     - target: {fileID: 3004010351046849166, guid: 8736c9f5bc6291841b1955f7f66c94a1, type: 3}
       propertyPath: m_LocalPosition.y
