@@ -5,8 +5,8 @@ public class PlayerControls : MonoBehaviour
     private Rigidbody2D rb;
     public LayerMask groundLayers;
     public float playerSpeed = 2.0f;
-    public float jumpHeight = 10.0f;
-    public float gravityScale = 1.0f;
+    public float jumpHeight = 40.0f;
+    public float gravityScale = 10.0f;
     private const float gravityValue = -9.81f;
     private bool isMovingRight = true;
 
