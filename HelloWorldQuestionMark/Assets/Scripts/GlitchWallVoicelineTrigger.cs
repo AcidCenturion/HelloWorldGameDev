@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class FirstVoicelineTrigger : MonoBehaviour
+public class GlitchWallVoicelineTrigger : MonoBehaviour
 {
     AudioSource source;
     Collider2D soundTrigger;
