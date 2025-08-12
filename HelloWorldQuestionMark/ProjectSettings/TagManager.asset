@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Boss
   - Wall
+  - CameraMoveZone
   layers:
   - Default
   - TransparentFX
