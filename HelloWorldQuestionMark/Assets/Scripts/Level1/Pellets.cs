@@ -13,7 +13,6 @@ public class Pellets : MonoBehaviour
     [SerializeField] private int dmg = 1;
     [SerializeField] private float duration = 5f;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         //five directions it can move: left, leftUp, up, rightUp, right

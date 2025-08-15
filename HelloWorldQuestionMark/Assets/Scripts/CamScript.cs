@@ -81,8 +81,8 @@ public class CamScript : MonoBehaviour
         //Move the camera with Lerp
         transform.position = Vector3.Lerp(transform.position, supposedPos, speed * Time.deltaTime);
         targetScript.OnTriggerEnter2D(playerCollider2D);
-        Debug.Log("camPos: " + CameraPosition);
-        Debug.Log("supPos: " + supposedPos);
+        // Debug.Log("camPos: " + CameraPosition);
+        // Debug.Log("supPos: " + supposedPos);
     }
 }
     

@@ -25,13 +25,14 @@ public class ShootPellets : MonoBehaviour
     void Start()
     {
         sound = GetComponent<AudioSource>();
+        DefaultDirection();
+        
+        //sets spawn location incase player never touched directional keys
+        spawnLocation = new Vector2(transform.position.x + spawnDistance, transform.position.y);
     }
     void Update()
     {
-        //sets spawn location incase player never touched directional keys
-        spawnLocation = new Vector2(transform.position.x + spawnDistance, transform.position.y);
-        DefaultDirection();
-
+        
         //changes direction based on input keys
         ChangeDirection();
         if (Input.GetKeyDown(shoot))
@@ -89,7 +90,7 @@ public class ShootPellets : MonoBehaviour
         GameObject pel = Instantiate(pellet, spawnLocation, Quaternion.Euler(0,0,rotation));
         pel.GetComponent<Pellets>().direction = this.direction;
         sound.Play();
-        //Debug.Log(spawnLocation);
+        Debug.Log(spawnLocation);
 
         //starts cooldown
         lastTimeShot = Time.time;
