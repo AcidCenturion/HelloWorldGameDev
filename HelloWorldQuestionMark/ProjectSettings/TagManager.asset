@@ -10,6 +10,9 @@ TagManager:
   - Boss
   - Wall
   - CameraMoveZone
+  - Pot
+  - Sword
+  - Coin
   layers:
   - Default
   - TransparentFX

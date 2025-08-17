@@ -7,6 +7,8 @@ public class L2PlayerMovement : MonoBehaviour
     private Vector2 moveDirection;
     private bool facingRight = true;
 
+    public int CoinCounter = 0;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -56,5 +58,15 @@ public class L2PlayerMovement : MonoBehaviour
         {
             transform.rotation = Quaternion.Euler(transform.rotation.x, 180, transform.rotation.z);
         }
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    { 
+        if(other.CompareTag("Coin"))
+        {
+            
+            CoinCounter++;
+        }
+
     }
 }

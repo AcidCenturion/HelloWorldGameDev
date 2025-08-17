@@ -62,7 +62,6 @@ public class Sword : MonoBehaviour
     void Update()
     {
         transform.position = transform.position + (move * speed * Time.deltaTime);
-        //OnTriggerEnter2D(GetComponent<Collider2D>());
     }
 
     void OnTriggerEnter2D(Collider2D collider)
