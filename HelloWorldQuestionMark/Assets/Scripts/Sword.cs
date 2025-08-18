@@ -10,12 +10,11 @@ public class Sword : MonoBehaviour
 
     [Header("Stats")]
     [SerializeField] private float speed = 5f;
-    [SerializeField] private int dmg = 1;
     [SerializeField] private float duration = 5f;
 
     void Start()
     {
-        //eight  directions it can move (compass directions)
+        //eight directions it can move (compass directions)
         switch (direction)
         {
             case "west":
@@ -59,11 +58,13 @@ public class Sword : MonoBehaviour
         Destroy(gameObject, duration);
     }
 
+    //moves sword
     void Update()
     {
         transform.position = transform.position + (move * speed * Time.deltaTime);
     }
 
+    //breaks sword if hits any collider
     void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.gameObject != null)
@@ -71,37 +72,6 @@ public class Sword : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
-    
-    
-    
-    
-    
-    
-    
-    //create method that destroys itself when it contacts collider
-    // void OnTriggerEnter2D(Collider2D collider)
-    // {
-    
-    //      Debug.Log("Object hit");
-    //     if (collider.gameObject.CompareTag("Breakable"))
-    //     {
-    //         Debug.Log("wall hit");
-    //         //Trigger in Breakable Objects always in a child object of the breakable object
-    //         collider.gameObject.GetComponentInParent<Breakable>().DecreaseDurability(dmg);
-            
-    //     }
-    //     else if (collider.gameObject.CompareTag("Enemy"))
-    //     {
-    //         //Trigger in Enemy Objects always in a child object of the enemy object
-    //         //Makes the enemy take 1 point of damage; enemy will die once health <= 0
-    //         //Works for Bosses too
-    //          Debug.Log("Enemy detected");
-    //         EnemyHealth enemyHealth = collider.gameObject.GetComponentInParent<EnemyHealth>();
-    //         enemyHealth.takeDamage(1);
-    //     }
-
-    //     Destroy(gameObject);
-    // }
     
 
 }

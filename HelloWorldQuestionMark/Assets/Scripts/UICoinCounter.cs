@@ -19,7 +19,6 @@ public class UICoinCounter : MonoBehaviour
         CoinCounterHere = playerScript.CoinCounter;
     }
 
-    // Update is called once per frame
     void Update()
     {
         textElement.text = CoinCounterHere.ToString() + " coins";

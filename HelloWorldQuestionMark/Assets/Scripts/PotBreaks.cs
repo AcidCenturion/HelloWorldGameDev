@@ -29,6 +29,7 @@ public class PotBreaks : MonoBehaviour
     {
         yield return new WaitForSeconds(0.3f);
         
+        //Instantiates between 0 and 2 coins (random) when pot Breaks, then destroys pot
         for (int i = 0; i < random; i++)
         {
             GameObject coin = Instantiate(coinObject, transform.position, Quaternion.Euler(0,0,0));
