@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f590608a85de1c8439ba100ab0f19ad3
+guid: 39e4ae20548155c48a82edd1e96f785c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7675826601332790545
-    second: coin_0
+      213: 9086330430583065420
+    second: playerDeath3_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: coin_0
+      name: playerDeath3_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 115
-        height: 139
+        x: 17
+        y: 22
+        width: 177
+        height: 61
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1155fe920a3068a60800000000000000
-      internalID: 7675826601332790545
+      spriteID: c4bc9ba9261291e70800000000000000
+      internalID: 9086330430583065420
       vertices: []
       indices: 
       edges: []
