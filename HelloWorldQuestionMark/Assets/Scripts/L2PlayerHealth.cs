@@ -7,18 +7,25 @@ public class L2PlayerHealth : MonoBehaviour
     public Rigidbody2D rb;
     public int Health = 3;
     private Vector2 spawnLocation;
+    private bool isDead = false;
 
     private Animator anim;
     public L2PlayerMovement playerScript;
+
+    [Header("iFrames")]
+    private SpriteRenderer spriteRend;
+    [SerializeField] private float iFrameDuration;
+    [SerializeField] private int numberOfFlashes;
 
 
 
     void Awake()
     {
         spawnLocation = transform.position;
+        spriteRend = GetComponent<SpriteRenderer>();
         //Debug.Log("spawn loc: " + spawnLocation);
     }
-    
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -28,22 +35,28 @@ public class L2PlayerHealth : MonoBehaviour
 
     void Update()
     {
-        
+
         if (Health == 0)
         {
             StartCoroutine(DeathAnimWait());
+        }
+
+        if (isDead == true)
+        {
+            rb.linearVelocity = Vector2.zero;
         }
     }
 
     IEnumerator DeathAnimWait()
     {
         playerScript.enabled = false;
-        rb.linearVelocity = Vector2.zero;
         anim.SetBool("isDead", true);
+        isDead = true;
 
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(0.7f);
 
         rb.position = spawnLocation;
+        isDead = false;
         anim.SetBool("isDead", false);
         playerScript.enabled = true;
         Health = 3;
@@ -52,11 +65,30 @@ public class L2PlayerHealth : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("Enemy"))
+        if (Health > 0)
         {
-            Health --;
+            if (other.gameObject.CompareTag("Enemy"))
+            {
+            Health--;
+            StartCoroutine(ActivateInvulnerability());
+            }
+            Debug.Log("health: " + Health);
         }
-        //Debug.Log("health: " + Health);
+    }
+
+    IEnumerator ActivateInvulnerability()
+    {
+        Physics2D.IgnoreLayerCollision(9, 8, true);
+        
+        for (int i = 0; i < numberOfFlashes; i++)
+        {
+            spriteRend.color = new Color(1, 0.4f, 0.4f, 1);
+            yield return new WaitForSeconds(iFrameDuration / (numberOfFlashes*2));
+            spriteRend.color = Color.white;
+            yield return new WaitForSeconds(iFrameDuration / (numberOfFlashes*2));
+        }
+        Physics2D.IgnoreLayerCollision(9, 8, false);
+        
     }
 
 }

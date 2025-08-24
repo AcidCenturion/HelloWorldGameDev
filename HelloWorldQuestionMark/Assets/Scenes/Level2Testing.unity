@@ -1254,9 +1254,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e2b64057eadb4545902a686b205af29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 0}
+  rb: {fileID: 988804893}
   Health: 3
   playerScript: {fileID: 0}
+  iFrameDuration: 0.5
+  numberOfFlashes: 3
 --- !u!95 &988804890
 Animator:
   serializedVersion: 7
@@ -1279,6 +1281,11 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!50 &988804893 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 1546900695094195184, guid: b6218a03762f8074bbfb7b25d28a5efe, type: 3}
+  m_PrefabInstance: {fileID: 3894019963698757988}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1044838425
 GameObject:
   m_ObjectHideFlags: 0
@@ -4668,9 +4675,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2495358329399854808, guid: 16f21a31b12551b43946ff030e9894a7, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3588511876130288161, guid: 16f21a31b12551b43946ff030e9894a7, type: 3}
       propertyPath: m_Name
       value: L2GreenEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 3588511876130288161, guid: 16f21a31b12551b43946ff030e9894a7, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3588511876130288161, guid: 16f21a31b12551b43946ff030e9894a7, type: 3}
       propertyPath: m_TagString
@@ -4790,6 +4805,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: L2Player
       objectReference: {fileID: 0}
+    - target: {fileID: 106443124857915915, guid: b6218a03762f8074bbfb7b25d28a5efe, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1593001209842342069, guid: b6218a03762f8074bbfb7b25d28a5efe, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 2389892246288498549, guid: b6218a03762f8074bbfb7b25d28a5efe, type: 3}
       propertyPath: m_LocalPosition.x
       value: 12.32
@@ -4829,6 +4852,26 @@ PrefabInstance:
     - target: {fileID: 2389892246288498549, guid: b6218a03762f8074bbfb7b25d28a5efe, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2725640747163629661, guid: b6218a03762f8074bbfb7b25d28a5efe, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2854668012973877124, guid: b6218a03762f8074bbfb7b25d28a5efe, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2854668012973877124, guid: b6218a03762f8074bbfb7b25d28a5efe, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2854668012973877124, guid: b6218a03762f8074bbfb7b25d28a5efe, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2854668012973877124, guid: b6218a03762f8074bbfb7b25d28a5efe, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5989358780595534067, guid: b6218a03762f8074bbfb7b25d28a5efe, type: 3}
       propertyPath: m_IsTrigger
@@ -4900,6 +4943,10 @@ PrefabInstance:
     - target: {fileID: 5091514163147776811, guid: de483d4ff96be5f4886a4884411e3c66, type: 3}
       propertyPath: m_Name
       value: L2PurpleEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 5091514163147776811, guid: de483d4ff96be5f4886a4884411e3c66, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5022,6 +5069,10 @@ PrefabInstance:
     - target: {fileID: 6416463312355240333, guid: d6bb13609561b8249bb2dbf7b11b384f, type: 3}
       propertyPath: m_Name
       value: L2RedEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 6416463312355240333, guid: d6bb13609561b8249bb2dbf7b11b384f, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6416463312355240333, guid: d6bb13609561b8249bb2dbf7b11b384f, type: 3}
       propertyPath: m_TagString
