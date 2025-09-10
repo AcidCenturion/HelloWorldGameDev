@@ -159,7 +159,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      zeldaHat_0: 8724896670069278020
+      zeldaHat_1: -6416938328014897979
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

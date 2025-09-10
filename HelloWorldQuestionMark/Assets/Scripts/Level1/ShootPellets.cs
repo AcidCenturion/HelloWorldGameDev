@@ -43,18 +43,17 @@ public class ShootPellets : MonoBehaviour
 
     private void ChangeDirection()
     {
+        float temp = Mathf.Sqrt(Mathf.Pow(spawnDistance, 2) + Mathf.Pow(spawnDistance, 2)) / 2;
         if (Input.GetKey(left) && Input.GetKey(up))
         {
             direction = "leftUp";
             rotation = 315;
-            float temp = Mathf.Sqrt(Mathf.Pow(spawnDistance, 2) + Mathf.Pow(spawnDistance, 2)) / 2;
             spawnLocation = new Vector2(transform.position.x - temp, transform.position.y + temp);
         }
         else if (Input.GetKey(right) && Input.GetKey(up))
         {
             direction = "rightUp";
             rotation = 225;
-            float temp = Mathf.Sqrt(Mathf.Pow(spawnDistance, 2) + Mathf.Pow(spawnDistance, 2)) / 2;
             spawnLocation = new Vector2(transform.position.x + temp, transform.position.y + temp);
         }
         else if (Input.GetKey(left))
@@ -74,6 +73,27 @@ public class ShootPellets : MonoBehaviour
             direction = "right";
             rotation = 180;
             spawnLocation = new Vector2(transform.position.x + spawnDistance, transform.position.y);
+        }
+        else
+        {
+            switch (direction)
+            {
+                case "leftUp":
+                    spawnLocation = new Vector2(transform.position.x - temp, transform.position.y + temp);
+                    break;
+                case "rightUp":
+                    spawnLocation = new Vector2(transform.position.x + temp, transform.position.y + temp);
+                    break;
+                case "left":
+                    spawnLocation = new Vector2(transform.position.x - spawnDistance, transform.position.y);
+                    break;
+                case "up":
+                    spawnLocation = new Vector2(transform.position.x, transform.position.y + spawnDistance);
+                    break;
+                case "right":
+                    spawnLocation = new Vector2(transform.position.x + spawnDistance, transform.position.y);
+                    break;
+            }
         }
         //Debug.Log(direction);
 
