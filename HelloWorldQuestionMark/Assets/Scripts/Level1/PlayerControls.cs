@@ -1,3 +1,4 @@
+using Unity.Mathematics;
 using UnityEngine;
 
 public class PlayerControls : MonoBehaviour
@@ -6,7 +7,8 @@ public class PlayerControls : MonoBehaviour
     public LayerMask groundLayers;
     public float playerSpeed = 2.0f;
     public float jumpHeight = 40.0f;
-    public float gravityScale = 10.0f;
+    public float gravityScale = 1.0f;
+    public float fallSpeedCap = 15;
     private const float gravityValue = -9.81f;
     private bool isMovingRight = true;
 
@@ -17,18 +19,25 @@ public class PlayerControls : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         InputMove();
         FlipPlayer();
         InputJump();
+    }
 
+    void FixedUpdate()
+    {
         if (rb.linearVelocityX == 0)
         {
             rb.linearVelocityX = 0;
         }
 
         rb.linearVelocityY += gravityValue * gravityScale * Time.fixedDeltaTime;
+        if (rb.linearVelocityY < -fallSpeedCap) // Caps the player's fall speed so they can't glitch through the floor
+        {
+            rb.linearVelocityY = -fallSpeedCap;
+        }
     }
 
     private bool isGrounded()
@@ -60,8 +69,9 @@ public class PlayerControls : MonoBehaviour
 
     public void InputJump()
     {
-        if (Input.GetKey(KeyCode.W) && isGrounded())
+        if (Input.GetKeyDown(KeyCode.W) && isGrounded())
         {
+            Debug.Log("Player Jumpd");
             rb.linearVelocityY = jumpHeight;
         }
     }

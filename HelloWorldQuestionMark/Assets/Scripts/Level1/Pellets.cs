@@ -70,7 +70,7 @@ public class Pellets : MonoBehaviour
             //Trigger in Enemy Objects always in a child object of the enemy object
             //Makes the enemy take 1 point of damage; enemy will die once health <= 0
             //Works for Bosses too
-             Debug.Log("Enemy detected");
+            Debug.Log("Enemy detected");
             EnemyHealth enemyHealth = collider.gameObject.GetComponentInParent<EnemyHealth>();
             enemyHealth.takeDamage(1);
         }
