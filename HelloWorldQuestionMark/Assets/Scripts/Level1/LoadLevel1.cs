@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LoadScene2 : MonoBehaviour
+public class LoadScene1 : MonoBehaviour
 {
     public float changeTime;
 

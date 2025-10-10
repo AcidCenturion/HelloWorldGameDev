@@ -57,7 +57,7 @@ public class Pellets : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collider)
     {
     
-         Debug.Log("Object hit");
+        Debug.Log("Object hit");
         if (collider.gameObject.CompareTag("Breakable"))
         {
             Debug.Log("wall hit");

@@ -71,7 +71,7 @@ public class PlayerControls : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.W) && isGrounded())
         {
-            Debug.Log("Player Jumpd");
+            // Debug.Log("Player Jumpd");
             rb.linearVelocityY = jumpHeight;
         }
     }

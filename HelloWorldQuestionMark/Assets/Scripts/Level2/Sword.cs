@@ -67,9 +67,14 @@ public class Sword : MonoBehaviour
     //breaks sword if hits any collider
     void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.gameObject != null)
+        if (collider.gameObject.CompareTag("Wall"))
         {
             Destroy(this.gameObject);
+        }
+        else if (collider.gameObject.CompareTag("Enemy"))
+        {
+            Destroy(this.gameObject);
+            
         }
     }
     
