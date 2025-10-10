@@ -13,6 +13,7 @@ TagManager:
   - Pot
   - Sword
   - Coin
+  - Target
   layers:
   - Default
   - TransparentFX
