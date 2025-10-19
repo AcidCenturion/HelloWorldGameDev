@@ -7,43 +7,54 @@ public class TargetScript : MonoBehaviour
     public SpriteRenderer targetRenderer;
 
     public float startValue = 0f;
-    public float endValue = 100;
-    private float changeAlphaDuration = 10f;
-    private bool targetHit = false;
+    public float endValue = 100f;
+    private readonly float changeAlphaDuration = 7f;
+    public bool targetHit = false;
+    public bool targetHitBlip = false;
 
     private float currentValue;
     private float actualValue;
 
-    // UNFINISHED
-    // Currently, target turns orange when sword touches it, and slowly fades to transparent over 10seconds
-    // Next step is to make it so object glows and doesnt become transparent
+    private Coroutine _LerpCoroutine;
+
+    //DISCLAIMER I HAVE NO IDEA HOW THIS SCRIPT WORKS BUT IT TOOK SO LONG TO DO . 
 
     void Start()
     {
-        targetRenderer = GetComponent<SpriteRenderer>();   
+        targetRenderer = GetComponent<SpriteRenderer>();        
     }
 
     void Update()
     {
-        //Debug.Log("actualValue:" + actualValue);
-        targetRenderer.color = new Color(1.0f, 0.78f, 0.0f, actualValue);
+        //Debug.Log("actual value:" + actualValue);
+        //Debug.Log("targetHit: " + targetHit);
+        targetRenderer.color = new Color(1.0f, 0.2f, 0.0f, actualValue);
+
+        if (actualValue == 0)
+        {
+            targetHit = false;
+        }
+        //Debug.Log("targethitblip: " + targetHitBlip);
     }
 
     void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.CompareTag("Sword"))
         {
-            targetRenderer.color = new Color(1.0f, 0.78f, 0.0f, 1);
-            StartCoroutine(LerpAlphaValue(startValue, endValue, changeAlphaDuration));
-            targetHit = true;
-            Debug.Log("hit!");
-            StartCoroutine(WaitTenSeconds());
-            
+            if (targetHit)
+            {
+                //Debug.Log("targetHit true");
+                RestartLerp();
+            }
+            else
+            {
+                StartLerp();
+                targetHit = true;
+                //Debug.Log("targetHit false");
+            }
+              
         }
-        // else
-        // {
-        //     Debug.Log("didnt work");
-        // }
+
     }
 
     IEnumerator LerpAlphaValue(float fromValue, float toValue, float lerpDuration)
@@ -64,13 +75,34 @@ public class TargetScript : MonoBehaviour
         }
 
         currentValue = toValue;
+        _LerpCoroutine = null;
         //Debug.Log("Final Value: " + actualValue);
     }
 
-    IEnumerator WaitTenSeconds()
+    void StartLerp()
     {
-        yield return new WaitForSeconds(10f);
-        targetHit = false;
-        Debug.Log("reset!");
+        if (_LerpCoroutine == null)
+        {
+            _LerpCoroutine = StartCoroutine(LerpAlphaValue(startValue, endValue, changeAlphaDuration));
+            //Debug.Log("Lerp Started");
+        }
     }
+
+    void StopLerp()
+    {
+        if (_LerpCoroutine != null)
+        {
+            StopCoroutine(_LerpCoroutine);
+            _LerpCoroutine = null;
+            //Debug.Log("Lerp Stopped pt2");
+        }
+    }
+
+    void RestartLerp()
+    {
+        StopLerp();
+        StartLerp();
+        //Debug.Log("Lerp Restarted");
+    }
+
 }
