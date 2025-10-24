@@ -1242,50 +1242,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 519e7361285f3cc4b91c5cc619872a19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &988804884
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 988804876}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e2b64057eadb4545902a686b205af29, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 988804893}
-  Health: 3
-  playerScript: {fileID: 0}
-  iFrameDuration: 0.5
-  numberOfFlashes: 3
---- !u!95 &988804890
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 988804876}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0591efe901bf6bd4aadd629b05fa4236, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
---- !u!50 &988804893 stripped
-Rigidbody2D:
-  m_CorrespondingSourceObject: {fileID: 1546900695094195184, guid: b6218a03762f8074bbfb7b25d28a5efe, type: 3}
-  m_PrefabInstance: {fileID: 3894019963698757988}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1044838425
 GameObject:
   m_ObjectHideFlags: 0
@@ -4857,36 +4813,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 2854668012973877124, guid: b6218a03762f8074bbfb7b25d28a5efe, type: 3}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2854668012973877124, guid: b6218a03762f8074bbfb7b25d28a5efe, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2854668012973877124, guid: b6218a03762f8074bbfb7b25d28a5efe, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2854668012973877124, guid: b6218a03762f8074bbfb7b25d28a5efe, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5989358780595534067, guid: b6218a03762f8074bbfb7b25d28a5efe, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 106443124857915915, guid: b6218a03762f8074bbfb7b25d28a5efe, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 988804884}
-    - targetCorrespondingSourceObject: {fileID: 106443124857915915, guid: b6218a03762f8074bbfb7b25d28a5efe, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 988804890}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6218a03762f8074bbfb7b25d28a5efe, type: 3}
 --- !u!1001 &4317239956691574740
 PrefabInstance:
