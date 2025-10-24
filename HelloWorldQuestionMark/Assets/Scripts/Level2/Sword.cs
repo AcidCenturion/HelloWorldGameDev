@@ -81,6 +81,11 @@ public class Sword : MonoBehaviour
             Destroy(this.gameObject);
             
         }
+        else if (collider.gameObject.CompareTag("Pot"))
+        {
+            Destroy(this.gameObject);
+            
+        }
     }
     
 
