@@ -67,7 +67,7 @@ public class L2PlayerHealth : MonoBehaviour
     {
         if (Health > 0)
         {
-            if (other.gameObject.CompareTag("Enemy"))
+            if (other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("Spike"))
             {
             Health--;
             StartCoroutine(ActivateInvulnerability());
