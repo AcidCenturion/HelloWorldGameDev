@@ -1,4 +1,6 @@
 using UnityEngine;
+using System;
+using System.IO;
 
 public class Choices : MonoBehaviour
 {
@@ -11,6 +13,10 @@ public class Choices : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
+    }
+    void decideDialogue()
+    {
+
     }
 }
