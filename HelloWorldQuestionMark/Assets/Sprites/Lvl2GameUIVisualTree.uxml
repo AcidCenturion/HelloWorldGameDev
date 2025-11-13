@@ -1,0 +1,16 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="HealthContainer" style="flex-grow: 1; position: absolute; top: 20px; width: 250px; height: 75px; left: 20px; flex-direction: row;">
+        <ui:VisualElement name="Heart1" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Sprites/Level1/green_enemy.png?fileID=4724100757589294153&amp;guid=c32586f9d02a6284894241698dc771bb&amp;type=3#green_enemy_0&quot;); width: 75px; margin-right: 10px;" />
+        <ui:VisualElement name="Heart2" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Sprites/Level1/green_enemy.png?fileID=4724100757589294153&amp;guid=c32586f9d02a6284894241698dc771bb&amp;type=3#green_enemy_0&quot;); width: 75px; margin-right: 10px;" />
+        <ui:VisualElement name="Heart3" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Sprites/Level1/green_enemy.png?fileID=4724100757589294153&amp;guid=c32586f9d02a6284894241698dc771bb&amp;type=3#green_enemy_0&quot;); width: 75px; flex-direction: column;" />
+    </ui:VisualElement>
+    <ui:VisualElement name="KeyContainer" style="flex-grow: 1; position: absolute; top: 26px; width: 130px; height: 64px; left: auto; flex-direction: row; right: 221px;">
+        <ui:VisualElement name="KeyOrange" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Sprites/keyOrange.png?fileID=620357699096443383&amp;guid=f50ac54858db2ee4092809e049808a3a&amp;type=3#keyOrange_0&quot;); width: 75px; margin-right: 10px;" />
+        <ui:VisualElement name="KeyBlue1" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Sprites/keyBlue.png?fileID=-2340362578222764939&amp;guid=712673d60c28f194aac1a0badc744d6f&amp;type=3#keyBlue_0&quot;); width: 75px; margin-right: 10px;" />
+        <ui:VisualElement name="KeyBlue2" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Sprites/keyBlue.png?fileID=-2340362578222764939&amp;guid=712673d60c28f194aac1a0badc744d6f&amp;type=3#keyBlue_0&quot;); width: 75px; flex-direction: column;" />
+    </ui:VisualElement>
+    <ui:VisualElement name="CoinContainer" style="flex-grow: 1; position: absolute; top: 20px; width: 193px; height: 75px; left: auto; flex-direction: row; right: 20px;">
+        <ui:Label text="Label" name="CoinLabel" style="margin-top: 2px; font-size: 54px; -unity-font-definition: url(&quot;project://database/Assets/TextMesh%20Pro/Examples%20&amp;%20Extras/Fonts/Oswald-Bold.ttf?fileID=12800000&amp;guid=c9f6d0e7bc8541498c9a4799ba184ede&amp;type=3#Oswald-Bold&quot;); margin-right: 13px; top: -9px; color: rgb(255, 255, 255);" />
+        <ui:VisualElement name="CoinSprite" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Sprites/Coin1.png?fileID=3234001637869761286&amp;guid=5fc8fa66e7749ab49a6dbb1f9154af7f&amp;type=3#Coin1_0&quot;); width: 75px; flex-direction: column;" />
+    </ui:VisualElement>
+</ui:UXML>
