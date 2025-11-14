@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class L2GreenEnemy : MonoBehaviour
+public class L2GreenEnemy : Enemy
 {
     
     private Rigidbody2D rb;
@@ -8,16 +8,13 @@ public class L2GreenEnemy : MonoBehaviour
     private Vector2 moveDirection;
     private bool hasHitX = false;
     private bool hasHitY = false;
-    public float speed = 1.0f;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        moveDirectionStart = new Vector2(speed, speed);
+        moveDirectionStart = new Vector2(this.enemySpeed, this.enemySpeed);
         rb.linearVelocity = moveDirectionStart;
 
-        // moveDirection.x = rb.linearVelocity.x;
-        // moveDirection.y = rb.linearVelocity.y;
         moveDirection.x = rb.linearVelocity.x;
         moveDirection.y = rb.linearVelocity.y;
     }
@@ -78,15 +75,4 @@ public class L2GreenEnemy : MonoBehaviour
             }
         }
     }
-
-
-    //killed if hit with a sword
-    void OnTriggerEnter2D(Collider2D other)
-    { 
-        if(other.CompareTag("Sword"))
-        {
-            Destroy(this.gameObject);
-        }
-
-    } 
 }

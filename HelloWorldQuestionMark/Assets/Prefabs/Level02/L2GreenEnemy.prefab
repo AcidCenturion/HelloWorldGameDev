@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 202620152774630876}
   - component: {fileID: 2495358329399854808}
   - component: {fileID: 562000195181560939}
+  - component: {fileID: 1889782932385637980}
   m_Layer: 0
   m_Name: L2GreenEnemy
   m_TagString: Enemy
@@ -175,4 +176,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00d69a28f65a4b344aff5b6643a0697d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  enemy: {fileID: 0}
+  health: 1
+  damage: 1
+  enemySpeed: 2
+--- !u!114 &1889782932385637980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3588511876130288161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbbcf367554d7e845b4f6cb2e68cab62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

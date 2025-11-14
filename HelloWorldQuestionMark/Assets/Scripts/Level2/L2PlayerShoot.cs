@@ -12,12 +12,6 @@ public class L2PlayerShoot : MonoBehaviour
 
     private float lastTimeShot = 0;
     [SerializeField] private float cooldown = 0.5f;
-
-    void Start()
-    {
-        
-    }
-
     
     void Update()
     {

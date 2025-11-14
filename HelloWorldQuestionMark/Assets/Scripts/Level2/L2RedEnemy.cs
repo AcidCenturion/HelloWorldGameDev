@@ -1,22 +1,15 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-public class L2RedEnemy : MonoBehaviour
+public class L2RedEnemy : Enemy
 {
     public List<GameObject> waypoints;
-    public float speed = 3.0f;
     int index = 0;
-
-    void Start()
-    {
-        
-    }
-
     
     void Update()
     {
         Vector2 destination = waypoints[index].transform.position;
-        Vector2 newPos = Vector2.MoveTowards(transform.position, destination, speed * Time.deltaTime);
+        Vector2 newPos = Vector2.MoveTowards(transform.position, destination, this.enemySpeed * Time.deltaTime);
         transform.position = newPos;
 
         float distance = Vector2.Distance(transform.position, destination);
@@ -33,14 +26,4 @@ public class L2RedEnemy : MonoBehaviour
             }
         }
     }
-
-    //killed if hit with a sword
-    void OnTriggerEnter2D(Collider2D other)
-    { 
-        if(other.CompareTag("Sword"))
-        {
-            Destroy(this.gameObject);
-        }
-
-    } 
 }
