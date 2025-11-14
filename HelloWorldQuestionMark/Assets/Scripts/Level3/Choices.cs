@@ -15,8 +15,8 @@ public class Choices : MonoBehaviour
     {
 
     }
-    void decideDialogue()
+    bool displayChoice(int choiceNum)
     {
-
+        return false;
     }
 }

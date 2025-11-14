@@ -1,0 +1,10 @@
+{
+  "data" : [{
+    "name" : "emerson",
+    "gender" : "male"
+  },
+  {
+      "name" : "richard",
+    "gender" : "hydroflash"
+  }]
+}

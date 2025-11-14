@@ -12,6 +12,7 @@ public class DatableEntity : MonoBehaviour
         entities[3] = new DatableEntity("Green Square");
     }
     private string entityName;
+
     private int affection;
     private Boolean ending;
 
@@ -25,6 +26,13 @@ public class DatableEntity : MonoBehaviour
     {
         this.entityName = entityName;
         this.affection = 0;
+        this.ending = false;
+    }
+
+    public DatableEntity(string entityName, int affection)
+    {
+        this.entityName = entityName;
+        this.affection = affection;
         this.ending = false;
     }
 
