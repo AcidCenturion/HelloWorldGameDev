@@ -6,7 +6,7 @@ public class GameUIHandler : MonoBehaviour
 {
     public L2PlayerHealth PlayerHealth;
     public Key Key;
-    public UICoinCounter UICoinCounter;
+    public L2PlayerMovement PlayerMovement;
     public UIDocument GameUIDoc;
 
     public VisualElement Heart1;
@@ -30,6 +30,7 @@ public class GameUIHandler : MonoBehaviour
     void Update()
     {
         HealthLost();
+        CoinCollected();
     }
 
     void HealthLost()
@@ -61,7 +62,7 @@ public class GameUIHandler : MonoBehaviour
 
     void CoinCollected()
     {
-        
+        CoinLabel.text = ((int)PlayerMovement.CoinCounter).ToString();
     }
 
 }
