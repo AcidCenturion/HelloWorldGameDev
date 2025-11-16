@@ -1,0 +1,17 @@
+.button {
+    width: 319px;
+    height: 87px;
+    align-self: center;
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.button:hover {
+    scale: 1.05 1.05;
+    background-color: rgba(255, 255, 255, 0);
+    transition-duration: 0.35s;
+    -unity-background-image-tint-color: rgb(253, 196, 120);
+}
