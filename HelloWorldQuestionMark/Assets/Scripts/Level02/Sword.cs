@@ -73,6 +73,7 @@ public class Sword : MonoBehaviour
         }
         else if (collider.gameObject.CompareTag("Enemy"))
         {
+            Destroy(this.gameObject);
             Debug.Log("Enemy detected");
             EnemyHealth enemyHealth = collider.gameObject.GetComponentInParent<EnemyHealth>();
             enemyHealth.takeDamage(1);

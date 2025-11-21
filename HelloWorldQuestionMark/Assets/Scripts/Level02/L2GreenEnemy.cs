@@ -39,9 +39,11 @@ public class L2GreenEnemy : Enemy
             hasHitX = false;
         }
 
+        rb.linearVelocityY = moveDirection.x;
+        rb.linearVelocityY = moveDirection.y;   
+        
         //Debug.Log(moveDirection.x + " " + moveDirection.y);
     }
-
 
     //Tells which direction the Green collides a wall on
     private void OnCollisionEnter2D(Collision2D collision)

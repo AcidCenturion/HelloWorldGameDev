@@ -13,6 +13,7 @@ public class L2RedEnemy : Enemy
         transform.position = newPos;
 
         float distance = Vector2.Distance(transform.position, destination);
+        
 
         if (distance <= 0.05f)
         {

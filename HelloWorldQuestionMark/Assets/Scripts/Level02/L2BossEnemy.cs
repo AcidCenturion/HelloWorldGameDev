@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class L2BossEnemy : Enemy
+public class L2BossEnemy : Enemy 
 {
 
 
@@ -12,11 +12,9 @@ public class L2BossEnemy : Enemy
     private Vector2 moveDirection;
     private bool hasHitX = false;
     private bool hasHitY = false;
-
     private int currentAttack = 3;
 
     private SpriteRenderer spriteRend;
-
 
     public List<GameObject> waypoints;
     int index = 0;
@@ -49,11 +47,12 @@ public class L2BossEnemy : Enemy
     private bool didFullLoop = false;
     private float[] pointDistances = new float[4];
 
-    private int lastAttack;
+    private int lastAttack = 2;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+       
         ChooseMoves();
     }
 
@@ -74,13 +73,16 @@ public class L2BossEnemy : Enemy
         pointDistances[3] = point3Dist;
 
 
-
+           
 
         switch ((int)currentAttack)
         {
 
             //Bouncing Attacks
             case 0:
+
+             
+
                 //Flip y-direction if hits north or south
                 if (hasHitY == true)
                 {
@@ -109,6 +111,9 @@ public class L2BossEnemy : Enemy
                     rb.linearVelocity = new Vector2(moveDirection.x, moveDirection.y);
                     ChooseMoves();
                 }
+
+                rb.linearVelocityY = moveDirection.x;
+                rb.linearVelocityY = moveDirection.y;  
 
                 break;
 
@@ -179,7 +184,7 @@ public class L2BossEnemy : Enemy
     }
 
 
-//chooses move boss does, rerolls duplicate attacks
+    //chooses move boss does, rerolls duplicate attacks
     private void ChooseMoves()
     {
         lastAttack = currentAttack;
@@ -222,15 +227,13 @@ public class L2BossEnemy : Enemy
 
     }
 
-        //starts bouncing
+    //starts bouncing
     private void Bounce()
     {
         rb = GetComponent<Rigidbody2D>();
         moveDirectionStart = new Vector2(enemySpeed, enemySpeed);
         rb.linearVelocity = moveDirectionStart;
 
-        // moveDirection.x = rb.linearVelocity.x;
-        // moveDirection.y = rb.linearVelocity.y;
         moveDirection.x = rb.linearVelocity.x;
         moveDirection.y = rb.linearVelocity.y;
     }
@@ -273,20 +276,7 @@ public class L2BossEnemy : Enemy
     }
 
 
-    //killed if hit with a sword
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Sword"))
-        {
-            health--;
-        }
-        if (health <= 0)
-        {
-            Destroy(gameObject);
-        }
-
-    }
-
+    
 
 
 

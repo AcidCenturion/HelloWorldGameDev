@@ -41,6 +41,8 @@ public class EnemyHealth : MonoBehaviour
         this.damage = damage;
     }
 
+   
+
     // Reduces enemy health
     public void takeDamage(int damageAmount)
     {
