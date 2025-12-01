@@ -1,0 +1,14 @@
+{
+  "red" : [
+    {
+      "name" : "red",
+      "image" : "blabla.png"
+    }
+  ],
+  "green" : [
+    {
+      "name" : "green",
+      "image" : "bla.png"
+    }
+  ]
+}

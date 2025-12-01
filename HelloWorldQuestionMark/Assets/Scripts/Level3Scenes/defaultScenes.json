@@ -1,0 +1,54 @@
+{
+  "morning" : [
+    {
+      "name": "narrator",
+      "text": "You find yourself in a dimly lit room. The air is thick with mystery."
+    },
+    {
+      "text" : "banana"
+    },
+    {
+      "text" : "Testing option: load new scene array",
+      "options" : [
+        {
+          "text" : "this will load red scenes",
+          "points" : 0,
+          "nextSceneArr" : {
+            "sceneArr" : "redScenes",
+            "timeslot" : "Morning",
+            "startIndex" : 0
+          }
+        },
+        {
+          "text" : "this will load green scenes",
+          "nextSceneArr" : {
+            "sceneArr" : "greenScenes",
+            "timeslot" : "Morning",
+            "startIndex" : 0
+          }
+        },
+        {
+          "text" : "This will just lead to the next scene in defaultScenes",
+          "newIndex" : 4
+        }
+      ]
+    },
+    {
+      "text" : "This is the next scene in defaultScenes after the choice scene."
+    },
+    {
+      "text" : "asas",
+      "nextSceneArr" : {
+        "sceneArr" : "redScenes",
+        "timeslot" : "Morning",
+        "startIndex" : 0
+      }
+    }
+  ],
+  "chemistry" : [],
+  "history" : [],
+  "lunch" : [],
+  "PE" : [],
+  "afterSchool" : [],
+  "firstDate" : []
+}

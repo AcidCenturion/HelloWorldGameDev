@@ -1,0 +1,29 @@
+{
+  "morning" : [
+    {
+      "name" : "hi im green",
+      "text" : "This is green scenes json file.",
+      "choice" : {
+        "option1" : {
+          "text" : "hello red",
+          "index" : "This will be index of response towards option 1; change to",
+          "points" : 20
+        }
+      }
+    },
+    {
+      "text" : "This is the next scene in greenScenes after the choice scene.",
+      "nextSceneArr" : {
+        "sceneArr" : "defaultScenes",
+        "timeslot" : "Morning",
+        "startIndex" : 0
+      }
+    }
+  ],
+  "chemistry" : [],
+  "history" : [],
+  "lunch" : [],
+  "PE" : [],
+  "afterSchool" : [],
+  "firstDate" : []
+}

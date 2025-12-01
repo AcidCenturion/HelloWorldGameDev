@@ -1,0 +1,43 @@
+JSON IS CASE SENSITIVE SO READ WRITE EACH DATA FIELD CORRECTLY BASED OFF NAMES BELOW !!
+
+--- Format ---
+- JSON Data Fields each contain Scene Data Fields that may contain choices Data Fields and nextSceneArr Data Fields
+
+--- Data Fields ---
+
+*** JSON Data Fields ***
+# All fields are based off the time slots
+# Each field is an array of objects (The scenes)
+
+  morning - Timeslot for 7AM
+  chemistry - Timeslot for 8AM
+  history - Timeslot for 10AM
+  lunch - Timeslot for 12AM
+  PE - Timeslot for 1PM
+  afterSchool - Timeslot for 2PM
+  firstDate - Timeslot for 5PM
+
+** Scene Data Fields **
+  # Required fields
+  string text               // Used in textbox
+
+  # Optional Fields
+  string name               // name of character speaking; Don't add if you want text italicized
+  Option[] options          // if scene contains option(s); see data fields below
+  int skip                  // optional field to skip to a specific scene index; might be removed
+  NextSceneArr nextSceneArr // Loads new Scene array from json (for scene transitions)
+  string voiceOver          // Path to voice over audio file; might be removed later, idk if it should be relative or absolute
+
+* Option Data Fields *
+  # Required Fields
+  string text;
+
+  # Optional Fields
+  int points;
+  int newIndex;              // jump to new scene index if same timeslot
+  NextSceneArr nextSceneArr; // jump to new scene array if different timeslot
+
+* NextSceneArr Data Fields *
+  string sceneArr;           // which DIFFERENT scene array to load (redScenes, greenScenes, etc)
+  string timeslot;           // which day to load from DIFFERENT scene array
+  int startIndex;            // index to start at (if SAME scene array) 

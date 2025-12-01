@@ -1,0 +1,30 @@
+{
+  "morning" : [
+    {
+      "name" : "player",
+      "text" : "player: this is 0th"
+    },
+    {
+      "name" : "red",
+      "text" : "red: this is 1st"
+    },
+    {
+      "text" : "red: this is 2nd"
+    },
+    {
+      "text" : "red: this is 3rd"
+    },
+    {
+      "text" : "red: this is 4th"
+    },
+    {
+      "text" : "red: this is 5th"
+    }
+  ],
+  "chemistry" : [],
+  "history" : [],
+  "lunch" : [],
+  "PE" : [],
+  "afterSchool" : [],
+  "firstDate" : []
+}
