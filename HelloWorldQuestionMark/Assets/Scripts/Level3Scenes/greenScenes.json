@@ -1,7 +1,7 @@
 {
   "morning" : [
     {
-      "name" : "hi im green",
+      "name" : "Green",
       "text" : "This is green scenes json file.",
       "options" : [
         {
@@ -12,6 +12,7 @@
       ]
     },
     {
+      "name" : "green",
       "text" : "This is the next scene in greenScenes after the choice scene.",
       "nextSceneArr" : {
         "sceneArr" : "defaultScenes",

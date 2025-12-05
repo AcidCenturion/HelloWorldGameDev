@@ -5,10 +5,12 @@
       "text": "You find yourself in a dimly lit room. The air is thick with mystery."
     },
     {
+      "name" : "monkey",
       "text" : "banana"
     },
     {
-      "text" : "Testing option: load new scene array",
+      "name" : "Testing",
+      "text" : "Testing options: 0 for red, 1 for green, 2 for next default scene.",
       "options" : [
         {
           "text" : "this will load red scenes",
@@ -34,9 +36,11 @@
       ]
     },
     {
+      "name" : "placeholder",
       "text" : "This is the next scene in defaultScenes after the choice scene."
     },
     {
+      "name" : "placeholder",
       "text" : "asas",
       "nextSceneArr" : {
         "sceneArr" : "redScenes",

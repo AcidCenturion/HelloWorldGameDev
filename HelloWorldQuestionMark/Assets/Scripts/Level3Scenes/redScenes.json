@@ -9,15 +9,19 @@
       "text" : "red: this is 1st"
     },
     {
+      "name" : "red",
       "text" : "red: this is 2nd"
     },
     {
+      "name" : "red",
       "text" : "red: this is 3rd"
     },
     {
+      "name" : "red",
       "text" : "red: this is 4th"
     },
     {
+      "name" : "red",
       "text" : "red: this is 5th"
     }
   ],

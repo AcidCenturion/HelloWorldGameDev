@@ -66,6 +66,9 @@ public class LoadScene : MonoBehaviour
       Debug.LogError("No scenes loaded from json");
       return;
     }
+    currentScene = scenes[sceneIdx];
+    // LoadNextScene(-1); // Load first scene
+    GameObject.Find("sceneManager").GetComponent<DisplayScene>().UpdateScene();
   }
 
   // Public Function used by other scripts to load next scene
@@ -144,6 +147,7 @@ public class LoadScene : MonoBehaviour
     LoadNextScene(choice);
     Debug.Log("Current Scene Text: " + currentScene.text);
     Debug.Log("Current Scene index: " + sceneIdx);
+    GameObject.Find("sceneManager").GetComponent<DisplayScene>().UpdateScene();
   }
 
   // Helper Function: Loads specific Scene array from JSON file
