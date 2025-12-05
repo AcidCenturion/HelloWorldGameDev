@@ -3,7 +3,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public enum TimeOfDay { Morning, Chemistry, History, Lunch, PE, AfterSchool, FirstDate}
+public enum TimeOfDay { morning, chemistry, history, lunch, PE, afterSchool, firstDate}
 
 [System.Serializable]
 class ScenesArr
@@ -165,19 +165,19 @@ public class LoadScene : MonoBehaviour
     // Returns specific day scenes
     switch (day)
     {
-      case TimeOfDay.Morning:
+      case TimeOfDay.morning:
         return JsonUtility.FromJson<ScenesArr>(jsonString).morning;
-      case TimeOfDay.Chemistry:
+      case TimeOfDay.chemistry:
         return JsonUtility.FromJson<ScenesArr>(jsonString).chemistry;
-      case TimeOfDay.History:
+      case TimeOfDay.history:
         return JsonUtility.FromJson<ScenesArr>(jsonString).history;
-      case TimeOfDay.Lunch:
+      case TimeOfDay.lunch:
         return JsonUtility.FromJson<ScenesArr>(jsonString).lunch;
       case TimeOfDay.PE:
         return JsonUtility.FromJson<ScenesArr>(jsonString).PE;
-      case TimeOfDay.AfterSchool:
+      case TimeOfDay.afterSchool:
         return JsonUtility.FromJson<ScenesArr>(jsonString).afterSchool;
-      case TimeOfDay.FirstDate:
+      case TimeOfDay.firstDate:
         return JsonUtility.FromJson<ScenesArr>(jsonString).firstDate;
       default:
         Debug.Log("Passed in invalid day number, returning null");

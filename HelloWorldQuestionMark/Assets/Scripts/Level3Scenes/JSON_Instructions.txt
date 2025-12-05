@@ -39,5 +39,8 @@ JSON IS CASE SENSITIVE SO READ WRITE EACH DATA FIELD CORRECTLY BASED OFF NAMES B
 
 * NextSceneArr Data Fields *
   string sceneArr;           // which DIFFERENT scene array to load (redScenes, greenScenes, etc)
+    - make sure you're exactly typing the correct array; JSON case sensitive
+    - Values: i dont know the names of the characters yet, ill change this later
   string timeslot;           // which day to load from DIFFERENT scene array
+    - Values: morning, chemistry, ..., firstDate
   int startIndex;            // index to start at (if SAME scene array) 

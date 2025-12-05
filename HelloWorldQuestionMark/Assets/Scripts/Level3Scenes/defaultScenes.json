@@ -15,7 +15,7 @@
           "points" : 0,
           "nextSceneArr" : {
             "sceneArr" : "redScenes",
-            "timeslot" : "Morning",
+            "timeslot" : "morning",
             "startIndex" : 0
           }
         },
@@ -23,7 +23,7 @@
           "text" : "this will load green scenes",
           "nextSceneArr" : {
             "sceneArr" : "greenScenes",
-            "timeslot" : "Morning",
+            "timeslot" : "morning",
             "startIndex" : 0
           }
         },
@@ -40,7 +40,7 @@
       "text" : "asas",
       "nextSceneArr" : {
         "sceneArr" : "redScenes",
-        "timeslot" : "Morning",
+        "timeslot" : "morning",
         "startIndex" : 0
       }
     }
