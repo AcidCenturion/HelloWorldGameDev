@@ -9,10 +9,16 @@ public class L2PlayerShoot : MonoBehaviour
     private float spawnDistance;
     private Vector2 spawnLocation;
     public GameObject sword;
+    private AudioSource fireSword; 
 
     private float lastTimeShot = 0;
     [SerializeField] private float cooldown = 0.5f;
     
+    void Start()
+    {
+        fireSword = GetComponent<AudioSource>();
+    }
+
     void Update()
     {
         ProcessInputs();
@@ -107,6 +113,9 @@ public class L2PlayerShoot : MonoBehaviour
         //Instantiates pellet with direction
         GameObject pel = Instantiate(sword, spawnLocation, Quaternion.Euler(0,0,rotation));
         pel.GetComponent<Sword>().direction = this.direction;
+        
+        //plays sound effect
+        fireSword.Play();
 
         //starts cooldown
         lastTimeShot = Time.time;
