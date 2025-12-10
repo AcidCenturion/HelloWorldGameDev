@@ -9,7 +9,7 @@ public class L2GreenEnemy : Enemy
     private bool hasHitX = false;
     private bool hasHitY = false;
 
-    void Start()
+    void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         moveDirectionStart = new Vector2(this.enemySpeed, this.enemySpeed);
