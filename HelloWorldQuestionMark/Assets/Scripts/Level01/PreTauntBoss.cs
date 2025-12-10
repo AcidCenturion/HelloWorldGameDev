@@ -55,6 +55,10 @@ public class PreTauntBoss : MonoBehaviour
         //ensures the boss isn't visible until player steps into trigger
         bossStandIn.SetActive(false);
 
+        // Audio setup
+        AudioSource[] audiolist = GetComponents<AudioSource>();
+        voiceline = audiolist[0];
+        bossEncounterMusic = audiolist[1];
         backgroundMusic = backgroundMusic ? backgroundMusic : GameObject.Find("BackgroundMusic");
     }
 
