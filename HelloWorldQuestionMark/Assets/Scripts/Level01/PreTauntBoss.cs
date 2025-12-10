@@ -8,6 +8,9 @@ public class PreTauntBoss : MonoBehaviour
     public GameObject Wall;
     public GameObject Ceiling;
     public AudioSource voiceline;
+    public AudioSource bossEncounterMusic;
+    public GameObject backgroundMusic;
+    public bool pauseBackgroundMusic = true;
 
     //conditions
     private bool playerInTrigger = false;
@@ -51,6 +54,8 @@ public class PreTauntBoss : MonoBehaviour
 
         //ensures the boss isn't visible until player steps into trigger
         bossStandIn.SetActive(false);
+
+        backgroundMusic = backgroundMusic ? backgroundMusic : GameObject.Find("BackgroundMusic");
     }
 
     // Update is called once per frame
@@ -101,6 +106,16 @@ public class PreTauntBoss : MonoBehaviour
                 else
                 {
                     reachedEndPosition = true;
+
+                    // Update Music
+                    if (pauseBackgroundMusic) {
+                        // Pause background music
+                        backgroundMusic.GetComponent<AudioSource>().Pause();
+                        
+                        // Play boss encounter music
+                        if (bossEncounterMusic) bossEncounterMusic.Play();
+                    }
+                    
                     if (!voicelineActivated)
                     {
                         voicelineActivated = true;
@@ -116,7 +131,17 @@ public class PreTauntBoss : MonoBehaviour
                 }
                 else
                 {
+                    // Update Music
+                    if (pauseBackgroundMusic) {
+                        // Pause background music
+                        backgroundMusic.GetComponent<AudioSource>().Pause();
+                        
+                        // Play boss encounter music
+                        if (bossEncounterMusic) bossEncounterMusic.Play();
+                    }
+
                     reachedEndPosition = true;
+
                     if (!voicelineActivated)
                     {
                         voicelineActivated = true;
@@ -131,6 +156,11 @@ public class PreTauntBoss : MonoBehaviour
     private void Disable()
     {
         Debug.Log("Disabled");
+
+        if (pauseBackgroundMusic) {
+            if (bossEncounterMusic) bossEncounterMusic.Stop();
+            if (backgroundMusic) backgroundMusic.GetComponent<AudioSource>().Play();
+        }
         bossStandIn.SetActive(false);
         gameObject.GetComponent<BoxCollider2D>().enabled = false;
         playerInTrigger = false;

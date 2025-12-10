@@ -17,6 +17,7 @@ public class PreBossCutScene : MonoBehaviour
     public float pauseAfterReached = 1;
     public AudioSource voiceline;
     public AudioSource bossMusic;
+    public AudioSource bossEncounterMusic;
     public GameObject NormalBGM;
 
     void OnEnable()
@@ -34,6 +35,7 @@ public class PreBossCutScene : MonoBehaviour
         AudioSource[] audiolist = GetComponents<AudioSource>();
         voiceline = audiolist[0];
         bossMusic = audiolist[1];
+        bossEncounterMusic = audiolist[2];
 
         //Makes sure boss music is always paused
         bossMusic.Pause();
@@ -83,7 +85,16 @@ public class PreBossCutScene : MonoBehaviour
             {
                 reachedLocation = true;
                 boss.transform.rotation = Quaternion.identity;
+
+                // Pause background music
+                NormalBGM.GetComponent<AudioSource>().Pause();
+
+                // Play boss voiceline
                 voiceline.Play();
+                
+                // Play boss intro music
+                bossEncounterMusic.Play();
+
             }
 
         }
@@ -94,7 +105,7 @@ public class PreBossCutScene : MonoBehaviour
     public void EnableBoss()
     {
         boss.GetComponent<BossBehavior>().enabled = true;
-        NormalBGM.GetComponent<AudioSource>().Pause();
+        bossEncounterMusic.Stop();
         bossMusic.Play();
     }
     void OnTriggerEnter2D(Collider2D collision)
