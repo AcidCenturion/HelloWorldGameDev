@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7093434124071265113}
   - component: {fileID: 6746134982360116689}
   - component: {fileID: 8933496982952210465}
+  - component: {fileID: 6926405572820520699}
   m_Layer: 0
   m_Name: L2RedEnemy
   m_TagString: Enemy
@@ -105,7 +106,7 @@ MonoBehaviour:
   enemy: {fileID: 0}
   health: 1
   damage: 1
-  enemySpeed: 3
+  enemySpeed: 4.5
   waypoints:
   - {fileID: 0}
   - {fileID: 0}
@@ -175,3 +176,15 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 4, y: 4}
   m_Direction: 0
+--- !u!114 &6926405572820520699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6416463312355240333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbbcf367554d7e845b4f6cb2e68cab62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
