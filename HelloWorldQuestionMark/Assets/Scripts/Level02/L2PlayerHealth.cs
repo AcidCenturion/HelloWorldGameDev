@@ -7,7 +7,8 @@ public class L2PlayerHealth : MonoBehaviour
     public Rigidbody2D rb;
     public int Health = 3;
     private Vector2 spawnLocation;
-    private bool isDead = false;
+
+    public L2DeathUIHandler deathUIscript;
 
     private Animator anim;
     public L2PlayerMovement playerScript;
@@ -23,7 +24,7 @@ public class L2PlayerHealth : MonoBehaviour
     {
         spawnLocation = transform.position;
         spriteRend = GetComponent<SpriteRenderer>();
-        //Debug.Log("spawn loc: " + spawnLocation);
+        Debug.Log("spawn loc: " + spawnLocation);
     }
 
     void Start()
@@ -35,31 +36,21 @@ public class L2PlayerHealth : MonoBehaviour
 
     void Update()
     {
-
         if (Health == 0)
         {
-            StartCoroutine(DeathAnimWait());
-        }
-
-        if (isDead == true)
-        {
             rb.linearVelocity = Vector2.zero;
+            playerScript.enabled = false;
+            anim.SetBool("isDead", true);
         }
-    }
 
-    IEnumerator DeathAnimWait()
-    {
-        playerScript.enabled = false;
-        anim.SetBool("isDead", true);
-        isDead = true;
-
-        yield return new WaitForSeconds(0.7f);
-
-        rb.position = spawnLocation;
-        isDead = false;
-        anim.SetBool("isDead", false);
-        playerScript.enabled = true;
-        Health = 3;
+        if (deathUIscript.hasClickedRespawn == true)
+        {
+            rb.position = spawnLocation;
+            anim.SetBool("isDead", false);
+            playerScript.enabled = true;
+            Health = 3;
+            deathUIscript.hasClickedRespawn = false;
+        }
     }
 
 

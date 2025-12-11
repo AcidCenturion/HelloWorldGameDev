@@ -6,12 +6,14 @@ public class Lvl2OldManCutscene : MonoBehaviour
     public GameObject player;
     public GameObject cutsceneText;
     private AudioSource swordEquip;
+    public L2PlayerShoot shootScript;
 
     private bool inCutscene = false;
     private bool oldManCutsceneFinished = false;
 
     void Start()
     {
+        shootScript.enabled = false;
         swordEquip = GetComponent<AudioSource>();
         cutsceneText.SetActive(false);
     }
@@ -24,6 +26,7 @@ public class Lvl2OldManCutscene : MonoBehaviour
                 {
                     oldManCutsceneFinished = true;
                     DisableCutscene();
+                    shootScript.enabled = true;
                 }
         }
     }

@@ -10,6 +10,9 @@ public class CamScript : MonoBehaviour
     private Vector3 supposedPos;
     public float speed = 5f;
 
+    public float spawnCameraPositionX;
+    public float spawnCameraPositionY;
+
     void Start()
     {
         Camera mainCamera = Camera.main;
@@ -83,6 +86,12 @@ public class CamScript : MonoBehaviour
         targetScript.OnTriggerEnter2D(playerCollider2D);
         // Debug.Log("camPos: " + CameraPosition);
         // Debug.Log("supPos: " + supposedPos);
+    }
+
+    public void RespawnMoveCamera()
+    {
+        supposedPos = new Vector3(spawnCameraPositionX, spawnCameraPositionY, transform.position.z);
+        Debug.Log("works");
     }
 }
     
