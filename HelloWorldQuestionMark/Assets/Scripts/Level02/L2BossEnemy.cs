@@ -50,7 +50,7 @@ public class L2BossEnemy : Enemy
     private int lastAttack = 2;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Awake()
     {
        
         ChooseMoves();
