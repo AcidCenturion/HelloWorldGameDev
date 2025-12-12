@@ -6,8 +6,8 @@ using UnityEngine;
 public class Box : MonoBehaviour
 {
     [SerializeField] float moveDistance = 1.2f;
-    [SerializeField] Transform box;
-    [SerializeField] BoxPuzzleReset resetButton;
+    // private float xPos;
+    // private float yPos;
     private Vector2 startingPos;
     public Vector2 originalPos
     {
@@ -25,7 +25,15 @@ public class Box : MonoBehaviour
     void Start()
     {
         this.originalPos = this.transform.position;
+        // this.xPos = this.transform.position.x;
+        // this.yPos = this.transform.position.y;
     }
+
+    // TODO: Stops the box from getting misaligned
+    // void Update()
+    // {
+    //     this.transform.position = new Vector2(this.xPos, this.yPos);
+    // }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -53,7 +61,6 @@ public class Box : MonoBehaviour
         }
     }
     
-    // TODO: smooth the movement
     private Boolean moveBox(String direction)
     {
         // Tries to move the box in a direction
@@ -87,6 +94,9 @@ public class Box : MonoBehaviour
             }
         }
 
+        // this.xPos = newPosition.x;
+        // this.yPos = newPosition.y;
+        // TODO: smooth the movement(Vector2.SmoothDamp?)
         this.transform.position = newPosition;
         return true;
     }
