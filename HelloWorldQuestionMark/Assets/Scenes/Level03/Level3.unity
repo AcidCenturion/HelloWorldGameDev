@@ -318,7 +318,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -933,7 +933,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 914282766}
         m_TargetAssemblyTypeName: LoadScene, Assembly-CSharp
-        m_MethodName: TestNextScene
+        m_MethodName: ChooseNextScene
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1076,6 +1076,7 @@ MonoBehaviour:
       timeslot: 
       startIndex: 0
     voiceOver: 
+    location: 
 --- !u!4 &914282767
 Transform:
   m_ObjectHideFlags: 0
@@ -1106,6 +1107,13 @@ MonoBehaviour:
   sceneManager: {fileID: 914282765}
   text: {fileID: 2077287191}
   charName: {fileID: 419857394}
+  backgroundImage: {fileID: 2044647329}
+  images:
+  - {fileID: 3657372263959203267, guid: ef8d44e07dc09194ab8e9529349c7e0f, type: 3}
+  - {fileID: 4107826327890550477, guid: 5fdd7389c747a2b4e9e19d3504f7a346, type: 3}
+  - {fileID: 4724100757589294153, guid: c32586f9d02a6284894241698dc771bb, type: 3}
+  - {fileID: 1811704029881148630, guid: f1e468fd71f9c424193ede0e7a4f8bd7, type: 3}
+  - {fileID: 1023106628558505809, guid: 75caa9c91fe1cab45ae496cca589defd, type: 3}
 --- !u!114 &914282769
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1125,7 +1133,6 @@ MonoBehaviour:
   selectedColor: {r: 1, g: 1, b: 1, a: 1}
   defaultColor: {r: 1, g: 1, b: 1, a: 0.5411765}
   sceneManager: {fileID: 914282765}
-  up: 273
 --- !u!1 &915418530
 GameObject:
   m_ObjectHideFlags: 0
@@ -1795,7 +1802,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1

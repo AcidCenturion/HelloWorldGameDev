@@ -29,6 +29,7 @@ public class Scene
   public int skip;                  // optional field to skip to a specific scene index
   public NextSceneArr nextSceneArr; // Loads new Scene array from json (for scene transitions)
   public string voiceOver;          // Path to voice over audio file
+  public string location;           // Loads new background Image
 }
 [System.Serializable]
 public class NextSceneArr

@@ -9,7 +9,8 @@
           "index" : "This will be index of response towards option 1; change to",
           "points" : 20
         }
-      ]
+      ],
+      "location" : "leblanc_0"
     },
     {
       "name" : "green",

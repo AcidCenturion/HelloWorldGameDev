@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class Controls : MonoBehaviour
@@ -13,6 +14,7 @@ public class Controls : MonoBehaviour
     // Visual
     public Color selectedColor;
     public Color defaultColor;
+    private ColorBlock standardColors;
 
     public GameObject sceneManager;
 
@@ -20,51 +22,46 @@ public class Controls : MonoBehaviour
     {
         sceneManager = sceneManager ? sceneManager : GameObject.Find("SceneManager");
 
-        // Set all buttons to default color
-        if (Option1.activeSelf) Option1.GetComponent<Image>().color = defaultColor;   
-        if (Option2.activeSelf) Option2.GetComponent<Image>().color = defaultColor;
-        if (Option3.activeSelf) Option3.GetComponent<Image>().color = defaultColor;
-        if (Option4.activeSelf) Option4.GetComponent<Image>().color = defaultColor;
+        // Sets specific color object
+        standardColors = Option1.GetComponent<Button>().colors;
+        standardColors.normalColor = defaultColor;
+        standardColors.highlightedColor = selectedColor;
 
-        // Maybe Disable all buttons initially
-        // Then let Choices script load them in
+        // Set specific colors for button
+        if (Option1.activeSelf) Option1.GetComponent<Button>().colors = standardColors;   
+        if (Option2.activeSelf) Option2.GetComponent<Button>().colors = standardColors;
+        if (Option3.activeSelf) Option3.GetComponent<Button>().colors = standardColors;
+        if (Option4.activeSelf) Option4.GetComponent<Button>().colors = standardColors;
+        
+        // Maybe Disable all buttons initially in start??
+        // Then let Choices script load them in??
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyUp(KeyCode.Return) || Input.GetKeyUp(KeyCode.Space))
         {
+            // Calls function if selection doesn't exist
+            // Only for scenes where options do not exist
+            // prevents double ChooseNextScenes
+            if (selectedButton == null) sceneManager.GetComponent<LoadScene>().ChooseNextScene(-1);
 
-            // Call choices script function to make choice
-            int choice = -1;
-            if (selectedButton == Option1) choice = 0;
-            else if (selectedButton == Option2) choice = 1;
-            else if (selectedButton == Option3) choice = 2;
-            else if (selectedButton == Option4) choice = 3;
-
-            // If didnt choose option, but required to; uncomment later when Choices is done
-            // if (selectedButton == null && Option1.activeSelf) return;
-
-            sceneManager.GetComponent<LoadScene>().ChooseNextScene(choice);
-            
-            // Reset selected button
-            if (selectedButton) selectedButton.GetComponent<Image>().color = defaultColor;
+            // Removes selected visualizer
             selectedButton = null;
+
             return;
         }
 
         // Selects button if any present
         if (!Option1.activeSelf) return;
 
+        // Selects button on input
         if (Input.GetKeyUp(KeyCode.UpArrow) || Input.GetKeyUp(KeyCode.W))
         {
             // Does option exist
             if (!Option1.activeSelf) return;
 
-            // Update selected visual
-            if (selectedButton != null) selectedButton.GetComponent<Image>().color = defaultColor;
             selectedButton = Option1;
         }
         else if (Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.A))
@@ -72,8 +69,6 @@ public class Controls : MonoBehaviour
             // Does option exist
             if (!Option2.activeSelf) return;
 
-            // Update selected visual
-            if (selectedButton != null) selectedButton.GetComponent<Image>().color = defaultColor;
             selectedButton = Option2;
         }
         else if (Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.D))
@@ -81,8 +76,6 @@ public class Controls : MonoBehaviour
             // Does option exist
             if (!Option3.activeSelf) return;
 
-            // Update selected visual
-            if (selectedButton != null) selectedButton.GetComponent<Image>().color = defaultColor;
             selectedButton = Option3;
         }
         else if (Input.GetKeyUp(KeyCode.DownArrow) || Input.GetKeyUp(KeyCode.S))
@@ -90,11 +83,21 @@ public class Controls : MonoBehaviour
             // Does option exist
             if (!Option4.activeSelf) return;
 
-            // Update selected visual
-            if (selectedButton != null) selectedButton.GetComponent<Image>().color = defaultColor;
             selectedButton = Option4;
         }
-        if (selectedButton != null) selectedButton.GetComponent<Image>().color = selectedColor;
 
+        // Select chosen option
+        if (selectedButton) EventSystem.current.SetSelectedGameObject(selectedButton);
+
+    }
+
+    // Public function for DisplayScene
+    // Called everytime a new scene is displayed
+    // Lets Keyboard & Mouse controls not clash with each other
+    public void turnOffSelectedButton()
+    {
+        // deselects any option
+        EventSystem.current.SetSelectedGameObject(null);
+        selectedButton = null;
     }
 }

@@ -2,7 +2,8 @@
   "morning" : [
     {
       "name" : "player",
-      "text" : "player: this is 0th"
+      "text" : "player: this is 0th",
+      "location" : "red_enemy_0"
     },
     {
       "name" : "red",
