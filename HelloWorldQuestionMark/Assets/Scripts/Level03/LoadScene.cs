@@ -142,7 +142,7 @@ public class LoadScene : MonoBehaviour
   }
 
   // Function for testing loading scenes
-  public void TestNextScene(int choice = -1)
+  public void ChooseNextScene(int choice = -1)
   {
     LoadNextScene(choice);
     Debug.Log("Current Scene Text: " + currentScene.text);
