@@ -1,3 +1,4 @@
+using System.Collections;
 using Microsoft.Unity.VisualStudio.Editor;
 using TMPro;
 using UnityEngine;
@@ -15,27 +16,38 @@ public class DisplayScene : MonoBehaviour
     public GameObject backgroundImage;
     private Sprite newBackground = null;
     public Sprite[] images;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    // Text Display
+    public float textDelay = 0.05f;
+    private Coroutine typeRoutine = null;
+
+
+
     void Start()
     {
+        // Finds all necessary objects
         sceneManager = sceneManager == null ? GameObject.Find("SceneManager") : sceneManager;
         text = text == null ? GameObject.Find("textbox_text") : text;
         charName = charName == null ? GameObject.Find("name_text") : charName;
-
-        UpdateScene();
     }   
 
+    // Public Function called in LoadScene everytime a new scene is called
     public void UpdateScene()
     {
         currScene = sceneManager.GetComponent<LoadScene>().currentScene;
 
-        // Updates text and name
-        text.GetComponent<TextMeshProUGUI>().text = currScene.text;
+        // Updates text
+        if (typeRoutine != null) StopCoroutine(typeRoutine);        // Stops text printer from overflowing from prev scene
+        typeRoutine = StartCoroutine(TypeMessage(currScene.text));  // Starts text printer for curr scene
+
+        // Updates Name
         charName.GetComponent<TextMeshProUGUI>().text = currScene.name;
 
         if (currScene.options != null && currScene.options.Length > 0)
         {
-            // Call function from choices.cs
+            // Call function from choices.cs??
+            // Sets a number of options as ACTIVE
+            // Remaining options are set as INACTIVE
         }
 
         // Update Background image if needed
@@ -47,6 +59,7 @@ public class DisplayScene : MonoBehaviour
         sceneManager.GetComponent<Controls>().turnOffSelectedButton();
     }
 
+    // Updates Background Image
     void updateImage(string location)
     {
         // Find location in available images
@@ -68,5 +81,22 @@ public class DisplayScene : MonoBehaviour
         // Update background sprite
         backgroundImage.GetComponent<SpriteRenderer>().sprite = newBackground;
         newBackground = null;
+    }
+
+    // Prints character message character by character
+    private IEnumerator TypeMessage(string message)
+    {
+        //Gets text object in editor
+        TextMeshProUGUI textObj = text.GetComponent<TextMeshProUGUI>();
+
+        // Resets text
+        textObj.text = "";
+
+        // Slowly adds each character in it
+        foreach (char c in message)
+        {
+            textObj.text += c;
+            yield return new WaitForSeconds(textDelay);
+        }
     }
 }
