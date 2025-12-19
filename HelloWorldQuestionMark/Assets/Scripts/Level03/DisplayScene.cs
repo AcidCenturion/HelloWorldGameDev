@@ -8,6 +8,7 @@ public class DisplayScene : MonoBehaviour
 {
     public GameObject sceneManager;
     private Scene currScene;
+    private Scene prevScene = null;
 
     public GameObject text;
     public GameObject charName;
@@ -43,24 +44,33 @@ public class DisplayScene : MonoBehaviour
         // Updates Name
         charName.GetComponent<TextMeshProUGUI>().text = currScene.name;
 
+        // Remove dialogue options from past scene
+        if (prevScene != null && prevScene.options != null && prevScene.options.Length > 0)
+        {
+            if (!sceneManager.GetComponent<Choices>().HideChoice()) 
+                Debug.LogError("DisplayScene: Failed to clear choices");
+        }
+
+        // Display dialogue options if needed
         if (currScene.options != null && currScene.options.Length > 0)
         {
-            // Call function from choices.cs??
-            // Sets a number of options as ACTIVE
-            // Remaining options are set as INACTIVE
+            if (!sceneManager.GetComponent<Choices>().DisplayChoice(currScene.options.Length)) 
+                Debug.LogError("Display Scene Failed to display choices");
         }
 
         // Update Background image if needed
-        if (currScene.location != null) updateImage(currScene.location);
+        if (currScene.location != null) UpdateImage(currScene.location);
 
         // Update Character image if needed
 
         // Update selected button in Controls.cs
         sceneManager.GetComponent<Controls>().turnOffSelectedButton();
+
+        prevScene = currScene;
     }
 
     // Updates Background Image
-    void updateImage(string location)
+    void UpdateImage(string location)
     {
         // Find location in available images
         for (int i = 0; i < images.Length; i++)

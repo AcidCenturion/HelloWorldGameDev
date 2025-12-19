@@ -146,8 +146,6 @@ public class LoadScene : MonoBehaviour
   public void ChooseNextScene(int choice = -1)
   {
     LoadNextScene(choice);
-    Debug.Log("Current Scene Text: " + currentScene.text);
-    Debug.Log("Current Scene index: " + sceneIdx);
     GameObject.Find("sceneManager").GetComponent<DisplayScene>().UpdateScene();
   }
 

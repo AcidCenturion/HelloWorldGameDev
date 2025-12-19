@@ -26,15 +26,13 @@ public class Controls : MonoBehaviour
         standardColors = Option1.GetComponent<Button>().colors;
         standardColors.normalColor = defaultColor;
         standardColors.highlightedColor = selectedColor;
+        standardColors.selectedColor = selectedColor;
 
         // Set specific colors for button
-        if (Option1.activeSelf) Option1.GetComponent<Button>().colors = standardColors;   
-        if (Option2.activeSelf) Option2.GetComponent<Button>().colors = standardColors;
-        if (Option3.activeSelf) Option3.GetComponent<Button>().colors = standardColors;
-        if (Option4.activeSelf) Option4.GetComponent<Button>().colors = standardColors;
-        
-        // Maybe Disable all buttons initially in start??
-        // Then let Choices script load them in??
+        if (Option1 != null) Option1.GetComponent<Button>().colors = standardColors;   
+        if (Option2 != null) Option2.GetComponent<Button>().colors = standardColors;
+        if (Option3 != null) Option3.GetComponent<Button>().colors = standardColors;
+        if (Option4 != null) Option4.GetComponent<Button>().colors = standardColors;
         
     }
 
