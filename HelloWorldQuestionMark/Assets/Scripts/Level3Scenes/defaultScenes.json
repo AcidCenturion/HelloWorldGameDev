@@ -5,8 +5,10 @@
       "text": "You find yourself in a dimly lit room. The air is thick with mystery."
     },
     {
-      "name" : "monkey",
-      "text" : "banana"
+      "name" : "placeholder",
+      "text" : "banana",
+      "emotion" : "Happy"
+
     },
     {
       "name" : "Testing",

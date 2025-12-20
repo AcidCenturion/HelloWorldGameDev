@@ -1,0 +1,741 @@
+fileFormatVersion: 2
+guid: 90446066af6a80c48b2242aba9a0382e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2539446956832164382
+    second: level3_mad_face_0
+  - first:
+      213: -5232320242936763336
+    second: level3_mad_face_1
+  - first:
+      213: -8951556478879786943
+    second: level3_mad_face_2
+  - first:
+      213: -4403188094949617935
+    second: level3_mad_face_3
+  - first:
+      213: 6233409156118723190
+    second: level3_mad_face_4
+  - first:
+      213: -3556686261900512520
+    second: level3_mad_face_5
+  - first:
+      213: 6979559543852607089
+    second: level3_mad_face_6
+  - first:
+      213: -5035617621304821825
+    second: level3_mad_face_7
+  - first:
+      213: 6398766248048496923
+    second: level3_mad_face_8
+  - first:
+      213: 5584878256522206707
+    second: level3_mad_face_9
+  - first:
+      213: -581658003311271921
+    second: level3_mad_face_10
+  - first:
+      213: -3730664055257406151
+    second: level3_mad_face_11
+  - first:
+      213: -8788709415342239231
+    second: level3_mad_face_12
+  - first:
+      213: -7202894728239348619
+    second: level3_mad_face_13
+  - first:
+      213: 6391234723514824443
+    second: level3_mad_face_14
+  - first:
+      213: -9043016148969918020
+    second: level3_mad_face_15
+  - first:
+      213: 336406864082399444
+    second: level3_mad_face_16
+  - first:
+      213: -1039663710248002215
+    second: level3_mad_face_17
+  - first:
+      213: -8261138603202150879
+    second: level3_mad_face_18
+  - first:
+      213: 3647742228323480077
+    second: level3_mad_face_19
+  - first:
+      213: 8622336544920790282
+    second: level3_mad_face_20
+  - first:
+      213: -7442439983574741371
+    second: level3_mad_face_21
+  - first:
+      213: 6196173180821337264
+    second: level3_mad_face_22
+  - first:
+      213: 6656999017046714229
+    second: level3_mad_face_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: level3_mad_face_0
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 117
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e57214827212ccd0800000000000000
+      internalID: -2539446956832164382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level3_mad_face_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 113
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83c2ba806701367b0800000000000000
+      internalID: -5232320242936763336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level3_mad_face_2
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 109
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14816815fcea5c380800000000000000
+      internalID: -8951556478879786943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level3_mad_face_3
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 105
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fe8c49b1cbb4e2c0800000000000000
+      internalID: -4403188094949617935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level3_mad_face_4
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 108
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67abf1af994818650800000000000000
+      internalID: 6233409156118723190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level3_mad_face_5
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 110
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f278ed50bc14aec0800000000000000
+      internalID: -3556686261900512520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level3_mad_face_6
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 113
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 176a5040d606cd060800000000000000
+      internalID: 6979559543852607089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level3_mad_face_7
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 116
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb7bd690474ed1ab0800000000000000
+      internalID: -5035617621304821825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level3_mad_face_8
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 118
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1190bf100cfcc850800000000000000
+      internalID: 6398766248048496923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level3_mad_face_9
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 109
+        width: 8
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fd1fc13f29718d40800000000000000
+      internalID: 5584878256522206707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level3_mad_face_10
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 108
+        width: 7
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f006ed3b0298de7f0800000000000000
+      internalID: -581658003311271921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level3_mad_face_11
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 105
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9356012cec40a3cc0800000000000000
+      internalID: -3730664055257406151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level3_mad_face_12
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 102
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1021560f95b380680800000000000000
+      internalID: -8788709415342239231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level3_mad_face_13
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 100
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57482c0486d2a0c90800000000000000
+      internalID: -7202894728239348619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level3_mad_face_14
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 104
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf63e3b6e1a32b850800000000000000
+      internalID: 6391234723514824443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level3_mad_face_15
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 104
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb1f68679b0c08280800000000000000
+      internalID: -9043016148969918020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level3_mad_face_16
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 101
+        width: 18
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d072a1b2482ba400800000000000000
+      internalID: 336406864082399444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level3_mad_face_17
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 86
+        width: 41
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95d9dc82d5f5291f0800000000000000
+      internalID: -1039663710248002215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level3_mad_face_18
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 77
+        width: 39
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12e7ed3b53a8a5d80800000000000000
+      internalID: -8261138603202150879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level3_mad_face_19
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 78
+        width: 7
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d02b967ea326f9230800000000000000
+      internalID: 3647742228323480077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level3_mad_face_20
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 92
+        width: 20
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a056fdd8761b8a770800000000000000
+      internalID: 8622336544920790282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level3_mad_face_21
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 41
+        width: 29
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58e0dd4444427b890800000000000000
+      internalID: -7442439983574741371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level3_mad_face_22
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 39
+        width: 28
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b478a1edaa3df550800000000000000
+      internalID: 6196173180821337264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level3_mad_face_23
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 22
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 577a131f559626c50800000000000000
+      internalID: 6656999017046714229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      level3_mad_face_0: -2539446956832164382
+      level3_mad_face_1: -5232320242936763336
+      level3_mad_face_10: -581658003311271921
+      level3_mad_face_11: -3730664055257406151
+      level3_mad_face_12: -8788709415342239231
+      level3_mad_face_13: -7202894728239348619
+      level3_mad_face_14: 6391234723514824443
+      level3_mad_face_15: -9043016148969918020
+      level3_mad_face_16: 336406864082399444
+      level3_mad_face_17: -1039663710248002215
+      level3_mad_face_18: -8261138603202150879
+      level3_mad_face_19: 3647742228323480077
+      level3_mad_face_2: -8951556478879786943
+      level3_mad_face_20: 8622336544920790282
+      level3_mad_face_21: -7442439983574741371
+      level3_mad_face_22: 6196173180821337264
+      level3_mad_face_23: 6656999017046714229
+      level3_mad_face_3: -4403188094949617935
+      level3_mad_face_4: 6233409156118723190
+      level3_mad_face_5: -3556686261900512520
+      level3_mad_face_6: 6979559543852607089
+      level3_mad_face_7: -5035617621304821825
+      level3_mad_face_8: 6398766248048496923
+      level3_mad_face_9: 5584878256522206707
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

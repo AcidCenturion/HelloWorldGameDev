@@ -4,6 +4,9 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+//TODO
+// FINISH PLACEHOLDERS OF ALL THE CHARACTERS
+
 public class DisplayScene : MonoBehaviour
 {
     public GameObject sceneManager;
@@ -22,8 +25,14 @@ public class DisplayScene : MonoBehaviour
     public float textDelay = 0.05f;
     private Coroutine typeRoutine = null;
 
-
-
+    // Character Display Objects; Add more if needed
+    public GameObject characterPlaceHolder;
+    public GameObject purpleCharacter;
+    public GameObject redCharacter;
+    public GameObject greenCharacter;
+    public GameObject kingCircleCharacter;
+    public GameObject hermitCharacter;
+    
     void Start()
     {
         // Finds all necessary objects
@@ -61,7 +70,39 @@ public class DisplayScene : MonoBehaviour
         // Update Background image if needed
         if (currScene.location != null) UpdateImage(currScene.location);
 
-        // Update Character image if needed
+        GameObject character = findCharacter(currScene.name);
+        // Update base model if currently none or changed to new character
+        if (character != null && (prevScene == null || (prevScene.name != currScene.name)))
+        {
+            // Load character
+            if (!character.GetComponent<Character>().DisplayCharacterBase())
+                Debug.LogError("Failed to load base model of: " + currScene.name);
+        }
+
+        // Update face
+        if (prevScene != null && character != null)
+        {
+            if (currScene.emotion == null)
+            {
+                // Load default face
+                if (!character.GetComponent<Character>().DisplayCharacterFace())
+                    Debug.LogError("Failed to load character face of: default face");
+            }
+            else
+            {
+                // Load requested face
+                if (!character.GetComponent<Character>().DisplayCharacterFace(currScene.emotion))
+                    Debug.LogError("Failed to load character face of: " + currScene.emotion);
+            }
+        }
+
+        // Character with no portrait speaking --> turn off character display
+        if (character == null)
+        {
+            // Turn off character display if its not alr off
+            if (redCharacter.GetComponent<Character>().isCharacterDisplayActive()) // Doesn't have to be red, just need an object that can use the methods
+                redCharacter.GetComponent<Character>().ResetCharacterDisplay();
+        }
 
         // Update selected button in Controls.cs
         sceneManager.GetComponent<Controls>().turnOffSelectedButton();
@@ -108,5 +149,31 @@ public class DisplayScene : MonoBehaviour
             textObj.text += c;
             yield return new WaitForSeconds(textDelay);
         }
+    }
+
+    private GameObject findCharacter(string name)
+    {
+        // Browse through character array and look for name??
+        switch (name.ToLower())
+        {
+            case "red":
+            case "rowan":
+                return redCharacter;
+            case "purple":
+            case "perri":
+                return purpleCharacter;
+            case "green":
+            case "gemini":
+                return greenCharacter;
+            case "hermit":
+            case "old hermit":
+            case "professor hermit":
+                return hermitCharacter;
+            case "king circle":
+                return kingCircleCharacter;
+            case "placeholder":
+                return characterPlaceHolder;
+        }
+        return null;
     }
 }

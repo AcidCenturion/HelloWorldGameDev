@@ -25,6 +25,7 @@ public class Scene
 
   // Optional Fields
   public string name;               // name of character speaking
+  public string emotion;            // How the character's face will look (Happy, Sad, etc)
   public Option[] options;          // optional field for choices
   public int skip;                  // optional field to skip to a specific scene index
   public NextSceneArr nextSceneArr; // Loads new Scene array from json (for scene transitions)

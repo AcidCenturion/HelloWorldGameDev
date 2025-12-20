@@ -27,6 +27,7 @@ If you add a new image to the sprites folder, drag that image into the image arr
   # Optional Fields
   string name               // name of character speaking; Don't add if you want text italicized
   Option[] options          // if scene contains option(s); see data fields below
+  public string emotion;    // How the character's face will look (Happy, sad, etc); not case sensitive
   int skip                  // optional field to skip to a specific scene index; might be removed
   NextSceneArr nextSceneArr // Loads new Scene array from json (for scene transitions)
   string voiceOver          // Path to voice over audio file; might be removed later, idk if it should be relative or absolute
