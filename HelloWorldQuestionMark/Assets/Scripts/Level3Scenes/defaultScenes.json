@@ -11,6 +11,11 @@
 
     },
     {
+      "name" : "Perri",
+      "text" : "Testing Purple's sprite",
+      "emotion" : "mad"
+    },
+    {
       "name" : "Testing",
       "text" : "Testing options: 0 for red, 1 for green, 2 for next default scene.",
       "options" : [
