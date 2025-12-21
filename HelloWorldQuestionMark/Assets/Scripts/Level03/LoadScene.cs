@@ -51,8 +51,7 @@ public class Option
 
 public class LoadScene : MonoBehaviour
 {
-  // Public Variables, used by other scripts
-  public Scene currentScene; // get this var when displaying scene
+  private Scene currentScene; // get this var when displaying scene
 
   // Private Variables
   private Scene[] scenes;
@@ -181,6 +180,11 @@ public class LoadScene : MonoBehaviour
         return null;
     }
 
+  }
+
+  public Scene getCurrentScene()
+  {
+    return currentScene;
   }
   
    

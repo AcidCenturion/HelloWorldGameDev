@@ -44,7 +44,7 @@ public class DisplayScene : MonoBehaviour
     // Public Function called in LoadScene everytime a new scene is called
     public void UpdateScene()
     {
-        currScene = sceneManager.GetComponent<LoadScene>().currentScene;
+        currScene = sceneManager.GetComponent<LoadScene>().getCurrentScene();
 
         // Updates text
         if (typeRoutine != null) StopCoroutine(typeRoutine);        // Stops text printer from overflowing from prev scene

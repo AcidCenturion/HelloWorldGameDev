@@ -22,7 +22,7 @@ public class Choices : MonoBehaviour
     public bool DisplayChoice(int choiceNum)
     {
         // Get Choices array
-        Option[] options = sceneManager.GetComponent<LoadScene>().currentScene.options;
+        Option[] options = sceneManager.GetComponent<LoadScene>().getCurrentScene().options;
         if (options.Length == 0)
         {
             Debug.LogError("Choices: Failed to get options");

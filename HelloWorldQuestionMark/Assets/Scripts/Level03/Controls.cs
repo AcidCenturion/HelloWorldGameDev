@@ -108,6 +108,14 @@ public class Controls : MonoBehaviour
             return;
         }
 
+        // Check to see if a choice is required
+        Scene currentScene = sceneManager.GetComponent<LoadScene>().getCurrentScene();
+        if (currentScene.options != null && currentScene.options.Length > 0 && choice == -1)
+        {
+            Debug.Log("Choice required, staying on this scene.");
+            return;
+        }
+
         // Load Next Scene
         sceneManager.GetComponent<LoadScene>().LoadNextScene(choice);
         sceneManager.GetComponent<DisplayScene>().UpdateScene();
