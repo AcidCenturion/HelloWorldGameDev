@@ -143,13 +143,6 @@ public class LoadScene : MonoBehaviour
 
   }
 
-  // Function for testing loading scenes
-  public void ChooseNextScene(int choice = -1)
-  {
-    LoadNextScene(choice);
-    GameObject.Find("sceneManager").GetComponent<DisplayScene>().UpdateScene();
-  }
-
   // Helper Function: Loads specific Scene array from JSON file
   Scene[] LoadFromJSON(string fileName, TimeOfDay day = 0)
   {

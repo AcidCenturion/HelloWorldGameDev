@@ -43,7 +43,7 @@ public class Controls : MonoBehaviour
             // Calls function if selection doesn't exist
             // Only for scenes where options do not exist
             // prevents double ChooseNextScenes
-            if (selectedButton == null) sceneManager.GetComponent<LoadScene>().ChooseNextScene(-1);
+            if (selectedButton == null) ChooseNextScene();
 
             // Removes selected visualizer
             selectedButton = null;
@@ -97,5 +97,19 @@ public class Controls : MonoBehaviour
         // deselects any option
         EventSystem.current.SetSelectedGameObject(null);
         selectedButton = null;
+    }
+
+    public void ChooseNextScene(int choice = -1)
+    {
+        // Check first to see if text is fully loaded in, if not then fully load text then return
+        if (sceneManager.GetComponent<DisplayScene>().isTyping())
+        {
+            sceneManager.GetComponent<DisplayScene>().FullDisplayText();
+            return;
+        }
+
+        // Load Next Scene
+        sceneManager.GetComponent<LoadScene>().LoadNextScene(choice);
+        sceneManager.GetComponent<DisplayScene>().UpdateScene();
     }
 }

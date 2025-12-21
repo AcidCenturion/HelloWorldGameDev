@@ -149,6 +149,9 @@ public class DisplayScene : MonoBehaviour
             textObj.text += c;
             yield return new WaitForSeconds(textDelay);
         }
+
+        typeRoutine = null;
+
     }
 
     private GameObject findCharacter(string name)
@@ -175,5 +178,20 @@ public class DisplayScene : MonoBehaviour
                 return characterPlaceHolder;
         }
         return null;
+    }
+
+    public bool isTyping()
+    {
+        return typeRoutine != null;
+    }
+
+    public void FullDisplayText()
+    {
+        if (typeRoutine != null)
+        {
+            StopCoroutine(typeRoutine);
+            text.GetComponent<TextMeshProUGUI>().text = currScene.text;
+            typeRoutine = null;
+        }
     }
 }
