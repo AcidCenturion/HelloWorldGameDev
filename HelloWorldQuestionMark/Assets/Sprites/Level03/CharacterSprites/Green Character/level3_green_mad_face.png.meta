@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: 0a5cf9b88d3feba4f91d9a184f8f7e31
+guid: f6dcd771f8defdf4ea7a78ab3154ded3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6130816615167595334
-    second: level3_purple_base_mode_0
+      213: 5779868662354049868
+    second: level3_green_mad_face_0
   - first:
-      213: -4068561221468737821
-    second: level3_purple_base_mode_1
+      213: 7553170517027742529
+    second: level3_green_mad_face_1
   - first:
-      213: 1320908635772925392
-    second: level3_purple_base_mode_2
+      213: 8110857454224751404
+    second: level3_green_mad_face_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -106,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: level3_purple_base_mode_0
+      name: level3_green_mad_face_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 93
-        width: 698
-        height: 872
+        x: 3
+        y: 75
+        width: 42
+        height: 45
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,20 +121,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6439022aa39051550800000000000000
-      internalID: 6130816615167595334
+      spriteID: c4b7604ece7363050800000000000000
+      internalID: 5779868662354049868
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: level3_purple_base_mode_1
+      name: level3_green_mad_face_1
       rect:
         serializedVersion: 2
-        x: 337
-        y: 86
-        width: 31
-        height: 10
+        x: 105
+        y: 75
+        width: 42
+        height: 45
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,20 +143,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3ee2d6f00219987c0800000000000000
-      internalID: -4068561221468737821
+      spriteID: 143646b119042d860800000000000000
+      internalID: 7553170517027742529
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: level3_purple_base_mode_2
+      name: level3_green_mad_face_2
       rect:
         serializedVersion: 2
-        x: 642
-        y: 86
-        width: 31
-        height: 10
+        x: 41
+        y: 18
+        width: 68
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -165,8 +165,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0d5bdffd76fc45210800000000000000
-      internalID: 1320908635772925392
+      spriteID: c2b35e6a1ed8f8070800000000000000
+      internalID: 8110857454224751404
       vertices: []
       indices: 
       edges: []
@@ -185,9 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      level3_purple_base_mode_0: 6130816615167595334
-      level3_purple_base_mode_1: -4068561221468737821
-      level3_purple_base_mode_2: 1320908635772925392
+      level3_green_mad_face_0: 5779868662354049868
+      level3_green_mad_face_1: 7553170517027742529
+      level3_green_mad_face_2: 8110857454224751404
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

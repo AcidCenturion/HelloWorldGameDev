@@ -1,16 +1,10 @@
 fileFormatVersion: 2
-guid: 0a5cf9b88d3feba4f91d9a184f8f7e31
+guid: 8c788beb477ed5745afcaa431636f1a3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6130816615167595334
-    second: level3_purple_base_mode_0
-  - first:
-      213: -4068561221468737821
-    second: level3_purple_base_mode_1
-  - first:
-      213: 1320908635772925392
-    second: level3_purple_base_mode_2
+      213: -922207543684278713
+    second: level3_hermit_base_mode_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -106,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: level3_purple_base_mode_0
+      name: level3_hermit_base_mode_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 93
-        width: 698
-        height: 872
+        y: 0
+        width: 692
+        height: 958
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,52 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6439022aa39051550800000000000000
-      internalID: 6130816615167595334
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: level3_purple_base_mode_1
-      rect:
-        serializedVersion: 2
-        x: 337
-        y: 86
-        width: 31
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3ee2d6f00219987c0800000000000000
-      internalID: -4068561221468737821
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: level3_purple_base_mode_2
-      rect:
-        serializedVersion: 2
-        x: 642
-        y: 86
-        width: 31
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0d5bdffd76fc45210800000000000000
-      internalID: 1320908635772925392
+      spriteID: 74653850029a333f0800000000000000
+      internalID: -922207543684278713
       vertices: []
       indices: 
       edges: []
@@ -185,9 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      level3_purple_base_mode_0: 6130816615167595334
-      level3_purple_base_mode_1: -4068561221468737821
-      level3_purple_base_mode_2: 1320908635772925392
+      level3_hermit_base_mode_0: -922207543684278713
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

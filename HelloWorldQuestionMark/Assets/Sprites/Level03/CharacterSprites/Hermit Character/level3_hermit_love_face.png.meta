@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: 0a5cf9b88d3feba4f91d9a184f8f7e31
+guid: 1af2773f8bffe7d408c03771b7cc29a4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6130816615167595334
-    second: level3_purple_base_mode_0
+      213: 8503490481253728884
+    second: level3_hermit_love_face_0
   - first:
-      213: -4068561221468737821
-    second: level3_purple_base_mode_1
+      213: -4392109530274768629
+    second: level3_hermit_love_face_1
   - first:
-      213: 1320908635772925392
-    second: level3_purple_base_mode_2
+      213: -6951593289808467553
+    second: level3_hermit_love_face_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -106,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: level3_purple_base_mode_0
+      name: level3_hermit_love_face_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 93
-        width: 698
-        height: 872
+        x: 9
+        y: 99
+        width: 29
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,20 +121,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6439022aa39051550800000000000000
-      internalID: 6130816615167595334
+      spriteID: 4724b0e0a87720670800000000000000
+      internalID: 8503490481253728884
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: level3_purple_base_mode_1
+      name: level3_hermit_love_face_1
       rect:
         serializedVersion: 2
-        x: 337
-        y: 86
-        width: 31
-        height: 10
+        x: 116
+        y: 99
+        width: 29
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,20 +143,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3ee2d6f00219987c0800000000000000
-      internalID: -4068561221468737821
+      spriteID: b095d5117a71c03c0800000000000000
+      internalID: -4392109530274768629
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: level3_purple_base_mode_2
+      name: level3_hermit_love_face_2
       rect:
         serializedVersion: 2
-        x: 642
-        y: 86
-        width: 31
-        height: 10
+        x: 37
+        y: 32
+        width: 80
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -165,8 +165,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0d5bdffd76fc45210800000000000000
-      internalID: 1320908635772925392
+      spriteID: f992af9ebbaf68f90800000000000000
+      internalID: -6951593289808467553
       vertices: []
       indices: 
       edges: []
@@ -185,9 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      level3_purple_base_mode_0: 6130816615167595334
-      level3_purple_base_mode_1: -4068561221468737821
-      level3_purple_base_mode_2: 1320908635772925392
+      level3_hermit_love_face_0: 8503490481253728884
+      level3_hermit_love_face_1: -4392109530274768629
+      level3_hermit_love_face_2: -6951593289808467553
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

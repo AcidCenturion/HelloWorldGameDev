@@ -16,6 +16,121 @@
       "emotion" : "mad"
     },
     {
+      "name" : "Perri",
+      "text" : "Testing Purple's sprite",
+      "emotion" : "sad"
+    },
+    {
+      "name" : "Perri",
+      "text" : "Testing Purple's sprite",
+      "emotion" : "happy"
+    },
+    {
+      "name" : "Perri",
+      "text" : "Testing Purple's sprite",
+      "emotion" : "love"
+    },
+    {
+      "name" : "Perri",
+      "text" : "Testing Purple's sprite"
+    },
+    {
+      "name" : "Red",
+      "text" : "Testing Rowan's sprite",
+      "emotion" : "mad"
+    },
+    {
+      "name" : "Red",
+      "text" : "Testing Rowan's sprite",
+      "emotion" : "sad"
+    },
+    {
+      "name" : "Red",
+      "text" : "Testing Rowan's sprite",
+      "emotion" : "happy"
+    },
+    {
+      "name" : "Red",
+      "text" : "Testing Rowan's sprite",
+      "emotion" : "love"
+    },
+    {
+      "name" : "Red",
+      "text" : "Testing Rowan's sprite"
+    },
+    {
+      "name" : "Gemini",
+      "text" : "Testing Gemini's sprite",
+      "emotion" : "mad"
+    },
+    {
+      "name" : "Gemini",
+      "text" : "Testing Gemini's sprite",
+      "emotion" : "sad"
+    },
+    {
+      "name" : "Gemini",
+      "text" : "Testing Gemini's sprite",
+      "emotion" : "happy"
+    },
+    {
+      "name" : "Gemini",
+      "text" : "Testing Gemini's sprite",
+      "emotion" : "love"
+    },
+    {
+      "name" : "Gemini",
+      "text" : "Testing Gemini's sprite"
+    },
+    {
+      "name" : "Hermit",
+      "text" : "Testing Hermit's sprite",
+      "emotion" : "mad"
+    },
+    {
+      "name" : "Hermit",
+      "text" : "Testing Hermit's sprite",
+      "emotion" : "sad"
+    },
+    {
+      "name" : "Hermit",
+      "text" : "Testing Hermit's sprite",
+      "emotion" : "happy"
+    },
+    {
+      "name" : "Hermit",
+      "text" : "Testing Hermit's sprite",
+      "emotion" : "love"
+    },
+    {
+      "name" : "Hermit",
+      "text" : "Testing Hermit's sprite"
+    },
+    {
+      "name" : "King Circle",
+      "text" : "Testing Purple's sprite",
+      "emotion" : "mad"
+    },
+    {
+      "name" : "King Circle",
+      "text" : "Testing Purple's sprite",
+      "emotion" : "sad"
+    },
+    {
+      "name" : "King Circle",
+      "text" : "Testing Purple's sprite",
+      "emotion" : "happy"
+    },
+    {
+      "name" : "King Circle",
+      "text" : "Testing Purple's sprite",
+      "emotion" : "love"
+    },
+    {
+      "name" : "King Circle",
+      "text" : "Testing Purple's sprite"
+    },
+    {
       "name" : "Testing",
       "text" : "Testing options: 0 for red, 1 for green, 2 for next default scene.",
       "options" : [

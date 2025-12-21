@@ -1,0 +1,585 @@
+fileFormatVersion: 2
+guid: 2d38eb7ab304a2642b36d153b3df200f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1161769001044920411
+    second: level3_king_love_face_0
+  - first:
+      213: 6869211368496149037
+    second: level3_king_love_face_1
+  - first:
+      213: 2681778373601840603
+    second: level3_king_love_face_2
+  - first:
+      213: 6439077155549059576
+    second: level3_king_love_face_3
+  - first:
+      213: -1885172461192143335
+    second: level3_king_love_face_4
+  - first:
+      213: 8782281945637030262
+    second: level3_king_love_face_5
+  - first:
+      213: -2672776160934684203
+    second: level3_king_love_face_6
+  - first:
+      213: -3766111997531000793
+    second: level3_king_love_face_7
+  - first:
+      213: 1595921410128009643
+    second: level3_king_love_face_8
+  - first:
+      213: -8679402508044217108
+    second: level3_king_love_face_9
+  - first:
+      213: 9065660350214765098
+    second: level3_king_love_face_10
+  - first:
+      213: -6495179020724905552
+    second: level3_king_love_face_11
+  - first:
+      213: -7879565160362334419
+    second: level3_king_love_face_12
+  - first:
+      213: 2514223261628789669
+    second: level3_king_love_face_13
+  - first:
+      213: 188051806346913523
+    second: level3_king_love_face_14
+  - first:
+      213: -3657459365914640969
+    second: level3_king_love_face_15
+  - first:
+      213: 3720002826314220530
+    second: level3_king_love_face_16
+  - first:
+      213: -6174025437929949489
+    second: level3_king_love_face_17
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: level3_king_love_face_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 88
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b58c75a40ce6f1010800000000000000
+      internalID: 1161769001044920411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level3_king_love_face_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 69
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d22b9425857545f50800000000000000
+      internalID: 6869211368496149037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level3_king_love_face_2
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 91
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bddccdcd837973520800000000000000
+      internalID: 2681778373601840603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level3_king_love_face_3
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 94
+        width: 23
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f995d9ae823c5950800000000000000
+      internalID: 6439077155549059576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level3_king_love_face_4
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 69
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91e1b4672a586d5e0800000000000000
+      internalID: -1885172461192143335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level3_king_love_face_5
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 93
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 679850726eee0e970800000000000000
+      internalID: 8782281945637030262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level3_king_love_face_6
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 43
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d91b5b1e3468ead0800000000000000
+      internalID: -2672776160934684203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level3_king_love_face_7
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 52
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 720f3da87151cbbc0800000000000000
+      internalID: -3766111997531000793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level3_king_love_face_8
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 47
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba9de14211ad52610800000000000000
+      internalID: 1595921410128009643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level3_king_love_face_9
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 47
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce4d36587619c8780800000000000000
+      internalID: -8679402508044217108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level3_king_love_face_10
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 52
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2af4ec7e02bfcd70800000000000000
+      internalID: 9065660350214765098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level3_king_love_face_11
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 43
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b95f15f71d7cd5a0800000000000000
+      internalID: -6495179020724905552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level3_king_love_face_12
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 34
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d272f000c3926a290800000000000000
+      internalID: -7879565160362334419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level3_king_love_face_13
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 40
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a3786b4cb054e220800000000000000
+      internalID: 2514223261628789669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level3_king_love_face_14
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 34
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f6adac1f181c9200800000000000000
+      internalID: 188051806346913523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level3_king_love_face_15
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 25
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bd7b32b5181e3dc0800000000000000
+      internalID: -3657459365914640969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level3_king_love_face_16
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 19
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f388e17cda10a330800000000000000
+      internalID: 3720002826314220530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level3_king_love_face_17
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 25
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc6b5f95394715aa0800000000000000
+      internalID: -6174025437929949489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      level3_king_love_face_0: 1161769001044920411
+      level3_king_love_face_1: 6869211368496149037
+      level3_king_love_face_10: 9065660350214765098
+      level3_king_love_face_11: -6495179020724905552
+      level3_king_love_face_12: -7879565160362334419
+      level3_king_love_face_13: 2514223261628789669
+      level3_king_love_face_14: 188051806346913523
+      level3_king_love_face_15: -3657459365914640969
+      level3_king_love_face_16: 3720002826314220530
+      level3_king_love_face_17: -6174025437929949489
+      level3_king_love_face_2: 2681778373601840603
+      level3_king_love_face_3: 6439077155549059576
+      level3_king_love_face_4: -1885172461192143335
+      level3_king_love_face_5: 8782281945637030262
+      level3_king_love_face_6: -2672776160934684203
+      level3_king_love_face_7: -3766111997531000793
+      level3_king_love_face_8: 1595921410128009643
+      level3_king_love_face_9: -8679402508044217108
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
