@@ -1,0 +1,48 @@
+{
+  "morning" : [
+    {
+      "name" : "Perri",
+      "text" : "This is Perri scenes json file.",
+      "location" : "leblanc_0"
+    },
+    {
+      "name" : "Perri",
+      "text" : "Testing Purple's sprite",
+      "emotion" : "mad"
+    },
+    {
+      "name" : "Perri",
+      "text" : "Testing Purple's sprite",
+      "emotion" : "sad"
+    },
+    {
+      "name" : "Perri",
+      "text" : "Testing Purple's sprite",
+      "emotion" : "happy"
+    },
+    {
+      "name" : "Perri",
+      "text" : "Testing Purple's sprite",
+      "emotion" : "love"
+    },
+    {
+      "name" : "Perri",
+      "text" : "Testing Purple's sprite"
+    },
+    {
+      "name" : "Perri",
+      "text" : "This is the next scene in Perri, the next will go back to defaultScenes.",
+      "nextSceneArr" : {
+        "sceneArr" : "defaultScenes",
+        "timeslot" : "morning",
+        "startIndex" : 0
+      }
+    }
+  ],
+  "chemistry" : [],
+  "history" : [],
+  "lunch" : [],
+  "PE" : [],
+  "afterSchool" : [],
+  "firstDate" : []
+}

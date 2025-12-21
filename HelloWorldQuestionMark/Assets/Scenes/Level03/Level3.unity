@@ -1206,13 +1206,10 @@ MonoBehaviour:
   sceneManager: {fileID: 914282765}
   text: {fileID: 2077287191}
   charName: {fileID: 419857394}
-  backgroundImage: {fileID: 2044647329}
-  images:
-  - {fileID: 3657372263959203267, guid: ef8d44e07dc09194ab8e9529349c7e0f, type: 3}
-  - {fileID: 4107826327890550477, guid: 5fdd7389c747a2b4e9e19d3504f7a346, type: 3}
-  - {fileID: 4724100757589294153, guid: c32586f9d02a6284894241698dc771bb, type: 3}
-  - {fileID: 1811704029881148630, guid: f1e468fd71f9c424193ede0e7a4f8bd7, type: 3}
+  backgroundLocation: {fileID: 2044647329}
+  locations:
   - {fileID: 1023106628558505809, guid: 75caa9c91fe1cab45ae496cca589defd, type: 3}
+  - {fileID: 21300000, guid: c6bcb4a1da9c94aa098691f27dc7c0f6, type: 3}
   textDelay: 0.05
   characterPlaceHolder: {fileID: 565039808}
   purpleCharacter: {fileID: 1976924747}
@@ -2507,7 +2504,7 @@ GameObject:
   - component: {fileID: 2044647331}
   - component: {fileID: 2044647330}
   m_Layer: 0
-  m_Name: visual novel background 1_0
+  m_Name: visualNovelBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2557,7 +2554,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 3516432488997133056, guid: c6bcb4a1da9c94aa098691f27dc7c0f6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c6bcb4a1da9c94aa098691f27dc7c0f6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

@@ -3,6 +3,9 @@ JSON IS CASE SENSITIVE SO READ WRITE EACH DATA FIELD CORRECTLY BASED OFF NAMES B
 --- Special Note ---
 If you add a new image to the sprites folder, drag that image into the image array in Display Scene
 
+--- Limitations ---
+If you want to skip to the beginning of the SAME array, you can't do (skip : 0), instead do nextSceneArr
+
 --- Format ---
 - JSON Data Fields each contain Scene Data Fields that may contain choices Data Fields and nextSceneArr Data Fields
 

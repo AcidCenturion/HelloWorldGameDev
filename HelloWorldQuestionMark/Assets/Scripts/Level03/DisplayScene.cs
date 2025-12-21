@@ -16,10 +16,10 @@ public class DisplayScene : MonoBehaviour
     public GameObject text;
     public GameObject charName;
 
-    // Image Variables
-    public GameObject backgroundImage;
+    // Location Variables
+    public GameObject backgroundLocation;
     private Sprite newBackground = null;
-    public Sprite[] images;
+    public Sprite[] locations;
 
     // Text Display
     public float textDelay = 0.05f;
@@ -39,6 +39,7 @@ public class DisplayScene : MonoBehaviour
         sceneManager = sceneManager == null ? GameObject.Find("SceneManager") : sceneManager;
         text = text == null ? GameObject.Find("textbox_text") : text;
         charName = charName == null ? GameObject.Find("name_text") : charName;
+        backgroundLocation = backgroundLocation == null ? GameObject.Find("visualNovelBackground") : backgroundLocation;
     }   
 
     // Public Function called in LoadScene everytime a new scene is called
@@ -67,8 +68,8 @@ public class DisplayScene : MonoBehaviour
                 Debug.LogError("Display Scene Failed to display choices");
         }
 
-        // Update Background image if needed
-        if (currScene.location != null) UpdateImage(currScene.location);
+        // Update Background Location if needed
+        if (currScene.location != null) UpdateLocation(currScene.location);
 
         GameObject character = findCharacter(currScene.name);
         // Update base model if currently none or changed to new character
@@ -110,15 +111,15 @@ public class DisplayScene : MonoBehaviour
         prevScene = currScene;
     }
 
-    // Updates Background Image
-    void UpdateImage(string location)
+    // Updates Background Location
+    void UpdateLocation(string location)
     {
-        // Find location in available images
-        for (int i = 0; i < images.Length; i++)
+        // Find location in available locations
+        for (int i = 0; i < locations.Length; i++)
         {
-            if (images[i].name == location)
+            if (locations[i].name == location)
             {
-                newBackground = images[i];
+                newBackground = locations[i];
             }
         }
 
@@ -130,7 +131,7 @@ public class DisplayScene : MonoBehaviour
         }
 
         // Update background sprite
-        backgroundImage.GetComponent<SpriteRenderer>().sprite = newBackground;
+        backgroundLocation.GetComponent<SpriteRenderer>().sprite = newBackground;
         newBackground = null;
     }
 

@@ -105,6 +105,11 @@ public class LoadScene : MonoBehaviour
       if (!string.IsNullOrEmpty(selected.nextSceneArr.sceneArr))
       {
         scenes = LoadFromJSON(selected.nextSceneArr.sceneArr, (TimeOfDay) Enum.Parse(typeof(TimeOfDay), selected.nextSceneArr.timeslot));
+        if (scenes == null || scenes.Length == 0)
+        {
+          Debug.LogError("No scenes loaded from json");
+          return;
+        }
         sceneIdx = selected.nextSceneArr.startIndex;
         currentScene = scenes[sceneIdx];
         return;
@@ -127,6 +132,11 @@ public class LoadScene : MonoBehaviour
     if (!string.IsNullOrEmpty(currentScene.nextSceneArr.sceneArr))
     {
       scenes = LoadFromJSON(currentScene.nextSceneArr.sceneArr, (TimeOfDay) Enum.Parse(typeof(TimeOfDay), currentScene.nextSceneArr.timeslot)); 
+      if (scenes == null || scenes.Length == 0)
+      {
+        Debug.LogError("No scenes loaded from json");
+        return;
+      }
       sceneIdx = currentScene.nextSceneArr.startIndex;
       currentScene = scenes[sceneIdx];
     } else
