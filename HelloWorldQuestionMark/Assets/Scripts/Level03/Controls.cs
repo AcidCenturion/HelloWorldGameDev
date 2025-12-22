@@ -116,6 +116,20 @@ public class Controls : MonoBehaviour
             return;
         }
 
+        // Check if scene has a choice & if so, if it has a options.points != 0 to modify affinity
+        if (currentScene.options != null && currentScene.options.Length > 0 && choice >= 0)
+        {
+            Option selectedOption = currentScene.options[choice];
+
+            // Modify affinity if needed
+            if (selectedOption.points != 0)
+            {
+                // Get character GameObject & modifies affinity
+                GameObject character = sceneManager.GetComponent<DisplayScene>().findCharacter(currentScene.name);
+                if (character != null) character.GetComponent<Character>().AddAffinity(selectedOption.points);
+            }
+        }
+
         // Load Next Scene
         sceneManager.GetComponent<LoadScene>().LoadNextScene(choice);
         sceneManager.GetComponent<DisplayScene>().UpdateScene();

@@ -6,6 +6,9 @@
       "location" : "placeholderBackground"
     },
     {
+      "text" : "This is testing if text is properly italicized when no name is given."
+    },
+    {
       "name" : "Testing",
       "text" : "Testing: Choose which character array to load next.",
       "options" : [

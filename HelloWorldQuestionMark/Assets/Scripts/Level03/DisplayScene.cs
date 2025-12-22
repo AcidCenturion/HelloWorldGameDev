@@ -52,7 +52,7 @@ public class DisplayScene : MonoBehaviour
         typeRoutine = StartCoroutine(TypeMessage(currScene.text));  // Starts text printer for curr scene
 
         // Updates Name
-        charName.GetComponent<TextMeshProUGUI>().text = currScene.name;
+        charName.GetComponent<TextMeshProUGUI>().text = currScene.name != null ? currScene.name : "";
 
         // Remove dialogue options from past scene
         if (prevScene != null && prevScene.options != null && prevScene.options.Length > 0)
@@ -71,7 +71,7 @@ public class DisplayScene : MonoBehaviour
         // Update Background Location if needed
         if (currScene.location != null) UpdateLocation(currScene.location);
 
-        GameObject character = findCharacter(currScene.name);
+        GameObject character = currScene.name != null ? findCharacter(currScene.name) : null;
         // Update base model if currently none or changed to new character
         if (character != null && (prevScene == null || (prevScene.name != currScene.name)))
         {
@@ -143,6 +143,9 @@ public class DisplayScene : MonoBehaviour
 
         // Resets text
         textObj.text = "";
+        
+        // Italicizes text if no name is given; assuming thats the player's thoughts
+        if (currScene.name == null) textObj.text += "<i>";
 
         // Slowly adds each character in it
         foreach (char c in message)
@@ -151,11 +154,15 @@ public class DisplayScene : MonoBehaviour
             yield return new WaitForSeconds(textDelay);
         }
 
+        if (currScene.name == null) textObj.text += "</i>";
+
         typeRoutine = null;
 
     }
 
-    private GameObject findCharacter(string name)
+    // Public function to find character GameObject based on name
+    // Also used by Controls to update affinity
+    public GameObject findCharacter(string name)
     {
         // Browse through character array and look for name??
         switch (name.ToLower())
@@ -190,8 +197,9 @@ public class DisplayScene : MonoBehaviour
     {
         if (typeRoutine != null)
         {
+            // Stops coroutine and fully displays text
             StopCoroutine(typeRoutine);
-            text.GetComponent<TextMeshProUGUI>().text = currScene.text;
+            text.GetComponent<TextMeshProUGUI>().text = currScene.name != null ? currScene.text : $"<i>{currScene.text}</i>";
             typeRoutine = null;
         }
     }

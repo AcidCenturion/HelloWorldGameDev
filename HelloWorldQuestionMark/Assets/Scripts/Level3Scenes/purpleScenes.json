@@ -12,8 +12,18 @@
     },
     {
       "name" : "Perri",
-      "text" : "Testing Purple's sprite",
-      "emotion" : "sad"
+      "text" : "Perri's affinity should decrease/increase by 10 here",
+      "emotion" : "sad",
+      "options" : [
+        {
+          "text" : "Make Perri mad",
+          "points" : -10
+        },
+        {
+          "text" : "Make Perri happy",
+          "points" : 10
+        }
+      ]
     },
     {
       "name" : "Perri",

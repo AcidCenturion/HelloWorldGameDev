@@ -9,7 +9,13 @@ using UnityEngine.UI;
 // If no name or character is mc, then ResetCharacterDisplay() is called to clear the character from the screen
 public class Character : MonoBehaviour
 {
-    public float defaultAffinity;
+    // Affinity Variables
+    private int Affinity;
+    public int MaxAffinity = 100;
+    public int MinAffinity = 0;
+    public int StartingAffinity = 50;
+
+    // Character Display Components
     public GameObject characterDisplay;
     public GameObject faceDisplay;
     public Sprite baseModel; 
@@ -18,10 +24,34 @@ public class Character : MonoBehaviour
 
     void Start()
     {
-        // DisplayCharacterBase();
         ResetCharacterDisplay();
+
+        Affinity = StartingAffinity; 
+    }
+    // Affinity Functions
+    public void AddAffinity(int amount)
+    {
+        Debug.Log($"Character: Adding {amount} affinity");
+        if (Affinity + amount >= MaxAffinity)
+        {
+            Affinity = MaxAffinity;
+        }
+        else if (Affinity + amount <= MinAffinity)
+        {
+            Affinity = MinAffinity;
+        }
+        else
+        {
+            Affinity += amount;
+        }
     }
 
+    public int GetAffinity()
+    {
+        return Affinity;
+    }
+
+    // Character Display Functions  
     public bool DisplayCharacterBase()
     {
         // Checks if character display isnt active
