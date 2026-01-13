@@ -30,6 +30,10 @@ public class PreTauntBoss : MonoBehaviour
     public float speed = 1f;
     public float rotationSpeed = 10f;
 
+    //Text
+    public GameObject cutsceneText;
+
+
     void Start()
     {
         // ensures that only one of the entry options is selected
@@ -60,6 +64,10 @@ public class PreTauntBoss : MonoBehaviour
         voiceline = audiolist[0];
         bossEncounterMusic = audiolist[1];
         backgroundMusic = backgroundMusic ? backgroundMusic : GameObject.Find("BackgroundMusic");
+
+        //Text setup
+        cutsceneText.SetActive(false);
+
     }
 
     // Update is called once per frame
@@ -172,6 +180,8 @@ public class PreTauntBoss : MonoBehaviour
         player.GetComponent<ShootPellets>().enabled = true;
         Wall.SetActive(false);
         Ceiling.SetActive(false);
+        cutsceneText.SetActive(false);
+
     }
 
     void OnTriggerEnter2D(Collider2D col)
@@ -184,6 +194,9 @@ public class PreTauntBoss : MonoBehaviour
             //disables player movement
             player.GetComponent<PlayerControls>().enabled = false;
             player.GetComponent<ShootPellets>().enabled = false;
+
+            //enables text
+            cutsceneText.SetActive(true);
         }
     }
 

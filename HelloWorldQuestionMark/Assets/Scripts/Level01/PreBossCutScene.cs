@@ -19,6 +19,7 @@ public class PreBossCutScene : MonoBehaviour
     public AudioSource bossMusic;
     public AudioSource bossEncounterMusic;
     public GameObject NormalBGM;
+    public GameObject cutsceneText;
 
     void OnEnable()
     {
@@ -40,9 +41,10 @@ public class PreBossCutScene : MonoBehaviour
         //Makes sure boss music is always paused
         bossMusic.Pause();
 
+        cutsceneText.SetActive(false);
+
     }
 
-    // Update is called once per frame
     void Update()
     {
         //if player hasnt activated it
@@ -107,7 +109,10 @@ public class PreBossCutScene : MonoBehaviour
         boss.GetComponent<BossBehavior>().enabled = true;
         bossEncounterMusic.Stop();
         bossMusic.Play();
+        
+        cutsceneText.SetActive(true);
     }
+
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
@@ -121,6 +126,11 @@ public class PreBossCutScene : MonoBehaviour
             //player unable to move
             player.GetComponent<PlayerControls>().enabled = false;
             player.GetComponent<ShootPellets>().enabled = false;
+            player.GetComponent<Rigidbody2D>().linearVelocityX = 0;
+            player.GetComponent<Rigidbody2D>().linearVelocityY = 0;
+
+            //cutscene text appears
+            cutsceneText.SetActive(true);
         }
     }
 }

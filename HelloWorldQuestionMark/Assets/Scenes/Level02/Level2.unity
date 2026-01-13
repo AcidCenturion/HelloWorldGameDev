@@ -4754,7 +4754,7 @@ GameObject:
   - component: {fileID: 572913416}
   - component: {fileID: 572913415}
   m_Layer: 0
-  m_Name: Isometric Diamond
+  m_Name: BoxPuzResetButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
