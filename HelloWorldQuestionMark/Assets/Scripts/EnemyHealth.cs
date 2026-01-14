@@ -7,6 +7,9 @@ public class EnemyHealth : MonoBehaviour
     private int damage;
     private bool isInvulnerable;
 
+    public bool bossIsDead = false;
+
+
     public int entityHealth
     {
         get
@@ -57,6 +60,11 @@ public class EnemyHealth : MonoBehaviour
         // Destroys the enemy if it runs out of health
         if (this.currentHealth <= 0)
         {
+            if (this.gameObject.name == "Boss")
+            {
+                bossIsDead = true;
+                Destroy(gameObject);
+            }
             Destroy(gameObject);
         }
     }
@@ -75,4 +83,5 @@ public class EnemyHealth : MonoBehaviour
             this.currentHealth = this.maxHealth;
         }
     }
+
 }

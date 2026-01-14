@@ -20,9 +20,13 @@ public class PurpleEnemy : MonoBehaviour
     [SerializeField] public float speed;
     
 
-    CircleCollider2D collider;
+    CircleCollider2D Collider;
     RayCast rayCastOrigins;
     public CollisionDetection collision;
+
+    public AudioClip clip;
+    private bool isQuitting = false;
+
 
     void Start()
     {
@@ -30,7 +34,7 @@ public class PurpleEnemy : MonoBehaviour
         enemyHealth = enemy.GetComponent<EnemyHealth>();
         enemyHealth.Init(health, damage);
 
-        collider = GetComponent<CircleCollider2D>();
+        Collider = GetComponent<CircleCollider2D>();
         CalculateRaySpacing();
 
         // Sets enemySpeed 5 seconds after starting to account for lag without the enemy flying out of the map
@@ -44,7 +48,7 @@ public class PurpleEnemy : MonoBehaviour
         collision.Reset();
 
         // Mostly stops the enemy from being moved horizontally
-        Rigidbody2D rb = collider.gameObject.GetComponentInParent<Rigidbody2D>();
+        Rigidbody2D rb = Collider.gameObject.GetComponentInParent<Rigidbody2D>();
         if (rb != null)
         {
             rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
@@ -64,7 +68,7 @@ public class PurpleEnemy : MonoBehaviour
     // Creates rays to check if the object is touching another object
     void CalculateRaySpacing ()
     {
-        Bounds bounds = collider.bounds;
+        Bounds bounds = Collider.bounds;
 
         verticalRays = Mathf.Clamp(verticalRays, 2, int.MaxValue);
 
@@ -94,7 +98,7 @@ public class PurpleEnemy : MonoBehaviour
             // Debug.DrawLine(rayCastOrigins.topLeft, rayCastOrigins.topRight, Color.blue);
 
             // Checks if the enemy has hit anything that isn't itelf
-            if (hit && hit.collider != collider)
+            if (hit && hit.collider != Collider)
             {
                 rayLength = hit.distance;
 
@@ -108,7 +112,7 @@ public class PurpleEnemy : MonoBehaviour
     
     void UpdateRayCast ()
     {
-        Bounds bounds = collider.bounds;
+        Bounds bounds = Collider.bounds;
 
         rayCastOrigins.topLeft = new Vector2(bounds.min.x, bounds.max.y);
         rayCastOrigins.topRight = new Vector2(bounds.max.x, bounds.max.y);
@@ -147,6 +151,19 @@ public class PurpleEnemy : MonoBehaviour
         public void Reset ()
         {
             above = below = false;
+        }
+    }
+
+    void OnApplicationQuit()
+    {
+        isQuitting = true;
+    }
+
+    void OnDestroy()
+    {
+        if(!isQuitting)
+        {
+            L1SoundEffectManager.Instance.PlaySoundEffect(clip, transform.position);
         }
     }
 }

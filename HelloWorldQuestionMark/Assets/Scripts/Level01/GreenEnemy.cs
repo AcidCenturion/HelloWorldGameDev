@@ -16,6 +16,9 @@ public class GreenEnemy : MonoBehaviour
     [SerializeField] public int damage = 1;
     [SerializeField] private float enemySpeed;
 
+    public AudioClip clip;
+    private bool isQuitting = false;
+
     void Start()
     {
         // Creates a new EnemyHealth
@@ -25,7 +28,7 @@ public class GreenEnemy : MonoBehaviour
         spriteRenderer = enemy.GetComponent<SpriteRenderer>();
     }
 
-    void Update ()
+    void Update()
     {
         // If the enemy is left of the patrol point and moving left it keeps moving left else moves right
         if (isMovingLeft)
@@ -55,12 +58,12 @@ public class GreenEnemy : MonoBehaviour
 
     }
 
-    void Movement (int direction)
+    void Movement(int direction)
     {
         enemy.position = new Vector2(enemy.position.x + Time.deltaTime * direction * enemySpeed, enemy.position.y);
     }
 
-    void ChangeDirection ()
+    void ChangeDirection()
     {
 
         // Changes the direction the enemy faces
@@ -72,6 +75,19 @@ public class GreenEnemy : MonoBehaviour
         else
         {
             enemy.transform.rotation = Quaternion.Euler(0, 180, 0);
+        }
+    }
+
+    void OnApplicationQuit()
+    {
+        isQuitting = true;
+    }
+
+    void OnDestroy()
+    {
+        if(!isQuitting)
+        {
+            L1SoundEffectManager.Instance.PlaySoundEffect(clip, transform.position);
         }
     }
 }

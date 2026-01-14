@@ -348,6 +348,5 @@ public class BossBehavior : MonoBehaviour
 
         }
     }
-    
-    //when boss dies, play normal bgm
+
 }

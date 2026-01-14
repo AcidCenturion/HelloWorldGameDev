@@ -56,7 +56,7 @@ public class Pellets : MonoBehaviour
     //create method that destroys itself when it contacts collider
     void OnTriggerEnter2D(Collider2D collider)
     {
-    
+
         Debug.Log("Object hit");
         if (collider.gameObject.CompareTag("Breakable"))
         {
@@ -73,6 +73,8 @@ public class Pellets : MonoBehaviour
             Debug.Log("Enemy detected");
             EnemyHealth enemyHealth = collider.gameObject.GetComponentInParent<EnemyHealth>();
             enemyHealth.takeDamage(1);
+
+            
         }
 
         Destroy(gameObject);

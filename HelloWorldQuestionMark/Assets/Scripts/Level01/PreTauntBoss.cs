@@ -165,6 +165,7 @@ public class PreTauntBoss : MonoBehaviour
 
         }
     }
+    
     private void Disable()
     {
         Debug.Log("Disabled");
