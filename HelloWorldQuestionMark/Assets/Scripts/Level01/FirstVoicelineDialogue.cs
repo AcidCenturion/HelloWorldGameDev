@@ -23,7 +23,7 @@ public class FirstVoicelineDialogue : MonoBehaviour
     {
         if (inCutscene)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.E))
                 {
                     FirstDialogueCutsceneFinished = true;
                     DisableCutscene();
