@@ -35,7 +35,8 @@ public class DisplayScene : MonoBehaviour
 
     // Audio
     public GameObject musicManager;
-    
+    public AudioSource typeSFX;
+
     void Start()
     {
         // Finds all necessary objects
@@ -158,6 +159,7 @@ public class DisplayScene : MonoBehaviour
         foreach (char c in message)
         {
             textObj.text += c;
+            if (typeSFX != null) typeSFX.Play();
             yield return new WaitForSeconds(textDelay);
         }
 
