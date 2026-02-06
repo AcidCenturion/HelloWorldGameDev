@@ -27,14 +27,22 @@ If you want to skip to the beginning of the SAME array, you can't do (skip : 0),
   # Required fields
   string text               // Used in textbox
 
-  # Optional Fields
+  # Optional Fields (Not required to have)
   string name               // name of character speaking; Don't add if you want text italicized
-  Option[] options          // if scene contains option(s); see data fields below
-  public string emotion;    // How the character's face will look (Happy, sad, etc); not case sensitive
+  Option[] options          // if scene contains option(s)
+                               see data fields below for values
+  public string emotion;    // How the character's face will look 
+                               Values: Normal, Happy, Love, Sad, Mad
+                               not case sensitive, Normal if not specified
   int skip                  // optional field to skip to a specific scene index; might be removed
   NextSceneArr nextSceneArr // Loads new Scene array from json (for scene transitions)
-  string voiceOver          // Path to voice over audio file; might be removed later, idk if it should be relative or absolute
-  string location           // NEW background image, if want to keep the same one then don't use this. Must use EXACT image name (ex. "school_hallway")
+                               See data fields below for values
+  string voiceOver          // Path to voice over audio file; probably be removed later, idk if it should be relative or absolute
+  string location           // NEW background image, if want to keep the same one then don't use this
+                               Must use EXACT image name (ex. "school_hallway")
+  public string bgm;        // Changes BGM to specified track 
+                               Values: Morning, Noon, Night
+
 
 * Option Data Fields *
   # Required Fields

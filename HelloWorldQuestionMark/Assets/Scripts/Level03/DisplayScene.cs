@@ -32,6 +32,9 @@ public class DisplayScene : MonoBehaviour
     public GameObject greenCharacter;
     public GameObject kingCircleCharacter;
     public GameObject hermitCharacter;
+
+    // Audio
+    public GameObject musicManager;
     
     void Start()
     {
@@ -40,6 +43,7 @@ public class DisplayScene : MonoBehaviour
         text = text == null ? GameObject.Find("textbox_text") : text;
         charName = charName == null ? GameObject.Find("name_text") : charName;
         backgroundLocation = backgroundLocation == null ? GameObject.Find("visualNovelBackground") : backgroundLocation;
+        musicManager = musicManager == null ? GameObject.Find("MusicManager") : musicManager;
     }   
 
     // Public Function called in LoadScene everytime a new scene is called
@@ -104,6 +108,9 @@ public class DisplayScene : MonoBehaviour
             if (redCharacter.GetComponent<Character>().isCharacterDisplayActive()) // Doesn't have to be red, just need an object that can use the methods
                 redCharacter.GetComponent<Character>().ResetCharacterDisplay();
         }
+
+        // Update BGM
+        if (currScene.bgm != null) UpdateBGM(currScene.bgm);
 
         // Update selected button in Controls.cs
         sceneManager.GetComponent<Controls>().turnOffSelectedButton();
@@ -201,6 +208,25 @@ public class DisplayScene : MonoBehaviour
             StopCoroutine(typeRoutine);
             text.GetComponent<TextMeshProUGUI>().text = currScene.name != null ? currScene.text : $"<i>{currScene.text}</i>";
             typeRoutine = null;
+        }
+    }
+
+    private void UpdateBGM(string bgm)
+    {
+        switch (bgm.ToLower())
+        {
+            case "morning":
+                musicManager.GetComponent<MusicManager>().PlayBGM(Level3BGM.Morning);
+                break;
+            case "noon":
+                musicManager.GetComponent<MusicManager>().PlayBGM(Level3BGM.Noon);
+                break;
+            case "night":
+                musicManager.GetComponent<MusicManager>().PlayBGM(Level3BGM.Night);
+                break;
+            default:
+                Debug.LogError("Failed to find BGM: " + bgm);
+                break;
         }
     }
 }

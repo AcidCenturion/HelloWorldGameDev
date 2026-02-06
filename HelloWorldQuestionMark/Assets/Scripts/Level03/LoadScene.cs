@@ -31,6 +31,7 @@ public class Scene
   public NextSceneArr nextSceneArr; // Loads new Scene array from json (for scene transitions)
   public string voiceOver;          // Path to voice over audio file
   public string location;           // Loads new background Image
+  public string bgm;                // Changes BGM to specified track
 }
 [System.Serializable]
 public class NextSceneArr
