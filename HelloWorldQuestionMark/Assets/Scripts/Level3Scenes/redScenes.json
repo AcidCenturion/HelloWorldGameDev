@@ -2,27 +2,32 @@
   "morning" : [
     {
       "name" : "player",
-      "text" : "player: this is 0th"
+      "text" : "player: this is 0th",
+      "location" : "leblanc_0"
     },
     {
-      "name" : "red",
-      "text" : "red: this is 1st"
+      "name" : "Red",
+      "text" : "Testing Rowan's sprite",
+      "emotion" : "mad"
     },
     {
-      "name" : "red",
-      "text" : "red: this is 2nd"
+      "name" : "Red",
+      "text" : "Testing Rowan's sprite",
+      "emotion" : "sad"
     },
     {
-      "name" : "red",
-      "text" : "red: this is 3rd"
+      "name" : "Red",
+      "text" : "Testing Rowan's sprite",
+      "emotion" : "happy"
     },
     {
-      "name" : "red",
-      "text" : "red: this is 4th"
+      "name" : "Red",
+      "text" : "Testing Rowan's sprite",
+      "emotion" : "love"
     },
     {
-      "name" : "red",
-      "text" : "red: this is 5th"
+      "name" : "Red",
+      "text" : "Testing Rowan's sprite"
     }
   ],
   "chemistry" : [],

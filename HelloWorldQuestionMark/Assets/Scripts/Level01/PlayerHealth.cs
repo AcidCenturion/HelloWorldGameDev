@@ -7,7 +7,9 @@ public class PlayerHealth : MonoBehaviour
     private int currentHealth;
     public float invulnTimerMax = 1;
     private float invulnTimerVal;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    public AudioSource playerHurtSound;
+    
     void Start()
     {
         currentHealth = maxHealth;
@@ -26,6 +28,7 @@ public class PlayerHealth : MonoBehaviour
     {
         currentHealth -= damage;
         Debug.Log("Player took damage, Current health: " + currentHealth);
+        playerHurtSound.Play();
 
         if (currentHealth <= 0)
         {

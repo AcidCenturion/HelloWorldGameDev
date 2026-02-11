@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4016900301786255683}
   - component: {fileID: 111330849294093411}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Trigger
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -218,6 +218,7 @@ MonoBehaviour:
   health: 1
   damage: 1
   enemySpeed: 3.5
+  clip: {fileID: 8300000, guid: 7194c80f9b4d3c742888a1e690316594, type: 3}
 --- !u!50 &8358912361568507279
 Rigidbody2D:
   serializedVersion: 5

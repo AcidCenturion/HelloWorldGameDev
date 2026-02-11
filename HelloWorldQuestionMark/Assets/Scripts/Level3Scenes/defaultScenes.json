@@ -2,15 +2,15 @@
   "morning" : [
     {
       "name": "narrator",
-      "text": "You find yourself in a dimly lit room. The air is thick with mystery."
+      "text": "You find yourself in a dimly lit room. The air is thick with mystery.",
+      "location" : "placeholderBackground"
     },
     {
-      "name" : "monkey",
-      "text" : "banana"
+      "text" : "This is testing if text is properly italicized when no name is given."
     },
     {
       "name" : "Testing",
-      "text" : "Testing options: 0 for red, 1 for green, 2 for next default scene.",
+      "text" : "Testing: Choose which character array to load next.",
       "options" : [
         {
           "text" : "this will load red scenes",
@@ -30,8 +30,40 @@
           }
         },
         {
-          "text" : "This will just lead to the next scene in defaultScenes",
-          "newIndex" : 4
+          "text" : "this will load purple scenes",
+          "nextSceneArr" : {
+            "sceneArr" : "purpleScenes",
+            "timeslot" : "morning",
+            "startIndex" : 0
+          }
+        },
+        {
+          "text" : "This will just move to the next default scene"
+        }
+      ]
+    },
+    {
+      "name" : "Testing",
+      "text" : "Testing: Additional character arrays to load",
+      "options" : [
+        {
+          "text" : "this will load hermit scenes",
+          "nextSceneArr" : {
+            "sceneArr" : "hermitScenes",
+            "timeslot" : "morning",
+            "startIndex" : 0
+          }
+        },
+        {
+          "text" : "this will load king circle scenes",
+          "nextSceneArr" : {
+            "sceneArr" : "kingCircleScenes",
+            "timeslot" : "morning",
+            "startIndex" : 0
+          }
+        },
+        {
+          "text" : "This will just move to the next default scene"
         }
       ]
     },
@@ -41,9 +73,9 @@
     },
     {
       "name" : "placeholder",
-      "text" : "asas",
+      "text" : "The next scene will be the start of the default scene",
       "nextSceneArr" : {
-        "sceneArr" : "redScenes",
+        "sceneArr" : "defaultScenes",
         "timeslot" : "morning",
         "startIndex" : 0
       }

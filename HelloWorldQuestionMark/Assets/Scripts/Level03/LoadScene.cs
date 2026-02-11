@@ -25,10 +25,13 @@ public class Scene
 
   // Optional Fields
   public string name;               // name of character speaking
+  public string emotion;            // How the character's face will look (Happy, Sad, etc)
   public Option[] options;          // optional field for choices
   public int skip;                  // optional field to skip to a specific scene index
   public NextSceneArr nextSceneArr; // Loads new Scene array from json (for scene transitions)
   public string voiceOver;          // Path to voice over audio file
+  public string location;           // Loads new background Image
+  public string bgm;                // Changes BGM to specified track
 }
 [System.Serializable]
 public class NextSceneArr
@@ -49,8 +52,7 @@ public class Option
 
 public class LoadScene : MonoBehaviour
 {
-  // Public Variables, used by other scripts
-  public Scene currentScene; // get this var when displaying scene
+  private Scene currentScene; // get this var when displaying scene
 
   // Private Variables
   private Scene[] scenes;
@@ -104,6 +106,11 @@ public class LoadScene : MonoBehaviour
       if (!string.IsNullOrEmpty(selected.nextSceneArr.sceneArr))
       {
         scenes = LoadFromJSON(selected.nextSceneArr.sceneArr, (TimeOfDay) Enum.Parse(typeof(TimeOfDay), selected.nextSceneArr.timeslot));
+        if (scenes == null || scenes.Length == 0)
+        {
+          Debug.LogError("No scenes loaded from json");
+          return;
+        }
         sceneIdx = selected.nextSceneArr.startIndex;
         currentScene = scenes[sceneIdx];
         return;
@@ -126,6 +133,11 @@ public class LoadScene : MonoBehaviour
     if (!string.IsNullOrEmpty(currentScene.nextSceneArr.sceneArr))
     {
       scenes = LoadFromJSON(currentScene.nextSceneArr.sceneArr, (TimeOfDay) Enum.Parse(typeof(TimeOfDay), currentScene.nextSceneArr.timeslot)); 
+      if (scenes == null || scenes.Length == 0)
+      {
+        Debug.LogError("No scenes loaded from json");
+        return;
+      }
       sceneIdx = currentScene.nextSceneArr.startIndex;
       currentScene = scenes[sceneIdx];
     } else
@@ -139,15 +151,6 @@ public class LoadScene : MonoBehaviour
       currentScene = scenes[sceneIdx];
     }
 
-  }
-
-  // Function for testing loading scenes
-  public void TestNextScene(int choice = -1)
-  {
-    LoadNextScene(choice);
-    Debug.Log("Current Scene Text: " + currentScene.text);
-    Debug.Log("Current Scene index: " + sceneIdx);
-    GameObject.Find("sceneManager").GetComponent<DisplayScene>().UpdateScene();
   }
 
   // Helper Function: Loads specific Scene array from JSON file
@@ -188,6 +191,11 @@ public class LoadScene : MonoBehaviour
         return null;
     }
 
+  }
+
+  public Scene getCurrentScene()
+  {
+    return currentScene;
   }
   
    

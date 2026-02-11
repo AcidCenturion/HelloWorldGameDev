@@ -10,15 +10,18 @@ public class PreBossCutScene : MonoBehaviour
     public Transform[] rollPoints;
     int rollPointIndex = 0;
     [Header("Temp Variables")]
-    bool isActivated = false;
+    public bool isActivated = false;
     bool reachedLocation = false;
     public Transform destination; //use empty game object's Transform for this
     private float timer;
     public float pauseAfterReached = 1;
     public AudioSource voiceline;
+    public bool BossCutsceneFinished = false;
     public AudioSource bossMusic;
     public AudioSource bossEncounterMusic;
     public GameObject NormalBGM;
+    public GameObject cutsceneText;
+    public EnemyHealth enemyHealth;
 
     void OnEnable()
     {
@@ -40,9 +43,10 @@ public class PreBossCutScene : MonoBehaviour
         //Makes sure boss music is always paused
         bossMusic.Pause();
 
+        cutsceneText.SetActive(false);
+
     }
 
-    // Update is called once per frame
     void Update()
     {
         //if player hasnt activated it
@@ -70,6 +74,7 @@ public class PreBossCutScene : MonoBehaviour
             GetComponent<BoxCollider2D>().enabled = false;
 
             //Destroy(gameObject);
+
         }
         else
         {
@@ -107,7 +112,10 @@ public class PreBossCutScene : MonoBehaviour
         boss.GetComponent<BossBehavior>().enabled = true;
         bossEncounterMusic.Stop();
         bossMusic.Play();
+        
+        cutsceneText.SetActive(false);
     }
+
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
@@ -121,7 +129,19 @@ public class PreBossCutScene : MonoBehaviour
             //player unable to move
             player.GetComponent<PlayerControls>().enabled = false;
             player.GetComponent<ShootPellets>().enabled = false;
+            player.GetComponent<Rigidbody2D>().linearVelocityX = 0;
+            player.GetComponent<Rigidbody2D>().linearVelocityY = 0;
+
+            //cutscene text appears
+            cutsceneText.SetActive(true);
         }
     }
+
+    void BossDies()
+    {
+        bossMusic.Stop();
+        NormalBGM.GetComponent<AudioSource>().Pause();
+    }
+
 }
 //Note When Reset, restart normalBGM and stop bossMusic

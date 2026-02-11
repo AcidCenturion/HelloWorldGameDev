@@ -3,13 +3,32 @@
     {
       "name" : "Green",
       "text" : "This is green scenes json file.",
-      "options" : [
-        {
-          "text" : "hello red",
-          "index" : "This will be index of response towards option 1; change to",
-          "points" : 20
-        }
-      ]
+      "location" : "leblanc_0",
+      "bgm" : "Morning"
+    },
+    {
+      "name" : "Gemini",
+      "text" : "Testing Gemini's sprite",
+      "emotion" : "mad"
+    },
+    {
+      "name" : "Gemini",
+      "text" : "Testing Gemini's sprite",
+      "emotion" : "sad"
+    },
+    {
+      "name" : "Gemini",
+      "text" : "Testing Gemini's sprite",
+      "emotion" : "happy"
+    },
+    {
+      "name" : "Gemini",
+      "text" : "Testing Gemini's sprite",
+      "emotion" : "love"
+    },
+    {
+      "name" : "Gemini",
+      "text" : "Testing Gemini's sprite"
     },
     {
       "name" : "green",

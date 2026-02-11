@@ -93,7 +93,7 @@ Transform:
   m_GameObject: {fileID: 4392107944190451744}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.0613213, y: -0.023923874, z: 0.0076475497}
+  m_LocalPosition: {x: 4.49, y: -0.35, z: 0.0076475497}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -112,7 +112,7 @@ GameObject:
   - component: {fileID: 3347844527231362425}
   - component: {fileID: 3017874350310894324}
   - component: {fileID: 8217144383007194578}
-  - component: {fileID: 3589728723682013121}
+  - component: {fileID: 749725931238249387}
   m_Layer: 0
   m_Name: green_enemy
   m_TagString: Enemy
@@ -206,9 +206,10 @@ MonoBehaviour:
   RightPatrolPoint: {fileID: 8679565700492859607}
   LeftPatrolPoint: {fileID: 6886113279631926513}
   enemy: {fileID: 4871914675738585554}
-  health: 0
+  health: 1
   damage: 1
   enemySpeed: 3.5
+  clip: {fileID: 8300000, guid: 7194c80f9b4d3c742888a1e690316594, type: 3}
 --- !u!58 &3017874350310894324
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -271,8 +272,8 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &3589728723682013121
+  m_Constraints: 4
+--- !u!114 &749725931238249387
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

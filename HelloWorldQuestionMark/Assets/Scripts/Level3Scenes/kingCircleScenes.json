@@ -1,0 +1,48 @@
+{
+  "morning" : [
+    {
+      "name" : "King Circle",
+      "text" : "This is King Circle scenes json file.",
+      "location" : "leblanc_0"
+    },
+    {
+      "name" : "King Circle",
+      "text" : "Testing Purple's sprite",
+      "emotion" : "mad"
+    },
+    {
+      "name" : "King Circle",
+      "text" : "Testing Purple's sprite",
+      "emotion" : "sad"
+    },
+    {
+      "name" : "King Circle",
+      "text" : "Testing Purple's sprite",
+      "emotion" : "happy"
+    },
+    {
+      "name" : "King Circle",
+      "text" : "Testing Purple's sprite",
+      "emotion" : "love"
+    },
+    {
+      "name" : "King Circle",
+      "text" : "Testing Purple's sprite"
+    },
+    {
+      "name" : "King Circle",
+      "text" : "This is the next scene in King Circle, the next will go back to defaultScenes.",
+      "nextSceneArr" : {
+        "sceneArr" : "defaultScenes",
+        "timeslot" : "morning",
+        "startIndex" : 0
+      }
+    }
+  ],
+  "chemistry" : [],
+  "history" : [],
+  "lunch" : [],
+  "PE" : [],
+  "afterSchool" : [],
+  "firstDate" : []
+}

@@ -13,7 +13,10 @@ public class Breakable : MonoBehaviour
  
 
 
-  [SerializeField] private int durability = 1;
+    [SerializeField] private int durability = 1;
+
+    public AudioClip clip;
+    private bool isQuitting = false;
 
     //Method called by pellets 
     public void DecreaseDurability(int dmg)
@@ -24,6 +27,19 @@ public class Breakable : MonoBehaviour
         {
             //Destroys the breakable object
             Destroy(gameObject);
+        }
+    }
+
+    void OnApplicationQuit()
+    {
+        isQuitting = true;
+    }
+
+    void OnDestroy()
+    {
+        if(!isQuitting)
+        {
+            L1SoundEffectManager.Instance.PlaySoundEffect(clip, transform.position);
         }
     }
 

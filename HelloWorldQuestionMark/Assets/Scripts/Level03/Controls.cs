@@ -1,16 +1,137 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class Controls : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    // Buttons
+    public GameObject Option1; // up arrow
+    public GameObject Option2; // left arrow
+    public GameObject Option3; // right arrow
+    public GameObject Option4; // down arrow
+    private GameObject selectedButton = null;
+
+    // Visual
+    public Color selectedColor;
+    public Color defaultColor;
+    private ColorBlock standardColors;
+
+    public GameObject sceneManager;
+
     void Start()
     {
+        sceneManager = sceneManager ? sceneManager : GameObject.Find("SceneManager");
+
+        // Sets specific color object
+        standardColors = Option1.GetComponent<Button>().colors;
+        standardColors.normalColor = defaultColor;
+        standardColors.highlightedColor = selectedColor;
+        standardColors.selectedColor = selectedColor;
+
+        // Set specific colors for button
+        if (Option1 != null) Option1.GetComponent<Button>().colors = standardColors;   
+        if (Option2 != null) Option2.GetComponent<Button>().colors = standardColors;
+        if (Option3 != null) Option3.GetComponent<Button>().colors = standardColors;
+        if (Option4 != null) Option4.GetComponent<Button>().colors = standardColors;
         
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyUp(KeyCode.Return) || Input.GetKeyUp(KeyCode.Space))
+        {
+            // Calls function if selection doesn't exist
+            // Only for scenes where options do not exist
+            // prevents double ChooseNextScenes
+            if (selectedButton == null) ChooseNextScene();
+
+            // Removes selected visualizer
+            selectedButton = null;
+
+            return;
+        }
+
+        // Selects button if any present
+        if (!Option1.activeSelf) return;
+
+        // Selects button on input
+        if (Input.GetKeyUp(KeyCode.UpArrow) || Input.GetKeyUp(KeyCode.W))
+        {
+            // Does option exist
+            if (!Option1.activeSelf) return;
+
+            selectedButton = Option1;
+        }
+        else if (Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.A))
+        {
+            // Does option exist
+            if (!Option2.activeSelf) return;
+
+            selectedButton = Option2;
+        }
+        else if (Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.D))
+        {
+            // Does option exist
+            if (!Option3.activeSelf) return;
+
+            selectedButton = Option3;
+        }
+        else if (Input.GetKeyUp(KeyCode.DownArrow) || Input.GetKeyUp(KeyCode.S))
+        {
+            // Does option exist
+            if (!Option4.activeSelf) return;
+
+            selectedButton = Option4;
+        }
+
+        // Select chosen option
+        if (selectedButton) EventSystem.current.SetSelectedGameObject(selectedButton);
+
+    }
+
+    // Public function for DisplayScene
+    // Called everytime a new scene is displayed
+    // Lets Keyboard & Mouse controls not clash with each other
+    public void turnOffSelectedButton()
+    {
+        // deselects any option
+        EventSystem.current.SetSelectedGameObject(null);
+        selectedButton = null;
+    }
+
+    public void ChooseNextScene(int choice = -1)
+    {
+        // Check first to see if text is fully loaded in, if not then fully load text then return
+        if (sceneManager.GetComponent<DisplayScene>().isTyping())
+        {
+            sceneManager.GetComponent<DisplayScene>().FullDisplayText();
+            return;
+        }
+
+        // Check to see if a choice is required
+        Scene currentScene = sceneManager.GetComponent<LoadScene>().getCurrentScene();
+        if (currentScene.options != null && currentScene.options.Length > 0 && choice == -1)
+        {
+            Debug.Log("Choice required, staying on this scene.");
+            return;
+        }
+
+        // Check if scene has a choice & if so, if it has a options.points != 0 to modify affinity
+        if (currentScene.options != null && currentScene.options.Length > 0 && choice >= 0)
+        {
+            Option selectedOption = currentScene.options[choice];
+
+            // Modify affinity if needed
+            if (selectedOption.points != 0)
+            {
+                // Get character GameObject & modifies affinity
+                GameObject character = sceneManager.GetComponent<DisplayScene>().findCharacter(currentScene.name);
+                if (character != null) character.GetComponent<Character>().AddAffinity(selectedOption.points);
+            }
+        }
+
+        // Load Next Scene
+        sceneManager.GetComponent<LoadScene>().LoadNextScene(choice);
+        sceneManager.GetComponent<DisplayScene>().UpdateScene();
     }
 }

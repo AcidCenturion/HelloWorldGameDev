@@ -21,9 +21,12 @@ public class RedEnemy : MonoBehaviour
     [SerializeField] public int damage = 1;
     [SerializeField] private float enemySpeed = 5f;
 
-    CircleCollider2D collider;
+    CircleCollider2D Collider;
     RayCast rayCastOrigins;
     public CollisionDetection collision;
+
+    public AudioClip clip;
+    private bool isQuitting = false;
 
     void Start ()
     {
@@ -32,7 +35,7 @@ public class RedEnemy : MonoBehaviour
         enemyHealth.Init(health, damage);
 
         // Sets up enemy collisions with RayCasting
-        collider = GetComponent<CircleCollider2D> ();
+        Collider = GetComponent<CircleCollider2D> ();
         CalculateRaySpacing();
 
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -58,7 +61,7 @@ public class RedEnemy : MonoBehaviour
     // Creates rays to check if the object is touching another object
     void CalculateRaySpacing ()
     {
-        Bounds bounds = collider.bounds;
+        Bounds bounds = Collider.bounds;
 
         horizontalRays = Mathf.Clamp(horizontalRays, 2, int.MaxValue);
         verticalRays = Mathf.Clamp(verticalRays, 2, int.MaxValue);
@@ -133,7 +136,7 @@ public class RedEnemy : MonoBehaviour
     // Calculates the bounds of the RayCast
     void UpdateRayCast ()
     {
-        Bounds bounds = collider.bounds;
+        Bounds bounds = Collider.bounds;
 
         rayCastOrigins.topLeft = new Vector2(bounds.min.x, bounds.max.y);
         rayCastOrigins.topRight = new Vector2(bounds.max.x, bounds.max.y);
@@ -180,6 +183,19 @@ public class RedEnemy : MonoBehaviour
         {
             above = below = false;
             left = right = false;
+        }
+    }
+
+    void OnApplicationQuit()
+    {
+        isQuitting = true;
+    }
+
+    void OnDestroy()
+    {
+        if(!isQuitting)
+        {
+            L1SoundEffectManager.Instance.PlaySoundEffect(clip, transform.position);
         }
     }
 }
