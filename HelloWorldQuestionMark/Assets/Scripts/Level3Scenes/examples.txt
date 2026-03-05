@@ -1,0 +1,151 @@
+{
+  "morning" : [
+    {
+      "name": "narrator",
+      "text": "You find yourself in a dimly lit room. The air is thick with mystery.",
+      "location" : "placeholderBackground"
+    },
+    {
+      "text" : "This is testing if text is properly italicized when no name is given."
+    },
+    {
+      "name" : "Testing",
+      "text" : "Testing: Choose which character array to load next.",
+      "options" : [
+        {
+          "text" : "this will load red scenes",
+          "points" : 0,
+          "nextSceneArr" : {
+            "sceneArr" : "redScenes",
+            "timeslot" : "morning",
+            "startIndex" : 0
+          }
+        },
+        {
+          "text" : "this will load green scenes",
+          "nextSceneArr" : {
+            "sceneArr" : "greenScenes",
+            "timeslot" : "morning",
+            "startIndex" : 0
+          }
+        },
+        {
+          "text" : "this will load purple scenes",
+          "nextSceneArr" : {
+            "sceneArr" : "purpleScenes",
+            "timeslot" : "morning",
+            "startIndex" : 0
+          }
+        },
+        {
+          "text" : "This will just move to the next default scene"
+        }
+      ]
+    },
+    {
+      "name" : "Testing",
+      "text" : "Testing: Additional character arrays to load",
+      "options" : [
+        {
+          "text" : "this will load hermit scenes",
+          "nextSceneArr" : {
+            "sceneArr" : "hermitScenes",
+            "timeslot" : "morning",
+            "startIndex" : 0
+          }
+        },
+        {
+          "text" : "this will load king circle scenes",
+          "nextSceneArr" : {
+            "sceneArr" : "kingCircleScenes",
+            "timeslot" : "morning",
+            "startIndex" : 0
+          }
+        },
+        {
+          "text" : "This will just move to the next default scene"
+        }
+      ]
+    },
+    {
+      "name" : "placeholder",
+      "text" : "This is the next scene in defaultScenes after the choice scene."
+    },
+    {
+      "name" : "placeholder",
+      "text" : "The next scene will be the start of the default scene",
+      "nextSceneArr" : {
+        "sceneArr" : "defaultScenes",
+        "timeslot" : "morning",
+        "startIndex" : 0
+      }
+    }
+  ],
+  "chemistry" : [],
+  "history" : [],
+  "lunch" : [],
+  "PE" : [],
+  "afterSchool" : [],
+  "firstDate" : []
+}
+
+
+{
+  "morning" : [
+    {
+      "name" : "Perri",
+      "text" : "This is Perri scenes json file.",
+      "location" : "leblanc_0",
+      "bgm" : "Night"
+    },
+    {
+      "name" : "Perri",
+      "text" : "Testing Purple's sprite",
+      "emotion" : "mad"
+    },
+    {
+      "name" : "Perri",
+      "text" : "Perri's affinity should decrease/increase by 10 here",
+      "emotion" : "sad",
+      "options" : [
+        {
+          "text" : "Make Perri mad",
+          "points" : -10
+        },
+        {
+          "text" : "Make Perri happy",
+          "points" : 10
+        }
+      ]
+    },
+    {
+      "name" : "Perri",
+      "text" : "Testing Purple's sprite",
+      "emotion" : "happy"
+    },
+    {
+      "name" : "Perri",
+      "text" : "Testing Purple's sprite",
+      "emotion" : "love"
+    },
+    {
+      "name" : "Perri",
+      "text" : "Testing Purple's sprite"
+    },
+    {
+      "name" : "Perri",
+      "text" : "This is the next scene in Perri, the next will go back to defaultScenes.",
+      "nextSceneArr" : {
+        "sceneArr" : "defaultScenes",
+        "timeslot" : "morning",
+        "startIndex" : 0
+      }
+    }
+  ],
+  "chemistry" : [],
+  "history" : [],
+  "lunch" : [],
+  "PE" : [],
+  "afterSchool" : [],
+  "firstDate" : []
+}

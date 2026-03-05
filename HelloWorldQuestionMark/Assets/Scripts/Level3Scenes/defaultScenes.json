@@ -1,36 +1,77 @@
 {
   "morning" : [
     {
-      "name": "narrator",
-      "text": "You find yourself in a dimly lit room. The air is thick with mystery.",
-      "location" : "placeholderBackground"
+      "text": "5 months later..."
     },
     {
-      "text" : "This is testing if text is properly italicized when no name is given."
+      "name" : "Developer",
+      "text" : "Hey, playtester, check this out. I made a new game!"
     },
     {
-      "name" : "Testing",
-      "text" : "Testing: Choose which character array to load next.",
+      "name" : "Developer",
+      "text" : "I think you’ll really like this one! I never put much lore in those other games, and I figured I could work on a story-driven experience this time."
+    },
+    {
+      "name" : "Developer",
+      "text" : "It is my first time, though… I’m quite nervous… please don’t judge it too hard… Um, go ahead."
+    },
+    {
+      "text" : "A giant dungeon beast lies before you. “This is it,” you think. “The monster’s reign of terror will come to an end.”"
+    },
+    {
+      "text" : "You lunge towards it with a vicious cry. The beast quickly dodges out of the way, opening its maws for an attack. It screams a blood-curdling cry at you…"
+    },
+    {
+      "name" : "Familar Voice",
+      "text" : "Hey, are you up yet? You’re gonna be late for the bus!"
+    },
+    {
+      "text" : "That’s right, it’s a Monday. You’re supposed to start at your new school today as the new transfer student. "
+    },
+    {
+      "text" : "You pick yourself out of bed and quickly throw yourself together, rushing downstairs to the bus."
+    },
+    {
+      "text" : "A day like any other - not a problem in sight. Just you, waiting at the bus stop."
+    },
+    {
+      "name" : "Developer",
+      "text" : "I figured that if I want to focus on storytelling, then I need to focus on the characters. And what better genre to do that than in a dating sim!"
+    },
+    {
+      "text" : "You hear the voice of another in your head. You’re not sure where it's coming from, as there is no one else nearby. Yet, it still sounds so familiar as if you heard it before in another life."
+    },
+    {
+      "text" : "In fact, it's almost like there's two voices. One describes your life, addressing you in second person, while the other talks to you directly."
+    },
+    {
+      "name" : "Developer",
+      "text" : "Well, I guess, this would be the first time I’ve given the player character any kind of personality. Have fun you little lovebird!"
+    },
+    {
+      "text" : "As you listen to the narrating voice in your head, you hear the sounds of the bus screeching to a stop in front of you. This is your ride to school."
+    },
+    {
+      "text" : "You clamber onto the bus behind your friend. As you walk down the aisle, you spot a few available seats."
+    },
+    {
+      "name" : "Familar Voice",
+      "text" : "Hey, c’mon, what’re you waiting for! Come sit by your good old friend Perri and let’s talk about how exciting it is that we both are going to the same school like old times!"
+    },
+    {
+      "text" : "Perri pats the seat next to them near the back, but the bus pulls away and starts shaking, almost making you lose your balance. Maybe it’s best if you take a closer seat. You look to the other available seat right next to you, where you spot a guy in a varsity jacket on the phone."
+    },
+    {
+      "text" : "Amongst the loud voices of students talking to each other, you overhear someone on the other side loudly say the name Rowan, grabbing their attention."
+    },
+    {
+      "text" : "There’s also the seat to your right where an imposing blue figure looms, filling the air with a sense of royalty. You feel a sense of deja vu, despite never having met."
+    },
+    {
+      "text" : "Where will you choose to sit?",
       "options" : [
         {
-          "text" : "this will load red scenes",
-          "points" : 0,
-          "nextSceneArr" : {
-            "sceneArr" : "redScenes",
-            "timeslot" : "morning",
-            "startIndex" : 0
-          }
-        },
-        {
-          "text" : "this will load green scenes",
-          "nextSceneArr" : {
-            "sceneArr" : "greenScenes",
-            "timeslot" : "morning",
-            "startIndex" : 0
-          }
-        },
-        {
-          "text" : "this will load purple scenes",
+          "text" : "Carefully make your way to the back next to Perri",
           "nextSceneArr" : {
             "sceneArr" : "purpleScenes",
             "timeslot" : "morning",
@@ -38,48 +79,26 @@
           }
         },
         {
-          "text" : "This will just move to the next default scene"
-        }
-      ]
-    },
-    {
-      "name" : "Testing",
-      "text" : "Testing: Additional character arrays to load",
-      "options" : [
-        {
-          "text" : "this will load hermit scenes",
+          "text" : "Play it safe and sit next to Rowan",
           "nextSceneArr" : {
-            "sceneArr" : "hermitScenes",
+            "sceneArr" : "redScenes",
             "timeslot" : "morning",
             "startIndex" : 0
           }
         },
         {
-          "text" : "this will load king circle scenes",
+          "text" : "Figure out why you’re getting such strong deja vu",
           "nextSceneArr" : {
             "sceneArr" : "kingCircleScenes",
             "timeslot" : "morning",
             "startIndex" : 0
           }
-        },
-        {
-          "text" : "This will just move to the next default scene"
         }
       ]
-    },
-    {
-      "name" : "placeholder",
-      "text" : "This is the next scene in defaultScenes after the choice scene."
-    },
-    {
-      "name" : "placeholder",
-      "text" : "The next scene will be the start of the default scene",
-      "nextSceneArr" : {
-        "sceneArr" : "defaultScenes",
-        "timeslot" : "morning",
-        "startIndex" : 0
-      }
+
     }
+
+    
   ],
   "chemistry" : [],
   "history" : [],

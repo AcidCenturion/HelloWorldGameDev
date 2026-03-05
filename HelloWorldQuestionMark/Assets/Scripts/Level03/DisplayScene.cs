@@ -178,6 +178,7 @@ public class DisplayScene : MonoBehaviour
         {
             case "red":
             case "rowan":
+            case "student called rowan":
                 return redCharacter;
             case "purple":
             case "perri":
@@ -188,6 +189,7 @@ public class DisplayScene : MonoBehaviour
             case "hermit":
             case "old hermit":
             case "professor hermit":
+            case "bus driver":
                 return hermitCharacter;
             case "king circle":
                 return kingCircleCharacter;

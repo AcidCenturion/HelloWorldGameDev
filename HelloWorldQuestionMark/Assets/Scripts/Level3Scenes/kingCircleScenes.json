@@ -1,43 +1,28 @@
 {
   "morning" : [
     {
-      "name" : "King Circle",
-      "text" : "This is King Circle scenes json file.",
-      "location" : "leblanc_0"
+      "text" : "Your sense of deja vu overcomes you. You gather your courage and attempt to sit next to the kingly figure."
     },
     {
       "name" : "King Circle",
-      "text" : "Testing Purple's sprite",
-      "emotion" : "mad"
+      "text" : "Whoa there, buddy. This row firmly belongs to me and my lackeys. So buzz off, loser."
+    },
+    {
+      "text" : "You look around him and notice no one is sitting by them. You point this out to him."
     },
     {
       "name" : "King Circle",
-      "text" : "Testing Purple's sprite",
-      "emotion" : "sad"
+      "text" : "Yeah, well, no one’s choosing to sit by you either. Now get lost!"
     },
     {
-      "name" : "King Circle",
-      "text" : "Testing Purple's sprite",
-      "emotion" : "happy"
-    },
-    {
-      "name" : "King Circle",
-      "text" : "Testing Purple's sprite",
-      "emotion" : "love"
-    },
-    {
-      "name" : "King Circle",
-      "text" : "Testing Purple's sprite"
-    },
-    {
-      "name" : "King Circle",
-      "text" : "This is the next scene in King Circle, the next will go back to defaultScenes.",
+      "text" : "Not wanting any trouble, you decide to back off.",
       "nextSceneArr" : {
         "sceneArr" : "defaultScenes",
         "timeslot" : "morning",
-        "startIndex" : 0
+        "startIndex" : 20
       }
     }
+    
   ],
   "chemistry" : [],
   "history" : [],

@@ -1,34 +1,250 @@
 {
   "morning" : [
     {
-      "name" : "player",
-      "text" : "player: this is 0th",
-      "location" : "leblanc_0"
+      "text" : "You decide to sit next to a good-looking student in one of the middle rows of the bus. He’s a pretty fit guy and seems much stronger than the rest of the students. However, he is crowded by a group of people, possibly his friends. "
     },
     {
-      "name" : "Red",
-      "text" : "Testing Rowan's sprite",
-      "emotion" : "mad"
+      "name" : "Student Who Knows Rowan",
+      "text" : "So, are you going to head to his house tonight?"
     },
     {
-      "name" : "Red",
-      "text" : "Testing Rowan's sprite",
-      "emotion" : "sad"
+      "name" : "Student Called Rowan",
+      "text" : "Sorry, I’m kinda busy as of the moment. Rain check?"
     },
     {
-      "name" : "Red",
-      "text" : "Testing Rowan's sprite",
-      "emotion" : "happy"
+      "name" : "Student Who Knows Rowan",
+      "text" : "No worries, dude! But you’re going to miss out on a lot of fun! I’ll see you later in class, alright?"
     },
     {
-      "name" : "Red",
-      "text" : "Testing Rowan's sprite",
-      "emotion" : "love"
+      "text" : "The group leaves towards the back of the bus, giving you a chance to finally grab that seat. You also notice they were talking on the phone to someone as well."
     },
     {
-      "name" : "Red",
-      "text" : "Testing Rowan's sprite"
+      "name" :"Student Called Rowan",
+      "text" : "Yeah, I’ll be there once I get to the school. And yeah, I’ll be there at the info meeting on Sunday… wait, you want me to be a speaker for the freshmen? But wouldn’t that take away from…"
+    },
+    {
+      "name" : "Student Called Rowan",
+      "text" : "You sit down next to him, but he seems oblivious to the new student who sat down next to him. Maybe you could try getting their attention?",
+      "options" : [
+        {
+          "text" : "Tap their Shoulder",
+          "points" : 0
+        },
+        {
+          "text" : "You must have your hands full this morning",
+          "points" : 1,
+          "newIndex" : 10
+        },
+        {
+          "text" : "Do nothing and stare at them",
+          "points" : -1,
+          "newIndex" : 14
+        }
+      ]
+    },
+    {
+      "text" : "You weakly tap on their right shoulder, as their eyes shift towards you, and you smile."
+    },
+    {
+      "name" : "Student Called Rowan",
+      "text" : " Uh huh, ok. Actually, you know what? Can we discuss this later during lunch? Sure, that sounds good. Alright, bye. *beep*"
+    },
+    {
+      "name" : "Student Called Rowan",
+      "text" : "Sorry about that, I had a busy morning, and not only that, it’s the first day. I didn’t notice you next to me as well.",
+      "skip" : 19
+    },
+    {
+      "text" : "The student looks at you, and for a brief moment, the two of you awkwardly stare at each other."
+    },
+    {
+      "name" : "Student Called Rowan",
+      "text" : "Huh? Oh, sorry, yeah, I got a bit distracted. Can we talk later? I want to discuss this during lunch…. Yeah, sure thing, ok see ya. *beep*"
+    },
+    {
+      "name" : "Student Called Rowan",
+      "text" : "Yeah, already the first day, and I’ve got everything up my ass and more. Honestly, you kinda saved me from speaking to him more. Thanks for that"
+    },
+    {
+      "text" : "You feel like you’ve made a pretty good first impression.",
+      "skip" : 19
+    },
+    {
+      "text" : "You decide to do nothing and stare at them until they notice. However, it seems they are still focused on the conversation."
+    },
+    {
+      "name" :"Student Called Rowan",
+      "text" : "Yeah, sure thing. So if I reschedule my tryout to later in the evening, then it all works out? (sigh) Could we discuss this later, maybe lunch?  Ok then, I’ll see you soon. *beep*"
+    },
+    {
+      "text" : "They hang up the call and then notice you staring at them 5 inches from his face, and he flinches."
+    },
+    {
+      "name" :"Student Called Rowan",
+      "text" : "HOLY CRAP! Jeez, man, maybe a warning next time? Didn’t need to like, stare into my soul for how long you were staring at me. Don’t need to scare me like that.",
+      "emotion" : "Mad"
+    },
+    {
+      "text" : "You hastily apologize to them, but it seems they will remember it for a while. "
+    },
+    {
+      "text" : "They open up their phone to a video of what seems to be a football game. They watch a play from start to finish, and then rewind it numerous times."
+    },
+    {
+      "name" : "Student Called Rowan",
+      "text" : "He said to watch the cornerback’s motion… but what is it?"
+    },
+    {
+      "text" : "They watch more plays, and once again, the cornerback appears every single time. And on every one of those plays, the cornerback looks like he’s two steps ahead on every play, getting to the running back when it’s a run play, and the receiver when it’s a pass play."
+    },
+    {
+      "name" : "Student Called Rowan",
+      "text" : "Is it something to do with his hands? The way he moves? Everything he does is different! What am I missing here?"
+    },
+    {
+      "text" : "They begin to get frustrated and stop watching. But to you, maybe there’s something that you could pick out that they haven’t. You offer to watch the film on their phone."
+    },
+    {
+      "name" : "Student Called Rowan",
+      "text" : "Huh? You want to watch? Alright then, here you go then. Watch as much as you like. I’m getting a headache just watching them already."
+    },
+    {
+      "name" : "Student Called Rowan",
+      "text" : "They give you the phone and you begin watching play after play, focusing on the cornerback. There could be something with his actions that gives it away.",
+      "options" : [
+        {
+          "text" : "Listen to his voice",
+          "points" : 0
+        },
+        {
+          "text" : "Watch his movement during each play",
+          "points" : -1,
+          "newIndex" : 31
+        },
+        {
+          "text" : "Watch the entire defense",
+          "points" : 1,
+          "newIndex" : 37
+        }
+      ]
+    },
+    {
+      "text" : "You decide to turn your attention away from the cornerback but towards the quarterback’s voice. You notice that the cornerbacks move to a specific position every time a different word the QB makes."
+    },
+    {
+      "name" :"Student Called Rowan",
+      "text" : "Oh? Did you find something useful?"
+    },
+    {
+      "text" : "You hand the phone back to them and describe that the voice of the QB is dependent on the cornerback’s motion and their position. However, you weren’t able to detect specifically which goes with what."
+    },
+    {
+      "name" :"Student Called Rowan",
+      "text" : "Ah don’t worry about that, this is actually pretty useful info though. I’ll keep that in mind, thanks for that by the way."
+    },
+    {
+      "text" : "Afterwards he keeps analyzing the video again, retaining the info you taught them in mind. While you didn’t seem to break through fully, it felt like you started to warm up to them.",
+      "skip" : 43
+    },
+    {
+      "text" : "You decide to do what they did earlier: look at the cornerback’s movement every play. Maybe he missed something that wasn’t too obvious, maybe it’s very subtle…"
+    },
+    {
+      "text" : "..."
+    },
+    {
+      "text" : "..."
+    },
+    {
+      "text" : "A few moments pass, and you don’t seem to be making progress. You hand the phone back to them with a defeated look."
+    },
+    {
+      "name" : "Student Called Rowan",
+      "text" : "Oh? You’re done already? I told you, it’s pretty difficult. Don’t worry, if I can’t figure it out, then I don’t expect everyone to find out. But hey, at least you tried your best."
+    },
+    {
+      "text" : "Despite the seemingly encouraging words coming out of their mouth, you still feel a slight embarrassment that you weren’t able to figure out the problem.",
+      "skip" : 43
+    },
+    {
+      "text" : "Instead of watching the cornerback, you decide to watch not just him, but EVERYONE else on the defense. And after each play, you notice that one defensive end taps his right foot on a running play, and taps it once on a passing play."
+    },
+    {
+      "name" : "Student Called Rowan",
+      "text" : "You look locked in. Did you actually figure out what it was?"
+    },
+    {
+      "text" : "You hand them back the phone and describe the pattern that you saw in the film"
+    },
+    {
+      "name" : "Student Called Rowan",
+      "text" : "His foot? Oh shit, you’re right! That’s what’s happening. I’m actually pretty dumb to not have noticed it."
+    },
+    {
+      "name" :"Student Called Rowan",
+      "text" : "That’s what he said about the cornerback. Not to solely watch him, but to see what was messaged to him. Thanks again! Didn’t know you were a football nerd."
+    },
+    {
+      "text" : "You feel a great sense of pride in your body. Your elite of knowledge of football worked out beautifully, and you feel that you were able to grow a bit deeper with the student."
+    },
+    {
+      "name" :"Student Called Rowan",
+      "text" : "Anyways, you seem like a very nice kid. Usually, many people come up to me thinking I’m a celebrity and all, but you don’t seem to be like one of them. I like that."
+    },
+    {
+      "text" : "They reach out their hand."
+    },
+    {
+      "name" : "Rowan",
+      "text" : "Name’s Rowan, nice to meet you, um… "
+    },
+    {
+      "text" : "Rowan squints their eyes, trying to make the slightly messy handwritten name on your name tag, a bit messier due to your lack of sleep last night."
+    },
+    {
+      "name" : "Rowan",
+      "text" : "Square... right? I think I said that correctly, just want to make sure."
+    },
+    {
+      "text" : "You nod your head nonchalantly, not showing the fact that they got your name right despite the fact that, to your point of view, it looks illegible."
+    },
+    {
+      "text" : "Rowan breathes a sigh of relief"
+    },
+    {
+      "name" : "Rowan",
+      "text" : "Phew, ok then, good to know. I didn’t want to make a bad impression after all. I somehow have a problem with that for some reason, not sure why though..."
+    },
+    {
+      "name" : "Rowan",
+      "text" : "But since you’ve already noticed, I am part of the football team, the quarterback, to be specific. I also play as the point guard and captain on the basketball team, the starting pitcher on the baseball team, and also many other sports that I’m sure you have never heard of before."
+    },
+    {
+      "name" : "Bus Driver Hermit",
+      "text" : "We will be arriving at Sintax Academy very shortly! Please remain in your seats for the time being!"
+    },
+    {
+      "text" : "Moments later, the bus pulls up to the entrance of the school. It is a grand school, with mixes of Art-Deco and modern architecture blended in, evident with the old-school main building and the recently renovated science buildings."
+    },
+    {
+      "name" : "Rowan",
+      "text" : "Hey, just before you go, would you mind taking a look at your schedule? I’m just curious, that’s all."
+    },
+    {
+      "text" : "Without hesitation, you show him a paper of your schedule, partly crumpled up due to being shoved into the bottom of your backpack."
+    },
+    {
+      "name" : "Rowan",
+      "text" : "Hmm… oh it looks like we both have the same chemistry and P.E class, so we'll see each other again later. "
+    },
+    {
+      "name" : "Rowan",
+      "text" : "Well I'm gonna head out now. I need to turn in some paperwork to the conditioning coach for the pre-season, so you can head to class without me! See ya!"
+    },
+    {
+      "text" : "Just as you were about to say goodbye to Rowan, they immediately sprint out the bus and head to who knows where. It’s best not to linger anymore and head to your first period of the day."
     }
+    
   ],
   "chemistry" : [],
   "history" : [],
