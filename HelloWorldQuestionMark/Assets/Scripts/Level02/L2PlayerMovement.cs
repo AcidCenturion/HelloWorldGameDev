@@ -64,9 +64,20 @@ public class L2PlayerMovement : MonoBehaviour
     { 
         if(other.CompareTag("Coin"))
         {
-            
+
             CoinCounter++;
         }
+        if (other.CompareTag("CameraMoveZone"))
+        {
+            for (double moveTime = 20; moveTime <= 1; moveTime += Time.deltaTime)
+            {
+                float moveX = Input.GetAxisRaw("Horizontal");
+                float moveY = Input.GetAxisRaw("Vertical");
+                moveDirection = new Vector2(moveX, moveY).normalized;  
+            }
+            
+        }
+
 
     }
 }

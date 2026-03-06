@@ -87,9 +87,11 @@ public class Sword : MonoBehaviour
         {
             Destroy(this.gameObject);
             
+        }else if (!collider.gameObject.CompareTag("Coin"))
+        {
+            Destroy(this.gameObject);            
         }
 
-        Destroy(this.gameObject);
     }
     
 

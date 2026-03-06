@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
   private Rigidbody2D rb;
   private Vector2 moveInput;
   private Vector2 moveDirection;
+  [SerializeField] private Boolean facingRight;
 
   
 
@@ -36,24 +37,40 @@ public class PlayerMovement : MonoBehaviour
         float moveY = Input.GetAxisRaw("Vertical");
         rb.linearVelocity = moveInput * moveSpeed;
         moveDirection = new Vector2(moveX,moveY).normalized;
-        
+        PointPlayer(moveX);
     }
-
-    void FixedUpdate()
-    {
-         if (isDashing)
-        {
-            return;
-        }
-    }
-
-
     public void Move(InputAction.CallbackContext context)
     {
        
         moveInput = context.ReadValue<Vector2>();
-    }
 
+        
+    }
+    
+void PointPlayer(float moveX)
+    {
+
+        //checks horizontal input -> points player towards left/right   
+         if (moveX > 0)
+        {
+            facingRight = true;
+        }
+        if (moveX < 0)
+        {
+            facingRight = false;
+        }
+
+        // Changes the direction the Player is facing
+        if (facingRight == true)
+        {
+            transform.rotation = Quaternion.Euler(transform.rotation.x, 0, transform.rotation.z);
+        }
+        else
+        {
+            transform.rotation = Quaternion.Euler(transform.rotation.x, 180, transform.rotation.z);
+        }
+    }
+    
     public void DashControl(InputAction.CallbackContext context)
     {
        if (canDash){ 
