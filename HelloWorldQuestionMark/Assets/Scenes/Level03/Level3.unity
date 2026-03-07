@@ -355,6 +355,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 649c72aa6b6bf46bb90bb98001660694, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &219323994
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 219323996}
+  - component: {fileID: 219323997}
+  m_Layer: 0
+  m_Name: testObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &219323996
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 219323994}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1050.6143, y: 491.29977, z: -6.7007985}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &219323997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 219323994}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6320e0885bfd63141841552412647ff4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &245115344
 GameObject:
   m_ObjectHideFlags: 0
@@ -1963,6 +2007,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1360157924}
   - component: {fileID: 1360157923}
+  - component: {fileID: 1360157925}
   m_Layer: 0
   m_Name: Rowan
   m_TagString: Untagged
@@ -2009,6 +2054,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1360157925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1360157922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14560ebb2fbb9af4cafcc3c44b7bae6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1475711399
 GameObject:
   m_ObjectHideFlags: 0
@@ -2231,6 +2288,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1525506281}
   - component: {fileID: 1525506280}
+  - component: {fileID: 1525506282}
   m_Layer: 0
   m_Name: Gemini
   m_TagString: Untagged
@@ -2277,6 +2335,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1525506282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1525506279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6320e0885bfd63141841552412647ff4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1559847337
 GameObject:
   m_ObjectHideFlags: 0
@@ -2897,6 +2967,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1976924749}
   - component: {fileID: 1976924748}
+  - component: {fileID: 1976924750}
   m_Layer: 0
   m_Name: Perri
   m_TagString: Untagged
@@ -2943,6 +3014,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1976924750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1976924747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 965a0ff875420fa49b60950bde5b5b0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2044647329
 GameObject:
   m_ObjectHideFlags: 0
@@ -3186,3 +3269,4 @@ SceneRoots:
   - {fileID: 879340855}
   - {fileID: 1287457754}
   - {fileID: 1280091177}
+  - {fileID: 219323996}

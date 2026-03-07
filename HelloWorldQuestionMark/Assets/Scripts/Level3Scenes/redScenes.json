@@ -28,16 +28,16 @@
       "options" : [
         {
           "text" : "Tap their Shoulder",
-          "points" : 0
+          "points" : 5
         },
         {
           "text" : "You must have your hands full this morning",
-          "points" : 1,
+          "points" : 10,
           "newIndex" : 10
         },
         {
           "text" : "Do nothing and stare at them",
-          "points" : -1,
+          "points" : -5,
           "newIndex" : 14
         }
       ]
@@ -114,16 +114,16 @@
       "options" : [
         {
           "text" : "Listen to his voice",
-          "points" : 0
+          "points" : 5
         },
         {
           "text" : "Watch his movement during each play",
-          "points" : -1,
+          "points" : -5,
           "newIndex" : 31
         },
         {
           "text" : "Watch the entire defense",
-          "points" : 1,
+          "points" : 10,
           "newIndex" : 37
         }
       ]

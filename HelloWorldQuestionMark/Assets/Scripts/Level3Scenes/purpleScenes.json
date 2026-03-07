@@ -8,8 +8,23 @@
     },
     {
       "name" : "Perri",
-      "text" : "Testing Purple's sprite",
-      "emotion" : "mad"
+      "text" : "Testing marking a prereq as true",
+      "emotion" : "mad",
+      "prereq" : {
+        "exists" : true,
+        "isPrereq" : true,
+        "prereqIndex" : 0
+      }
+    },
+    {
+      "name" : "Perri",
+      "text" : "the next text SHOULD NOT be the points test",
+      "prereq" : {
+        "exists" : true,
+        "isPrereq" : false,
+        "prereqIndex" : 0,
+        "prereqSkip" : 7
+      }
     },
     {
       "name" : "Perri",
@@ -39,6 +54,10 @@
     {
       "name" : "Perri",
       "text" : "Testing Purple's sprite"
+    },
+    {
+      "name" : "Perri",
+      "text" : "This should occur after prereq test"
     },
     {
       "name" : "Perri",
