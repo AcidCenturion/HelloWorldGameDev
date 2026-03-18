@@ -3,6 +3,12 @@ using UnityEngine;
 public class GreenStateManager : MonoBehaviour
 {
     public GreenState currentState;
+    public Rigidbody2D greenRB;
+
+    void Start()
+    {
+        greenRB = GetComponent<Rigidbody2D>();
+    }
 
     void Update()
     {
