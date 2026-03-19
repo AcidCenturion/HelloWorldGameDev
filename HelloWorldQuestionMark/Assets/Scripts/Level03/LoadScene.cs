@@ -72,6 +72,7 @@ public class LoadScene : MonoBehaviour
   private GameObject rowan = null;
   private GameObject gemini = null;
   private GameObject perri = null;
+  public GameObject TimeBox = null;
 
 
   
@@ -143,17 +144,7 @@ public class LoadScene : MonoBehaviour
       }
 
       // Load From Same scene array
-      sceneIdx = selected.newIndex != 0 ? selected.newIndex : sceneIdx + 1;
-      if (sceneIdx >= scenes.Length)
-      {
-        Debug.Log("Reached end of scenes array, staying at last scene");
-        sceneIdx = scenes.Length - 1;
-      }
-
-      // check for prereqs
-      if (currentScene.prereq != null && currentScene.prereq.exists) CheckPrerequisites();
-
-      currentScene = scenes[sceneIdx];
+      LoadFromSameArray();
       return;
     }
 
@@ -172,17 +163,7 @@ public class LoadScene : MonoBehaviour
       currentScene = scenes[sceneIdx];
     } else
     {
-      sceneIdx = currentScene.skip != 0 ? currentScene.skip : sceneIdx + 1;
-      if (sceneIdx >= scenes.Length)
-      {
-        Debug.Log("Reached end of scenes array, staying at last scene");
-        sceneIdx = scenes.Length - 1;
-      }
-
-      // check for prereqs
-      if (currentScene.prereq != null && currentScene.prereq.exists) CheckPrerequisites();
-
-      currentScene = scenes[sceneIdx];
+      LoadFromSameArray();
     }
 
   }
@@ -271,6 +252,25 @@ public class LoadScene : MonoBehaviour
     if (currentScene.prereq.prereqIndex < 0) return;
     character.GetComponent<CharacterPrereq>().markPrereqTrue(currentScene.prereq.prereqIndex);
     
+  }
+
+  void LoadFromSameArray()
+  {
+    sceneIdx = currentScene.skip != 0 ? currentScene.skip : sceneIdx + 1;
+      if (sceneIdx >= scenes.Length)
+      {
+        Debug.Log("Reached end of scenes array, staying at last scene");
+
+        // end of array means new time
+        if (TimeBox != null) TimeBox.GetComponent<DateAndTime>().UpdateTime();
+
+        sceneIdx = scenes.Length - 1;
+      }
+
+      // check for prereqs
+      if (currentScene.prereq != null && currentScene.prereq.exists) CheckPrerequisites();
+
+      currentScene = scenes[sceneIdx];
   }
   
    
