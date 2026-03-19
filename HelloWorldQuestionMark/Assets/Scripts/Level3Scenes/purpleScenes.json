@@ -60,8 +60,36 @@
       "text" : "This should occur after prereq test"
     },
     {
+      "text" : "This will test king circle affection",
+      "kingAffinity" : {
+        "affinityCheck" : [250, 150, 50],
+        "successIndex" : [10, 11, 12]
+      }
+    },
+    {
+      "name" : "King Circle",
+      "text" : "This is reached because the affection wasn't reached or the check failed",
+      "skip" : 13
+    },
+    {
+      "name" : "King Circle",
+      "text" : "This is reached because the affection is > 250",
+      "skip" : 13
+    },
+    {
+      "name" : "King Circle",
+      "text" : "This is reached because the affection is > 150",
+      "skip" : 13
+    },
+    {
+      "name" : "King Circle",
+      "text" : "This is reached because the affection is > 50",
+      "skip" : 13
+    },
+    {
       "name" : "Perri",
-      "text" : "This is the next scene in Perri, the next will go back to defaultScenes."
+      "text" : "This is the next scene in Perri, the next will go back to defaultScenes.",
+      "skip" : 13
     }
   ],
   "chemistry" : [],

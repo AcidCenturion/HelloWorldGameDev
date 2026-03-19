@@ -21,24 +21,25 @@ class ScenesArr
 public class Scene
 {
   // Required fields
-  public string text;               // Italicized text if no name is null
+  public string text;                    // Italicized text if no name is null
 
   // Optional Fields
-  public string name;               // name of character speaking
-  public string emotion;            // How the character's face will look (Happy, Sad, etc)
-  public Option[] options;          // optional field for choices
-  public int skip;                  // optional field to skip to a specific scene index
-  public Prerequisite prereq;       // optional field for prerequisite logic
-  public NextSceneArr nextSceneArr; // Loads new Scene array from json (for scene transitions)
-  public string voiceOver;          // Path to voice over audio file
-  public string location;           // Loads new background Image
-  public string bgm;                // Changes BGM to specified track
+  public string name;                    // name of character speaking
+  public string emotion;                 // How the character's face will look (Happy, Sad, etc)
+  public Option[] options;               // optional field for choices
+  public int skip;                       // optional field to skip to a specific scene index
+  public Prerequisite prereq;            // optional field for prerequisite logic
+  public KingAffinityCheck kingAffinity; // optional field for dialogue based on king affinity
+  public NextSceneArr nextSceneArr;      // Loads new Scene array from json (for scene transitions)
+  public string voiceOver;               // Path to voice over audio file
+  public string location;                // Loads new background Image
+  public string bgm;                     // Changes BGM to specified track
 }
 [System.Serializable]
 public class NextSceneArr
 {
   public string sceneArr;  // which scene array to load (redScenes, greenScenes, etc)
-  public string timeslot;       // which day to load from that scene array
+  public string timeslot;  // which day to load from that scene array
   public int startIndex;  // index to start at in that scene array
 }
 [System.Serializable]
@@ -59,6 +60,13 @@ public class Prerequisite
   public int prereqIndex; // index of prereq in character's prereq list; required
 }
 
+[System.Serializable]
+public class KingAffinityCheck
+{
+  public int[] affinityCheck;   // Required affinity for special dialogue
+  public int[] successIndex;    // Respective sceneIndex for special dialogues; aligned with affintyCheck
+}
+
 
 public class LoadScene : MonoBehaviour
 {
@@ -72,6 +80,7 @@ public class LoadScene : MonoBehaviour
   private GameObject rowan = null;
   private GameObject gemini = null;
   private GameObject perri = null;
+  private GameObject kingCircle = null;
   public GameObject TimeBox = null;
 
 
@@ -93,6 +102,7 @@ public class LoadScene : MonoBehaviour
     rowan = GameObject.Find("Rowan");
     gemini = GameObject.Find("Gemini");
     perri = GameObject.Find("Perri");
+    kingCircle = GameObject.Find("KingCircle");
 
     if (!rowan || !gemini || !perri)
     {
@@ -149,6 +159,23 @@ public class LoadScene : MonoBehaviour
     }
 
     // No choice made.
+
+    // Check if upcoming scene has a king circle affinity check
+    // Can't be in a different scene array
+    if (currentScene.kingAffinity != null && currentScene.kingAffinity.affinityCheck != null && currentScene.kingAffinity.affinityCheck.Length > 0)
+    {
+      // Check if it passes afinity check. if so update sceneIndex and load next scene and return
+      int passedAffinity = kingCircle.GetComponent<KingCircle>().getNextSceneIndex(currentScene.kingAffinity.affinityCheck);
+
+      // Passed Affinity Check
+      if (passedAffinity >= 0)
+      {
+        sceneIdx = currentScene.kingAffinity.successIndex[passedAffinity];
+        currentScene = scenes[sceneIdx];
+        return;
+      }
+    }
+
 
     // Check if next scene is from different scene array
     if (!string.IsNullOrEmpty(currentScene.nextSceneArr.sceneArr))
@@ -271,7 +298,6 @@ public class LoadScene : MonoBehaviour
       if (currentScene.prereq != null && currentScene.prereq.exists) CheckPrerequisites();
 
       currentScene = scenes[sceneIdx];
-  }
-  
+  }  
    
 }
