@@ -17,13 +17,19 @@ public class PlayerMovement : MonoBehaviour
   private Rigidbody2D rb;
   private Vector2 moveInput;
   private Vector2 moveDirection;
+
+  private Animator animator;
+
   [SerializeField] private Boolean facingRight;
 
   
 
     void Start()
     {
+
+        
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
 
     }
 
@@ -42,6 +48,13 @@ public class PlayerMovement : MonoBehaviour
     public void Move(InputAction.CallbackContext context)
     {
        
+       animator.SetBool("IsWalking", true);
+        if (context.canceled)
+        {
+           animator.SetBool("IsWalking", false); 
+        }
+        
+
         moveInput = context.ReadValue<Vector2>();
 
         

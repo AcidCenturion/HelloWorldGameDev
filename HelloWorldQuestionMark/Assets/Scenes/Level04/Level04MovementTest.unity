@@ -531,6 +531,34 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1732596263}
+    - target: {fileID: 3420216908800960172, guid: 6e8f91f824911d3409fa848bd2087ab4, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3420216908800960172, guid: 6e8f91f824911d3409fa848bd2087ab4, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3420216908800960172, guid: 6e8f91f824911d3409fa848bd2087ab4, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8828968466366046265}
+    - target: {fileID: 3420216908800960172, guid: 6e8f91f824911d3409fa848bd2087ab4, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3420216908800960172, guid: 6e8f91f824911d3409fa848bd2087ab4, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Punch
+      objectReference: {fileID: 0}
+    - target: {fileID: 3420216908800960172, guid: 6e8f91f824911d3409fa848bd2087ab4, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: L4PlayerAttacks, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3420216908800960172, guid: 6e8f91f824911d3409fa848bd2087ab4, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4014247397373364052, guid: 6e8f91f824911d3409fa848bd2087ab4, type: 3}
       propertyPath: m_Name
       value: Player
@@ -538,8 +566,54 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4014247397373364052, guid: 6e8f91f824911d3409fa848bd2087ab4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8828968466366046265}
+    - targetCorrespondingSourceObject: {fileID: 4014247397373364052, guid: 6e8f91f824911d3409fa848bd2087ab4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8828968466366046272}
   m_SourcePrefab: {fileID: 100100000, guid: 6e8f91f824911d3409fa848bd2087ab4, type: 3}
+--- !u!1 &8828968466366046264 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4014247397373364052, guid: 6e8f91f824911d3409fa848bd2087ab4, type: 3}
+  m_PrefabInstance: {fileID: 8828968466366046263}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8828968466366046265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8828968466366046264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 497cb4ded5ffe5a4a961bff99d938eef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightPDamage: 10
+--- !u!95 &8828968466366046272
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8828968466366046264}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e0679d689fa8c3a488f53d7a8b5a08bb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
