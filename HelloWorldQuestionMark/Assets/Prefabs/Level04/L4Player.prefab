@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 5429763552813428035}
   - component: {fileID: 3420216908800960172}
   - component: {fileID: 6284431796826587772}
+  - component: {fileID: 3470128922979514301}
+  - component: {fileID: 5389803751058922603}
   m_Layer: 0
   m_Name: L4Player
   m_TagString: Untagged
@@ -206,7 +208,19 @@ MonoBehaviour:
     m_ActionId: dd9efd1f-aeb0-4984-84e4-87b049fa23a8
     m_ActionName: 'Player/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3470128922979514301}
+        m_TargetAssemblyTypeName: L4PlayerAttacks, Assembly-CSharp
+        m_MethodName: Punch
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 40a995ec-1b75-4a39-b64d-9cf28f84e572
     m_ActionName: 'Player/Punch[/Keyboard/j]'
   - m_PersistentCalls:
@@ -287,3 +301,38 @@ MonoBehaviour:
   dashDuration: 0.1
   dashCooldown: 1
   facingRight: 0
+--- !u!114 &3470128922979514301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4014247397373364052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 497cb4ded5ffe5a4a961bff99d938eef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightPDamage: 10
+--- !u!95 &5389803751058922603
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4014247397373364052}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e0679d689fa8c3a488f53d7a8b5a08bb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
