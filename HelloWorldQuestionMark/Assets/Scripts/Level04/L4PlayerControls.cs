@@ -4,15 +4,24 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
-public class PlayerMovement : MonoBehaviour
+public class L4PlayerControls : MonoBehaviour
 {
-    
+    //Movement variables
   [SerializeField] float moveSpeed;
   [SerializeField] float dashSpeed = 10f;
   [SerializeField] float dashDuration = 1f;
   [SerializeField] float dashCooldown = 1f;
   bool isDashing;
   bool canDash = true;
+
+
+  //Attacking Variables
+private int pComboIterator = 0;
+private float punchLag = 0.5f;
+private bool isPunching;
+    
+    [SerializeField] int lightPDamage;
+  //Component variables
 
   private Rigidbody2D rb;
   private Vector2 moveInput;
@@ -33,11 +42,17 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    void Update()
+    void FixedUpdate()
     {
          if (isDashing)
         {
             return;
+        }
+        if (isPunching)
+        {
+        Debug.Log("ispsuf");
+        rb.linearVelocity = moveInput * 0;
+           return;
         }
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
@@ -84,6 +99,7 @@ void PointPlayer(float moveX)
         }
     }
     
+    //
     public void DashControl(InputAction.CallbackContext context)
     {
        if (canDash){ 
@@ -91,6 +107,9 @@ void PointPlayer(float moveX)
        }
     }
 
+
+
+    //IEnumerator that handles dash cooldowns
     private IEnumerator Dash()
     {
         canDash = false;
@@ -100,6 +119,20 @@ void PointPlayer(float moveX)
         isDashing = false;
         yield return new WaitForSeconds(dashCooldown);
         canDash = true;
+    }
+
+
+
+    //Attacking    
+    public void Punch(InputAction.CallbackContext context)
+    {
+       StartCoroutine(GivePunchlag());
+    }
+    private IEnumerator GivePunchlag()
+    {
+        isPunching = true;
+        yield return new WaitForSeconds(punchLag);
+        isPunching = false;
     }
 
 }

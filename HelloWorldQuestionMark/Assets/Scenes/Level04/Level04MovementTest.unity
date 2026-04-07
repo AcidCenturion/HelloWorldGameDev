@@ -119,6 +119,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &638832589 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4014247397373364052, guid: 6e8f91f824911d3409fa848bd2087ab4, type: 3}
+  m_PrefabInstance: {fileID: 8828968466366046263}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1218450713
 GameObject:
   m_ObjectHideFlags: 0
@@ -536,20 +541,44 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3420216908800960172, guid: 6e8f91f824911d3409fa848bd2087ab4, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8828968466366046273}
+    - target: {fileID: 3420216908800960172, guid: 6e8f91f824911d3409fa848bd2087ab4, type: 3}
       propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 8828968466366046265}
+      objectReference: {fileID: 8828968466366046273}
+    - target: {fileID: 3420216908800960172, guid: 6e8f91f824911d3409fa848bd2087ab4, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8828968466366046273}
     - target: {fileID: 3420216908800960172, guid: 6e8f91f824911d3409fa848bd2087ab4, type: 3}
       propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3420216908800960172, guid: 6e8f91f824911d3409fa848bd2087ab4, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Move
       objectReference: {fileID: 0}
     - target: {fileID: 3420216908800960172, guid: 6e8f91f824911d3409fa848bd2087ab4, type: 3}
       propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Punch
       objectReference: {fileID: 0}
     - target: {fileID: 3420216908800960172, guid: 6e8f91f824911d3409fa848bd2087ab4, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DashControl
+      objectReference: {fileID: 0}
+    - target: {fileID: 3420216908800960172, guid: 6e8f91f824911d3409fa848bd2087ab4, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: L4PlayerControls, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3420216908800960172, guid: 6e8f91f824911d3409fa848bd2087ab4, type: 3}
       propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: L4PlayerAttacks, Assembly-CSharp
+      value: L4PlayerControls, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3420216908800960172, guid: 6e8f91f824911d3409fa848bd2087ab4, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: L4PlayerControls, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3420216908800960172, guid: 6e8f91f824911d3409fa848bd2087ab4, type: 3}
       propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -559,22 +588,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3470128922979514301, guid: 6e8f91f824911d3409fa848bd2087ab4, type: 3}
+    - {fileID: 6284431796826587772, guid: 6e8f91f824911d3409fa848bd2087ab4, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4014247397373364052, guid: 6e8f91f824911d3409fa848bd2087ab4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8828968466366046273}
   m_SourcePrefab: {fileID: 100100000, guid: 6e8f91f824911d3409fa848bd2087ab4, type: 3}
---- !u!114 &8828968466366046265 stripped
+--- !u!114 &8828968466366046273
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3470128922979514301, guid: 6e8f91f824911d3409fa848bd2087ab4, type: 3}
-  m_PrefabInstance: {fileID: 8828968466366046263}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 638832589}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 497cb4ded5ffe5a4a961bff99d938eef, type: 3}
+  m_Script: {fileID: 11500000, guid: 7f3a7ae319d798c4e8e6311718e9fcc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeed: 0
+  dashSpeed: 10
+  dashDuration: 1
+  dashCooldown: 1
+  lightPDamage: 0
+  facingRight: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
