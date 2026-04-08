@@ -8,9 +8,11 @@ public class GreenChaseState : GreenState
     public GreenAttackState attackState;
 
     public Transform target;
+    public Vector3 targetPos;
     public float speed = 5.0f;
     public float angle;
     private Vector3 moveDirection;
+    private float distanceThreshold = 0.3f;
 
 
     public override GreenState RunCurrentState()
@@ -28,16 +30,17 @@ public class GreenChaseState : GreenState
     void Update()
     {
         FindTargetAngle();
-        
-        
+        CheckIfChaseFinished();
+        //TestButton();        
 
     }
 
-    private void OnCollisionEnter2D(Collision2D collider)
+    private void CheckIfChaseFinished()
     {
-        if (collider.gameObject.CompareTag("Player"))
+        if (Vector3.Distance(transform.parent.parent.position, targetPos) <= distanceThreshold)
         {
             isInRangeOfPlayer = true;
+            Debug.Log("chase done");
         }
         else
         {
@@ -49,18 +52,27 @@ public class GreenChaseState : GreenState
     {
         Transform grandParentTransform = transform.parent.parent;
 
-        if (target != null)
+        if (target.position.x >= grandParentTransform.position.x)
         {
-            if (target.position.y > grandParentTransform.position.y)
+            targetPos = new Vector3(target.position.x - 2, target.position.y, target.position.z);
+        }
+        else if (target.position.x <= grandParentTransform.position.x)
+        {
+            targetPos = new Vector3(target.position.x + 2, target.position.y, target.position.z);
+        }
+
+        if (target != null && !isInRangeOfPlayer)
+        {
+            if (target.position.y >= grandParentTransform.position.y)
             {
-                if (target.position.x > grandParentTransform.position.x)
+                if (targetPos.x >= grandParentTransform.position.x)
                 {
                     angle = 45.0f;
                     float angleInRadians = angle * Mathf.Deg2Rad;
                     moveDirection = new Vector3(Mathf.Sin(angleInRadians), Mathf.Cos(angleInRadians)).normalized;
                     grandParentTransform.position += moveDirection * speed * Time.deltaTime;
                 }
-                else if (target.position.x < grandParentTransform.position.x)
+                else if (targetPos.x <= grandParentTransform.position.x)
                 {
                     angle = 315.0f;
                     float angleInRadians = angle * Mathf.Deg2Rad;
@@ -68,16 +80,16 @@ public class GreenChaseState : GreenState
                     grandParentTransform.position += moveDirection * speed * Time.deltaTime;
                 }
             }
-            else if (target.position.y < grandParentTransform.position.y)
+            else if (targetPos.y <= grandParentTransform.position.y)
             {
-                if (target.position.x > grandParentTransform.position.x)
+                if (targetPos.x >= grandParentTransform.position.x)
                 {
                     angle = 135.0f;
                     float angleInRadians = angle * Mathf.Deg2Rad;
                     moveDirection = new Vector3(Mathf.Sin(angleInRadians), Mathf.Cos(angleInRadians)).normalized;
                     grandParentTransform.position += moveDirection * speed * Time.deltaTime;
                 }
-                else if (target.position.x < grandParentTransform.position.x)
+                else if (targetPos.x <= grandParentTransform.position.x)
                 {
                     angle = 225.0f;
                     float angleInRadians = angle * Mathf.Deg2Rad;
@@ -86,11 +98,23 @@ public class GreenChaseState : GreenState
                 }
             }
 
-            
-            //float step = speed * Time.deltaTime;
-            //grandParentTransform.position = Vector3.MoveTowards(grandParentTransform.position, target.position, step);
         }
+
     }
+
+    // private void TestButton()
+    // {
+    //     if (Input.GetKeyDown(KeyCode.L))
+    //     {
+    //         isInRangeOfPlayer = true;
+    //     }
+
+    //     if (Input.GetKeyDown(KeyCode.P))
+    //     {
+    //         Debug.Log("gree pos" + transform.parent.parent.position);
+    //         Debug.Log("target pos" + targetPos);
+    //     }
+    // }
 
 
 
