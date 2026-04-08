@@ -7,7 +7,7 @@ using UnityEngine.InputSystem;
 public class L4PlayerControls : MonoBehaviour
 {
     //Movement variables
-  [SerializeField] float moveSpeed;
+  [SerializeField] float moveSpeed = 3f;
   [SerializeField] float dashSpeed = 10f;
   [SerializeField] float dashDuration = 1f;
   [SerializeField] float dashCooldown = 1f;
@@ -19,14 +19,21 @@ public class L4PlayerControls : MonoBehaviour
 private int pComboIterator = 0;
 private float punchLag = 0.5f;
 private bool isPunching;
-    
     [SerializeField] int lightPDamage;
+
+    // hitbox variables 
+    public GameObject attackPoint;
+    public float radius;
+
+    public LayerMask enemies;
+
   //Component variables
 
   private Rigidbody2D rb;
   private Vector2 moveInput;
   private Vector2 moveDirection;
 
+    private PlayerInput playerInput;
   private Animator animator;
 
   [SerializeField] private Boolean facingRight;
@@ -39,6 +46,7 @@ private bool isPunching;
         
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        playerInput = GetComponent<PlayerInput>();
 
     }
 
@@ -50,7 +58,7 @@ private bool isPunching;
         }
         if (isPunching)
         {
-        Debug.Log("ispsuf");
+        
         rb.linearVelocity = moveInput * 0;
            return;
         }
@@ -126,13 +134,42 @@ void PointPlayer(float moveX)
     //Attacking    
     public void Punch(InputAction.CallbackContext context)
     {
+       animator.SetBool("IsPunching", true);
        StartCoroutine(GivePunchlag());
+       if (context.canceled)
+        {
+           animator.SetBool("IsPunching", false); 
+        }
     }
+
+
+    
     private IEnumerator GivePunchlag()
     {
+        
         isPunching = true;
         yield return new WaitForSeconds(punchLag);
         isPunching = false;
     }
+
+
+
+    //Creates Light Punch Hitbox with animation event
+    public void CreateLightPHitbox()
+    {
+        Collider2D[] enemy = Physics2D.OverlapCircleAll(attackPoint.transform.position, radius, enemies);
+
+        foreach(Collider2D enemyGameObject in enemy)
+        {
+            Debug.Log("HitEnemy");
+        }
+
+    }
+
+    //Draws hitbox when i needed it in editor
+    // private void OnDrawGizmos() 
+    // {
+    //     Gizmos.DrawWireSphere(attackPoint.transform.position, radius);
+    // }
 
 }
