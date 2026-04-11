@@ -13,6 +13,7 @@ public class GreenStateManager : MonoBehaviour
     void Update()
     {
         RunStateMachine();
+        //Debug.Log(currentState);
     }
 
     private void RunStateMachine()

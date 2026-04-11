@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class GreenChaseState : GreenState
 {
-    public bool isInRangeOfPlayer;
+    public bool ChaseisInRangeOfPlayer;
     public GreenStateManager greenStateManager;
     public GreenAttackState attackState;
 
@@ -17,7 +17,7 @@ public class GreenChaseState : GreenState
 
     public override GreenState RunCurrentState()
     {
-        if (isInRangeOfPlayer)
+        if (ChaseisInRangeOfPlayer)
         {
             return attackState;
         }
@@ -31,20 +31,21 @@ public class GreenChaseState : GreenState
     {
         FindTargetAngle();
         CheckIfChaseFinished();
-        //TestButton();        
-
+        //TestButton();
+        //Debug.Log("chasing");
+        //Debug.Log(ChaseisInRangeOfPlayer);
     }
 
     private void CheckIfChaseFinished()
     {
-        if (Vector3.Distance(transform.parent.parent.position, targetPos) <= distanceThreshold)
+        if (Vector3.Distance(transform.parent.parent.position, targetPos) < distanceThreshold)
         {
-            isInRangeOfPlayer = true;
-            Debug.Log("chase done");
+            ChaseisInRangeOfPlayer = true;
+            //Debug.Log("chase done");
         }
         else
         {
-            isInRangeOfPlayer = false;
+            ChaseisInRangeOfPlayer = false;
         }
     }
 
@@ -61,7 +62,7 @@ public class GreenChaseState : GreenState
             targetPos = new Vector3(target.position.x + 2, target.position.y, target.position.z);
         }
 
-        if (target != null && !isInRangeOfPlayer)
+        if (target != null && !ChaseisInRangeOfPlayer)
         {
             if (target.position.y >= grandParentTransform.position.y)
             {

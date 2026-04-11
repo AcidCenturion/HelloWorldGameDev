@@ -169,7 +169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac6bf00c59e795f429f37e8d83b6485c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isInRangeOfPlayer: 0
+  ChaseisInRangeOfPlayer: 0
   greenStateManager: {fileID: 1612766610}
   attackState: {fileID: 883256829}
   target: {fileID: 319577900}
@@ -252,6 +252,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chaseState: {fileID: 570579822}
+  target: {fileID: 319577900}
+  targetPos: {x: 0, y: 0, z: 0}
 --- !u!4 &883256830
 Transform:
   m_ObjectHideFlags: 0
