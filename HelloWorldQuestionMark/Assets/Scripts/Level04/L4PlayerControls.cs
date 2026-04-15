@@ -1,8 +1,10 @@
 using System;
 using System.Collections;
+using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Interactions;
 
 public class L4PlayerControls : MonoBehaviour
 {
@@ -17,7 +19,7 @@ public class L4PlayerControls : MonoBehaviour
 
   //Attacking Variables
 private int pComboIterator = 0;
-private float punchLag = 0.5f;
+private float punchLag = 0.67f;
 private bool isPunching;
     [SerializeField] int lightPDamage;
 
@@ -60,6 +62,7 @@ private bool isPunching;
         {
         
         rb.linearVelocity = moveInput * 0;
+        animator.SetBool("IsPunching", false); 
            return;
         }
         float moveX = Input.GetAxisRaw("Horizontal");
@@ -134,12 +137,23 @@ void PointPlayer(float moveX)
     //Attacking    
     public void Punch(InputAction.CallbackContext context)
     {
-       animator.SetBool("IsPunching", true);
-       StartCoroutine(GivePunchlag());
+       
+       
+       if (context.interaction is TapInteraction)
+        {
+           animator.SetBool("IsPunching", true);
+            StartCoroutine(GivePunchlag()); 
+            
+        }
+       if(context.interaction is HoldInteraction)
+        {
+            animator.SetBool("IsPunching", false);
+        }
        if (context.canceled)
         {
            animator.SetBool("IsPunching", false); 
         }
+
     }
 
 
@@ -150,6 +164,9 @@ void PointPlayer(float moveX)
         isPunching = true;
         yield return new WaitForSeconds(punchLag);
         isPunching = false;
+        animator.SetBool("IsPunching", false);
+
+        
     }
 
 

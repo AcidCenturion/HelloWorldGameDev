@@ -107,7 +107,7 @@ public partial class @HelloWorldQuestionMark: IInputActionCollection2, IDisposab
                     ""id"": ""40a995ec-1b75-4a39-b64d-9cf28f84e572"",
                     ""expectedControlType"": """",
                     ""processors"": """",
-                    ""interactions"": """",
+                    ""interactions"": ""Tap,Hold"",
                     ""initialStateCheck"": false
                 },
                 {
