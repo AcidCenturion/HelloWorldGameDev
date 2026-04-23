@@ -7,24 +7,33 @@ public class GreenChaseState : GreenState
     public GreenStateManager greenStateManager;
     public GreenAttackState attackState;
 
-    public Transform target;
+    private Transform target;
     public Vector3 targetPos;
     public float speed = 5.0f;
     public float angle;
     private Vector3 moveDirection;
     private float distanceThreshold = 0.3f;
 
+    [SerializeField] private Animator _animator;
+
 
     public override GreenState RunCurrentState()
     {
         if (ChaseisInRangeOfPlayer)
         {
+            _animator.SetBool("isInRange", true);
             return attackState;
         }
         else
         {
+            _animator.SetBool("isInRange", false);
             return this;
         }
+    }
+
+    void Start()
+    {
+        target = GameObject.FindWithTag("Player").transform;
     }
 
     void Update()
@@ -55,11 +64,13 @@ public class GreenChaseState : GreenState
 
         if (target.position.x >= grandParentTransform.position.x)
         {
-            targetPos = new Vector3(target.position.x - 2, target.position.y, target.position.z);
+            targetPos = new Vector3(target.position.x - 1.2f, target.position.y, target.position.z);
+            grandParentTransform.localScale = new Vector3(1, 1, 1);
         }
         else if (target.position.x <= grandParentTransform.position.x)
         {
-            targetPos = new Vector3(target.position.x + 2, target.position.y, target.position.z);
+            targetPos = new Vector3(target.position.x + 1.2f, target.position.y, target.position.z);
+            grandParentTransform.localScale = new Vector3(-1, 1, 1);
         }
 
         if (target != null && !ChaseisInRangeOfPlayer)
@@ -102,6 +113,7 @@ public class GreenChaseState : GreenState
         }
 
     }
+
 
     // private void TestButton()
     // {
