@@ -18,17 +18,17 @@ public class GreenStateManager : MonoBehaviour
 
     private void RunStateMachine()
     {
-        GreenState nextState = currentState?.RunCurrentState();
+        GreenState GreenNextState = currentState?.RunCurrentState();
 
-        if (nextState != null)
+        if (GreenNextState != null)
         {
-            SwitchToTheNextState(nextState);
+            SwitchToTheNextState(GreenNextState);
         }
     }
 
-    private void SwitchToTheNextState(GreenState nextState)
+    private void SwitchToTheNextState(GreenState GreenNextState)
     {
-        currentState = nextState;
+        currentState = GreenNextState;
     }
 }
 
