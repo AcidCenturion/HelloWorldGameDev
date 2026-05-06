@@ -40,7 +40,9 @@ private bool isPunching;
 
   [SerializeField] private Boolean facingRight;
 
-  
+    // LayerMask variables
+    public LayerMask breakables;
+
 
     void Start()
     {
@@ -137,9 +139,9 @@ void PointPlayer(float moveX)
     //Attacking    
     public void Punch(InputAction.CallbackContext context)
     {
-       
-       
-       if (context.interaction is TapInteraction)
+        // Debug.Log("Punch() called, phase: " + context.phase);
+
+        if (context.interaction is TapInteraction)
         {
            animator.SetBool("IsPunching", true);
             StartCoroutine(GivePunchlag()); 
@@ -174,12 +176,55 @@ void PointPlayer(float moveX)
     //Creates Light Punch Hitbox with animation event
     public void CreateLightPHitbox()
     {
+        /*
         Collider2D[] enemy = Physics2D.OverlapCircleAll(attackPoint.transform.position, radius, enemies);
 
         foreach(Collider2D enemyGameObject in enemy)
         {
             Debug.Log("HitEnemy");
         }
+        */
+
+        // Debug.Log("CreateLightPHitbox fired");
+
+        // 1. Detect breakables
+        Collider2D[] breakableHits = Physics2D.OverlapCircleAll(
+            attackPoint.transform.position,
+            radius,
+            breakables
+        );
+
+        foreach (Collider2D hit in breakableHits)
+        {
+            //Debug.Log("HitBreakable: " + hit.name);
+
+            Debug.Log("HitBreakable: " + hit.name);
+
+            BreakableObject b = hit.GetComponent<BreakableObject>();
+            if (b != null)
+            {
+                Debug.Log("Calling Break()...");
+                b.Break();
+            }
+
+        }
+
+        // 2. Detect enemies
+        Collider2D[] enemyHits = Physics2D.OverlapCircleAll(
+            attackPoint.transform.position,
+            radius,
+            enemies
+        );
+
+        foreach (Collider2D hit in enemyHits)
+        {
+            Debug.Log("HitEnemy: " + hit.name);
+
+            //Enemy e = hit.GetComponent<Enemy>();
+            //if (e != null)
+            //    e.TakeDamage(lightPDamage);
+        }
+
 
     }
 
@@ -188,5 +233,10 @@ void PointPlayer(float moveX)
     // {
     //     Gizmos.DrawWireSphere(attackPoint.transform.position, radius);
     // }
+
+
+
+
+
 
 }
