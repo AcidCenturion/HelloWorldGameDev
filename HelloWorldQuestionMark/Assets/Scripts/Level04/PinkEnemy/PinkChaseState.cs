@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class PinkChaseState : PinkState
 {
-    public bool pinkChaseisInRangeOfPlayer = false;
+    public bool pinkChaseReadyToAttack;
     public PinkStateManager pinkStateManager;
     public PinkAttackState pinkAttackState;
 
@@ -18,14 +18,14 @@ public class PinkChaseState : PinkState
 
     public override PinkState RunCurrentState()
     {
-        if (pinkChaseisInRangeOfPlayer)
+        if (pinkChaseReadyToAttack)
         {
-            //_animator.SetBool("isInRange", true);
+            _animator.SetBool("isInRange", true);
             return pinkAttackState;
         }
         else
         {
-            //_animator.SetBool("isInRange", false);
+            _animator.SetBool("isInRange", false);
             return this;
         }
     }
@@ -47,12 +47,12 @@ public class PinkChaseState : PinkState
 
         if (target.position.x >= grandParentTransform.position.x)  //player is to the right of me
         {
-            targetPos = new Vector3(worldpointLeft.x, playerPos.y, 0);
+            targetPos = new Vector3(worldpointLeft.x, playerPos.y, Random.Range(0f, 1f));   //the random is so the pinks dont overlap w each other
             grandParentTransform.localScale = new Vector3(1, 1, 1);
         }
         else if (target.position.x <= grandParentTransform.position.x) //player is to the left of me
         {
-            targetPos = new Vector3(worldpointRight.x, playerPos.y, 0);
+            targetPos = new Vector3(worldpointRight.x, playerPos.y, Random.Range(0f, 1f));
             grandParentTransform.localScale = new Vector3(-1, 1, 1);
         }
     }
@@ -60,20 +60,20 @@ public class PinkChaseState : PinkState
     void Update()
     {
         FollowPlayerY();
-        CheckIfChaseFinished();
+        CheckIfReadyToAttack();
 
     }
 
-    private void CheckIfChaseFinished()
+    private void CheckIfReadyToAttack()
     {
         if (Mathf.Approximately(transform.parent.parent.position.y, targetPos.y) && Mathf.Approximately(rb.linearVelocityX, 0))
         {
-            pinkChaseisInRangeOfPlayer = true;
+            pinkChaseReadyToAttack = true;
             //Debug.Log("chase done");
         }
         else
         {
-            pinkChaseisInRangeOfPlayer = false;
+            pinkChaseReadyToAttack = false;
         }
     }
 
@@ -84,16 +84,18 @@ public class PinkChaseState : PinkState
         //Debug.Log(targetPos);
        
 
-        if (target != null && !pinkChaseisInRangeOfPlayer)
+        if (target != null )
         {
-            if (target.position.y >= grandParentTransform.position.y)  //player is above me
-            {
-                targetPos = new Vector3(targetPos.x, target.position.y, targetPos.z);
-            }
-            else if (targetPos.y <= grandParentTransform.position.y) //player is below me
-            {
-                targetPos = new Vector3(targetPos.x, target.position.y, targetPos.z);
-            }
+            // if (target.position.y >= grandParentTransform.position.y)  //player is above me
+            // {
+            //     targetPos = new Vector3(targetPos.x, target.position.y, targetPos.z);
+            // }
+            // else if (targetPos.y <= grandParentTransform.position.y) //player is below me
+            // {
+            //     targetPos = new Vector3(targetPos.x, target.position.y, targetPos.z);
+            // }
+
+            targetPos = new Vector3(targetPos.x, target.position.y, targetPos.z);
 
         }
         float step = speed * Time.deltaTime;

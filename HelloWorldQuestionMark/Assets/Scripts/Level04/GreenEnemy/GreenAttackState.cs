@@ -4,10 +4,10 @@ public class GreenAttackState : GreenState
 {
     public GreenChaseState chaseState;
 
-    private bool AttisInRangeOfPlayer = true;
+    private bool AttisInRangeOfPlayer;
     private Transform target;
     public Vector3 targetPos;
-    private float distanceThreshold = 0.3f;
+    private float distanceThreshold = 0.52f;
 
     [SerializeField] private Animator _animator;
 
@@ -16,12 +16,12 @@ public class GreenAttackState : GreenState
         if (AttisInRangeOfPlayer)
         {
             _animator.SetBool("isInRange", true);
-            //Debug.Log("I have attacked!");
             return this;
         }
         else
         {
             _animator.SetBool("isInRange", false);
+            //Debug.Log("I have attacked!");
             return chaseState;
         }
     }
@@ -35,14 +35,15 @@ public class GreenAttackState : GreenState
     {
         CheckIfChaseFinished();
         CreateTargetPos();
-
+        //Debug.Log(Vector3.Distance(transform.parent.parent.position, targetPos));
+        //Debug.Log(AttisInRangeOfPlayer);
     }
 
     private void CheckIfChaseFinished()
     {
         if (Vector3.Distance(transform.parent.parent.position, targetPos) < distanceThreshold)
         {
-            AttisInRangeOfPlayer = true;
+            AttisInRangeOfPlayer= true;
         }
         else
         {
@@ -56,11 +57,11 @@ public class GreenAttackState : GreenState
 
         if (target.position.x >= grandParentTransform.position.x)
         {
-            targetPos = new Vector3(target.position.x - 2, target.position.y, target.position.z);
+            targetPos = new Vector3(target.position.x - 1, target.position.y, target.position.z);
         }
         else if (target.position.x <= grandParentTransform.position.x)
         {
-            targetPos = new Vector3(target.position.x + 2, target.position.y, target.position.z);
+            targetPos = new Vector3(target.position.x + 1, target.position.y, target.position.z);
         }
     }
 
