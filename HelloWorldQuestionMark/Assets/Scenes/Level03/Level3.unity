@@ -720,6 +720,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 312271032}
   m_CullTransparentMesh: 1
+--- !u!1 &399162559
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 399162561}
+  - component: {fileID: 399162560}
+  m_Layer: 0
+  m_Name: AffinityHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &399162560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 399162559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e53da2dbb75f6cf4aa67f3bf1025eee8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RowanAffinity: 0
+  PerriAffinity: 0
+  GeminiAffinity: 0
+--- !u!4 &399162561
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 399162559}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 526.8293, y: 485.32556, z: -5.5722795}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &419857394
 GameObject:
   m_ObjectHideFlags: 0
@@ -888,6 +935,7 @@ MonoBehaviour:
   MaxAffinity: 100
   MinAffinity: 0
   StartingAffinity: 50
+  characterName: 3
   characterDisplay: {fileID: 1504199581}
   faceDisplay: {fileID: 1647044439}
   baseModel: {fileID: 21300000, guid: 920986601844c2a4ea5e4ef64b868a9d, type: 3}
@@ -897,6 +945,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: abaffc1b00818484da0af69ea7bff0b8, type: 3}
   - {fileID: 21300000, guid: 90446066af6a80c48b2242aba9a0382e, type: 3}
   - {fileID: 21300000, guid: 8295ff1a65c76d742b5f2026e1c7ea9f, type: 3}
+  AffintyHolder: {fileID: 399162559}
 --- !u!4 &565039810
 Transform:
   m_ObjectHideFlags: 0
@@ -1169,6 +1218,7 @@ MonoBehaviour:
   MaxAffinity: 100
   MinAffinity: 0
   StartingAffinity: 50
+  characterName: 3
   characterDisplay: {fileID: 1504199581}
   faceDisplay: {fileID: 1647044439}
   baseModel: {fileID: 21300000, guid: 8c788beb477ed5745afcaa431636f1a3, type: 3}
@@ -1178,6 +1228,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 1af2773f8bffe7d408c03771b7cc29a4, type: 3}
   - {fileID: 21300000, guid: a4e48029b152eec4fa3116bb5d42e415, type: 3}
   - {fileID: 21300000, guid: fe300ac99171d47488a8a5cdd2b4d59e, type: 3}
+  AffintyHolder: {fileID: 399162559}
 --- !u!4 &879340855
 Transform:
   m_ObjectHideFlags: 0
@@ -2114,6 +2165,7 @@ MonoBehaviour:
   MaxAffinity: 100
   MinAffinity: 0
   StartingAffinity: 50
+  characterName: 3
   characterDisplay: {fileID: 1504199581}
   faceDisplay: {fileID: 1647044439}
   baseModel: {fileID: 21300000, guid: c5a6f88127039e146bbcd1f6d542794f, type: 3}
@@ -2123,6 +2175,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 2d38eb7ab304a2642b36d153b3df200f, type: 3}
   - {fileID: 21300000, guid: 4d84693f4f4c43847b8291a419816dee, type: 3}
   - {fileID: 21300000, guid: ecf2c9149b797444ab5489d3075050d5, type: 3}
+  AffintyHolder: {fileID: 399162559}
 --- !u!4 &1287457754
 Transform:
   m_ObjectHideFlags: 0
@@ -2186,6 +2239,7 @@ MonoBehaviour:
   MaxAffinity: 100
   MinAffinity: 0
   StartingAffinity: 0
+  characterName: 2
   characterDisplay: {fileID: 1504199581}
   faceDisplay: {fileID: 1647044439}
   baseModel: {fileID: 21300000, guid: 920986601844c2a4ea5e4ef64b868a9d, type: 3}
@@ -2195,6 +2249,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: abaffc1b00818484da0af69ea7bff0b8, type: 3}
   - {fileID: 21300000, guid: 90446066af6a80c48b2242aba9a0382e, type: 3}
   - {fileID: 21300000, guid: 8295ff1a65c76d742b5f2026e1c7ea9f, type: 3}
+  AffintyHolder: {fileID: 399162559}
 --- !u!4 &1360157924
 Transform:
   m_ObjectHideFlags: 0
@@ -2467,6 +2522,7 @@ MonoBehaviour:
   MaxAffinity: 100
   MinAffinity: 0
   StartingAffinity: 0
+  characterName: 1
   characterDisplay: {fileID: 1504199581}
   faceDisplay: {fileID: 1647044439}
   baseModel: {fileID: 21300000, guid: 0782e45429c78b244aa63255814704c3, type: 3}
@@ -2476,6 +2532,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: ff4aaf02526367b41a919865171199d9, type: 3}
   - {fileID: 21300000, guid: f6dcd771f8defdf4ea7a78ab3154ded3, type: 3}
   - {fileID: 21300000, guid: 82862d65659fc774a8ef5a32857f0dea, type: 3}
+  AffintyHolder: {fileID: 399162559}
 --- !u!4 &1525506281
 Transform:
   m_ObjectHideFlags: 0
@@ -3376,6 +3433,7 @@ MonoBehaviour:
   MaxAffinity: 100
   MinAffinity: 0
   StartingAffinity: 0
+  characterName: 0
   characterDisplay: {fileID: 1504199581}
   faceDisplay: {fileID: 1647044439}
   baseModel: {fileID: 21300000, guid: 0a5cf9b88d3feba4f91d9a184f8f7e31, type: 3}
@@ -3385,6 +3443,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: c9b3f8cc62fa18b4e92b882f9e54522a, type: 3}
   - {fileID: 21300000, guid: ddda23f84f2f3f24ebf33c158d42dba2, type: 3}
   - {fileID: 21300000, guid: d8cbf175ed5967d4a9bb3970e5fcbf3f, type: 3}
+  AffintyHolder: {fileID: 399162559}
 --- !u!4 &1976924749
 Transform:
   m_ObjectHideFlags: 0
@@ -3731,3 +3790,4 @@ SceneRoots:
   - {fileID: 1287457754}
   - {fileID: 1280091177}
   - {fileID: 219323996}
+  - {fileID: 399162561}

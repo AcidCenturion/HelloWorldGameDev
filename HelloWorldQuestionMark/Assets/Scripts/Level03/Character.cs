@@ -14,6 +14,8 @@ public class Character : MonoBehaviour
     public int MaxAffinity = 100;
     public int MinAffinity = 0;
     public int StartingAffinity = 50;
+    public enum CharacterName {Perri, Gemini, Rowan, None};
+    public CharacterName characterName = CharacterName.None;
 
     // Character Display Components
     public GameObject characterDisplay;
@@ -21,12 +23,14 @@ public class Character : MonoBehaviour
     public Sprite baseModel; 
     public Sprite[] Faces;
     enum Emotion {normal, happy, love, mad, sad};
+    public GameObject AffintyHolder;
 
     void Start()
     {
         ResetCharacterDisplay();
 
         Affinity = StartingAffinity; 
+        AffintyHolder.GetComponent<AffinityHolder>().UpdateCharacterAffinity(characterName, Affinity);
     }
     // Affinity Functions
     public void AddAffinity(int amount)
@@ -44,6 +48,11 @@ public class Character : MonoBehaviour
         {
             Affinity += amount;
         }
+
+        if (characterName == CharacterName.None) return;
+
+        //update globa affinity holder 
+        AffintyHolder.GetComponent<AffinityHolder>().UpdateCharacterAffinity(characterName, Affinity);
     }
 
     public int GetAffinity()
