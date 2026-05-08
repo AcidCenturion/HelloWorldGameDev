@@ -27,7 +27,7 @@ public class MusicChanger : MonoBehaviour
             music02.Play();
             music01.Stop();
         }
-        else if (isPlayingMusic == music02)
+        if (isPlayingMusic == music02)
         {
             music01.clip = newMusic;
             music01.Play();
