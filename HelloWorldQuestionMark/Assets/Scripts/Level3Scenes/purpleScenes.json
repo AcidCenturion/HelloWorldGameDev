@@ -1,99 +1,281 @@
 {
   "morning" : [
     {
-      "name" : "Perri",
-      "text" : "This is Perri scenes json file.",
+      "text" : "Seeing Perri’s expectant invitation, you decide to precariously maneuver your way across the bus to the seat they were patting.",
       "location" : "leblanc_0",
       "bgm" : "Night"
     },
     {
       "name" : "Perri",
-      "text" : "Testing marking a prereq as true",
-      "emotion" : "mad",
-      "prereq" : {
-        "exists" : true,
-        "isPrereq" : true,
-        "prereqIndex" : 0
-      }
+      "text" : "Man, it feels like ages since we last rode the bus together. When I heard you were transferring to the same school as me from my mom, I made sure to save a seat for you at the back of the bus, just like in elementary."
     },
     {
-      "name" : "Perri",
-      "text" : "the next text SHOULD NOT be the points test",
-      "prereq" : {
-        "exists" : true,
-        "isPrereq" : false,
-        "prereqIndex" : 0,
-        "prereqSkip" : 7
-      }
+      "text" : "The bus hits a small bump in the road, but being at the back of the bus, you feel the whole seat rock upwards. You feel yourself rising slightly from the seat as the chair catapults you up."
     },
     {
-      "name" : "Perri",
-      "text" : "Perri's affinity should decrease/increase by 10 here",
-      "emotion" : "sad",
+      "text" : "Wheeeee!",
+      "name" : "Perri"
+    },
+    {
+      "text" : "Only a few moments later, you and the bus both come plummeting back down to the usual height of the seat."
+    },
+    {
+      "text" : "I haven’t sat in these seats of the bus since we started going to different schools. It just wasn’t the same. But, now that we’re back…",
+      "name" : "Perri"
+    },
+    {
+      "text" : "Perri looks at you with a bit of a mischievous grin."
+    },
+    {
+      "text" : "Wanna compete again?",
+      "name" : "Perri"
+    },
+    {
+      "text" : "You remember the times from elementary when you and Perri would compete to see who bounced higher whenever the bus hit a bump in the road."
+    },
+    {
+      "text" : "Considering the years that have passed since your last competition, you’ve grown taller and put on a bit more body mass."
+    },
+    {
+      "text" : "Meanwhile Perri still looks as light as a feather compared to others around their age.",
       "options" : [
         {
-          "text" : "Make Perri mad",
-          "points" : -10
+          "text" : "Compliment anyways",
+          "points" : 10
         },
         {
-          "text" : "Make Perri happy",
-          "points" : 10
+          "text" : "\"Hard to compete with the equivalent of a stick bug.\"",
+          "points" : 5,
+          "newIndex" : 28
+        },
+        {
+          "text" : "Refuse them",
+          "points" : -5,
+          "newIndex" : 47
         }
       ]
     },
     {
-      "name" : "Perri",
-      "text" : "Testing Purple's sprite",
-      "emotion" : "happy"
+      "text" : "You look ahead and see that the bus is approaching a speed bump. Glancing at the driver, the old man piloting the vehicle shows no sign of slowing the bus down."
+    },
+    {
+      "text" : "You curl up and hold your knees in a fetal position. Not really sure what it would do to help, you just remember always doing it when you used to compete with Perri."
+    },
+    {
+      "text" : "Ha, you think rolling up like a cannonball is going to help you win?",
+      "name" : "Perri"
+    },
+    {
+      "text" : "Perri mocks as they also join you in bracing their knees to their chest."
+    },
+    {
+      "text" : "As the bus zooms over the speed bump, you feel the seat pushing up against you." 
+    },
+    {
+      "text" : "You feel a sense of weightlessness as you lift up and away from the seat cushion."
+    },
+    {
+      "text" : "THUNK"
+    },
+    {
+      "text" : "Only a few moments later, the feeling of gravity returns to you as you return back to the comfort of being grounded on the seat. "
+    },
+    {
+      "text" : "You turn to see where the thunk sound came from."
+    },
+    {
+      "text" : "Owowowwowo",
+      "name" : "Perri"
+    },
+    {
+      "text" : "Perri’s busy rubbing the top of their head with their hand."
     },
     {
       "name" : "Perri",
-      "text" : "Testing Purple's sprite",
-      "emotion" : "love"
+      "text" : "Ouch… Since when did the back of the seats in front of us feel like bricks…"
+    },
+    {
+      "text" : "They turn back to you and flash a smile."
+    },
+    {
+      "text" : "Oh! Don’t worry, I’ll be alright. ",
+      "name" : "Perri"
+    },
+    {
+      "text" : "Buuuut, I guess that makes me the winner!",
+      "name" : "Perri"
+    },
+    {
+      "text" : "Their smile beams"
     },
     {
       "name" : "Perri",
-      "text" : "Testing Purple's sprite"
+      "text" : "Thanks for playing with me again. It’s been too long since the last time we hung out.",
+      "skip" : 58
     },
     {
+      "text" : "Hey! Who are you calling a bug!",
+      "name" : "Perri"
+    },
+    {
+      "text" : "Perri laughs along with your jest and punches lightly on your shoulder."
+    },
+    {
+      "text" : "And if anything, you’re the one who used to look like a stick bug.",
+      "name" : "Perri"
+    },
+    {
+      "text" : "I swear, you must’ve weighed less than me back in elementary. ",
+      "name" : "Perri"
+    },
+    {
+      "text" : "Suddenly, you feel your seat jump up. Before you can grab anything to brace yourself with, the seat has already thrown you up with it"
+    },
+    {
+      "text" : "There was never a chance to get your balance before you felt yourself hurling forward into the seat in front of you."
+    },
+    {
+      "text" : "<b>THUNK THUNK</b>"
+    },
+    {
+      "text" : "Your head hits straight into the seat back in front of you."
+    },
+    {
+      "text" : "Despite looking cushioned, you can feel that it's a clear deception for the pile of bricks that it feels like it's made out of."
+    },
+    {
+      "text" : "As you feel the return of the seat cushion’s comfort below you, you look over to Perri to check that they're okay while rubbing your own head to soften what might be a bruise."
+    },
+    {
+      "text" : "Owowowwowo",
+      "name" : "Perri"
+    },
+    {
+      "text" : "Perri’s busy rubbing the top of their head with their hand."
+    },
+    {
+      "text" : "Ouch… Since when did the back of the seats in front of us feel like bricks…",
+      "name" : "Perri"
+    },
+    {
+      "text" : "They turn back to you with a look of concern."
+    },
+    {
+      "text" : "Are you alright? Did you hit your head hard? I- I can take you to the nurse’s station when we get to campus.",
+      "name" : "Perri"
+    },
+    {
+      "text" : "You nod your head while waving your other hand."
+    },
+    {
+      "text" : "It’s best to not hassle Perri with taking you to the nurse’s station – it's probably just a bruise anyway."
+    },
+    {
+      "text" : "Plus, you don’t want to be late on your first day nor make Perri late to their class."
+    },
+    {
+      "text" : "A-alright then… make sure you ice it when you get home! Or you know what, I’ll come over after school and make sure it's iced!",
       "name" : "Perri",
-      "text" : "This should occur after prereq test"
+      "skip" : 58
     },
     {
-      "text" : "This will test king circle affection",
-      "kingAffinity" : {
-        "affinityCheck" : [250, 150, 50],
-        "successIndex" : [10, 11, 12]
-      }
+      "text" : "You look ahead and see that the bus is approaching a speed bump."
     },
     {
-      "name" : "King Circle",
-      "text" : "This is reached because the affection wasn't reached or the check failed",
-      "skip" : 13
+      "text" : "Glancing at the driver, the old man piloting the vehicle shows no sign of slowing the bus down."
     },
     {
-      "name" : "King Circle",
-      "text" : "This is reached because the affection is > 250",
-      "skip" : 13
+      "text" : "Quickly, you grab the seat to brace yourself down. "
     },
     {
-      "name" : "King Circle",
-      "text" : "This is reached because the affection is > 150",
-      "skip" : 13
+      "text" : "As the bus zooms over the speed bump, you feel the seat pushing up against you."
     },
     {
-      "name" : "King Circle",
-      "text" : "This is reached because the affection is > 50",
-      "skip" : 13
+      "text" : "You grip tighter to hold yourself from flying off the tiny semblance of a cushion."
     },
     {
-      "name" : "Perri",
-      "text" : "This is the next scene in Perri, the next will go back to defaultScenes.",
+      "text" : "You look over to Perri where your gazes meet. Their smile from before disappears in exchange for a frown."
+    },
+    {
+      "text" : "The bus, now having passed the speed bump, settles back down. Perri’s frown remains as their gaze moves downward."
+    },
+    {
+      "text" : "It hasn’t been that long, has it? You didn’t use to be such a killjoy…",
+      "name" : "Perri"
+    },
+    {
+      "text" : "You don’t know how to respond to that. Afterall, who knows if you could’ve gotten hurt because the bus driver didn’t slow down for a speed bump."
+    },
+    {
+      "text" : "Well, it’s whatever! We’ll be arriving at school soon, so I’m sure there’ll be other things we can do together.",
+      "name" : "Perri"
+    },
+    {
+      "text" : "Perri’s expression seemed to change back to normal, with her usual carefree smile plastered across her face."
+    },
+    {
+      "text" : "We will be arriving at Sintax Academy very shortly! Please remain in your seats for the time being!",
+      "name" : "Bus Driver"
+    },
+    {
+      "text" : "Moments later, the bus pulls up to the entrance of the school."
+    }
+    ,
+    {
+      "text" : "It is a grand school, with mixes of Art-Deco and modern architecture blended in, evident with the old-school main building and the recently renovated science buildings."
+    },
+    {
+      "text" : "You reach into your bag and dig around to pull out a crumpled paper. After un-crumpling it, Perri peers over your shoulder to take a peek at the contents of the paper."
+    },
+    {
+      "text" : "Oh! Is that your schedule? Lemme see!",
+      "name" : "Perri"
+    },
+    {
+      "text" : "You angle the paper so that both of you can view it together."
+    },
+    {
+      "text" : "Aww man, I don’t share a class with you until second period. ",
+      "name" : "Perri"
+    },
+    {
+      "text" : "Do you think you can find your way to chemistry class on your own?",
+      "name" : "Perri"
+    },
+    {
+      "text" : "While reading closer in order to see the class room number, you nod your head in response to Perri’s question."
+    },
+    {
+      "text" : "Afterall, you’re not in elementary school anymore; you now understand that rooms are (generally) numbered logically. It shouldn’t be too difficult to navigate the halls."
+    },
+    {
+      "text" : "A-alright then. I guess I'll see you later in history class.",
+      "name" : "Perri"
+    },
+    {
+      "text" : "Perri gathers their things and gets up to head out of the bus. They turn to wave before stepping out."
+    },
+    {
+      "text" : "For a split second, you could’ve sworn there was a small frown on her face as she turned back towards the school."
+    },
+    {
+      "text" : "Regardless, it's time for you to start heading to class. Since you don’t know where it is yet, it's best to reserve time to search for the classroom.",
       "nextSceneArr" : {
-        "sceneArr" : "purpleScenes",
+        "sceneArr" : "defaultScenes",
         "timeslot" : "chemistry",
         "startIndex" : 0
       }
+    }
+
+
+  ,
+    {
+      "text" : "",
+      "name" : "Perri"
+    }
+    ,
+    {
+      "text" : ""
     }
   ],
   "chemistry" : [

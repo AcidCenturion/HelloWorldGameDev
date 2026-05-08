@@ -242,7 +242,12 @@
       "text" : "Well I'm gonna head out now. I need to turn in some paperwork to the conditioning coach for the pre-season, so you can head to class without me! See ya!"
     },
     {
-      "text" : "Just as you were about to say goodbye to Rowan, they immediately sprint out the bus and head to who knows where. It’s best not to linger anymore and head to your first period of the day."
+      "text" : "Just as you were about to say goodbye to Rowan, they immediately sprint out the bus and head to who knows where. It’s best not to linger anymore and head to your first period of the day.",
+      "nextSceneArr" : {
+        "sceneArr" : "defaultScenes",
+        "timeslot" : "chemistry",
+        "startIndex" : 0
+      }
     }
     
   ],
