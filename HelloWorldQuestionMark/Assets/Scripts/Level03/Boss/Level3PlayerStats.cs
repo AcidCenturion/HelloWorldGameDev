@@ -37,7 +37,7 @@ public class Level3PlayerStats : MonoBehaviour
         }
 
         // delay so AffinityHolder has time to load
-        Invoke(nameof(UpdateCharacterBooleans), 1f);
+        Invoke(nameof(UpdateCharacterBooleans), 3f);
 
         PlayerHealthText.text = "Player Health: " + health.ToString();
     }

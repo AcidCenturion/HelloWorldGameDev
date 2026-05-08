@@ -20,5 +20,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level01/Cutscene1.unity
     guid: 6dc107a094ee7bc40b191417128ff554
+  - enabled: 1
+    path: Assets/Scenes/Level03/Level3.unity
+    guid: 094bb4bf86db142d38a5e27c59d68b4f
+  - enabled: 1
+    path: Assets/Scenes/Level03/Level3Boss.unity
+    guid: ef389ece0c8f335448bba8af22f4d4f7
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

@@ -1,4 +1,7 @@
 using System;
+using System.Diagnostics;
+using UnityEngine.SceneManagement;
+// using System.Diagnostics;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -71,6 +74,9 @@ public class KingAffinityCheck
 public class LoadScene : MonoBehaviour
 {
   private Scene currentScene; // get this var when displaying scene
+  public const TimeOfDay LAST_TIME_SLOT = TimeOfDay.lunch;
+  public const int BOSS_SCENE_INDEX = 6;
+  private TimeOfDay currTime = TimeOfDay.morning;
 
   // Private Variables
   private Scene[] scenes;
@@ -91,7 +97,7 @@ public class LoadScene : MonoBehaviour
     scenes = LoadFromJSON("defaultScenes", (TimeOfDay)0);
     if (scenes == null || scenes.Length == 0)
     {
-      Debug.LogError("No scenes loaded from json");
+      UnityEngine.Debug.LogError("No scenes loaded from json");
       return;
     }
     currentScene = scenes[sceneIdx];
@@ -106,7 +112,7 @@ public class LoadScene : MonoBehaviour
 
     if (!rowan || !gemini || !perri)
     {
-      Debug.LogError("Failed to find character game objects in LoadScene");
+      UnityEngine.Debug.LogError("Failed to find character game objects in LoadScene");
     }
   }
 
@@ -135,7 +141,7 @@ public class LoadScene : MonoBehaviour
           selected = currentScene.options[3];
           break;
         default:
-          Debug.LogError("Invalid choice number: " + choice);
+          UnityEngine.Debug.LogError("Invalid choice number: " + choice);
           return;
       }
 
@@ -145,7 +151,7 @@ public class LoadScene : MonoBehaviour
         scenes = LoadFromJSON(selected.nextSceneArr.sceneArr, (TimeOfDay) Enum.Parse(typeof(TimeOfDay), selected.nextSceneArr.timeslot));
         if (scenes == null || scenes.Length == 0)
         {
-          Debug.LogError("No scenes loaded from json");
+          UnityEngine.Debug.LogError("No scenes loaded from json");
           return;
         }
         sceneIdx = selected.nextSceneArr.startIndex;
@@ -183,7 +189,7 @@ public class LoadScene : MonoBehaviour
       scenes = LoadFromJSON(currentScene.nextSceneArr.sceneArr, (TimeOfDay) Enum.Parse(typeof(TimeOfDay), currentScene.nextSceneArr.timeslot)); 
       if (scenes == null || scenes.Length == 0)
       {
-        Debug.LogError("No scenes loaded from json");
+        UnityEngine.Debug.LogError("No scenes loaded from json");
         return;
       }
       sceneIdx = currentScene.nextSceneArr.startIndex;
@@ -207,7 +213,7 @@ public class LoadScene : MonoBehaviour
       jsonString = System.IO.File.ReadAllText(filePath);
     } catch (Exception e)
     {
-      Debug.Log("Error reading file: " + e.Message);
+      UnityEngine.Debug.Log("Error reading file: " + e.Message);
       return null;
     }
 
@@ -215,21 +221,28 @@ public class LoadScene : MonoBehaviour
     switch (day)
     {
       case TimeOfDay.morning:
+        NewTimeArray(TimeOfDay.morning);
         return JsonUtility.FromJson<ScenesArr>(jsonString).morning;
       case TimeOfDay.chemistry:
+        NewTimeArray(TimeOfDay.chemistry);
         return JsonUtility.FromJson<ScenesArr>(jsonString).chemistry;
       case TimeOfDay.history:
+        NewTimeArray(TimeOfDay.history);
         return JsonUtility.FromJson<ScenesArr>(jsonString).history;
       case TimeOfDay.lunch:
+        NewTimeArray(TimeOfDay.lunch);
         return JsonUtility.FromJson<ScenesArr>(jsonString).lunch;
       case TimeOfDay.PE:
+        NewTimeArray(TimeOfDay.PE);
         return JsonUtility.FromJson<ScenesArr>(jsonString).PE;
       case TimeOfDay.afterSchool:
+        NewTimeArray(TimeOfDay.afterSchool);
         return JsonUtility.FromJson<ScenesArr>(jsonString).afterSchool;
       case TimeOfDay.firstDate:
+        NewTimeArray(TimeOfDay.firstDate);
         return JsonUtility.FromJson<ScenesArr>(jsonString).firstDate;
       default:
-        Debug.Log("Passed in invalid day number, returning null");
+        UnityEngine.Debug.Log("Passed in invalid day number, returning null");
         return null;
     }
 
@@ -244,13 +257,13 @@ public class LoadScene : MonoBehaviour
   {
     // Implement logic to check if prerequisites for current scene are met
     // If not, use prereqSkip to jump to a different scene
-    Debug.Log("Checking prerequisites for scene: " + currentScene.text);
+    UnityEngine.Debug.Log("Checking prerequisites for scene: " + currentScene.text);
     if (currentScene.prereq == null) return;
 
     GameObject character = this.GetComponent<DisplayScene>().findCharacter(currentScene.name);
     if (character == null)
     {
-      Debug.LogError("Character not found in scene: " + currentScene.name);
+      UnityEngine.Debug.LogError("Character not found in scene: " + currentScene.name);
       return;
     }
 
@@ -286,12 +299,20 @@ public class LoadScene : MonoBehaviour
     sceneIdx = currentScene.skip != 0 ? currentScene.skip : sceneIdx + 1;
       if (sceneIdx >= scenes.Length)
       {
-        Debug.Log("Reached end of scenes array, staying at last scene");
+        if (currTime == LAST_TIME_SLOT)
+        {
+          UnityEngine.Debug.Log("LOADING BOSS SCENE");
+          SceneManager.LoadScene(BOSS_SCENE_INDEX);
+          return;
+        } else
+        {
+          UnityEngine.Debug.Log("Reached end of scenes array, staying at last scene");
+          sceneIdx = scenes.Length - 1;
+        }
 
         // end of array means new time
-        if (TimeBox != null) TimeBox.GetComponent<DateAndTime>().UpdateTime();
+        // if (TimeBox != null) TimeBox.GetComponent<DateAndTime>().UpdateTime();
 
-        sceneIdx = scenes.Length - 1;
       }
 
       // check for prereqs
@@ -299,5 +320,20 @@ public class LoadScene : MonoBehaviour
 
       currentScene = scenes[sceneIdx];
   }  
+
+  void NewTimeArray(TimeOfDay newTime)
+  {
+    // if (newTime == LAST_TIME_SLOT && sceneIdx + 1 >= scenes.Length)
+    // {
+    //   // Load boss scene
+    //   UnityEngine.Debug.Log("Need to load last scene now");
+    // }
+
+    if (newTime == currTime)
+      return;
+
+    if (TimeBox) TimeBox.GetComponent<DateAndTime>().UpdateTime();
+    currTime = newTime;
+  }
    
 }

@@ -15,6 +15,7 @@ public class AffinityHolder : MonoBehaviour
         if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
+            return;
         }
 
         // Sets instance 

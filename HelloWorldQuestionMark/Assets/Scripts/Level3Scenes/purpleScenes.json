@@ -89,12 +89,38 @@
     {
       "name" : "Perri",
       "text" : "This is the next scene in Perri, the next will go back to defaultScenes.",
-      "skip" : 13
+      "nextSceneArr" : {
+        "sceneArr" : "purpleScenes",
+        "timeslot" : "chemistry",
+        "startIndex" : 0
+      }
     }
   ],
-  "chemistry" : [],
-  "history" : [],
-  "lunch" : [],
+  "chemistry" : [
+    {
+      "text" : "This is chem",
+      "nextSceneArr" : {
+        "sceneArr" : "purpleScenes",
+        "timeslot" : "history",
+        "startIndex" : 0
+      }
+    }
+  ],
+  "history" : [
+    {
+      "text" : "This is history",
+      "nextSceneArr" : {
+        "sceneArr" : "purpleScenes",
+        "timeslot" : "lunch",
+        "startIndex" : 0
+      }
+    }
+  ],
+  "lunch" : [
+    {
+      "text" : "This will load the boss scene"
+    }
+  ],
   "PE" : [],
   "afterSchool" : [],
   "firstDate" : []
