@@ -185,6 +185,7 @@ public class DisplayScene : MonoBehaviour
                 return purpleCharacter;
             case "green":
             case "gemini":
+            case "girl with glasses":
                 return greenCharacter;
             case "hermit":
             case "old hermit":

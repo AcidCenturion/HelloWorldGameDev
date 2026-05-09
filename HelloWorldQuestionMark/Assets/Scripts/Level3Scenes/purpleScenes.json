@@ -37,7 +37,8 @@
       "text" : "Considering the years that have passed since your last competition, you’ve grown taller and put on a bit more body mass."
     },
     {
-      "text" : "Meanwhile Perri still looks as light as a feather compared to others around their age.",
+      "name" : "Perri",
+      "text" : "<i>Meanwhile Perri still looks as light as a feather compared to others around their age.</i>",
       "options" : [
         {
           "text" : "Compliment anyways",

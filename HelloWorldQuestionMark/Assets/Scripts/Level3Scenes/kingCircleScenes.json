@@ -24,7 +24,27 @@
     }
     
   ],
-  "chemistry" : [],
+  "chemistry" : [
+    {
+      "text" : "You walk up to King Circle with friendship? Hostility? You’re not sure what, but you once again come face-to-face with the big blue himself."
+    },
+    {
+      "name" : "King Circle",
+      "text" : "What do you want? Can’t you see I’m busy getting ready for chemistry?"
+    },
+    {
+      "name" : "King Circle",
+      "text" : "Oh, wait, you’ve never felt chemistry with another person in your life, so you wouldn’t know."
+    },
+    {
+      "text" : "Speechless, you leave and look for a seat",
+      "nextSceneArr" : {
+        "sceneArr" : "defaultScenes",
+        "timeslot" : "chemistry",
+        "startIndex" : 10
+      }
+    }
+  ],
   "history" : [],
   "lunch" : [],
   "PE" : [],
