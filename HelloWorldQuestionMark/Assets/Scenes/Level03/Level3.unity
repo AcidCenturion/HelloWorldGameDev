@@ -3690,10 +3690,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "You decide to sit next to a good-looking student in one of the middle
-    rows of the bus. He\u2019s a pretty fit guy, and seems much stronger than the
-    rest of the students. He seems to be on the phone, talking quietly to whomever
-    is on the other side."
+  m_text: "It\u2019s pretty cool, right? It\u2019s actually a combination of a radical
+    process and a slower, non-radical process that results in iodide ions and free
+    iodine that form triiodide atoms and\u2026 Oh, I just did it again."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

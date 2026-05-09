@@ -16,14 +16,20 @@
       "text" : "It is my first time, though… I’m quite nervous… please don’t judge it too hard… Um, go ahead."
     },
     {
-      "text" : "A giant dungeon beast lies before you. “This is it,” you think. “The monster’s reign of terror will come to an end.”"
+      "text" : "A giant dungeon beast lies before you. “This is it,” you think. \"The monster’s reign of terror will come to an end.\""
     },
     {
       "text" : "You lunge towards it with a vicious cry. The beast quickly dodges out of the way, opening its maws for an attack. It screams a blood-curdling cry at you…"
     },
     {
-      "name" : "Familar Voice",
-      "text" : "Hey, are you up yet? You’re gonna be late for the bus!"
+      "name" : "The Beast",
+      "text" : "<b>beep beep beep</b>"
+    },
+    {
+      "text" : "The beast’s roar sounds oddly like an alarm clock."
+    },
+    {
+      "text" : "You realize that it wasn’t a beast at all, and was, in fact, your alarm clock."
     },
     {
       "text" : "That’s right, it’s a Monday. You’re supposed to start at your new school today as the new transfer student. "
