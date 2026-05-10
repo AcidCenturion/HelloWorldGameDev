@@ -26,7 +26,8 @@
       "text" : "<b>beep beep beep</b>"
     },
     {
-      "text" : "The beast’s roar sounds oddly like an alarm clock."
+      "text" : "The beast’s roar sounds oddly like an alarm clock.",
+      "bgm" : "Morning"
     },
     {
       "text" : "You realize that it wasn’t a beast at all, and was, in fact, your alarm clock."
@@ -105,7 +106,8 @@
   ],
   "chemistry" : [
     {
-      "text" : "You wind your way down the halls of Sintax Academy and find your room in the chemistry lab with a few other students."
+      "text" : "You wind your way down the halls of Sintax Academy and find your room in the chemistry lab with a few other students.",
+      "bgm" : "Chemistry"
     },
     {
       "text" : "Navigating this place is like a labyrinth, and by the time you actually arrive, most of the seats are taken, and the professor has already arrived."
@@ -184,10 +186,16 @@
   ],
   "history" : [
     {
-      "text" : "This is now history"
+      "text" : "This is now history",
+      "bgm" : "History"
     }
   ],
-  "lunch" : [],
+  "lunch" : [
+    {
+      "text" : "This is now lunch",
+      "bgm" : "Lunch"
+    }
+  ],
   "PE" : [],
   "afterSchool" : [],
   "firstDate" : []

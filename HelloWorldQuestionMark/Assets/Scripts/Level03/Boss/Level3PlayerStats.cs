@@ -27,6 +27,11 @@ public class Level3PlayerStats : MonoBehaviour
     public bool isAllCompanion = false;
     public bool isNoneCompanion = false;
 
+    [Header("Music")]
+    [SerializeField] private GameObject MusicManager;
+    [SerializeField] private int LowHealthMusicThreshold = 20;
+    private bool isPlayingLowHealthMusic = false;
+
     private Level3PlayerControls playerControls;
     void Start()
     {
@@ -103,6 +108,10 @@ public class Level3PlayerStats : MonoBehaviour
             health = 0;
 
             // Handle player death
+        }
+        if (health <= LowHealthMusicThreshold && !isPlayingLowHealthMusic)
+        {
+            MusicManager.GetComponent<Level3BossSceneMusic>().PlayLevel3BossMusic(Level3BossMusic.PLAYER_LOW);
         }
 
         PlayerHealthText.text = "Player Health: " + health.ToString();

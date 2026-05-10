@@ -3,8 +3,7 @@
     {
       "name" : "Green",
       "text" : "This is green scenes json file.",
-      "location" : "leblanc_0",
-      "bgm" : "Morning"
+      "location" : "leblanc_0"
     },
     {
       "name" : "Gemini",

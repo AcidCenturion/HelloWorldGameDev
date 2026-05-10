@@ -2,8 +2,7 @@
   "morning" : [
     {
       "text" : "Seeing Perri’s expectant invitation, you decide to precariously maneuver your way across the bus to the seat they were patting.",
-      "location" : "leblanc_0",
-      "bgm" : "Night"
+      "location" : "leblanc_0"
     },
     {
       "name" : "Perri",

@@ -16,6 +16,10 @@ public class Level3Boss : MonoBehaviour
     [SerializeField] private GameObject Player;
     private Level3PlayerStats playerStats;
     [SerializeField] private TextMeshProUGUI BossHealth;
+    [SerializeField] private GameObject MusicManager;
+    [Header("Music")]
+    [SerializeField] private int LowHealthMusicThreshold = 20;
+    private bool playingLowHealthMusic = false;
 
     // Other vars
     private List<string> dialogue = new List<string>();
@@ -70,10 +74,17 @@ public class Level3Boss : MonoBehaviour
     // Player Functions
     public int TakeDamage(int damageAmount)
     {
+        // update health
         int damageTaken = Mathf.Max(damageAmount - Defense, 0);
         Health -= damageTaken;
-        Debug.Log($"Boss takes {damageTaken} damage! Remaining health: {Health}");
         BossHealth.text = $"Boss Health: {Health}";
+
+        // update music
+        if (Health <= LowHealthMusicThreshold && !playingLowHealthMusic)
+        {
+            MusicManager.GetComponent<Level3BossSceneMusic>().PlayLevel3BossMusic(Level3BossMusic.BOSS_LOW);
+            playingLowHealthMusic = true;
+        }
 
         if (Health <= 0)
         {
