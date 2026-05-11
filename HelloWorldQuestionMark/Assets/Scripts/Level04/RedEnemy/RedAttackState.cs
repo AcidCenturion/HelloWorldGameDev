@@ -8,8 +8,9 @@ public class RedAttackState : RedState
     private bool AttisInRangeOfPlayer;
     private Transform player;
     public Vector3 playerPos;
+    public Vector3 chargeTargetPos;
     private float distanceThreshold = 0.3f;
-    [SerializeField] private float jumpforce = 400f;
+    [SerializeField] private float speed = 5.0f;
     public bool isAttacking = false;
     private Vector3 facingDirection;
     [SerializeField] private float AttackChargeUpDduration = 2.0f;
@@ -45,14 +46,14 @@ public class RedAttackState : RedState
         CreatePlayerPos();
         //Debug.Log(Vector3.Distance(transform.parent.parent.position, playerPos));
         //Debug.Log(AttisInRangeOfPlayer);
-        if (!AttisInRangeOfPlayer && isAttacking)
-        {
-            StopCoroutine(Attack());
-        }
+        // if (!AttisInRangeOfPlayer && isAttacking)
+        // {
+        //     StopCoroutine(Attack());
+        // }
 
         if (AttisInRangeOfPlayer && !isAttacking)
         {
-            StartCoroutine(Attack());
+            StartCoroutine(Attack(transform.parent.parent.position, chargeTargetPos, speed));
         }
 
     }
@@ -76,28 +77,57 @@ public class RedAttackState : RedState
         if (player.position.x >= grandParentTransform.position.x)
         {
             playerPos = new Vector3(player.position.x - 4.0f, player.position.y, player.position.z);
+            chargeTargetPos = new Vector3(player.position.x + 2.0f, player.position.y, player.position.z);
             facingDirection = transform.right;
         }
         else if (player.position.x <= grandParentTransform.position.x)
         {
             playerPos = new Vector3(player.position.x + 4.0f, player.position.y, player.position.z);
+            chargeTargetPos = new Vector3(player.position.x - 2.0f, player.position.y, player.position.z);
             facingDirection = -transform.right;
         }
     }
 
-    IEnumerator Attack()
+    IEnumerator Attack(Vector3 start, Vector3 end, float speed)
     {
         isAttacking = true;
 
-        rb.constraints = RigidbodyConstraints2D.FreezeAll;
-        yield return new WaitForSeconds(AttackChargeUpDduration); 
-        
-        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
-        rb.AddForce(facingDirection * jumpforce, ForceMode2D.Impulse);
+        chaseState.GetComponent<RedChaseState>().enabled = false;
+        Debug.Log("charging");
+        yield return new WaitForSeconds(AttackChargeUpDduration);
+
+        float t = 0;
+        float parameter = 0;
+        Debug.Log("start: " + start);
+        Debug.Log("end: " + end);
+
+        while (t < 1)
+        {
+            t = parameter / speed;
+            transform.parent.parent.position = Vector3.Lerp(start, end, t);
+            parameter += Time.deltaTime;
+            
+            if (Mathf.Approximately(start.x, end.x))
+            {
+                Debug.Log("pos: " + transform.parent.parent.position);
+            }
+            Debug.Log(t);
+            yield return null;
+        }
+        transform.parent.parent.position = end;
+                
+        Debug.Log("cooldown");
         yield return new WaitForSeconds(AttackCooldownTime);
 
-        isAttacking = false;
-        //yield return new WaitForSeconds(1.0f);
+
+        // rb.constraints = RigidbodyConstraints2D.FreezeAll;
+        // yield return new WaitForSeconds(AttackChargeUpDduration); 
         
+        // rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+        // rb.AddForce(facingDirection * jumpforce, ForceMode2D.Impulse);
+        // yield return new WaitForSeconds(AttackCooldownTime);
+
+        chaseState.GetComponent<RedChaseState>().enabled = true;
+        isAttacking = false;        
     }
 }
