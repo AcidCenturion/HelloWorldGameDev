@@ -56,6 +56,8 @@ public class RedAttackState : RedState
             StartCoroutine(Attack(transform.parent.parent.position, chargeTargetPos, speed));
         }
 
+        
+
     }
 
     private void CheckIfChaseFinished()
@@ -86,6 +88,7 @@ public class RedAttackState : RedState
             chargeTargetPos = new Vector3(player.position.x - 2.0f, player.position.y, player.position.z);
             facingDirection = -transform.right;
         }
+        //Debug.Log(Camera.main.WorldToViewportPoint(player.position));
     }
 
     IEnumerator Attack(Vector3 start, Vector3 end, float speed)
@@ -115,7 +118,7 @@ public class RedAttackState : RedState
             yield return null;
         }
         transform.parent.parent.position = end;
-                
+
         Debug.Log("cooldown");
         yield return new WaitForSeconds(AttackCooldownTime);
 
