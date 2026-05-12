@@ -6,6 +6,7 @@ public class L4StageManager : MonoBehaviour
     public GameObject greenEnemy;
     public GameObject redEnemy;
     public GameObject pinkEnemy;
+    public GameObject bossEnemy;
     public GameObject player;
 
     L4CamBehavior l4CamBehavior;
@@ -14,6 +15,7 @@ public class L4StageManager : MonoBehaviour
     public float FollowSpeed = 2f;
     private Vector3 currentCameraPosition;
     public bool stageIsCompleted = true;
+    
 
 
     void Start()
@@ -59,7 +61,7 @@ public class L4StageManager : MonoBehaviour
             break;
 
             case 4:
-            Debug.Log("boss spawn time");
+            SpawnEnemies(bossEnemy);
             break;
 
         }
@@ -67,18 +69,31 @@ public class L4StageManager : MonoBehaviour
 
     void CheckIfStageComplete()
     {
-        if (GameObject.FindWithTag("Enemy") == null && l4CamBehavior.CameraFinished && stageIsCompleted)
+        if (GameObject.FindWithTag("Enemy") == null && l4CamBehavior.CameraFinished && stageIsCompleted )
         {
-            Debug.Log("Start!");
+            if (stageNumber == 0)
+            {
+                Debug.Log("Start game !");    
+            }
+            else
+            {
+                Debug.Log("Start!");
+            }
             stageNumber++;
             Debug.Log(stageNumber);
             stageIsCompleted = false;
             ManageEnemiesInStage();
+            
         }
         else if(GameObject.FindWithTag("Enemy") == null && l4CamBehavior.CameraFinished)
         {
-            l4CamBehavior.CameraFinished = false;
-            stageIsCompleted = true;
+            if (stageNumber < 4)
+            {
+                l4CamBehavior.CameraFinished = false;
+                stageIsCompleted = true;
+            }
+            
+            
         }
     }
 }

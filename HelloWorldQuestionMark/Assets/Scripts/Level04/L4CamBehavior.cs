@@ -9,6 +9,8 @@ public class L4CamBehavior : MonoBehaviour
     //public bool CameraShouldFollow = false;
     public bool CameraFinished = true;
 
+    private bool bossClear = false;
+
     void Start()
     {
         currentCameraPosition = transform.position;
@@ -37,7 +39,11 @@ public class L4CamBehavior : MonoBehaviour
             }    
             
         }
-        
+        // if (!GameObject.Find("Boss Enemy") && l4StageManager.stageNumber == 4)  //this doesnt work either
+        // {
+        //     Debug.Log("boss is clear"); //rn this happens when boss spawns for some reason
+        //     bossClear = true;
+        // }
     }
 
     void CameraSwitchToStatic()
@@ -75,6 +81,15 @@ public class L4CamBehavior : MonoBehaviour
                 if (transform.position.x >= 54)
                     {
                         transform.position = new Vector3(54, 0, -10f);
+                        //l4StageManager.stageIsCompleted = false;
+                        CameraFinished = true; //time to start next stage
+                    }
+                break;
+
+                case 4:
+                if (transform.position.x >= 72)
+                    {
+                        transform.position = new Vector3(72, 0, -10f);
                         //l4StageManager.stageIsCompleted = false;
                         CameraFinished = true; //time to start next stage
                     }
