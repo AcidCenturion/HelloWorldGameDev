@@ -14,19 +14,19 @@ public class RedChaseState : RedState
     private Vector3 moveDirection;
     private float distanceThreshold = 0.3f;
 
-    //[SerializeField] private Animator _animator;
+    [SerializeField] private Animator _animator;
 
 
     public override RedState RunCurrentState()
     {
         if (ChaseisInRangeOfPlayer)
         {
-            //_animator.SetBool("isInRange", true);
+            _animator.SetBool("isInRange", true);
             return attackState;
         }
         else
         {
-            //_animator.SetBool("isInRange", false);
+            _animator.SetBool("isInRange", false);
             return this;
         }
     }

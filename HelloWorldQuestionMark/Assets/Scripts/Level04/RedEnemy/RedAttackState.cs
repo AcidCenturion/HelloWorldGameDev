@@ -18,7 +18,7 @@ public class RedAttackState : RedState
 
     public Rigidbody2D rb;
 
-    //[SerializeField] private Animator _animator;
+    [SerializeField] private Animator _animator;
 
     public override RedState RunCurrentState()
     {
@@ -96,13 +96,14 @@ public class RedAttackState : RedState
         isAttacking = true;
 
         chaseState.GetComponent<RedChaseState>().enabled = false;
-        Debug.Log("charging");
+        //Debug.Log("charging");
+        _animator.SetBool("isCharging", true);
         yield return new WaitForSeconds(AttackChargeUpDduration);
-
+        _animator.SetBool("isCharging", false);
         float t = 0;
         float parameter = 0;
-        Debug.Log("start: " + start);
-        Debug.Log("end: " + end);
+        //Debug.Log("start: " + start);
+        //Debug.Log("end: " + end);
 
         while (t < 1)
         {
@@ -114,13 +115,15 @@ public class RedAttackState : RedState
             {
                 Debug.Log("pos: " + transform.parent.parent.position);
             }
-            Debug.Log(t);
+            //Debug.Log(t);
             yield return null;
         }
         transform.parent.parent.position = end;
 
-        Debug.Log("cooldown");
+        //Debug.Log("cooldown");
+        _animator.SetBool("isCoolDown", true);
         yield return new WaitForSeconds(AttackCooldownTime);
+        _animator.SetBool("isCoolDown", false);
 
 
         // rb.constraints = RigidbodyConstraints2D.FreezeAll;
