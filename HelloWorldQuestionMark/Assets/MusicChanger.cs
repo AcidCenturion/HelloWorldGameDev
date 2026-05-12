@@ -9,11 +9,12 @@ public class InitialMusic : MonoBehaviour
             MusicChanger.instance.ChangeMusic(music);
         } 
     }
-    //private void OnTriggerExit2D (Collider2D other)
-    //{
-        //if (other.CompareTag("Player"))
-        //{
-            //MusicChanger.instance.ReturnInitial();
-        //}
-    //}
+    /* private void OnTriggerExit2D (Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            MusicChanger.instance.ReturnInitial();
+        }
+    }
+    */
 }

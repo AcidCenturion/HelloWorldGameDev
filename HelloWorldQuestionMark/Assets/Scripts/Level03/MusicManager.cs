@@ -3,8 +3,9 @@ using UnityEngine;
 public enum Level3BGM
 {
     Morning,
-    Noon,
-    Night
+    Chemistry,
+    History,
+    Lunch
 }
 
 public class MusicManager : MonoBehaviour
@@ -13,8 +14,9 @@ public class MusicManager : MonoBehaviour
 
     private AudioSource[] audioSource;
     private AudioSource morningBGM;
-    private AudioSource noonBGM;   
-    private AudioSource nightBGM;
+    private AudioSource chemistryBGM;   
+    private AudioSource historyBGM;
+    private AudioSource lunchBGM;
     private AudioSource currBGM;
 
 
@@ -25,8 +27,9 @@ public class MusicManager : MonoBehaviour
     {
         audioSource = GetComponents<AudioSource>();
         morningBGM = audioSource[0];
-        noonBGM = audioSource[1];
-        nightBGM = audioSource[2];
+        chemistryBGM = audioSource[1];
+        historyBGM = audioSource[2];
+        lunchBGM = audioSource[3];
     }
 
     public void PlayBGM(Level3BGM bgm)
@@ -48,11 +51,14 @@ public class MusicManager : MonoBehaviour
             case Level3BGM.Morning:
                 currBGM = morningBGM;
                 break;
-            case Level3BGM.Noon:
-                currBGM = noonBGM;
+            case Level3BGM.Chemistry:
+                currBGM = chemistryBGM;
                 break;
-            case Level3BGM.Night:
-                currBGM = nightBGM;
+            case Level3BGM.History:
+                currBGM = historyBGM;
+                break;
+            case Level3BGM.Lunch:
+                currBGM = lunchBGM;
                 break;
         }
 

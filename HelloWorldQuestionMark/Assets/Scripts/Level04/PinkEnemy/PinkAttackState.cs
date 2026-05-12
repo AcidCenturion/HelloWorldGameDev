@@ -9,9 +9,12 @@ public class PinkAttackState : PinkState
     private Transform target;
     public Vector3 targetPos;
     private float bulletSpeed = 10.0f;
-    [SerializeField] private GameObject bullet;
+    public GameObject bullet;
+    private bool isAttacking = false;
+    [SerializeField] private float duration = 2.0f;
 
     [SerializeField] private Animator _animator;
+
 
     public override PinkState RunCurrentState()
     {
@@ -39,12 +42,10 @@ public class PinkAttackState : PinkState
     {
         CheckIfChaseFinished();
         targetPos = target.position;
-        //Debug.Log("pink: " + transform.parent.parent.position.y);
-        //Debug.Log("player: " + targetPos.y);
-        //Debug.Log(Mathf.Approximately(transform.parent.parent.position.y, targetPos.y));
-        if (Input.GetKeyDown(KeyCode.F))
+
+        if (pinkAttReadyToAttack && !isAttacking)
         {
-            Attack();
+            StartCoroutine(Attack());
         }
     }
 
@@ -60,23 +61,16 @@ public class PinkAttackState : PinkState
         }
     }
 
-    
-    private void Attack()
+
+
+    IEnumerator Attack()
     {
+        isAttacking = true;
         GameObject bulletInstance = Instantiate(bullet, transform.parent.parent.position, transform.parent.parent.rotation);
         Rigidbody2D rb = bulletInstance.GetComponent<Rigidbody2D>();
-
-        if (rb != null)
-        {
-            rb.linearVelocity = transform.parent.parent.forward * bulletSpeed;
-        }
-
-        //StartCoroutine(InterspaceAttack());
+    
+        yield return new WaitForSeconds(duration);   
+        isAttacking = false;
+        
     }
-
-    // IEnumerator InterspaceAttack()
-    // {
-    //     yield return new WaitForSeconds(2.0f);
-
-    // }
 }

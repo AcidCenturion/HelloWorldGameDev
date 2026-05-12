@@ -16,14 +16,21 @@
       "text" : "It is my first time, though… I’m quite nervous… please don’t judge it too hard… Um, go ahead."
     },
     {
-      "text" : "A giant dungeon beast lies before you. “This is it,” you think. “The monster’s reign of terror will come to an end.”"
+      "text" : "A giant dungeon beast lies before you. “This is it,” you think. \"The monster’s reign of terror will come to an end.\""
     },
     {
       "text" : "You lunge towards it with a vicious cry. The beast quickly dodges out of the way, opening its maws for an attack. It screams a blood-curdling cry at you…"
     },
     {
-      "name" : "Familar Voice",
-      "text" : "Hey, are you up yet? You’re gonna be late for the bus!"
+      "name" : "The Beast",
+      "text" : "<b>beep beep beep</b>"
+    },
+    {
+      "text" : "The beast’s roar sounds oddly like an alarm clock.",
+      "bgm" : "Morning"
+    },
+    {
+      "text" : "You realize that it wasn’t a beast at all, and was, in fact, your alarm clock."
     },
     {
       "text" : "That’s right, it’s a Monday. You’re supposed to start at your new school today as the new transfer student. "
@@ -95,14 +102,100 @@
           }
         }
       ]
-
-    }
-
-    
+    }    
   ],
-  "chemistry" : [],
-  "history" : [],
-  "lunch" : [],
+  "chemistry" : [
+    {
+      "text" : "You wind your way down the halls of Sintax Academy and find your room in the chemistry lab with a few other students.",
+      "bgm" : "Chemistry"
+    },
+    {
+      "text" : "Navigating this place is like a labyrinth, and by the time you actually arrive, most of the seats are taken, and the professor has already arrived."
+    },
+    {
+      "text" : "You notice the teacher is… the bus driver? Well anyways, he appears to be talking to a shorter, nerdy-looking girl with glasses."
+    },
+    {
+      "text" : "I got everything set up for class. I also put out the elements we had on the countertops for people to look at.",
+      "name" : "Girl with Glasses"
+    },
+    {
+      "name" : "Bus Driver",
+      "text" : "Thank you, Gemini. You can go take your seat now."
+    },
+    {
+      "text" : "He turns to you"
+    },
+    {
+      "text" : "Oh, good, you’re here. *Ahem* Good morning, class, and welcome back to school.",
+      "name" : "Professor Hermit"
+    },
+    {
+      "text" : "As you all probably know, my name is Professor Hermit. I won’t tolerate anyone who doesn’t call me by that name.",
+      "name" : "Professor Hermit"
+    },
+    {
+      "text" : "This year, we have a new transfer student. Why don’t you go ahead and introduce yourself?",
+      "name" : "Professor Hermit"
+    },
+    {
+      "text" : "Actually, never mind, we’ve got a busy class today, so you go ahead and find a seat.",
+      "name" : "Professor Hermit"
+    },
+    {
+      "text" : "You look around at the empty seats."
+    },
+    {
+      "text" : "You notice that fit jock from the bus, Rowan, is here too. Although you don’t know him well, a familiar face is still familiar."
+    },
+    {
+      "text" : "Then again, there is that nerdy girl, Gemini, who could be a great help in this class."
+    },
+    {
+      "text" : "In the back, there’s one more seat. Once again, King Circle dominates the area, noticeably alone."
+    },
+    {
+      "text" : "Who will be your chemistry partner?",
+      "options" : [
+        {
+          "text" : "Ask Gemini for help as your lab partner",
+          "nextSceneArr" : {
+            "sceneArr" : "greenScenes",
+            "timeslot" : "chemistry",
+            "startIndex" : 0
+          }
+        },
+        {
+          "text" : "Take a seat next to Rowan",
+          "nextSceneArr" : {
+            "sceneArr" : "redScenes",
+            "timeslot" : "chemistry",
+            "startIndex" : 0
+          }
+        },
+        {
+          "text" : "Confront King Circle",
+          "nextSceneArr" : {
+            "sceneArr" : "kingCircleScenes",
+            "timeslot" : "chemistry",
+            "startIndex" : 0
+          }
+        }
+      ]
+    }
+  ],
+  "history" : [
+    {
+      "text" : "This is now history",
+      "bgm" : "History"
+    }
+  ],
+  "lunch" : [
+    {
+      "text" : "This is now lunch",
+      "bgm" : "Lunch"
+    }
+  ],
   "PE" : [],
   "afterSchool" : [],
   "firstDate" : []

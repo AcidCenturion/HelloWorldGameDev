@@ -182,6 +182,7 @@ void PointPlayer(float moveX)
         foreach(Collider2D enemyGameObject in enemy)
         {
             Debug.Log("HitEnemy");
+            enemyGameObject.GetComponent<L4Health>().health -= lightPDamage;
         }
         */
 

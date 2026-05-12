@@ -185,6 +185,7 @@ public class DisplayScene : MonoBehaviour
                 return purpleCharacter;
             case "green":
             case "gemini":
+            case "girl with glasses":
                 return greenCharacter;
             case "hermit":
             case "old hermit":
@@ -222,11 +223,14 @@ public class DisplayScene : MonoBehaviour
             case "morning":
                 musicManager.GetComponent<MusicManager>().PlayBGM(Level3BGM.Morning);
                 break;
-            case "noon":
-                musicManager.GetComponent<MusicManager>().PlayBGM(Level3BGM.Noon);
+            case "chemistry":
+                musicManager.GetComponent<MusicManager>().PlayBGM(Level3BGM.Chemistry);
                 break;
-            case "night":
-                musicManager.GetComponent<MusicManager>().PlayBGM(Level3BGM.Night);
+            case "history":
+                musicManager.GetComponent<MusicManager>().PlayBGM(Level3BGM.History);
+                break;
+            case "lunch":
+                musicManager.GetComponent<MusicManager>().PlayBGM(Level3BGM.Lunch);
                 break;
             default:
                 Debug.LogError("Failed to find BGM: " + bgm);
