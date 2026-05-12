@@ -204,8 +204,7 @@ void PointPlayer(float moveX)
             BreakableObject b = hit.GetComponent<BreakableObject>();
             if (b != null)
             {
-                Debug.Log("Calling Break()...");
-                b.Break();
+                b.TakeDamage(1); // 1 damage per punch
             }
 
         }
@@ -225,7 +224,7 @@ void PointPlayer(float moveX)
             //if (e != null)
             //    e.TakeDamage(lightPDamage);
         }
-
+        
 
     }
 
