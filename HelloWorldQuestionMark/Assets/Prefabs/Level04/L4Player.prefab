@@ -300,7 +300,7 @@ MonoBehaviour:
   dashSpeed: 20
   dashDuration: 0.1
   dashCooldown: 1
-  lightPDamage: 0
+  lightPDamage: 10
   attackPoint: {fileID: 6398353717930131000}
   radius: 0.5
   enemies:

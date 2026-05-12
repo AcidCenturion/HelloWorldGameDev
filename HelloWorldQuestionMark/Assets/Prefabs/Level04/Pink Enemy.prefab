@@ -145,6 +145,7 @@ GameObject:
   - component: {fileID: 4727888337368280062}
   - component: {fileID: 4359165059928611137}
   - component: {fileID: 1532927679320315735}
+  - component: {fileID: 467212127604020804}
   m_Layer: 0
   m_Name: Pink Enemy
   m_TagString: Enemy
@@ -332,6 +333,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &467212127604020804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4726043632226499859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc9f7d3c1ac2ece42b743b3d22c67bd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 30
 --- !u!1 &8273038971974724064
 GameObject:
   m_ObjectHideFlags: 0

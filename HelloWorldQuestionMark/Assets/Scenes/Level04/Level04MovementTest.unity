@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 1176499226}
   - component: {fileID: 1176499225}
   - component: {fileID: 1176499224}
+  - component: {fileID: 1176499227}
   m_Layer: 8
   m_Name: SampleEntity
   m_TagString: Enemy
@@ -244,6 +245,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1176499227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1176499223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc9f7d3c1ac2ece42b743b3d22c67bd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 20
 --- !u!1 &1218450713
 GameObject:
   m_ObjectHideFlags: 0
