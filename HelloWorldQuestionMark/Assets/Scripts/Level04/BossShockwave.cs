@@ -1,19 +1,18 @@
 using UnityEngine;
-using System.Collections;
 
-public class PinkBullet : MonoBehaviour
+public class BossShockwave : MonoBehaviour
 {
-    [SerializeField] private float speed = 5f;
-    [SerializeField] private float duration = 10f;
-    public GameObject player;
-    public Rigidbody2D bulletRB;
-
+    private GameObject player;
     private Vector3 direction;
+    [SerializeField] private float speed = 5f;
+    [SerializeField] private float duration = 5f;
+
 
     void Start()
     {
-        bulletRB = GetComponent<Rigidbody2D>();
-
+    
+        player = GameObject.Find("L4Player");
+    
         if (transform.position.x < player.transform.position.x)  //player is to the right of bullet
         {
             direction = new Vector3(1, 0, 0);
@@ -26,13 +25,10 @@ public class PinkBullet : MonoBehaviour
         }
 
         Destroy(this.gameObject, duration);
-        
     }
 
-    
     void Update()
     {
-        //bulletRB.linearVelocity = direction * speed;
         transform.position = transform.position + (direction * speed * Time.deltaTime);
     }
 }

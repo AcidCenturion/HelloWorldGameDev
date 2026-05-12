@@ -387,7 +387,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6981c21eba64f24a9d665f62d17e1d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChaseSpeed: 5
+  ChaseSpeed: 1
+  ChargeUpDuration: 1.5
+  CooldownDuration: 2.5
+  jumpforce: 500
+  shockwaveObject: {fileID: 6913958897378618991, guid: 41719808eb9ba0c45bf702ebd514c3e6, type: 3}
 --- !u!50 &1447399668
 Rigidbody2D:
   serializedVersion: 5
