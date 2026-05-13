@@ -8,7 +8,9 @@ public class Level3PlayerStats : MonoBehaviour
     [SerializeField] private int health = 100;
     [SerializeField] private int maxHealth = 100;
     [SerializeField] private int damage = 10;
+    private int defaultDamage;
     [SerializeField] private int defense = 0;
+    private int defaultDefense;
     [SerializeField] private float defendReduction = 0.5f;
     [Header("Action Debuffs")]
     [SerializeField] private int GlareDamageDebuff = 2;
@@ -44,6 +46,17 @@ public class Level3PlayerStats : MonoBehaviour
         // delay so AffinityHolder has time to load
         Invoke(nameof(UpdateCharacterBooleans), 3f);
 
+        PlayerHealthText.text = "Player Health: " + health.ToString();
+
+        defaultDamage = damage;
+        defaultDefense = defense;
+    }
+
+    public void ResetStats()
+    {
+        health = maxHealth;
+        damage = defaultDamage;
+        defense = defaultDefense;
         PlayerHealthText.text = "Player Health: " + health.ToString();
     }
 

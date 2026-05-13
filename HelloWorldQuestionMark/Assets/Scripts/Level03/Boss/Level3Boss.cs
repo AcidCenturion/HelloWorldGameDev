@@ -7,8 +7,11 @@ public class Level3Boss : MonoBehaviour
 
     [Header("Stats")]
     [SerializeField] private int Health;
+    private int maxHealth;
     [SerializeField] private int Damage;
+    private int maxDamage;
     [SerializeField] private int Defense;
+    private int maxDefense;
 
     [Header("References")]
     [SerializeField] private GameObject DialogueBox;
@@ -51,6 +54,10 @@ public class Level3Boss : MonoBehaviour
     {
         dialogueBox = DialogueBox.GetComponent<Level3DialogueBossBox>();
     }
+
+    maxHealth = Health;
+    maxDamage = Damage;
+    maxDefense = Defense;
   }
 
   public void BossTurn()
@@ -118,5 +125,13 @@ public class Level3Boss : MonoBehaviour
         Debug.Log("Boss defeated! You win!");
         
         // Updates dialogue box to show victory message, once it reaches the end, idk??
+    }
+
+    public void ResetStats()
+    {
+        Health = maxHealth;
+        Defense = maxDefense;
+        Damage = maxDamage;
+        BossHealth.text = $"Boss Health: {Health}";
     }
 }

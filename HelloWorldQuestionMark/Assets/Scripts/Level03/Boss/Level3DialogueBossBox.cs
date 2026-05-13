@@ -11,8 +11,11 @@ public class Level3DialogueBossBox : MonoBehaviour
     private bool isPlayerTurn = false;
     public GameObject Player;
     private Level3PlayerControls player;
+    private Level3PlayerStats playerStats;
     public GameObject Boss;
     private Level3Boss boss;
+    public GameObject GameOverUI;
+    public GameObject MusicManager;
 
   void Start()
   {
@@ -22,6 +25,7 @@ public class Level3DialogueBossBox : MonoBehaviour
     } else
     {
         player = Player.GetComponent<Level3PlayerControls>();
+        playerStats = Player.GetComponent<Level3PlayerStats>();
     }
 
     if (!Boss)
@@ -32,12 +36,21 @@ public class Level3DialogueBossBox : MonoBehaviour
         boss = Boss.GetComponent<Level3Boss>();
     }
 
-    // intro to fight
+    StartGame();
+
+  }
+
+   public void StartGame()
+    {
+        boss.ResetStats();
+        playerStats.ResetStats();
+        // intro to fight
     dialogue.Add("This is boss fight");
     dialogue.Add("Prepare to fight");
     NextDialogue();
-
-  }
+    GameOverUI.SetActive(false);
+    MusicManager.GetComponent<Level3BossSceneMusic>().PlayLevel3BossMusic(Level3BossMusic.REGULAR);
+    }
 
 
     /*
@@ -68,6 +81,14 @@ public class Level3DialogueBossBox : MonoBehaviour
         // checks if already reached last one
         if (currDialogue >= dialogue.Count)
         {
+            // check if this is player death
+            if (playerStats.GetHealth() <= 0)
+            {
+                GameOverUI.SetActive(true);
+                isPlayerTurn = false;
+                return;
+            }
+
             Debug.Log("Reached last dialogue");
             text.text = "";
             currDialogue = 0;
