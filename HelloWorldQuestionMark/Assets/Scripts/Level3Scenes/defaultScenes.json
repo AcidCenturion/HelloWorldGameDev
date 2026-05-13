@@ -186,8 +186,101 @@
   ],
   "history" : [
     {
-      "text" : "This is now history",
+      "text" : "A look through the doorframe gives you a sense of deja vu. Framing the entire classroom, historical paintings of the Great Shape War tell epic tales of pride and tragedy, victory and remorse.",
       "bgm" : "History"
+    },
+    {
+      "text" : "Maps of the continents are plastered in between the paintings, the laminate bubbling near the edges, indicating their age."
+    },
+    {
+      "text" : "You enter near the back of the classroom, next to the bookshelves filled with dusty, unused history books. You take a closer look at them, noticing a few book titles that seem vaguely interesting."
+    },
+    {
+      "text" : "Your lungs are immediately filled with the musty air. You pull back and look towards the windows where the late sunrise rays pour through the far side windows, creating an air of calm."
+    },
+    {
+      "text" : "Light pours over your childhood friend, Perri, who is looking longingly out the window. As you idle in the doorway, Gemini filters in behind you with a few more students and chooses a spot near the front of the classroom."
+    },
+    {
+      "text" : "You look at the clock at the front of the room which tells you that class will be starting soon. The only empty spot is near the middle. "
+    },
+    {
+      "text" : "You set your backpack down next to it and climb into the tiny seat. Professor Hermit picks up some chalk and begins drawing on the board."
+    },
+    {
+      "text" : "To begin this class, I would like to ask you all a question. Why do we study history?",
+      "name" : "Professor Hermit"
+    },
+    {
+      "text" : "A voice mumbles in the back of the classroom."
+    },
+    {
+      "text" : "To learn about my great feats!",
+      "name" : "King Circle"
+    },
+    {
+      "text" : "You swivel in your chair. Somehow, you once again find yourself in the same class as the blue king."
+    },
+    {
+      "text" : "Yes… from a certain angle, history is purely the study of past events, but think deeper. What makes history important to learn? That is the question to keep in mind throughout this semester.",
+      "name" : "Professor Hermit"
+    },
+    {
+      "text" : "Back when I was a young shape, I used to think the same way. I was– ",
+      "name" : "Professor Hermit"
+    },
+    {
+      "text" : "...",
+      "name" :"King Circle"
+    },
+    {
+      "text" : "I don’t recall asking you about your life story.",
+      "name" :"King Circle"
+    },
+    {
+      "text" : "But it could be yours too, because the things that have come to shape my life, now become to shape yours and everyone else’s futures.",
+      "name" : "Professor Hermit"
+    },
+    {
+      "text" : "We all have our own stories, facing difficulties with choice and living through the consequences to be here where we are in the present.",
+      "name" : "Professor Hermit"
+    },
+    {
+      "text" : "Which is why history class is more than a study and lecture, it is the opportunity for you students to forge your own story.",
+      "name" : "Professor Hermit"
+    },
+    {
+      "text" : "Since every story needs to start somewhere, how about you all get into groups of two and introduce yourselves?",
+      "name" : "Professor Hermit"
+    },
+    {
+      "text" : "Who will be in your group?",
+      "options" : [
+        {
+          "text" : "Gemini",
+          "nextSceneArr" : {
+            "sceneArr" : "greenScenes",
+            "timeslot" : "history",
+            "startIndex" : 0
+          }
+        },
+        {
+          "text" : "Perri",
+          "nextSceneArr" : {
+            "sceneArr" : "purpleScenes",
+            "timeslot" : "history",
+            "startIndex" : 0
+          }
+        },
+        {
+          "text" : "King Circle",
+          "nextSceneArr" : {
+            "sceneArr" : "kingCircleScenes",
+            "timeslot" : "history",
+            "startIndex" : 0
+          }
+        }
+      ]
     }
   ],
   "lunch" : [
