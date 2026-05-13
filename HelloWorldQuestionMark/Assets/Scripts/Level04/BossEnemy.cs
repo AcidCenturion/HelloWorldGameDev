@@ -24,6 +24,14 @@ public class BossEnemy : MonoBehaviour
 
     [SerializeField] private Animator _animator;
 
+       //these six variables handle attacks
+    public float radius;
+    public LayerMask players;
+    public GameObject normalAttackPoint;
+    public GameObject chargeAttackPoint;
+    [SerializeField] int attackDamage;
+    [SerializeField] int chargeAttackDamage;
+
     void Start()
     {
         player = GameObject.Find("L4Player");
@@ -206,6 +214,33 @@ public class BossEnemy : MonoBehaviour
         }
 
         isShockWaving = false;
+    }
+
+
+     public void CreateNormalAttackHitbox()
+    {
+        
+        Collider2D[] player = Physics2D.OverlapCircleAll(normalAttackPoint.transform.position, radius, players);
+
+        foreach(Collider2D playerGameObject in player)
+        {
+            Debug.Log("HitEnemy");
+            playerGameObject.GetComponent<L4Health>().health -= attackDamage;
+        }
+
+
+    }
+
+     public void CreateChargeAttackHitbox()
+    {
+        
+        Collider2D[] player = Physics2D.OverlapCircleAll(chargeAttackPoint.transform.position, radius, players);
+
+        foreach(Collider2D playerGameObject in player)
+        {
+            Debug.Log("HitEnemy");
+            playerGameObject.GetComponent<L4Health>().health -= chargeAttackDamage;
+        }
     }
 
 

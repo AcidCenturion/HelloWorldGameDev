@@ -10,6 +10,12 @@ public class PinkBullet : MonoBehaviour
 
     private Vector3 direction;
 
+    //four variables for damage
+    public float radius;
+    public LayerMask players;
+    public GameObject attackPoint;
+    [SerializeField] int attackDamage;
+
     void Start()
     {
         bulletRB = GetComponent<Rigidbody2D>();
@@ -34,5 +40,15 @@ public class PinkBullet : MonoBehaviour
     {
         //bulletRB.linearVelocity = direction * speed;
         transform.position = transform.position + (direction * speed * Time.deltaTime);
+        
+        Collider2D[] player = Physics2D.OverlapCircleAll(attackPoint.transform.position, radius, players);
+
+        foreach(Collider2D playerGameObject in player)
+        {
+            Debug.Log("HitEnemy");
+            playerGameObject.GetComponent<L4Health>().health -= attackDamage;
+            Destroy(this.gameObject);
+        }
+
     }
 }

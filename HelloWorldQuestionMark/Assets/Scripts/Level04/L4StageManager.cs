@@ -28,10 +28,10 @@ public class L4StageManager : MonoBehaviour
 
     void Update()
     {
-        if (!l4CutsceneManager.inCutscene)
-        {
-            CheckIfStageComplete();    
-        }
+        // if (!l4CutsceneManager.inCutscene)
+        // {
+        //     CheckIfStageComplete();    
+        // }
         
         
     }
