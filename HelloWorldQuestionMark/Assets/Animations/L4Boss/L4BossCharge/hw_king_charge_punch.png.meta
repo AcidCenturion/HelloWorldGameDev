@@ -1,0 +1,741 @@
+fileFormatVersion: 2
+guid: 7eaffdd3be489424caa275720d018205
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1413320250183929902
+    second: hw_king_charge_punch_0
+  - first:
+      213: 3041980567257719271
+    second: hw_king_charge_punch_1
+  - first:
+      213: 2350759110170064154
+    second: hw_king_charge_punch_2
+  - first:
+      213: 441251338011344319
+    second: hw_king_charge_punch_3
+  - first:
+      213: -662531419918429380
+    second: hw_king_charge_punch_4
+  - first:
+      213: -3024831371863911024
+    second: hw_king_charge_punch_5
+  - first:
+      213: -2961632897849007713
+    second: hw_king_charge_punch_6
+  - first:
+      213: -5702268151627135671
+    second: hw_king_charge_punch_7
+  - first:
+      213: -4763844824477784042
+    second: hw_king_charge_punch_8
+  - first:
+      213: -466956486545804263
+    second: hw_king_charge_punch_9
+  - first:
+      213: 8090207383920176279
+    second: hw_king_charge_punch_10
+  - first:
+      213: -6136931927470370860
+    second: hw_king_charge_punch_11
+  - first:
+      213: 8486345010970789087
+    second: hw_king_charge_punch_12
+  - first:
+      213: -5523915529270876886
+    second: hw_king_charge_punch_13
+  - first:
+      213: -6056588864304222644
+    second: hw_king_charge_punch_14
+  - first:
+      213: 1129411800546063997
+    second: hw_king_charge_punch_15
+  - first:
+      213: -4882324422521093299
+    second: hw_king_charge_punch_16
+  - first:
+      213: 4049287391030323529
+    second: hw_king_charge_punch_17
+  - first:
+      213: -8516751867214012087
+    second: hw_king_charge_punch_18
+  - first:
+      213: -9039197919745066555
+    second: hw_king_charge_punch_19
+  - first:
+      213: 7247942389644506643
+    second: hw_king_charge_punch_20
+  - first:
+      213: 6980874987800098103
+    second: hw_king_charge_punch_21
+  - first:
+      213: -1540259081844292361
+    second: hw_king_charge_punch_22
+  - first:
+      213: 4258295080974163225
+    second: hw_king_charge_punch_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: hw_king_charge_punch_0
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 0
+        width: 27
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e20541a874f1d9310800000000000000
+      internalID: 1413320250183929902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hw_king_charge_punch_1
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 0
+        width: 27
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e1a9057539473a20800000000000000
+      internalID: 3041980567257719271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hw_king_charge_punch_2
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 0
+        width: 27
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a153332b4f29f9020800000000000000
+      internalID: 2350759110170064154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hw_king_charge_punch_3
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 0
+        width: 29
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbdf4da01c3af1600800000000000000
+      internalID: 441251338011344319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hw_king_charge_punch_4
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 0
+        width: 30
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c331a3f0f273ec6f0800000000000000
+      internalID: -662531419918429380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hw_king_charge_punch_5
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 0
+        width: 30
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 095189eb4e3a506d0800000000000000
+      internalID: -3024831371863911024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hw_king_charge_punch_6
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 0
+        width: 30
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f916990229a26e6d0800000000000000
+      internalID: -2961632897849007713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hw_king_charge_punch_7
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 0
+        width: 30
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 945cd38f3597dd0b0800000000000000
+      internalID: -5702268151627135671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hw_king_charge_punch_8
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 0
+        width: 30
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6182bef3f5c63edb0800000000000000
+      internalID: -4763844824477784042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hw_king_charge_punch_9
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 0
+        width: 30
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9147fddac890589f0800000000000000
+      internalID: -466956486545804263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hw_king_charge_punch_10
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 0
+        width: 30
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79cedcd70c0364070800000000000000
+      internalID: 8090207383920176279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hw_king_charge_punch_11
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 0
+        width: 30
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4df00644dec35daa0800000000000000
+      internalID: -6136931927470370860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hw_king_charge_punch_12
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 0
+        width: 30
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd4825c23dd85c570800000000000000
+      internalID: 8486345010970789087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hw_king_charge_punch_13
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 0
+        width: 30
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a25ab84d71c1753b0800000000000000
+      internalID: -5523915529270876886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hw_king_charge_punch_14
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 0
+        width: 30
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4e6f80648ca2fba0800000000000000
+      internalID: -6056588864304222644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hw_king_charge_punch_15
+      rect:
+        serializedVersion: 2
+        x: 733
+        y: 0
+        width: 27
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d76bea87c0a7caf00800000000000000
+      internalID: 1129411800546063997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hw_king_charge_punch_16
+      rect:
+        serializedVersion: 2
+        x: 783
+        y: 0
+        width: 26
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d438a6d2ecf7e3cb0800000000000000
+      internalID: -4882324422521093299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hw_king_charge_punch_17
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 0
+        width: 27
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 949a4d79d65f13830800000000000000
+      internalID: 4049287391030323529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hw_king_charge_punch_18
+      rect:
+        serializedVersion: 2
+        x: 879
+        y: 0
+        width: 27
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 941609aec4b6ec980800000000000000
+      internalID: -8516751867214012087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hw_king_charge_punch_19
+      rect:
+        serializedVersion: 2
+        x: 927
+        y: 0
+        width: 27
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c9352b32615e8280800000000000000
+      internalID: -9039197919745066555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hw_king_charge_punch_20
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 0
+        width: 26
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 316b14fb33dd59460800000000000000
+      internalID: 7247942389644506643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hw_king_charge_punch_21
+      rect:
+        serializedVersion: 2
+        x: 1023
+        y: 0
+        width: 25
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 735fb3da0dc01e060800000000000000
+      internalID: 6980874987800098103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hw_king_charge_punch_22
+      rect:
+        serializedVersion: 2
+        x: 1071
+        y: 0
+        width: 23
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f40a949686ef9ae0800000000000000
+      internalID: -1540259081844292361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hw_king_charge_punch_23
+      rect:
+        serializedVersion: 2
+        x: 1117
+        y: 0
+        width: 27
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91d124290d0881b30800000000000000
+      internalID: 4258295080974163225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      hw_king_charge_punch_0: 1413320250183929902
+      hw_king_charge_punch_1: 3041980567257719271
+      hw_king_charge_punch_10: 8090207383920176279
+      hw_king_charge_punch_11: -6136931927470370860
+      hw_king_charge_punch_12: 8486345010970789087
+      hw_king_charge_punch_13: -5523915529270876886
+      hw_king_charge_punch_14: -6056588864304222644
+      hw_king_charge_punch_15: 1129411800546063997
+      hw_king_charge_punch_16: -4882324422521093299
+      hw_king_charge_punch_17: 4049287391030323529
+      hw_king_charge_punch_18: -8516751867214012087
+      hw_king_charge_punch_19: -9039197919745066555
+      hw_king_charge_punch_2: 2350759110170064154
+      hw_king_charge_punch_20: 7247942389644506643
+      hw_king_charge_punch_21: 6980874987800098103
+      hw_king_charge_punch_22: -1540259081844292361
+      hw_king_charge_punch_23: 4258295080974163225
+      hw_king_charge_punch_3: 441251338011344319
+      hw_king_charge_punch_4: -662531419918429380
+      hw_king_charge_punch_5: -3024831371863911024
+      hw_king_charge_punch_6: -2961632897849007713
+      hw_king_charge_punch_7: -5702268151627135671
+      hw_king_charge_punch_8: -4763844824477784042
+      hw_king_charge_punch_9: -466956486545804263
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

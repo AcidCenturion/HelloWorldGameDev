@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 1521449259433285193}
   - component: {fileID: 1356909508067430768}
   - component: {fileID: 6622454167668409553}
+  - component: {fileID: 7190991612654917643}
   m_Layer: 0
   m_Name: Boss Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -79,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -8020673119811320987, guid: 9b3f0810d478d6e48ac82890095125ae, type: 3}
+  m_Sprite: {fileID: 1413320250183929902, guid: 7eaffdd3be489424caa275720d018205, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -128,7 +129,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.75, y: 2.8125}
+    oldSize: {x: 1.6875, y: 2.9375}
     newSize: {x: 3.46, y: 3.46}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -180,3 +181,28 @@ MonoBehaviour:
   CooldownDuration: 2.5
   jumpforce: 500
   shockwaveObject: {fileID: 6913958897378618991, guid: 41719808eb9ba0c45bf702ebd514c3e6, type: 3}
+  WaitBeforeShockwave: 1.5
+  WaitAfterShockwave: 2.5
+  _animator: {fileID: 7190991612654917643}
+--- !u!95 &7190991612654917643
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7469806436657744227}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cd2df7606de6f374b842e05e4f2ab3d7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

@@ -2,15 +2,25 @@ using UnityEngine;
 
 public class BoundPlayerToCamera : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private Vector2 screenBounds;
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    void LateUpdate() {
+        screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
+        Vector3 viewPos = transform.position;
+
+        // Restrict X and Y positions
+        // viewPos.x = Mathf.Clamp(viewPos.x, screenBounds.x, screenBounds.x);
+        // viewPos.y = Mathf.Clamp(viewPos.y, screenBounds.y, screenBounds.y);
+        viewPos.x = Mathf.Clamp(viewPos.x, screenBounds.x * -1, screenBounds.x);
+        viewPos.y = Mathf.Clamp(viewPos.y, screenBounds.y * -1, screenBounds.y);
+
+        transform.position = viewPos;
+
+        //Debug.Log(screenBounds);
     }
 }

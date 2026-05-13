@@ -3,6 +3,8 @@ using System.Collections;
 
 public class L4StageManager : MonoBehaviour
 {
+    public L4CutsceneManager l4CutsceneManager;
+
     public GameObject greenEnemy;
     public GameObject redEnemy;
     public GameObject pinkEnemy;
@@ -26,7 +28,11 @@ public class L4StageManager : MonoBehaviour
 
     void Update()
     {
-        CheckIfStageComplete();
+        if (!l4CutsceneManager.inCutscene)
+        {
+            CheckIfStageComplete();    
+        }
+        
         
     }
 
@@ -46,22 +52,26 @@ public class L4StageManager : MonoBehaviour
             SpawnEnemies(greenEnemy);
             SpawnEnemies(greenEnemy);
             SpawnEnemies(greenEnemy);
+            l4CutsceneManager.whichCutscene++;
             break;
 
             case 2:
             SpawnEnemies(redEnemy);
             SpawnEnemies(redEnemy);
             SpawnEnemies(redEnemy);
+            l4CutsceneManager.whichCutscene++;
             break;
 
             case 3:
             SpawnEnemies(pinkEnemy);
             SpawnEnemies(pinkEnemy);
             SpawnEnemies(pinkEnemy);
+            l4CutsceneManager.whichCutscene++;
             break;
 
             case 4:
             SpawnEnemies(bossEnemy);
+            l4CutsceneManager.whichCutscene++;
             break;
 
         }
@@ -73,14 +83,14 @@ public class L4StageManager : MonoBehaviour
         {
             if (stageNumber == 0)
             {
-                Debug.Log("Start game !");    
+                //Debug.Log("Start game !");    
             }
             else
             {
-                Debug.Log("Start!");
+                //Debug.Log("Start!");
             }
             stageNumber++;
-            Debug.Log(stageNumber);
+            //Debug.Log(stageNumber);
             stageIsCompleted = false;
             ManageEnemiesInStage();
             
@@ -91,9 +101,14 @@ public class L4StageManager : MonoBehaviour
             {
                 l4CamBehavior.CameraFinished = false;
                 stageIsCompleted = true;
+                
             }
-            
-            
+            if (stageNumber == 4)
+            {
+                l4CutsceneManager.inCutscene = true;
+            }
+        
+               
         }
     }
 }
