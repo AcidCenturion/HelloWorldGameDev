@@ -160,6 +160,11 @@ public class LoadScene : MonoBehaviour
       }
 
       // Load From Same scene array
+      if (selected.newIndex > 0)
+      {
+        LoadFromSameArray(selected.newIndex);
+        return;
+      }
       LoadFromSameArray();
       return;
     }
@@ -294,9 +299,10 @@ public class LoadScene : MonoBehaviour
     
   }
 
-  void LoadFromSameArray()
+  void LoadFromSameArray(int choiceNewIndex = -1)
   {
     sceneIdx = currentScene.skip != 0 ? currentScene.skip : sceneIdx + 1;
+    if (choiceNewIndex >= 0) sceneIdx = choiceNewIndex;
       if (sceneIdx >= scenes.Length)
       {
         if (currTime == LAST_TIME_SLOT)
