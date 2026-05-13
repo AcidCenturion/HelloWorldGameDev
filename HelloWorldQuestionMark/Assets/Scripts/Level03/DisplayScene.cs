@@ -3,6 +3,7 @@ using Microsoft.Unity.VisualStudio.Editor;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 //TODO
 // FINISH PLACEHOLDERS OF ALL THE CHARACTERS
@@ -17,7 +18,7 @@ public class DisplayScene : MonoBehaviour
     public GameObject charName;
 
     // Location Variables
-    public GameObject backgroundLocation;
+    public UnityEngine.UI.Image backgroundLocation;
     private Sprite newBackground = null;
     public Sprite[] locations;
 
@@ -43,7 +44,7 @@ public class DisplayScene : MonoBehaviour
         sceneManager = sceneManager == null ? GameObject.Find("SceneManager") : sceneManager;
         text = text == null ? GameObject.Find("textbox_text") : text;
         charName = charName == null ? GameObject.Find("name_text") : charName;
-        backgroundLocation = backgroundLocation == null ? GameObject.Find("visualNovelBackground") : backgroundLocation;
+        // backgroundLocation = backgroundLocation == null ? GameObject.Find("visualNovelBackground") : backgroundLocation;
         musicManager = musicManager == null ? GameObject.Find("MusicManager") : musicManager;
     }   
 
@@ -139,7 +140,7 @@ public class DisplayScene : MonoBehaviour
         }
 
         // Update background sprite
-        backgroundLocation.GetComponent<SpriteRenderer>().sprite = newBackground;
+        backgroundLocation.sprite = newBackground;
         newBackground = null;
     }
 

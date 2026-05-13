@@ -1,11 +1,13 @@
 {
   "morning" : [
     {
-      "text": "5 months later..."
+      "text": "5 months later...",
+      "location" : "black_0"
     },
     {
       "name" : "Developer",
-      "text" : "Hey, playtester, check this out. I made a new game!"
+      "text" : "Hey, playtester, check this out. I made a new game!",
+      "location" :"black_0"
     },
     {
       "name" : "Developer",
@@ -33,7 +35,8 @@
       "text" : "You realize that it wasn’t a beast at all, and was, in fact, your alarm clock."
     },
     {
-      "text" : "That’s right, it’s a Monday. You’re supposed to start at your new school today as the new transfer student. "
+      "text" : "That’s right, it’s a Monday. You’re supposed to start at your new school today as the new transfer student. ",
+      "location" : "single bedroom_0"
     },
     {
       "text" : "You pick yourself out of bed and quickly throw yourself together, rushing downstairs to the bus."
@@ -59,7 +62,8 @@
       "text" : "As you listen to the narrating voice in your head, you hear the sounds of the bus screeching to a stop in front of you. This is your ride to school."
     },
     {
-      "text" : "You clamber onto the bus behind your friend. As you walk down the aisle, you spot a few available seats."
+      "text" : "You clamber onto the bus behind your friend. As you walk down the aisle, you spot a few available seats.",
+      "location" : "Bus_0"
     },
     {
       "name" : "Familar Voice",
@@ -107,7 +111,8 @@
   "chemistry" : [
     {
       "text" : "You wind your way down the halls of Sintax Academy and find your room in the chemistry lab with a few other students.",
-      "bgm" : "Chemistry"
+      "bgm" : "Chemistry",
+      "location" : "science_classroom_0"
     },
     {
       "text" : "Navigating this place is like a labyrinth, and by the time you actually arrive, most of the seats are taken, and the professor has already arrived."
@@ -187,7 +192,8 @@
   "history" : [
     {
       "text" : "A look through the doorframe gives you a sense of deja vu. Framing the entire classroom, historical paintings of the Great Shape War tell epic tales of pride and tragedy, victory and remorse.",
-      "bgm" : "History"
+      "bgm" : "History",
+      "location" : "history_classroom_0"
     },
     {
       "text" : "Maps of the continents are plastered in between the paintings, the laminate bubbling near the edges, indicating their age."

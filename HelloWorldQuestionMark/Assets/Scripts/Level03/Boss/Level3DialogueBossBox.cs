@@ -45,8 +45,8 @@ public class Level3DialogueBossBox : MonoBehaviour
         boss.ResetStats();
         playerStats.ResetStats();
         // intro to fight
-    dialogue.Add("This is boss fight");
-    dialogue.Add("Prepare to fight");
+    dialogue.Add("KING CIRCLE challenges you to a fight!");
+    dialogue.Add("Prepare to fight!");
     NextDialogue();
     GameOverUI.SetActive(false);
     MusicManager.GetComponent<Level3BossSceneMusic>().PlayLevel3BossMusic(Level3BossMusic.REGULAR);

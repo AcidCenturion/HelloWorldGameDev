@@ -2,8 +2,7 @@
   "morning" : [
     {
       "name" : "Green",
-      "text" : "This is green scenes json file.",
-      "location" : "leblanc_0"
+      "text" : "This is green scenes json file."
     },
     {
       "name" : "Gemini",
