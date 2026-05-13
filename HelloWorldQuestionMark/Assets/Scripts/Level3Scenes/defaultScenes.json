@@ -290,6 +290,8 @@
     }
   ],
   "PE" : [],
-  "afterSchool" : [],
+  "afterSchool" : [{
+      "text" : "You just finished a day of school. Tired, you return home and go to bed."
+    }],
   "firstDate" : []
 }
