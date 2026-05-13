@@ -176,7 +176,7 @@ void PointPlayer(float moveX)
     //Creates Light Punch Hitbox with animation event
     public void CreateLightPHitbox()
     {
-        /*
+        
         Collider2D[] enemy = Physics2D.OverlapCircleAll(attackPoint.transform.position, radius, enemies);
 
         foreach(Collider2D enemyGameObject in enemy)
@@ -184,16 +184,12 @@ void PointPlayer(float moveX)
             Debug.Log("HitEnemy");
             enemyGameObject.GetComponent<L4Health>().health -= lightPDamage;
         }
-        */
+        
 
-        // Debug.Log("CreateLightPHitbox fired");
+       
 
         // 1. Detect breakables
-        Collider2D[] breakableHits = Physics2D.OverlapCircleAll(
-            attackPoint.transform.position,
-            radius,
-            breakables
-        );
+        Collider2D[] breakableHits = Physics2D.OverlapCircleAll(attackPoint.transform.position,radius, breakables);
 
         foreach (Collider2D hit in breakableHits)
         {
@@ -209,21 +205,7 @@ void PointPlayer(float moveX)
 
         }
 
-        // 2. Detect enemies
-        Collider2D[] enemyHits = Physics2D.OverlapCircleAll(
-            attackPoint.transform.position,
-            radius,
-            enemies
-        );
-
-        foreach (Collider2D hit in enemyHits)
-        {
-            Debug.Log("HitEnemy: " + hit.name);
-
-            //Enemy e = hit.GetComponent<Enemy>();
-            //if (e != null)
-            //    e.TakeDamage(lightPDamage);
-        }
+      
         
 
     }
