@@ -291,8 +291,107 @@
   ],
   "lunch" : [
     {
-      "text" : "This is now lunch",
+      "text" : "It’s time for lunch. Your stomach has been grumbling forever, and now’s the chance to get some grub. You head into the packed cafeteria.",
       "bgm" : "Lunch"
+    },
+    {
+      "text" : "Some groups are sitting at the lunch table talking to their friends; a long line forms to get food. You groan at the thought of the wait time, but hey, at least you’re getting food, right?"
+    },
+    {
+      "text" : "You grab a plate and get ready to be handed the first scoop of whatever junk the lunch ladies put into this nutritional meal, until all of a sudden…"
+    },
+    {
+      "text" : "AHHHHHH!!!!"
+    },
+    {
+      "text" : "You hear a scream from the other end of the cafeteria. You drop your plate to see what all the commotion is about, and notice a young student on the ground, their lunch plopped on the floor, ruined. "
+    },
+    {
+      "text" : "Standing above them is none other than that figure that you keep seeing: King Circle. Well, he’s apparently EVERYWHERE."
+    },
+    {
+      "text" : "He was there at the bus, at chemistry, and at history class. Not only that, but time and time again, every time you see him, you feel like you’ve seen him at other times as well."
+    },
+    {
+      "text": "Please… just let me go! What else do you want from me?",
+      "name": "Crying Student"
+    },
+    {
+      "text": "You know <b>EXACTLY</b> what I want from you!",
+      "name": "King Circle"
+    },
+    {
+      "text": "The intimidating figure grabs the girl by the shirt and flings her up from the floor in an instant."
+    },
+    {
+      "text": "Where. Is. My. Homework?!",
+      "name": "King Circle"
+    },
+    {
+      "text": "I don’t know what you’re talking about! You’ve never asked me about doing homework for you!",
+      "name": "Crying Student"
+    },
+    {
+      "text": "Let her go.",
+      "name": "Player"
+    },
+    {
+      "text": "Both of them look at the source of whoever said that, and it turns out to be you who had said that. King Circle lets go of the girl, as she begins to run away from the scene of the crime."
+    },
+    {
+      "text": "What did you say to me? Do you know who you’re talking to?",
+      "name": "King Circle"
+    },
+    {
+      "text": "Yeah, I know who I’m talking to. And to be honest, you seem to be… in a much more sorry sight than usual.",
+      "name": "Player"
+    },
+    {
+      "text": "You feel like someone has possessed you, that someone has taken over, because in no way you never say things like that. But at the same time, it seems like you want to see how this pans out."
+    },
+    {
+      "text": "C’mon, man. Asking people to do YOUR homework? What are we in? A teenager movie? Give me a break. That’s just pathetic.",
+      "name": "Player"
+    },
+    {
+      "text": "Hold on, is this your attempt at trying to talk back at me?… Wait a minute, I’ve seen you before. You were on the bus. You were in my chemistry class. And just a few minutes ago, you were just in my history class as well.",
+      "name": "King Circle"
+    },
+    {
+      "text": "And?",
+      "name": "Player"
+    },
+    {
+      "text": "You trying to get onto me? Because every time I’ve seen you, you always had this weird look… that you like me or something…",
+      "name": "King Circle"
+    },
+    {
+      "text": "Nearly everyone in the cafeteria, who had grouped around in a circle to see what was happening, let out a massive “ooooohhhh” that rang around the school. And deep down inside you, he was right."
+    },
+    {
+      "text": "You did have a crush on him. Maybe it was something in him that you could relate to, but unfortunately, things have changed."
+    },
+    {
+      "text": "You’re right. I did. But now I realize, after seeing this, I don’t have a crush on you anymore.",
+      "name": "Player"
+    },
+    {
+      "text": "And why is that, huh? Is it because you realize there’s no way in hell you’re gonna go on a date with me?",
+      "name": "King Circle"
+    },
+    {
+      "text": "No, not that. It’s because people like you don’t deserve to be in love with anyone.",
+      "name": "Player"
+    },
+    {
+      "text": "Next thing you know, you notice a menacing look glaring at you. It seemed that King Circle did not take too kindly at that comment of yours."
+    },
+    {
+      "text": "You know what?! That’s enough! I’ve had enough of your shenanigans! Get over here!",
+      "name": "King Circle"
+    },
+    {
+      "text": "King Circle begins to charge at you. You notice a jock of a student lunging at speeds you’ve never seen before. But you’re ready. You’re prepared. And ready to kick some spherical ass."
     }
   ],
   "PE" : [],
