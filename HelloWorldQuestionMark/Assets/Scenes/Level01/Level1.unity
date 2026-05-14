@@ -4694,7 +4694,7 @@ MonoBehaviour:
   Ceiling: {fileID: 329771408}
   voiceline: {fileID: 992686487}
   bossEncounterMusic: {fileID: 0}
-  backgroundMusic: {fileID: 0}
+  backgroundMusic: {fileID: 1956339493}
   pauseBackgroundMusic: 1
   EnterByFalling: 0
   EnterByRolling: 1

@@ -621,6 +621,7 @@
   {
     "text": "Oh, is that so? That’s quite a dull outlook. I mean, think about how much you can learn from school. Besides the course material, you also learn a lot of soft skills.",
     "name": "Gemini",
+    "emotion" : "Sad",
     "skip" : 15
   },
   {
@@ -629,6 +630,7 @@
   {
     "text": "Art is a great subject! I have a lot of respect for artists of all types. It’s actually quite an intellectual sport, especially poetry. I love poetry.",
     "name": "Gemini",
+    "emotion" : "Happy",
     "skip" : 15
   },
   {
@@ -636,7 +638,8 @@
   },
   {
     "text": "I love astronomy, too! I have space posters hanging all over my room!",
-    "name": "Gemini"
+    "name": "Gemini",
+    "emotion" : "Love"
   },
   {
     "text": "Gemini is practically bouncing at the idea of encountering a fellow space lover."
@@ -809,6 +812,7 @@
   },
   {
     "text": "Yeah, sure.",
+    "emotion" : "Sad",
     "name": "Gemini"
   },
   {
@@ -824,7 +828,8 @@
   },
   {
     "text": "I study every day. Whenever I have a free period. I like to come to the library and read. It’s such a relaxing place.",
-    "name": "Gemini"
+    "name": "Gemini",
+    "emotion" : "Happy"
   },
   {
     "text": "Gemini doesn’t mind your compliment, but it doesn’t have the reassuring effect that you’d hoped."
@@ -845,7 +850,8 @@
   },
   {
     "text": "Yeah, of course. I can help you with that. Take a seat, and we can review together.",
-    "name": "Gemini"
+    "name": "Gemini",
+    "emotion" : "Love"
   },
   {
     "text": "She pats a spot next to her. You sit down. The space is crowded enough that you’re shoulder-to-shoulder."
