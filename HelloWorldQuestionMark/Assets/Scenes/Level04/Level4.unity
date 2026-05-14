@@ -4144,6 +4144,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2912097076883733260, guid: 6e8f91f824911d3409fa848bd2087ab4, type: 3}
+      propertyPath: health
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2912097076883733260, guid: 6e8f91f824911d3409fa848bd2087ab4, type: 3}
       propertyPath: DeathCanvas
       value: 
       objectReference: {fileID: 1554295673}

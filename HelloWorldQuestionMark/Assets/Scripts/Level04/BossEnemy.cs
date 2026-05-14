@@ -34,6 +34,8 @@ public class BossEnemy : MonoBehaviour
     [SerializeField] int attackDamage;
     [SerializeField] int chargeAttackDamage;
 
+    private bool activeChargeHitbox;
+
     void Start()
     {
         player = GameObject.Find("L4Player");
@@ -51,6 +53,10 @@ public class BossEnemy : MonoBehaviour
         if (!inAttack)
         {
             StartCoroutine(TimerToSwitchAttack());
+        }
+        if (activeChargeHitbox)
+        {
+            CreateChargeAttackHitbox();
         }
 
         PickAttack(newNumber);
@@ -252,16 +258,35 @@ public class BossEnemy : MonoBehaviour
 
     }
 
+
+    public void enablehitbox()
+    {
+        activeChargeHitbox = true;
+        CreateChargeAttackHitbox();
+        
+    }
     public void CreateChargeAttackHitbox()
     {
         
+        
         Collider2D[] player = Physics2D.OverlapCircleAll(chargeAttackPoint.transform.position, radius, players);
+        
 
         foreach(Collider2D playerGameObject in player)
         {
             Debug.Log("HitEnemy");
             playerGameObject.GetComponent<L4Health>().health -= chargeAttackDamage;
+            activeChargeHitbox = false;
+            
         }
+        
+
+
+    }
+
+    public void disablehitbox()
+    {
+        activeChargeHitbox = false;
     }
 
 
