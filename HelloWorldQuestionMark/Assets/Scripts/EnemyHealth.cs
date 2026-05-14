@@ -68,6 +68,9 @@ public class EnemyHealth : MonoBehaviour
                 bossIsDead = true;
                 SceneManager.LoadScene(LEVEL3_SCENE_INDEX);
                 Destroy(gameObject);
+            } else if (this.gameObject.name == "Boss")
+            {
+                SceneManager.LoadScene("Level2");
             }
             Destroy(gameObject);
         }
