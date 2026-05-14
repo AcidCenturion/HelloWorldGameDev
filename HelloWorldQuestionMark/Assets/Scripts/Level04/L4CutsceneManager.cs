@@ -30,6 +30,11 @@ public class L4CutsceneManager : MonoBehaviour
     public GameObject Text4_2;
     public GameObject Text5_1;
     public GameObject Text5_2;
+    public GameObject Text5_3;
+    public GameObject Text5_4;
+    public GameObject Text5_5;
+    public GameObject Text5_6;
+    public GameObject Text5_7;
     
 
     public bool inCutscene = true;
@@ -329,9 +334,54 @@ public class L4CutsceneManager : MonoBehaviour
                 break;
 
                 case 3:
+                Boss.SetActive(false);
+                imageBlue.SetActive(false);
+                Text5_2.SetActive(false);
+                Narrator.SetActive(true);
+                imageOrange.SetActive(true);
+                Text5_3.SetActive(true);
+                break;
+
+                case 4:
+                Boss.SetActive(false);
+                imageBlue.SetActive(false);
+                Text5_3.SetActive(false);
+                Narrator.SetActive(true);
+                imageOrange.SetActive(true);
+                Text5_4.SetActive(true);
+                break;
+
+                case 5:
+                Boss.SetActive(false);
+                imageBlue.SetActive(false);
+                Text5_4.SetActive(false);
+                Narrator.SetActive(true);
+                imageOrange.SetActive(true);
+                Text5_5.SetActive(true);
+                break;
+
+                case 6:
+                Boss.SetActive(false);
+                imageBlue.SetActive(false);
+                Text5_5.SetActive(false);
+                Narrator.SetActive(true);
+                imageOrange.SetActive(true);
+                Text5_6.SetActive(true);
+                break;
+
+                case 7:
+                Boss.SetActive(false);
+                imageBlue.SetActive(false);
+                Text5_6.SetActive(false);
+                Narrator.SetActive(true);
+                imageOrange.SetActive(true);
+                Text5_7.SetActive(true);
+                break;
+
+                case 8:
                 Narrator.SetActive(false);
                 imageOrange.SetActive(false);
-                Text5_2.SetActive(false);
+                Text5_7.SetActive(false);
                 secondCutscene.SetActive(false);
                 generalCutsceneCanvas.SetActive(false);
                 l4PlayerControls.enabled = true;
