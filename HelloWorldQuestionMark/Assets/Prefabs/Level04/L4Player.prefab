@@ -16,7 +16,6 @@ GameObject:
   - component: {fileID: 6284431796826587772}
   - component: {fileID: 2912097076883733260}
   - component: {fileID: 5389803751058922603}
-  - component: {fileID: 3951798526510987372}
   - component: {fileID: 6504284652179355785}
   m_Layer: 9
   m_Name: L4Player
@@ -35,7 +34,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.01, y: -1.71, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6193313157421988999}
@@ -325,6 +324,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc9f7d3c1ac2ece42b743b3d22c67bd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 0}
   health: 30
 --- !u!95 &5389803751058922603
 Animator:
@@ -348,18 +348,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &3951798526510987372
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4014247397373364052}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eaa45534a6e76b14aa16506b49d98f71, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &6504284652179355785
 MonoBehaviour:
   m_ObjectHideFlags: 0

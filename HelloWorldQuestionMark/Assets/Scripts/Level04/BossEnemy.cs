@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Runtime.InteropServices;
 using UnityEngine;
 
 public class BossEnemy : MonoBehaviour
@@ -7,6 +8,7 @@ public class BossEnemy : MonoBehaviour
     private Rigidbody2D rb;
     private int lastNumber;
     private int newNumber = -1;
+    private bool inAttack = false;
     public float ChaseSpeed = 5f;
     private Vector3 playerPos;
 
@@ -40,23 +42,40 @@ public class BossEnemy : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.L))
+        // if (Input.GetKeyDown(KeyCode.L))
+        // {
+        //     newNumber++;
+        //     Debug.Log(newNumber);
+        // }
+
+        if (!inAttack)
         {
-            newNumber++;
-            Debug.Log(newNumber);
+            StartCoroutine(TimerToSwitchAttack());
         }
+
         PickAttack(newNumber);
         
     }
 
+    IEnumerator TimerToSwitchAttack()
+    {
+            inAttack = true;
+            MakeRandomNumber();
+            //PickAttack(newNumber);
+            //Debug.Log(newNumber);
+            yield return new WaitForSeconds(6f);
+            inAttack = false;
+    }
+
     int MakeRandomNumber()
     {
-        int newNumber = Random.Range(0, 2);
+        newNumber = Random.Range(0, 3);
         while (newNumber == lastNumber)
         {
-            newNumber = Random.Range(0, 2);
+            newNumber = Random.Range(0, 3);
         }
         lastNumber = newNumber;
+        //Debug.Log(newNumber);
         return newNumber;
     }
 
@@ -83,15 +102,16 @@ public class BossEnemy : MonoBehaviour
 
     void ChasePlayer()
     {
+        Debug.Log("chasing");
 
         if (transform.position.x < player.transform.position.x)  //if boss is to the left of the player
         {
-            playerPos = new Vector3(player.transform.position.x - 2.0f, player.transform.position.y, player.transform.position.z);
+            playerPos = new Vector3(player.transform.position.x - 1.5f, player.transform.position.y, player.transform.position.z);
             transform.localScale = new Vector3(1, 1, 1);
         }
         else if (transform.position.x > player.transform.position.x)  //if boss is to the right of the player
         {
-            playerPos = new Vector3(player.transform.position.x + 2.0f, player.transform.position.y, player.transform.position.z);
+            playerPos = new Vector3(player.transform.position.x + 1.5f, player.transform.position.y, player.transform.position.z);
             transform.localScale = new Vector3(-1, 1, 1);
         }
 
@@ -144,7 +164,7 @@ public class BossEnemy : MonoBehaviour
         
 
         if (Mathf.Approximately(Vector2.Distance(transform.position, playerPos), 0) && !isChargePunching)
-        {   
+        {
             _animator.SetBool("isInRange", true);
             StartCoroutine(Punching());
         }
@@ -172,6 +192,7 @@ public class BossEnemy : MonoBehaviour
 
     void ShockWave()
     {
+        Debug.Log("shockwaving");
         if (!isShockWaving)
         {
             if (transform.position.x < player.transform.position.x)  //if boss is to the left of the player
@@ -217,7 +238,7 @@ public class BossEnemy : MonoBehaviour
     }
 
 
-     public void CreateNormalAttackHitbox()
+    public void CreateNormalAttackHitbox()
     {
         
         Collider2D[] player = Physics2D.OverlapCircleAll(normalAttackPoint.transform.position, radius, players);
@@ -231,7 +252,7 @@ public class BossEnemy : MonoBehaviour
 
     }
 
-     public void CreateChargeAttackHitbox()
+    public void CreateChargeAttackHitbox()
     {
         
         Collider2D[] player = Physics2D.OverlapCircleAll(chargeAttackPoint.transform.position, radius, players);

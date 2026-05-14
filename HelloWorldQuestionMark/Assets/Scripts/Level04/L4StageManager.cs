@@ -38,10 +38,11 @@ public class L4StageManager : MonoBehaviour
 
     void SpawnEnemies(GameObject enemyType)
     {
-        float randomSign = (Random.value < 0.5f) ? -0.1f : 1.1f;
-        Vector3 SpawnLocation = new Vector3(randomSign, Random.value, 0);
+        float randomSide = (Random.value < 0.5f) ? -0.05f : 1.05f;
+        float randomHeight = (Random.Range(0.0f, 0.4f));
+        Vector3 SpawnLocation = new Vector3(randomSide, randomHeight, 0);
         //Vector3 WorldPointSpawnLocation = Camera.main.ViewportToWorldPoint(SpawnLocation);
-        Instantiate(enemyType, Camera.main.ViewportToWorldPoint(SpawnLocation), Quaternion.identity);
+        Instantiate(enemyType, new Vector3(Camera.main.ViewportToWorldPoint(SpawnLocation).x, Camera.main.ViewportToWorldPoint(SpawnLocation).y, 0), Quaternion.identity);
     }
 
     void ManageEnemiesInStage()
@@ -49,21 +50,22 @@ public class L4StageManager : MonoBehaviour
         switch(stageNumber)
         {
             case 1:
-            SpawnEnemies(greenEnemy);
+            // SpawnEnemies(bossEnemy);    //USE FOR TESTING BOSS
             SpawnEnemies(greenEnemy);
             SpawnEnemies(greenEnemy);
             l4CutsceneManager.whichCutscene++;
             break;
 
             case 2:
-            SpawnEnemies(redEnemy);
+            SpawnEnemies(greenEnemy);
             SpawnEnemies(redEnemy);
             SpawnEnemies(redEnemy);
             l4CutsceneManager.whichCutscene++;
             break;
 
             case 3:
-            SpawnEnemies(pinkEnemy);
+            SpawnEnemies(greenEnemy);
+            SpawnEnemies(redEnemy);
             SpawnEnemies(pinkEnemy);
             SpawnEnemies(pinkEnemy);
             l4CutsceneManager.whichCutscene++;

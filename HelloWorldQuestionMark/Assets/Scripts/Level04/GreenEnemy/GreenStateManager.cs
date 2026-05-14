@@ -39,16 +39,14 @@ public class GreenStateManager : MonoBehaviour
 
     public void CreateAttackHitbox()
     {
-        
         Collider2D[] player = Physics2D.OverlapCircleAll(attackPoint.transform.position, radius, players);
 
         foreach(Collider2D playerGameObject in player)
         {
-            Debug.Log("HitEnemy");
+            //Debug.Log("HitEnemy");
             playerGameObject.GetComponent<L4Health>().health -= attackDamage;
         }
 
-
-}
+    }
 }
 

@@ -81,7 +81,7 @@ public class L4CutsceneManager : MonoBehaviour
     {
         if (inCutscene)
         {
-            player.GetComponent<Rigidbody2D>().linearVelocityX = 0;
+            
             l4PlayerControls.enabled = false;
             l4Health.enabled = false;
 
@@ -97,6 +97,7 @@ public class L4CutsceneManager : MonoBehaviour
             switch (whichText1)
             {
                 case 1:
+                player.GetComponent<Rigidbody2D>().linearVelocityX = 0;
                 Narrator.SetActive(true);
                 imageOrange.SetActive(true);
                 Text1_1.SetActive(true);
@@ -161,6 +162,7 @@ public class L4CutsceneManager : MonoBehaviour
             switch (whichText2)
             {
                 case 1:
+                player.GetComponent<Rigidbody2D>().linearVelocityX = 0;
                 Boss.SetActive(true);
                 imageBlue.SetActive(true);
                 Text2_1.SetActive(true);
@@ -211,6 +213,7 @@ public class L4CutsceneManager : MonoBehaviour
             switch (whichText3)
             {
                 case 1:
+                player.GetComponent<Rigidbody2D>().linearVelocityX = 0;
                 Boss.SetActive(true);
                 imageBlue.SetActive(true);
                 Text3_1.SetActive(true);

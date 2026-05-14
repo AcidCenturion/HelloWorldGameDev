@@ -22,12 +22,12 @@ public class PinkBullet : MonoBehaviour
 
         if (transform.position.x < player.transform.position.x)  //player is to the right of bullet
         {
-            direction = new Vector3(1, 0, 0);
+            direction = new Vector3(-1, 0, 0);
             //Debug.Log("Im left");
         }
         else if (transform.position.x > player.transform.position.x)  //player is to the left of bullet
         {
-            direction = new Vector3(-1, 0, 0);
+            direction = new Vector3(1, 0, 0);
             //Debug.Log("Im right");
         }
 
