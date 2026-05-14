@@ -289,9 +289,406 @@
   ],
   "history" : [
     {
-      "text" : "This is history",
+      "text" : "You approach Perri who remains still staring out the window, as if unaware that class started."
+    },
+    {
+      "text" : "<i>You notice a rhythmic rise and fall of their shoulders. Looks like they fell asleep before class even started. Some things never change.</i>",
+      "name" : "Perri",
+      "options" : [
+        {
+          "text" : "Wake them",
+          "points" : 10
+        },
+        {
+          "text" : "Let them sleep",
+          "points" : 5,
+          "newIndex" : 23
+        }
+      ]
+    },
+    {
+      "text" : "Class has started already so I should probably wake them up."
+    },
+    {
+      "text" : "You take the seat next to Perri. You poke them lightly."
+    },
+    {
+      "text" : "…"
+    },
+    {
+      "text" : "They’re still asleep. You try poking them a little harder."
+    },
+    {
+      "text" : "…"
+    },
+    {
+      "text" : "They rustled in their sleep. Progress. It's time for the finishing move."
+    },
+    {
+      "text" : "You grab onto their shoulders and shake them violently until they wake up."
+    },
+    {
+      "name" : "Perri",
+      "text" : "WAaaaaAAaAaAaaAaAAaa!"
+    },
+    {
+      "text" : "They yelp while bobbing back and forth. Your work here is done, so you let go."
+    },
+    {
+      "text" : "The outburst of noise has everyone in the class look over in you and Perri’s direction."
+    },
+    {
+      "text" : "While their looks revealed a small sense of curiosity, no one seemed all that surprised about Perri waking up with a start in the middle of the class."
+    },
+    {
+      "name" : "Professor Hermit",
+      "text" : "Well, good morning Perri. It’s pair up time. Spend the next few minutes getting to know your partner."
+    },
+    {
+      "name" : "Perri",
+      "text" : "Huh? Getting to know him? But I already do!"
+    },
+    {
+      "name" : "Perri",
+      "text" : "I guess I’m so productive in my sleep that I already finished the assignment."
+    },
+    {
+      "text" : "Perri says with a proud smile beaming across their face."
+    },
+    {
+      "text" : "They turn their attention back towards you."
+    },
+    {
+      "name" : "Perri",
+      "text" : "Yay! We get to be partnered."
+    },
+    {
+      "name" : "Perri",
+      "text" : "It makes me glad that you woke me up. I’d trade sleep for more time with you any day."
+    },
+    {
+      "text" : "Perri appears giddy with enthusiasm."
+    }
+    ,
+    {
+      "name" : "Perri",
+      "text" : "Since we already know each other so well, let’s just chat about whatever! I’m sure Professor Hermit won’t mind at all."
+    },
+    {
+      "text" : "You glance over and see Professor Hermit peering back. He doesn’t seem bothered by Perri’s assumption… maybe?",
+      "skip" : 44
+    },
+    {
+      "text" : "<b>sigh</b>"
+    },
+    {
+      "text" : "They probably didn’t get enough sleep last night. "
+    },
+    {
+      "text" : "Maybe a late night cramming in some extra studies in preparation for class."
+    },
+    {
+      "text" : "That, or a late night playing games or watching anime. "
+    },
+    {
+      "text" : "…"
+    },
+    {
+      "text" : "The latter is definitely more likely."
+    },
+    {
+      "text" : "You take a seat at the desk in front of Perri such that your body blocks the direct line of sight from the professor to Perri."
+    },
+    {
+      "text" : "It’s not your first rodeo covering for Perri’s impromptu nap times. You’ve garnered quite a bit of experience in pretending to partn–"
+    },
+    {
+      "name" : "Professor Hermit",
+      "text" : "Perri! Wake up. You have a partner now so start your introductions"
+    },
+    {
+      "text" : "The professor saw right through your cover up."
+    },
+    {
+      "name" : "Perri",
+      "text" : "H-huh!? P-partner?"
+    },
+    {
+      "text" : "They jump up and stare blankly at you. You stare back with a smile and a wave."
+    }
+    ,
+    {
+      "name" : "Perri",
+      "text" : "Oh it's you! "
+    },
+    {
+      "text" : "Their shocked stare turns into a smile."
+    }
+    ,
+    {
+      "name" : "Perri",
+      "text" : "Since it's you, I wouldn't have minded being woken up from my rejuvenation nap, you know."
+    },
+    {
+      "name" : "Perri",
+      "text" : "That way, I get to spend more time with you."
+    },
+    {
+      "text" : "They lean in a little closer towards you."
+    }
+    ,
+    {
+      "name" : "Perri",
+      "text" : "uhhh… What are we doing again?"
+    },
+    {
+      "name" : "Professor Hermit",
+      "text" : "Introductions, Perri. We are doing partner introductions."
+    },
+    {
+      "text" : "Despite Perri’s quiet whisper, the professor appears to have heard them loud and clear."
+    }
+    ,
+    {
+      "name" : "Perri",
+      "text" : "Oh, then it's a good thing we’re partners then. We know each other so well by now that we don’t need to do any introductions!"
+    },
+    {
+      "name" : "Perri",
+      "text" : "So!"
+    },
+    {
+      "text" : "They say while clapping their hands audibly enough that every other partnered group turns towards you two for a second before returning to their own discussions."
+    }
+    ,
+    {
+      "name" : "Perri",
+      "text" : "What have you been up to lately?"
+    },
+    {
+      "text" : "You shrug."
+    }
+    ,
+    {
+      "name" : "Perri",
+      "text" : "You haven’t invited me over lately so I’ve been completely out of the loop."
+    },
+    {
+      "name" : "Perri",
+      "text" : "Any new games to play together? Not that I’ve ever been any good… but I’ve been practicing! I bet now I’ll have a better chance."
+    },
+    {
+      "text" : "You remember how you always beat them at Super Shape Bros Ultim–"
+    },
+    {
+      "name" : "Professor Hermit",
+      "text" : "Alright class, attention back to the front. Now that you’ve all paired up and introduced yourselves, how about a fastball trivia."
+    },
+    {
+      "text" : "The professor cuts in."
+    },
+    {
+      "name" : "Professor Hermit",
+      "text" : "Perri, you first. In the Great Shape War, what was the reason behind the start of the war?"
+    },
+    {
+      "name" : "Perri",
+      "text" : "H-huh? Oh, uhh.. Well, it's.. Ummm…"
+    },
+    {
+      "name" : "Perri",
+      "text" : "<i>Perri trails off without answering the question. They look at you with pleading eyes. Better help them out, you think to yourself.</i>",
+      "options" : [
+        {
+          "text" : "Whisper that they should have studied a little harder",
+          "points" : -5
+        },
+        {
+          "text" : "Whisper that the answer is territorial expansion ",
+          "points" : 5,
+          "newIndex" : 67
+        },
+        {
+          "text" : "Whisper that the answer is The Artifact",
+          "points" : 10,
+          "newIndex" : 75
+        }
+      ]
+    },
+    {
+      "name" : "Perri",
+      "text" : "Heyy.. That's not helping!"
+    },
+    {
+      "text" : "You shrug. Perri begins to frantically sift through all their papers as if they might have it written down somewhere."
+    },
+    {
+      "text" : "It’s too bad that Perri has never been one to ever take notes, let keep any from previous classes."
+    },
+    {
+      "name" : "Professor Hermit",
+      "text" : "It's a speed trivia. Emphasis on speed. You all should know this by heart."
+    },
+    {
+      "name" : "Perri",
+      "text" : "By heart… right… and my heart is telling me…"
+    },
+    {
+      "text" : "Their eyebrows furrow and slightly lower. Their lips and fists clench tightly. It seems that Perri is focusing with all their might."
+    },
+    {
+      "text" : "…"
+    },
+    {
+      "text" : "You hear a low growling sound from Perri’s direction."
+    },
+    {
+      "name" : "Perri",
+      "text" : "Then, my heart tells me that the shapes were fighting because they were really hungry."
+    },
+    {
+      "text" : "It seems all of Perri’s focus was wasted on their hunger instead."
+    },
+    {
+      "text" : "You stifle a laugh.",
+      "skip" : 86
+    },
+    {
+      "text" : "According to your knowledge of video games, anime, and specifically isekais, you figured that most wars start over resources."
+    },
+    {
+      "name" : "Perri",
+      "text" : "Oh right! The answer is territorial expansion!"
+    },
+    {
+      "name" : "Professor Hermit",
+      "text" : "Ah, yes that could be a common misconception. Territorial expansion often happens as a result of wars."
+    },
+    {
+      "name" : "Professor Hermit",
+      "text" : "But usually, as is the case with this one, a particular resource is sought after."
+    },
+    {
+      "name" : "Professor Hermit",
+      "text" : "Do you know what that resource might be? I’ll give you a hint: It’s so exclusive that there’s only one!"
+    },
+    {
+      "text" : "Perri thinks to themself for a moment, before the silence of their thought is interrupted by a low growling sound."
+    },
+    {
+      "name" : "Perri",
+      "text" : "Eheh… It must’ve been the greatest, most magnificent, bestest snack to ever exist!"
+    },
+    {
+      "text" : "Professor Hermit sighs.",
+      "skip" : 86
+    },
+    {
+      "text" : "Perri stands up confidently and replies."
+    },
+    {
+      "name" : "Perri",
+      "text" : "The answer is that the war was started over The Artifact."
+    },
+    {
+      "text" : "They say with strong conviction."
+    },
+    {
+      "name" : "Professor Hermit",
+      "text" : "Correct!"
+    },
+    {
+      "name" : "Professor Hermit",
+      "text" : "When the artifact was discovered, the world quickly realized that whoever controlled the artifact controlled the shape kingdom."
+    },
+    {
+      "name" : "Professor Hermit",
+      "text" : "One shape would have power over all the others. The world would be left in imbalance."
+    },
+    {
+      "text" : "Yeah so what?",
+      "name" : "King Circle"
+    },
+    {
+      "text" : "The student in blue cuts in."
+    },
+    {
+      "text" : "With the artifact, whoever rules would be able to do whatever they want. Don’t people say history is written by the victors anyways?",
+      "name" : "King Circle"
+    },
+    {
+      "name" : "Perri",
+      "text" : "But if no one controls The Artifact, then all the shapes can get along! We can all eat together and have fun together."
+    },
+    {
+      "name" : "Professor Hermit",
+      "text" : "Regardless of beliefs, still, good job studying up on the Great Shape War."
+    },
+    {
+      "text" : "The professor looks directly at you after Perri’s response. I guess you weren’t very discreet when Perri asked for your help."
+    },
+    {
+      "name" : "Professor Hermit",
+      "text" : "Well, Perri, I’m glad that you're getting along with the new student paired with you, but next do try for yourself first. "
+    },
+    {
+      "name" : "Professor Hermit",
+      "text" : "Don’t be afraid to answer wrong. If you become paralyzed by the fear of answering incorrectly, you’ll never progress through."
+    },
+    {
+      "name" : "Professor Hermit",
+      "text" : "Your learning, I mean."
+    },
+    {
+      "name" : "Professor Hermit",
+      "text" : "Even if you answer wrong, there’ll be an opportunity to learn for next time."
+    },
+    {
+      "text" : "The class continues at a usual pace. The professor goes around the room asking different students different questions."
+    },
+    {
+      "text" : "<b>RING RING RING RING</b>"
+    },
+    {
+      "text" : "Almost as soon as the first ring started, King Circle had already gotten out from his desk and headed towards the door."
+    },
+    {
+      "name" : "Professor Hermit",
+      "text" : "Now hold on there. Let me remind you: the bell does not dismiss you. I do."
+    },
+    {
+      "text" : "Professor Hermit speaks with a smirk across his face."
+    },
+    {
+      "text" : "Perri turns to you and whispers in your ear."
+    },
+    {
+      "name" : "Perri",
+      "text" : "That's classic Professor Hermit for you. He really loves egging on students who rush to lunch. "
+    },
+    {
+      "name" : "Perri",
+      "text" : "Oh and speaking of lunch, come see me during lunch. I packed some extra snacks for us!"
+    },
+    {
+      "name" : "Professor Hermit",
+      "text" : "Alright class, you are all dismissed!"
+    },
+    {
+      "name" : "Professor Hermit",
+      "text" : "Oh, and Perri, go to sleep early tonight. Snoozing should be done at the comfort of your bed, not on the desks of my class."
+    },
+    {
+      "name" : "Perri",
+      "text" : "Yes, Professor. "
+    },
+    {
+      "text" : "Before they leave the room, Perri turns back and waves to you. Then they skip off towards the lockers, probably to retrieve their extra snacks. "
+    },
+    {
+      "text" : "You then also navigate your way to the cafeteria for lunch.",
       "nextSceneArr" : {
-        "sceneArr" : "purpleScenes",
+        "sceneArr" : "defaultScenes",
         "timeslot" : "lunch",
         "startIndex" : 0
       }
