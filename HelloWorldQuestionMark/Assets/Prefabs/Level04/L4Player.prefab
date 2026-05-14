@@ -325,6 +325,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
+  DeathCanvas: {fileID: 0}
+  l4PlayerControls: {fileID: 6284431796826587772}
   health: 30
 --- !u!95 &5389803751058922603
 Animator:
@@ -360,6 +362,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eaa45534a6e76b14aa16506b49d98f71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lowerBound: 1
 --- !u!1 &6398353717930131000
 GameObject:
   m_ObjectHideFlags: 0

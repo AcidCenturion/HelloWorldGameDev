@@ -1,11 +1,13 @@
 using System.Collections;
 using Unity.VisualScripting;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class L4Health : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     public SpriteRenderer spriteRenderer;
+    public GameObject DeathCanvas;
+    public L4PlayerControls l4PlayerControls;
     [SerializeField] public int health;
     private int currentHealth;
 
@@ -15,7 +17,7 @@ public class L4Health : MonoBehaviour
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        currentHealth = health;      
+        currentHealth = health;
     }
 
     void Update()
@@ -29,7 +31,21 @@ public class L4Health : MonoBehaviour
 
         if(health <= 0)
         {
-            Destroy(gameObject);
+            if (this.CompareTag("Player"))
+            {
+                l4PlayerControls.enabled = false;
+                DeathCanvas.SetActive(true);
+
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                }
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
+            
         }
         
     }
