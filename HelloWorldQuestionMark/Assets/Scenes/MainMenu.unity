@@ -1837,7 +1837,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: -0.000030517578}
-  m_SizeDelta: {x: 0, y: 1500}
+  m_SizeDelta: {x: 0, y: 2000}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1328404572
 MonoBehaviour:
@@ -1880,29 +1880,40 @@ MonoBehaviour:
 
     Coders and Implementers
 
-    Alexa Vega
+    Aaron Topolcsik
 
-    Benji
-    Kallen
+    Alexa
+    Vega
+
+    Benji Kallen
+
+    Brian Wong
 
     Emerson Berido
 
     Ghaida Sulaiman
 
-    Jason Zhen
+    Jason
+    Zhen
 
     Kelsey Codilla
 
-    Richard
-    Yang
+    Richard Yang
+
+    Slava Vasyliev
+
+    Ted Montalbo
 
 
 
-    UI, Character, and Level Artists
+    UI,
+    Character, and Level Artists
 
     Alexa Vega
 
     Brian Wong
+
+    Charlie Leake
 
     Krystal
     Kwan
@@ -1924,16 +1935,21 @@ MonoBehaviour:
 
     Marcelo Delgado
 
+    Nathaniel
+    Basco
+
 
 
     Writers
 
-    Benji
-    Kallen
+    Benji Kallen
 
     Jim Sussenguth
 
     Maximus Gonzalez
+
+    Radin
+    Gumban
 
     Ryan Hum'
 --- !u!222 &1328404573
@@ -1971,7 +1987,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: bd4261374065b8f48a0e3290946be403, type: 3}
+  m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: bd4261374065b8f48a0e3290946be403, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
