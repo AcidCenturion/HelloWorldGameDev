@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyHealth : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class EnemyHealth : MonoBehaviour
     private bool isInvulnerable;
 
     public bool bossIsDead = false;
+
+    const int LEVEL3_SCENE_INDEX = 6;
 
 
     public int entityHealth
@@ -60,9 +63,10 @@ public class EnemyHealth : MonoBehaviour
         // Destroys the enemy if it runs out of health
         if (this.currentHealth <= 0)
         {
-            if (this.gameObject.name == "Boss")
+            if (this.gameObject.name == "L2BossEnemy")
             {
                 bossIsDead = true;
+                SceneManager.LoadScene(LEVEL3_SCENE_INDEX);
                 Destroy(gameObject);
             }
             Destroy(gameObject);

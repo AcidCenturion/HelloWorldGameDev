@@ -75,7 +75,9 @@ public class LoadScene : MonoBehaviour
 {
   private Scene currentScene; // get this var when displaying scene
   public const TimeOfDay LAST_TIME_SLOT = TimeOfDay.lunch;
-  public const int BOSS_SCENE_INDEX = 6;
+  public const int BOSS_SCENE_INDEX = 7;
+  public const TimeOfDay LEVEL4_TIME_SLOT = TimeOfDay.afterSchool;
+  public const int LEVEL4_SCENE_INDEX = 8;
   private TimeOfDay currTime = TimeOfDay.morning;
 
   // Private Variables
@@ -319,7 +321,13 @@ public class LoadScene : MonoBehaviour
           UnityEngine.Debug.Log("LOADING BOSS SCENE");
           SceneManager.LoadScene(BOSS_SCENE_INDEX);
           return;
-        } else
+        } else if (currTime == LEVEL4_TIME_SLOT)
+        {
+          UnityEngine.Debug.Log("LOADING LEVEL4 SCENE");
+          SceneManager.LoadScene(LEVEL4_SCENE_INDEX);
+          return;
+        }
+        else
         {
           UnityEngine.Debug.Log("Reached end of scenes array, staying at last scene");
           sceneIdx = scenes.Length - 1;
