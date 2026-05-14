@@ -2878,7 +2878,7 @@ MonoBehaviour:
   defendReduction: 0.5
   GlareDamageDebuff: 2
   ComplimentDefendDebuff: 1
-  CompanionThreshold: 60
+  CompanionThreshold: 20
   rowanAttackBonus: 1.5
   perriDefend: 3
   geminiHealthAdd: 10

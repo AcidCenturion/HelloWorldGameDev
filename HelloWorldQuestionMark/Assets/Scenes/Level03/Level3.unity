@@ -3612,7 +3612,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxAffinity: 100
   MinAffinity: 0
-  StartingAffinity: 0
+  StartingAffinity: 10
   characterName: 0
   characterDisplay: {fileID: 1504199581}
   faceDisplay: {fileID: 1647044439}
