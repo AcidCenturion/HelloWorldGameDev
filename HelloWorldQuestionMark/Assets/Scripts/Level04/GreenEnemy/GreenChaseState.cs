@@ -65,12 +65,12 @@ public class GreenChaseState : GreenState
         if (target.position.x >= grandParentTransform.position.x)
         {
             targetPos = new Vector3(target.position.x - 1.2f, target.position.y, target.position.z);
-            grandParentTransform.localScale = new Vector3(1, 1, 1);
+            grandParentTransform.localScale = new Vector3(Mathf.Abs(grandParentTransform.localScale.x), grandParentTransform.localScale.y, grandParentTransform.localScale.z);
         }
         else if (target.position.x <= grandParentTransform.position.x)
         {
             targetPos = new Vector3(target.position.x + 1.2f, target.position.y, target.position.z);
-            grandParentTransform.localScale = new Vector3(-1, 1, 1);
+            grandParentTransform.localScale = new Vector3(-1*Mathf.Abs(grandParentTransform.localScale.x), grandParentTransform.localScale.y, grandParentTransform.localScale.z);
         }
 
         if (target != null && !ChaseisInRangeOfPlayer)

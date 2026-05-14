@@ -69,12 +69,12 @@ public class RedChaseState : RedState
         if (player.position.x >= grandParentTransform.position.x)
         {
             playerPos = new Vector3(player.position.x - 4.0f, player.position.y, player.position.z);
-            grandParentTransform.localScale = new Vector3(1, 1, 1);
+            grandParentTransform.localScale = new Vector3(Mathf.Abs(grandParentTransform.localScale.x), grandParentTransform.localScale.y, grandParentTransform.localScale.z);
         }
         else if (player.position.x <= grandParentTransform.position.x)
         {
             playerPos = new Vector3(player.position.x + 4.0f, player.position.y, player.position.z);
-            grandParentTransform.localScale = new Vector3(-1, 1, 1);
+            grandParentTransform.localScale = new Vector3(-1*Mathf.Abs(grandParentTransform.localScale.x), grandParentTransform.localScale.y, grandParentTransform.localScale.z);
         }
 
         if (player != null && !ChaseisInRangeOfPlayer)

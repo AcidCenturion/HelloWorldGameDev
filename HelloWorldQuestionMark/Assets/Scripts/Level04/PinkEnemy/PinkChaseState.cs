@@ -48,12 +48,12 @@ public class PinkChaseState : PinkState
         if (target.position.x >= grandParentTransform.position.x)  //player is to the right of me
         {
             targetPos = new Vector3(worldpointLeft.x, playerPos.y, Random.Range(0f, 1f));   //the random is so the pinks dont overlap w each other
-            grandParentTransform.localScale = new Vector3(1, 1, 1);
+            grandParentTransform.localScale = new Vector3(Mathf.Abs(grandParentTransform.localScale.x), grandParentTransform.localScale.y, grandParentTransform.localScale.z);
         }
         else if (target.position.x <= grandParentTransform.position.x) //player is to the left of me
         {
             targetPos = new Vector3(worldpointRight.x, playerPos.y, Random.Range(0f, 1f));
-            grandParentTransform.localScale = new Vector3(-1, 1, 1);
+            grandParentTransform.localScale = new Vector3(-1*Mathf.Abs(grandParentTransform.localScale.x), grandParentTransform.localScale.y, grandParentTransform.localScale.z);
         }
     }
 

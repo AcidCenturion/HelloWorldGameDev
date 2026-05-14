@@ -107,12 +107,12 @@ public class BossEnemy : MonoBehaviour
         if (transform.position.x < player.transform.position.x)  //if boss is to the left of the player
         {
             playerPos = new Vector3(player.transform.position.x - 1.5f, player.transform.position.y, player.transform.position.z);
-            transform.localScale = new Vector3(1, 1, 1);
+            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
         }
         else if (transform.position.x > player.transform.position.x)  //if boss is to the right of the player
         {
             playerPos = new Vector3(player.transform.position.x + 1.5f, player.transform.position.y, player.transform.position.z);
-            transform.localScale = new Vector3(-1, 1, 1);
+            transform.localScale = new Vector3(-1*Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
         }
 
         float step = ChaseSpeed * Time.deltaTime;
@@ -148,13 +148,13 @@ public class BossEnemy : MonoBehaviour
             if (transform.position.x < player.transform.position.x)  //if boss is to the left of the player
             {
                 playerPos = new Vector3(player.transform.position.x - 4.0f, player.transform.position.y, player.transform.position.z);
-                transform.localScale = new Vector3(1, 1, 1);
+                transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
                 facingDirection = transform.right;
             }
             else if (transform.position.x > player.transform.position.x)  //if boss is to the right of the player
             {
                 playerPos = new Vector3(player.transform.position.x + 4.0f, player.transform.position.y, player.transform.position.z);
-                transform.localScale = new Vector3(-1, 1, 1);
+                transform.localScale = new Vector3(-1*Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
                 facingDirection = -transform.right;
             }
         
@@ -198,13 +198,13 @@ public class BossEnemy : MonoBehaviour
             if (transform.position.x < player.transform.position.x)  //if boss is to the left of the player
             {
                 playerPos = new Vector3(player.transform.position.x - 6.0f, player.transform.position.y, player.transform.position.z);
-                transform.localScale = new Vector3(1, 1, 1);
+                transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
                 facingDirection = transform.right;
             }
             else if (transform.position.x > player.transform.position.x)  //if boss is to the right of the player
             {
                 playerPos = new Vector3(player.transform.position.x + 6.0f, player.transform.position.y, player.transform.position.z);
-                transform.localScale = new Vector3(-1, 1, 1);
+                transform.localScale = new Vector3(-1*Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
                 facingDirection = -transform.right;
             }
         
