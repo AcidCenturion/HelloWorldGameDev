@@ -62,7 +62,8 @@
     },
     {
       "text" : "Ha, you think rolling up like a cannonball is going to help you win?",
-      "name" : "Perri"
+      "name" : "Perri",
+      "emotion" : "Love"
     },
     {
       "text" : "Perri mocks as they also join you in bracing their knees to their chest."
@@ -114,7 +115,8 @@
     },
     {
       "text" : "Hey! Who are you calling a bug!",
-      "name" : "Perri"
+      "name" : "Perri",
+      "emotion" : "Happy"
     },
     {
       "text" : "Perri laughs along with your jest and punches lightly on your shoulder."
@@ -200,7 +202,8 @@
     },
     {
       "text" : "It hasn’t been that long, has it? You didn’t use to be such a killjoy…",
-      "name" : "Perri"
+      "name" : "Perri",
+      "emotion" : "Sad"
     },
     {
       "text" : "You don’t know how to respond to that. Afterall, who knows if you could’ve gotten hurt because the bus driver didn’t slow down for a speed bump."
@@ -329,7 +332,8 @@
     },
     {
       "name" : "Perri",
-      "text" : "WAaaaaAAaAaAaaAaAAaa!"
+      "text" : "WAaaaaAAaAaAaaAaAAaa!",
+      "emotion" : "Love"
     },
     {
       "text" : "They yelp while bobbing back and forth. Your work here is done, so you let go."
@@ -411,7 +415,8 @@
     },
     {
       "name" : "Perri",
-      "text" : "H-huh!? P-partner?"
+      "text" : "H-huh!? P-partner?",
+      "emotion" : "Happy"
     },
     {
       "text" : "They jump up and stare blankly at you. You stare back with a smile and a wave."
@@ -517,7 +522,8 @@
     },
     {
       "name" : "Perri",
-      "text" : "Heyy.. That's not helping!"
+      "text" : "Heyy.. That's not helping!",
+      "emotion" : "Mad"
     },
     {
       "text" : "You shrug. Perri begins to frantically sift through all their papers as if they might have it written down somewhere."
@@ -558,7 +564,8 @@
     },
     {
       "name" : "Perri",
-      "text" : "Oh right! The answer is territorial expansion!"
+      "text" : "Oh right! The answer is territorial expansion!",
+      "emotion" : "Happy"
     },
     {
       "name" : "Professor Hermit",
@@ -588,7 +595,8 @@
     },
     {
       "name" : "Perri",
-      "text" : "The answer is that the war was started over The Artifact."
+      "text" : "The answer is that the war was started over The Artifact.",
+      "emotion" : "Love"
     },
     {
       "text" : "They say with strong conviction."

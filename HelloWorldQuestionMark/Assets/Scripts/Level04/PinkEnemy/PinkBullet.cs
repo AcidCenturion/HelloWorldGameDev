@@ -9,6 +9,7 @@ public class PinkBullet : MonoBehaviour
     public Rigidbody2D bulletRB;
 
     private Vector3 direction;
+    //private string direction;
 
     //four variables for damage
     public float radius;
@@ -19,16 +20,19 @@ public class PinkBullet : MonoBehaviour
     void Start()
     {
         bulletRB = GetComponent<Rigidbody2D>();
+        player = GameObject.FindWithTag("Player");
 
-        if (transform.position.x < player.transform.position.x)  //player is to the right of bullet
-        {
-            direction = new Vector3(-1, 0, 0);
-            //Debug.Log("Im left");
-        }
-        else if (transform.position.x > player.transform.position.x)  //player is to the left of bullet
+        if (this.transform.position.x < player.transform.position.x)  //player is to the right of bullet
         {
             direction = new Vector3(1, 0, 0);
-            //Debug.Log("Im right");
+            //direction = "left";
+            Debug.Log("Im left");
+        }
+        else if (this.transform.position.x > player.transform.position.x)  //player is to the left of bullet
+        {
+            direction = new Vector3(-1, 0, 0);
+            //direction = "right";
+            Debug.Log("Im right");
         }
 
         Destroy(this.gameObject, duration);

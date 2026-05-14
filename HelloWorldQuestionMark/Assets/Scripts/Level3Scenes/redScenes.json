@@ -52,6 +52,7 @@
     {
       "name" : "Student Called Rowan",
       "text" : "Sorry about that, I had a busy morning, and not only that, it’s the first day. I didn’t notice you next to me as well.",
+      "emotion" : "Happy",
       "skip" : 19
     },
     {
@@ -63,7 +64,8 @@
     },
     {
       "name" : "Student Called Rowan",
-      "text" : "Yeah, already the first day, and I’ve got everything up my ass and more. Honestly, you kinda saved me from speaking to him more. Thanks for that"
+      "text" : "Yeah, already the first day, and I’ve got everything up my ass and more. Honestly, you kinda saved me from speaking to him more. Thanks for that",
+      "emotion" : "Love"
     },
     {
       "text" : "You feel like you’ve made a pretty good first impression.",
@@ -133,7 +135,8 @@
     },
     {
       "name" :"Student Called Rowan",
-      "text" : "Oh? Did you find something useful?"
+      "text" : "Oh? Did you find something useful?",
+      "emotion" : "Happy"
     },
     {
       "text" : "You hand the phone back to them and describe that the voice of the QB is dependent on the cornerback’s motion and their position. However, you weren’t able to detect specifically which goes with what."
@@ -160,7 +163,8 @@
     },
     {
       "name" : "Student Called Rowan",
-      "text" : "Oh? You’re done already? I told you, it’s pretty difficult. Don’t worry, if I can’t figure it out, then I don’t expect everyone to find out. But hey, at least you tried your best."
+      "text" : "Oh? You’re done already? I told you, it’s pretty difficult. Don’t worry, if I can’t figure it out, then I don’t expect everyone to find out. But hey, at least you tried your best.",
+      "emotion" : "Sad"
     },
     {
       "text" : "Despite the seemingly encouraging words coming out of their mouth, you still feel a slight embarrassment that you weren’t able to figure out the problem.",
@@ -171,7 +175,8 @@
     },
     {
       "name" : "Student Called Rowan",
-      "text" : "You look locked in. Did you actually figure out what it was?"
+      "text" : "You look locked in. Did you actually figure out what it was?",
+      "emotion" : "Love"
     },
     {
       "text" : "You hand them back the phone and describe the pattern that you saw in the film"
@@ -367,7 +372,8 @@
     },
     {
       "name" : "Rowan",
-      "text" : "Oh thanks dude! I mean, I might lose this anyway in a couple of minutes, but thanks for the pencil!"
+      "text" : "Oh thanks dude! I mean, I might lose this anyway in a couple of minutes, but thanks for the pencil!",
+      "emotion" : "Happy"
     },
     {
       "text" : "Rowan gives you a smile and begins to write down some notes for the experiment. Now that everyone has a writing utensil, the experiment can now begin. ",
@@ -381,7 +387,8 @@
     },
     {
       "name" : "Rowan",
-      "text" : "You know what? Forget it, notes don’t even count for your grade anyways. Besides, all we do is just pour shit into beakers. We don’t need notes for this anyways."
+      "text" : "You know what? Forget it, notes don’t even count for your grade anyways. Besides, all we do is just pour shit into beakers. We don’t need notes for this anyways.",
+      "emotion" : "Mad"
     },
     {
       "name" : "Rowan",
@@ -396,7 +403,8 @@
     },
     {
       "name" : "Rowan",
-      "text" : "Wait, really? No one has ever asked me to do an experiment ever. Everyone always just tasked me to write down the notes. Don’t worry! I won’t let you down!"
+      "text" : "Wait, really? No one has ever asked me to do an experiment ever. Everyone always just tasked me to write down the notes. Don’t worry! I won’t let you down!",
+      "emotion" : "Love"
     },
     {
       "text" : "You feel Rowan’s confidence skyrocket, to the point where there’s stars in his eyes. It seems your encouragement has gotten to him pretty well."
@@ -487,7 +495,8 @@
     },
     {
       "name" : "Rowan",
-      "text" : "And? Do you have any better ideas? Because what we’re doing right now is going nowhere. "
+      "text" : "And? Do you have any better ideas? Because what we’re doing right now is going nowhere. ",
+      "emotion" : "Mad"
     },  
     {
       "name" : "Rowan",
@@ -506,7 +515,8 @@
     },
     {
       "name" : "Rowan",
-      "text" : "Haha, there we go! That’s the spirit! I knew that the moment we met we’d make a good team!"
+      "text" : "Haha, there we go! That’s the spirit! I knew that the moment we met we’d make a good team!",
+      "emotion" : "Love"
     },
     {
       "text" : "Rowan’s enthusiasm and confidence are so sky-high you couldn’t even measure it if you’ve tried."
@@ -521,7 +531,8 @@
     },
     {
       "name" : "Rowan",
-      "text" : "Hello? Well, if you’re going to say nothing, I guess I’ll just put it in anyway. We don’t have time to dilly-dally right now."
+      "text" : "Hello? Well, if you’re going to say nothing, I guess I’ll just put it in anyway. We don’t have time to dilly-dally right now.",
+      "emotion" : "Happy"
     },
     {
       "text" : " It’s settled now. All your faith is going to rest on this jock you’ve just barely known about and this weird white rock that… you’ve also barely known about as well."
@@ -695,7 +706,8 @@
     },
     {
       "name" : "Rowan",
-      "text" : "You did? For real? I… I…"
+      "text" : "You did? For real? I… I…",
+      "emotion" : "Love"
     },
     {
       "text" : "Rowan is majorly surprised at what you said. He initially doesn’t know how to react, but eventually he lets out a slight smile."
@@ -720,7 +732,8 @@
     },
     {
       "name" : "Rowan",
-      "text" : "I know, it’s just that… I feel like I’ve done them too many times in my life, you know? To the point where I know I’m bound to have one when the time comes."
+      "text" : "I know, it’s just that… I feel like I’ve done them too many times in my life, you know? To the point where I know I’m bound to have one when the time comes.",
+      "emotion" : "Happy"
     },
     {
       "text" : "You and Rowan continue to have a little conversation about the meaning of life, but eventually, you two realise that you are about to be late for your next class.",
@@ -734,7 +747,8 @@
     },
     {
       "name" : "Rowan",
-      "text" : "Yeah, you think I didn’t know that the LAST time I was in this class?"
+      "text" : "Yeah, you think I didn’t know that the LAST time I was in this class?",
+      "emotion" : "Mad"
     },
     {
       "name" : "Rowan",

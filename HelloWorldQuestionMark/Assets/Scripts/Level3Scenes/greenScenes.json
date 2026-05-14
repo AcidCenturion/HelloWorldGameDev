@@ -106,7 +106,8 @@
     },
     {
       "name" : "Gemini",
-      "text" : "Thanks, you’re a pretty helpful lab partner."
+      "text" : "Thanks, you’re a pretty helpful lab partner.",
+      "emotion" : "Happy"
     },
     {
       "text" : "Gemini looks over at you."
@@ -143,7 +144,8 @@
     },
     {
       "name" : "Gemini",
-      "text" : "Why did you just do that? I mean, it’s not like that changes anything, but still, why?"
+      "text" : "Why did you just do that? I mean, it’s not like that changes anything, but still, why?",
+      "emotion" : "Mad"
     },
     {
       "name" : "Gemini",
@@ -161,7 +163,8 @@
     },
     {
       "name" : "Gemini",
-      "text" : "Really? You wanna know more? Umm, okay. I’ve been doing chemistry since I was a little shape. I’d be happy to teach you more!"
+      "text" : "Really? You wanna know more? Umm, okay. I’ve been doing chemistry since I was a little shape. I’d be happy to teach you more!",
+      "emotion" : "Love"
     },
     {
       "text" : "You hand her solution B."
@@ -268,7 +271,8 @@
     },
     {
       "name" : "Gemini",
-      "text" : "What the? That’s uncalled for, and you did it in pen, too? Thanks a lot for that. I was starting to think that you were kinda cool."
+      "text" : "What the? That’s uncalled for, and you did it in pen, too? Thanks a lot for that. I was starting to think that you were kinda cool.",
+      "emotion" : "Sad"
     },
     {
       "text" : "Gemini flips her notebook to the next page and restarts on her lab report."
@@ -289,7 +293,8 @@
     },
     {
       "name" : "Gemini",
-      "text" : "That’s quite something, huh? Thanks for sharing. It makes me feel a lot better about sharing my own lofty dreams."
+      "text" : "That’s quite something, huh? Thanks for sharing. It makes me feel a lot better about sharing my own lofty dreams.",
+      "emotion" : "Love"
     },
     {
       "text" : "Her eyes soften"
@@ -318,7 +323,8 @@
     },
     {
       "name" : "Gemini",
-      "text" : "Right, it’s the imbalance between the processes that causes the oscillations. That’s also why the yellow state lasts for a far shorter time than the deep blue state."
+      "text" : "Right, it’s the imbalance between the processes that causes the oscillations. That’s also why the yellow state lasts for a far shorter time than the deep blue state.",
+      "emotion" : "Happy"
     },
     {
       "name" : "Gemini",
@@ -399,7 +405,8 @@
     },
     {
       "name" : "Gemini",
-      "text" : "Well, I guess that makes sense. When I make mistakes like that, it’s nice not to be suffocated by others."
+      "text" : "Well, I guess that makes sense. When I make mistakes like that, it’s nice not to be suffocated by others.",
+      "emotion" : "Love"
     },
     {
       "text" : "She still looks fidgety, clearly wanting to help in some way. You start talking to her about the periodic table to get her mind off of it."
@@ -428,7 +435,8 @@
     },
     {
       "name" : "Gemini",
-      "text" : "Really? That’s what you’re focused on in this situation? Don’t you think that’s a little immature?"
+      "text" : "Really? That’s what you’re focused on in this situation? Don’t you think that’s a little immature?",
+      "emotion" : "Mad"
     },
     {
       "text" : "Her voice becomes much more stern, clearly displeased by your insensitivity."
@@ -482,7 +490,8 @@
     },
     {
       "name" : "Gemini",
-      "text" : "Hey, Rowan, sorry things didn’t work out. Is everything alright?"
+      "text" : "Hey, Rowan, sorry things didn’t work out. Is everything alright?",
+      "emotion" : "Happy"
     },
     {
       "name" : "Rowan",
