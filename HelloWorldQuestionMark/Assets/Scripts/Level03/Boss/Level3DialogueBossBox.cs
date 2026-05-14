@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Level3DialogueBossBox : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class Level3DialogueBossBox : MonoBehaviour
     private Level3Boss boss;
     public GameObject GameOverUI;
     public GameObject MusicManager;
+
+    bool isBossDefeated = false;
 
   void Start()
   {
@@ -44,12 +47,23 @@ public class Level3DialogueBossBox : MonoBehaviour
     {
         boss.ResetStats();
         playerStats.ResetStats();
+
         // intro to fight
     dialogue.Add("KING CIRCLE challenges you to a fight!");
     dialogue.Add("Prepare to fight!");
     NextDialogue();
     GameOverUI.SetActive(false);
     MusicManager.GetComponent<Level3BossSceneMusic>().PlayLevel3BossMusic(Level3BossMusic.REGULAR);
+
+    }
+
+    public bool GetIsBossDefeated()
+    {
+        return isBossDefeated;
+    }
+    public void SetIsBossDefeated(bool value)
+    {
+        isBossDefeated = value;
     }
 
 
@@ -81,6 +95,13 @@ public class Level3DialogueBossBox : MonoBehaviour
         // checks if already reached last one
         if (currDialogue >= dialogue.Count)
         {
+            // check if boss defeated
+            if (isBossDefeated)
+            {
+                SceneManager.LoadScene("Level3");
+                return;
+            }
+
             // check if this is player death
             if (playerStats.GetHealth() <= 0)
             {

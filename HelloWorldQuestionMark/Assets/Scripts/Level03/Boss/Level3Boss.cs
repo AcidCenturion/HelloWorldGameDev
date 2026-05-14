@@ -84,6 +84,7 @@ public class Level3Boss : MonoBehaviour
         // update health
         int damageTaken = Mathf.Max(damageAmount - Defense, 0);
         Health -= damageTaken;
+        if (Health < 0) Health = 0;
         BossHealth.text = $"Boss Health: {Health}";
 
         // update music
@@ -125,6 +126,7 @@ public class Level3Boss : MonoBehaviour
         Debug.Log("Boss defeated! You win!");
         
         // Updates dialogue box to show victory message, once it reaches the end, idk??
+        dialogueBox.SetIsBossDefeated(true);
     }
 
     public void ResetStats()

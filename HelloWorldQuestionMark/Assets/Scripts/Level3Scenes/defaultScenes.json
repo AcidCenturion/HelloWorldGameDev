@@ -296,8 +296,107 @@
     }
   ],
   "PE" : [],
-  "afterSchool" : [{
-      "text" : "You just finished a day of school. Tired, you return home and go to bed."
-    }],
+  "afterSchool" : [
+    {
+      "text" : "Owwieee. That really hurts, you know. Okay, fine, fine, I admit it… Maybe you are kinda strong… and a little bit cute… I just get nervous when you look at me because… Nevermind.",
+      "name" :"King Circle"
+    },
+    {
+      "text" : "King Circle looks away bashfully"
+    },
+    {
+      "text" : "I... I guess what I’m trying to say is just that...",
+      "name" :"King Circle"
+    },
+    {
+      "text" : "I...",
+      "name" :"King Circle"
+    },
+    {
+      "text" : "I lov--",
+      "name" :"King Circle"
+    },
+    {
+      "name" :"King Circle",
+      "text" : ""
+    },
+    {
+      "text" : "...",
+      "location" :"black_0"
+    },
+    {
+      "name" : "Game Developer",
+      "text" : "WHY DOES THIS KEEP HAPPENING?! I spend so much time pouring my soul into developing these games, just for them to keep crashing. This must be your fault, isn’t it?! "
+    },
+    {
+      "name" : "Game Developer",
+      "text" : "If players just never played my games, my beautiful games would never break."
+    },
+    {
+      "name" : "Game Developer",
+      "text" : "But then… I’m sorry. This isn’t your fault. You know, I’ve actually been really happy to share my games with you. It’s just… frustrating, ya know? "
+    },
+    {
+      "name" : "Game Developer",
+      "text" : "Maybe developing games isn’t for me. Will people even like my games? I just don’t know anymore. Maybe I should just quit..."
+    },
+    {
+      "text" : "!",
+      "options" : [
+        {
+          "text" : "\"I really think you can make great games\""
+        },
+        {
+          "text" : "\"I’ve had a lot of fun, even with the bugs\"",
+          "newIndex" : 13
+        },
+        {
+          "text" : "\"But is quitting what you really want?\"",
+          "newIndex" : 15
+        }
+      ]
+    },
+    {
+      "name" : "Game Developer",
+      "text" : "You know… that actually means a lot to me. I really needed to hear that.",
+      "skip" : 16
+    },
+    {
+      "name" : "Game Developer",
+      "text" : "I guess… I guess I never thought about that."
+    },
+    {
+      "name" : "Game Developer",
+      "text" : "Actually… one of my earliest memories was when I glitched out of the map while playing Sonic Adventure.",
+      "skip" : 16
+    },
+    {
+      "name" : "Game Developer",
+      "text" : "No, but… it’s just so hard. Truthfully, I’ve always wanted to be a game developer."
+    },
+    {
+      "name" : "Game Developer",
+      "text" : "I started making games because of the fun I had playing them. You know, it’s funny how many of us start out that way, isn’t it? We’re all just enthusiastic gamers with ideas."
+    },
+    {
+      "name" : "Game Developer",
+      "text" : "I still have so many cool ideas for games I want to make. "
+    },
+    {
+      "name" : "Game Developer",
+      "text" : "In truth, I only created a dating sim because I thought it would be popular, but if that doesn’t even pan out for me, how can I expect my other ideas to work out?"
+    }
+
+
+    ,
+    {
+      "name" : "Game Developer",
+      "text" : ""
+    }
+    ,
+    {
+      "text" : ""
+    }
+  ],
   "firstDate" : []
 }

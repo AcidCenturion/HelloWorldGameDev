@@ -93,8 +93,17 @@ public class LoadScene : MonoBehaviour
   
   void Start()
   {
-    // Starts by loading 0th scene from defaultScenes.json Morning array
-    scenes = LoadFromJSON("defaultScenes", (TimeOfDay)0);
+    if (Level3BossEnd.Instance != null)
+    {
+      // if loading from boss fight
+      scenes = LoadFromJSON("defaultScenes", TimeOfDay.afterSchool);
+      currTime = TimeOfDay.afterSchool;
+    } else
+    {
+      // Starts by loading 0th scene from defaultScenes.json Morning array
+      scenes = LoadFromJSON("defaultScenes", (TimeOfDay)0);
+    }
+
     if (scenes == null || scenes.Length == 0)
     {
       UnityEngine.Debug.LogError("No scenes loaded from json");

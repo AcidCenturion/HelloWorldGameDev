@@ -58,6 +58,7 @@ public class Level3PlayerStats : MonoBehaviour
         damage = defaultDamage;
         defense = defaultDefense;
         PlayerHealthText.text = "Player Health: " + health.ToString();
+        playerControls.ResetCalledForHelp();
     }
 
     // Companion Functions

@@ -62,40 +62,37 @@ public class Level3PlayerControls : MonoBehaviour
     }
     public void HandleCallForHelp()
     {
-        dialogue.Add("Called for Help!");
+        dialogue.Add("You call out for help");
         if (!hasCalledForHelp)
         {
             // do regular logic
-            Debug.Log("Hasnt called for help yet");
             if (playerStats.isNoneCompanion)
             {
                 // tell dialogue that you have not made friends w anyone
-                dialogue.Add("Rowan, Perri, and Gemini heard your cries!");
-                dialogue.Add("...");
-                dialogue.Add("They all turned their heads away?");
+                dialogue.Add("The Old Hermit comes meandering across the plains and starts egging on King Circle.");
             } else
             {
                 if (playerStats.isRowanCompanion)
                 {
                     // increase attack
-                    dialogue.Add("Rowan heard your cries.");
-                    dialogue.Add("ATTACK increased.");
+                    dialogue.Add("Rowan comes rushing in with a roar!");
+                    dialogue.Add("ATTACK increased!");
                     playerStats.IncreaseDamage();
 
                 } 
                 if (playerStats.isGeminiCompanion)
                 {
                     // add health
-                    dialogue.Add("Gemini heard your cries.");
-                    dialogue.Add("HEALTH increased.");
+                    dialogue.Add(" Gemini sheepishly appears and performs first aid.");
+                    dialogue.Add("HEALTH increased!");
                     playerStats.AddHealth();
                     // update health player healthbar
                 } 
                 if (playerStats.isPerriCompanion)
                 {
                     // increase defense 
-                    dialogue.Add("Perri heard your cries.");
-                    dialogue.Add("DEFENSE increased.");
+                    dialogue.Add("Perri whispers words of resolve in your ear.");
+                    dialogue.Add("DEFENSE increased!");
                     playerStats.IncreaseDefense();
                 }
                 
@@ -104,7 +101,7 @@ public class Level3PlayerControls : MonoBehaviour
             hasCalledForHelp = true;
         } else
         {
-            dialogue.Add("You already called for help!");
+            dialogue.Add("But your friends are exhausted from their earlier efforts.");
         }
 
         EndTurn();
@@ -114,7 +111,7 @@ public class Level3PlayerControls : MonoBehaviour
         if (currentPlayerState == PlayerState.Idle)
         {
             currentPlayerState = PlayerState.Guard;
-            dialogue.Add("You take a stance.");
+            dialogue.Add("You steady yourself for King Circle’s onslaught.");
         } 
         EndTurn();
     }
@@ -125,20 +122,24 @@ public class Level3PlayerControls : MonoBehaviour
         // just does random dialouge 
         dialogue.Add("You gaze at King Circle.");
         dialogue.Add("He gazes back");
-        dialogue.Add("You blush a little");
+        dialogue.Add("You both blush a little");
         EndTurn();
     }
     public void HandleSpare()
     {
         if (!playerStats.isAllCompanion || !hasCalledForHelp)
         {
-            dialogue.Add("Rowan, Perri, and Gemini all aren't here! We can't attack all at once!");
+            dialogue.Add("Your team of companions isn’t ready to go all out");
             EndTurn();
             return;
         }
 
         // All out attack
-        dialogue.Add("All out attack!!");
+        dialogue.Add("Rowan leads the charge and tackles King Circle to the ground.");
+        dialogue.Add("Gemini whacks him with a calculus textbook.");
+        dialogue.Add("Perri provides support with a storm of rocks.");
+        dialogue.Add("You jump King Circle and discombobulate them!");
+
         int damageTaken = bossScript.TakeDamage(playerStats.GetAllOutAttackDamage());
         dialogue.Add($"King Circle takes {damageTaken} DAMAGE.");
         EndTurn();
@@ -235,6 +236,11 @@ public class Level3PlayerControls : MonoBehaviour
     public void SetButtonsActive(bool active)
     {
         ButtonContainer.SetActive(active);
+    }
+
+    public void ResetCalledForHelp()
+    {
+        hasCalledForHelp = false;
     }
      
 }

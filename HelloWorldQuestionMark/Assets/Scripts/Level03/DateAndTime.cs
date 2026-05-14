@@ -23,6 +23,7 @@ public class DateAndTime : MonoBehaviour
         if (currTime + 1 >= Times.Length) return;
         currTime++;
 
+        if (!timeText) return;
         timeText.text = Times[currTime];
     }
 }
