@@ -569,7 +569,342 @@
       }
     }
   ],
-  "history" : [],
+  "history" : [
+  
+  {
+    "text": "You hope that the nerdy girl at the front of the class will be able to make this class a breeze. After seeing how she handled herself in chemistry, you’re certain that she’ll be great at history, too, right?"
+  },
+  {
+    "text": "Oh, hi again. 2 classes in a row together is kinda nice. I hope you had fun in chemistry today.",
+    "name": "Gemini"
+  },
+  {
+    "text": "Gemini looks bashfully at you."
+  },
+  {
+    "text": "So then, ummm, would you want to be partners for history?",
+    "name": "Gemini"
+  },
+  {
+    "text": "You nod in agreement as you came over here with the same idea. You take a seat at the desk next to her."
+  },
+  {
+    "text": "Well, we already learned each other’s names last period, so we can skip that part… but oh! I guess I didn’t really get to know much about you last period. So, I guess we can start there.",
+    "name": "Gemini"
+  },
+  {
+    "text": "Gemini’s voice quivers as she thinks up a question for you."
+  },
+  {
+    "text": "What’s your favorite subject?",
+    "name": "Gemini",
+    "options" : [
+        {
+          "text" : "\"Lunch. School is kinda boring.\"",
+          "points" : -5
+        },
+        {
+          "text" : "\"Art! I love how creative I can be\"",
+          "points" : 5,
+          "newIndex" : 10
+        },
+        {
+          "text" : "\"Astronomy is my favorite.\"",
+          "points" : 10,
+          "newIndex" : 12
+        }
+      ]
+  },
+  {
+    "text": "You crack a joke. School is boring anyway, and anyone would much rather be at home, or at least study the actually interesting things."
+  },
+  {
+    "text": "Oh, is that so? That’s quite a dull outlook. I mean, think about how much you can learn from school. Besides the course material, you also learn a lot of soft skills.",
+    "name": "Gemini",
+    "skip" : 15
+  },
+  {
+    "text": "You express your passion for painting and drawing. It’s wonderful to be a creator."
+  },
+  {
+    "text": "Art is a great subject! I have a lot of respect for artists of all types. It’s actually quite an intellectual sport, especially poetry. I love poetry.",
+    "name": "Gemini",
+    "skip" : 15
+  },
+  {
+    "text": "You tell Gemini how much you love the cosmos with its beautiful stars and interesting physical phenomena."
+  },
+  {
+    "text": "I love astronomy, too! I have space posters hanging all over my room!",
+    "name": "Gemini"
+  },
+  {
+    "text": "Gemini is practically bouncing at the idea of encountering a fellow space lover."
+  },
+  {
+    "text": "I mean… you can probably guess my favorite subject, but it’s chemistry. English and History are…",
+    "name": "Gemini"
+  },
+  {
+    "text": "Gemini’s demeanor stiffens"
+  },
+  {
+    "text": "I’m good at both!",
+    "name": "Gemini"
+  },
+  {
+    "text": "After some short introductions, Professor Hermit announces the new activity to the class."
+  },
+  {
+    "text": "Alright, class, attention back to the front. Now that you’ve all paired up and introduced yourselves, how about a fastball trivia?",
+    "name": "Professor Hermit"
+  },
+  {
+    "text": "You notice Gemini become stiffer at the mention of a sudden trivia session. She looks somewhat out of it."
+  },
+  {
+    "text": "Gemini, you’re a smart student, so why don’t we start with you to show everyone how this goes? The winner will get a $10 gift card to Bases and Nonagons!",
+    "name": "Professor Hermit"
+  },
+  {
+    "text": "Gemini tremors a little bit. Everyone’s eyes are drawn to Gemini for the start of the trivia session. As she notices, Gemini winces and bites her lip, her competitive nature and the idea of getting a reward for her favorite shop overcoming her nerves."
+  },
+  {
+    "text": "Yeah, okay, I’ll take the first one.",
+    "name": "Gemini"
+  },
+  {
+    "text": "Great! Well here’s the first question: What ancient Hexagon civilization is commonly cited as the origin of the Cycloid religion?",
+    "name": "Professor Hermit"
+  },
+  {
+    "text": "Gemini freezes and ponders. You take a look at them. You want to reassure them, but before you can, Gemini answers the question in a shaky voice."
+  },
+  {
+    "text": "That would be the Hexagrams?",
+    "name": "Gemini"
+  },
+  {
+    "text": "Ding, ding, ding! That is correct! So you get one point. Gemini, now you can pass your turn or go for another point.",
+    "name": "Professor Hermit"
+  },
+  {
+    "text": "Gemini looks scared but doesn’t deny another round."
+  },
+  {
+    "text": "Yeah, okay… I’ll… I’ll just go for another point…",
+    "name": "Gemini"
+  },
+  {
+    "text": "Alright! Then, here’s your next one: Who conquered the entire Geomediterranean area in 314 BC?",
+    "name": "Professor Hermit"
+  },
+  {
+    "text": "Gemini becomes absolutely rigid."
+  },
+  {
+    "text": "That was King Digon right?",
+    "name": "Gemini"
+  },
+  {
+    "text": "Ooh, good try, but that’s not quite right. Anyone else want to give it a try? Yes, Perri, why don’t you give it a try?",
+    "name": "Professor Hermit"
+  },
+  {
+    "text": "You have a hard time noticing it, but you see Gemini become just a little greener. Fortunately, by now everyone has shifted their attention to the other student. You turn around to see your childhood friend Perri who just woke up from a nap and started stretching."
+  },
+  {
+    "text": "Huh? What’s up?",
+    "name": "Perri"
+  },
+  {
+    "text": "You had your hand raised? Do you want to try to answer the question?",
+    "name": "Professor Hermit"
+  },
+  {
+    "text": "What was the question? Sorry, I totally fell asleep, oops!",
+    "name": "Perri"
+  },
+  {
+    "text": "Perri laughs off the Professor who then lets out a massive sigh."
+  },
+  {
+    "text": "You need to stop falling asleep in my class. Don’t make me repeat myself next time, either. Well, give it a shot: Who conquered the entire Geomediterranean area in 314 BC?",
+    "name": "Professor Hermit"
+  },
+  {
+    "text": "Oh! I know that one! They actually made a video game about him. Anyways, it was King Monogon. Man, that game is super popular. Thanks for the easy question, Prof!",
+    "name": "Perri"
+  },
+  {
+    "text": "Hmmm, yes, that is correct. Would you like to go for another question or pass it along?",
+    "name": "Professor Hermit"
+  },
+  {
+    "text": "Uhhh, just pass it along.",
+    "name": "Perri"
+  },
+  {
+    "text": "Professor Hermit randomly chooses another student for the trivia session. You turn your attention back to Gemini, who has their head in their hands. You feel as if you should say something, but no words come to mind."
+  },
+  {
+    "text" : " Professor Hermit continues quizzing the other students until the end of class. Some student you’ve never met ends up winning the competition."
+  },
+  {
+    "text": "<b>RING RING RING RING</b>"
+  },
+  {
+    "text": "Almost as soon as the first ring started, King Circle had already gotten out from his desk and headed towards the door."
+  },
+  {
+    "text": "Now hold on there. Let me remind you: the bell does not dismiss you. I do.",
+    "name": "Professor Hermit"
+  },
+  {
+    "text": "Professor Hermit speaks with a smirk across his face."
+  },
+  {
+    "text": "Alright, class, you are all dismissed!",
+    "name": "Professor Hermit"
+  },
+  {
+    "text": "Gemini slowly packs up her stuff and heads toward the door. She turns around and gives you a weak smile."
+  },
+  {
+    "text": "It was great getting to know you a little more. Who knows, maybe we’ll have other classes together, too. Well, I’ll see you at lunch at least.",
+    "name": "Gemini"
+  },
+  {
+    "text": "She turns around and walks out. You quickly grab your stuff and walk after her, wanting to ensure that she’s truly okay. You see her walk away from the cafeteria and catch up to her in the library, where she’s sitting in a quiet corner."
+  },
+  {
+    "text" : "She has a book at her feet which she is silently reading. As you draw closer, you notice it’s one of the history books from the classroom. You’re standing over her by the time she notices your presence"
+  },
+  {
+    "text": "Hi…",
+    "name": "Gemini"
+  },
+  {
+    "text": "<i>Gemini barely acknowledges you and continues to read.</i>",
+    "name" : "Gemini",
+    "options" : [
+        {
+          "text" : "\"You know, you don’t have to try so hard at history\"",
+          "points" : -5
+        },
+        {
+          "text" : "\"You’re so studious. I think that’s pretty cool.\"",
+          "points" : 5,
+          "newIndex" : 60
+        },
+        {
+          "text" : "\"Can you help me study history?\"",
+          "points" : 10,
+          "newIndex" : 65
+        }
+      ]
+  },
+  {
+    "text": "You reassure her that it’s okay for her to miss just a few questions in history."
+  },
+  {
+    "text": "Yeah, sure.",
+    "name": "Gemini"
+  },
+  {
+    "text": "She replies somewhat curtly to you and keeps reading from the textbook. She lets out a sigh and closes it."
+  },
+  {
+    "text": "I understand what you’re trying to say, though. You’re kind of right, but it’s difficult to explain.",
+    "name": "Gemini",
+    "skip" : 72
+  },
+  {
+    "text": "You compliment Gemini on her study habits."
+  },
+  {
+    "text": "I study every day. Whenever I have a free period. I like to come to the library and read. It’s such a relaxing place.",
+    "name": "Gemini"
+  },
+  {
+    "text": "Gemini doesn’t mind your compliment, but it doesn’t have the reassuring effect that you’d hoped."
+  },
+  {
+    "text": "Studying is always good for you. It’s a comfy way for me to unwind. I’ve never been the best student, but studying helps me keep up.",
+    "name": "Gemini"
+  },
+  {
+    "text": "Evidently she’s right. She does appear to settle as she flips through her book.",
+    "skip" : 72
+  },
+  {
+    "text": "You inquire about help for the class from Gemini. After hearing all those trivia questions, you realized how little history you actually remember."
+  },
+  {
+    "text": "Gemini looks up at you with a small smile."
+  },
+  {
+    "text": "Yeah, of course. I can help you with that. Take a seat, and we can review together.",
+    "name": "Gemini"
+  },
+  {
+    "text": "She pats a spot next to her. You sit down. The space is crowded enough that you’re shoulder-to-shoulder."
+  },
+  {
+    "text": "I was just going over the Luna period and the subsequent Center Reform that resulted in the widespread distribution of books across the world.",
+    "name": "Gemini"
+  },
+  {
+    "text": "You sort of understand what she’s saying. It doesn’t matter, though. She seems back to her perky self."
+  },
+  {
+    "text": "Oh, fun fact, Marie Circlie is actually distantly related to the leader of the Center Reform through her cousin. Isn’t she just such an icon!",
+    "name": "Gemini"
+  },
+  {
+    "text": "Gemini’s shoulders relax a little, and she eases up."
+  },
+  {
+    "text": "Hey, thanks for checking in on me. I know you’re just here to cheer me up.",
+    "name": "Gemini"
+  },
+  {
+    "text": "I… I know it’s not a big deal, but there’s just someone in that class that I wanted to impress really badly. I was actually going to give them the gift card if I won it. I’ll get it next time, I promise.",
+    "name": "Gemini"
+  },
+  {
+    "text": "I really appreciate you coming to look for me, but I’m alright. Why don’t you go and get some lunch?",
+    "name": "Gemini"
+  },
+  {
+    "text": "You decide that’s enough and stand up to leave. You look back at Gemini, who quickly hides her blushing face behind the history book."
+  },
+  {
+    "text": "I’ll… I’ll see you next time.",
+    "name": "Gemini",
+    "nextSceneArr" : {
+        "sceneArr" : "defaultScenes",
+        "timeslot" : "lunch",
+        "startIndex" : 0
+      }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  ],
   "lunch" : [],
   "PE" : [],
   "afterSchool" : [],
