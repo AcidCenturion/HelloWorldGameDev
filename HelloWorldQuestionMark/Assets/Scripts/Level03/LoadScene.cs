@@ -220,6 +220,16 @@ public class LoadScene : MonoBehaviour
   // Helper Function: Loads specific Scene array from JSON file
   Scene[] LoadFromJSON(string fileName, TimeOfDay day = 0)
   {
+    TextAsset jsonFile = Resources.Load<TextAsset>("Level3Scenes/" + fileName);
+
+    if (jsonFile == null)
+    {
+        UnityEngine.Debug.LogError("Could not load JSON from Resources/Level3Scenes/" + fileName);
+        return null;
+    }
+
+    string jsonString = jsonFile.text;
+    /*
     string filePath, jsonString;
 
     try
@@ -232,6 +242,7 @@ public class LoadScene : MonoBehaviour
       UnityEngine.Debug.Log("Error reading file: " + e.Message);
       return null;
     }
+    */
 
     // Returns specific day scenes
     switch (day)

@@ -1,0 +1,48 @@
+{
+  "morning" : [
+    {
+      "name" : "Hermit",
+      "text" : "This is hermit scenes json file.",
+      "location" : "leblanc_0"
+    },
+    {
+      "name" : "Hermit",
+      "text" : "Testing Hermit's sprite",
+      "emotion" : "mad"
+    },
+    {
+      "name" : "Hermit",
+      "text" : "Testing Hermit's sprite",
+      "emotion" : "sad"
+    },
+    {
+      "name" : "Hermit",
+      "text" : "Testing Hermit's sprite",
+      "emotion" : "happy"
+    },
+    {
+      "name" : "Hermit",
+      "text" : "Testing Hermit's sprite",
+      "emotion" : "love"
+    },
+    {
+      "name" : "Hermit",
+      "text" : "Testing Hermit's sprite"
+    },
+    {
+      "name" : "hermit",
+      "text" : "This is the next scene in Hermit, the next will go back to defaultScenes.",
+      "nextSceneArr" : {
+        "sceneArr" : "defaultScenes",
+        "timeslot" : "morning",
+        "startIndex" : 0
+      }
+    }
+  ],
+  "chemistry" : [],
+  "history" : [],
+  "lunch" : [],
+  "PE" : [],
+  "afterSchool" : [],
+  "firstDate" : []
+}

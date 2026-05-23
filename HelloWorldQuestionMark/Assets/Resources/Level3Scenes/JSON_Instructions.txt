@@ -1,0 +1,62 @@
+JSON IS CASE SENSITIVE SO READ WRITE EACH DATA FIELD CORRECTLY BASED OFF NAMES BELOW !!
+
+--- Special Note ---
+If you add a new image to the sprites folder, drag that image into the image array in Display Scene
+
+--- Limitations ---
+If you want to skip to the beginning of the SAME array, you can't do (skip : 0), instead do nextSceneArr
+
+--- Format ---
+- JSON Data Fields each contain Scene Data Fields that may contain choices Data Fields and nextSceneArr Data Fields
+
+--- Data Fields ---
+
+*** JSON Data Fields ***
+# All fields are based off the time slots
+# Each field is an array of objects (The scenes)
+
+  morning - Timeslot for 7AM
+  chemistry - Timeslot for 8AM
+  history - Timeslot for 10AM
+  lunch - Timeslot for 12AM
+  PE - Timeslot for 1PM
+  afterSchool - Timeslot for 2PM
+  firstDate - Timeslot for 5PM
+
+** Scene Data Fields **
+  # Required fields
+  string text               // Used in textbox
+
+  # Optional Fields (Not required to have)
+  string name               // name of character speaking; Don't add if you want text italicized
+  Option[] options          // if scene contains option(s)
+                               see data fields below for values
+  public string emotion;    // How the character's face will look 
+                               Values: Normal, Happy, Love, Sad, Mad
+                               not case sensitive, Normal if not specified
+  int skip                  // optional field to skip to a specific scene index; might be removed
+  NextSceneArr nextSceneArr // Loads new Scene array from json (for scene transitions)
+                               See data fields below for values
+  string voiceOver          // Path to voice over audio file; probably be removed later, idk if it should be relative or absolute
+  string location           // NEW background image, if want to keep the same one then don't use this
+                               Must use EXACT image name (ex. "school_hallway")
+  public string bgm;        // Changes BGM to specified track 
+                               Values: Morning, Noon, Night
+
+
+* Option Data Fields *
+  # Required Fields
+  string text;
+
+  # Optional Fields
+  int points;
+  int newIndex;              // jump to new scene index if same timeslot
+  NextSceneArr nextSceneArr; // jump to new scene array if different timeslot
+
+* NextSceneArr Data Fields *
+  string sceneArr;           // which DIFFERENT scene array to load (redScenes, greenScenes, etc)
+    - make sure you're exactly typing the correct array; JSON case sensitive
+    - Values: i dont know the names of the characters yet, ill change this later
+  string timeslot;           // which day to load from DIFFERENT scene array
+    - Values: morning, chemistry, ..., firstDate
+  int startIndex;            // index to start at (if SAME scene array) 

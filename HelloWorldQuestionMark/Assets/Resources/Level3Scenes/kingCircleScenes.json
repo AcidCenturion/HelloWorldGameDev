@@ -1,0 +1,200 @@
+{
+  "morning" : [
+    {
+      "text" : "Your sense of deja vu overcomes you. You gather your courage and attempt to sit next to the kingly figure."
+    },
+    {
+      "name" : "King Circle",
+      "text" : "Whoa there, buddy. This row firmly belongs to me and my lackeys. So buzz off, loser."
+    },
+    {
+      "text" : "You look around him and notice no one is sitting by them. You point this out to him."
+    },
+    {
+      "name" : "King Circle",
+      "text" : "Yeah, well, no one’s choosing to sit by you either. Now get lost!"
+    },
+    {
+      "text" : "Not wanting any trouble, you decide to back off.",
+      "nextSceneArr" : {
+        "sceneArr" : "defaultScenes",
+        "timeslot" : "morning",
+        "startIndex" : 20
+      }
+    }
+    
+  ],
+  "chemistry" : [
+    {
+      "text" : "You walk up to King Circle with friendship? Hostility? You’re not sure what, but you once again come face-to-face with the big blue himself."
+    },
+    {
+      "name" : "King Circle",
+      "text" : "What do you want? Can’t you see I’m busy getting ready for chemistry?"
+    },
+    {
+      "name" : "King Circle",
+      "text" : "Oh, wait, you’ve never felt chemistry with another person in your life, so you wouldn’t know."
+    },
+    {
+      "text" : "Speechless, you leave and look for a seat",
+      "nextSceneArr" : {
+        "sceneArr" : "defaultScenes",
+        "timeslot" : "chemistry",
+        "startIndex" : 10
+      }
+    }
+  ],
+  "history" : [
+    {
+      "text" : "You walked up to King Circle. His pride and attitude was as inflated as his full-sized circular physique, ever compared to the rest of the students like yourself."
+    },
+    {
+      "text" : "But he so much as to turn his head away and silently dismiss you.",
+      "nextSceneArr" : {
+        "sceneArr" : "defaultScenes",
+        "timeslot" : "history",
+        "startIndex" : 19
+      }
+    }
+  ],
+  "lunch" : [
+    {
+      "text" : "You approach King Circle."
+    },
+    {
+      "text" : "But something feels different about this time…"
+    },
+    {
+      "name" : "King Circle",
+      "text" : "Well, well, well. Looks like you’ve been schmoozin’ your way up in my domain. How’s it feel, tough guy, being so popular? Why don’t you and I take this conversation somewhere private…"
+    },
+    {
+      "text" : "King Circle leads you out into the courtyard, then beyond the school gate. You hesitate momentarily before crossing the threshold. Should you be leaving school property in the middle of the day, you wonder?"
+    },
+    {
+      "name" : "King Circle",
+      "text" : " What’s the matter? C’mon, let’s get going, or else lunch is going to be over before we can even get anywhere."
+    },
+    {
+      "text" : "As you wander through the world, the scenery distorts. The concrete changes to grass. The buildings give way to hills. Even the sky changes shape. And soon, you find yourself in the ancient Circle Kingdom."
+    },
+    {
+      "name" : "King Circle",
+      "text" : " I’ve seen what you’re doing, and I’m not impressed. I have to say, I’m warming up to you, though. I never thought someone as lacking as you could be so charming. I… I mean… so charmless! Yeah, so charmless…"
+    },
+    {
+      "text" : "King Circle looks away and pouts, their cheeks seemingly redder."
+    },
+    {
+      "name" : "King Circle",
+      "text" : "Don’t look at me like that! I just got caught up in the beautiful scenery…"
+    }
+    ,
+    {
+      "text" : "His gaze turns longingly towards the horizon."
+    },
+    {
+      "name" : "King Circle",
+      "text" : "You think it’s beautiful, too, right? Well, not like I even care about your opinion anyway! This is my home, anyways."
+    }
+    ,
+    {
+      "text" : "King Circle’s strong and cheery attitude drops suddenly at the mention of their home."
+    },
+    {
+      "name" : "King Circle",
+      "text" : "When I first overthrow the previous ruler and took the throne, I had high hopes that I could fix the kingdom. I just wanted to provide a safe haven for all circles. I didn’t have a clue the destruction my actions would bring…"
+    }
+    ,
+    {
+      "text" : "King Circle’s attitude pulls a 180 as he suddenly feels your gaze all too keenly."
+    },
+    {
+      "name" : "King Circle",
+      "text" : "Oh, quit it. I bet you think you’re so perfect just because you’re the new kid who’s instantly popular. Well, you might have charmed the school, but I’m not so easily wooed. "
+    },
+    {
+      "name" : "King Circle",
+      "text" : "Well, I suppose that if you dropped to your hands and feet right now and begged to become one of my lowly peasants, there’s a chance I might accept that.",
+      "options" : [
+        {
+          "text" : "Do as he suggests",
+          "points" : 0
+        },
+        {
+          "text" : "Raise your chin & pretend you're too good for them",
+          "points" : 0,
+          "newIndex" : 21
+        },
+        {
+          "text" : "Stare deep into his eyes",
+          "points" : 0,
+          "newIndex" : 25
+        }
+      ]
+    },
+    {
+      "text" : "You drop down and beg to become a peasant in their cornfields."
+    },
+    {
+      "name" : "King Circle",
+      "text" : "Are you mocking me? You can’t seriously expect that meager attempt at fealty to please me."
+    }
+    ,
+    {
+      "text" : "Even so, King Circle has turned purple at your gesture"
+    },
+    {
+      "name" : "King Circle",
+      "text" : "Well, if you’re going to mock me like that, then I’m going to make you actually swear loyalty!"
+    }
+    ,
+    {
+      "text" : "King Circle rises up and slams on the ground, knocking you off balance.",
+      "skip" : 0
+    },
+    {
+      "text" : "You tilt your chin up and look away, showcasing your regal air of authority."
+    },
+    {
+      "name" : "King Circle",
+      "text" : "He- Hey! You’re going to just ignore me and pretend you’re better? Well, guess what, you’re not!"
+    },
+    {
+      "name" : "King Circle",
+      "text" : "I said hey! Look at me. Fine, maybe I’ll show you why I’m king, and you’re not!"
+    },
+    {
+      "text" : "King Circle comes rolling at you at full speed."
+    },
+    {
+      "text" : "You just stand there, looking, gazing. King Circle’s eyes are nothing but pits of black. Is there something beyond that void? What mind lies behind them? "
+    },
+    {
+      "text" : "They say that the eyes are the window to the soul, but you can’t determine anything beneath King Circle’s."
+    }
+    ,
+    {
+      "text" : "Perhaps they have no mind, but are simply a collection of 0s and 1s arranged in a pattern that you’ve come to know as King Circle. For that matter, who are you?"
+    }
+    ,
+    {
+      "text" : "Looking deep into King Circle’s eyes, you can’t help but notice your own reflection is missing. You peer deeper into the abyss, but nothing appears. And then, you notice it. "
+    },
+    {
+      "text" : "Looking closely, you notice an outline, not one that appears within the world, but one that appears outside of it. A large being, an ape almost."
+    },
+    {
+      "text" : "It’s strange. You have no recollection of this thing, and yet, you can’t help but feel it is inextricably linked to your very being. For that matter, what does it mean to be?..."
+    },
+    {
+      "text" : "...",
+      "name" :"King Circle"
+    }
+  ],
+  "PE" : [],
+  "afterSchool" : [
+  ],
+  "firstDate" : []
+}

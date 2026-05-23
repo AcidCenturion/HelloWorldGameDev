@@ -1,0 +1,501 @@
+{
+  "morning" : [
+    {
+      "text": "5 months later...",
+      "location" : "black_0"
+    },
+    {
+      "name" : "Developer",
+      "text" : "Hey, playtester, check this out. I made a new game!",
+      "location" :"black_0"
+    },
+    {
+      "name" : "Developer",
+      "text" : "I think you’ll really like this one! I never put much lore in those other games, and I figured I could work on a story-driven experience this time."
+    },
+    {
+      "name" : "Developer",
+      "text" : "It is my first time, though… I’m quite nervous… please don’t judge it too hard… Um, go ahead."
+    },
+    {
+      "text" : "A giant dungeon beast lies before you. “This is it,” you think. \"The monster’s reign of terror will come to an end.\""
+    },
+    {
+      "text" : "You lunge towards it with a vicious cry. The beast quickly dodges out of the way, opening its maws for an attack. It screams a blood-curdling cry at you…"
+    },
+    {
+      "name" : "The Beast",
+      "text" : "<b>beep beep beep</b>"
+    },
+    {
+      "text" : "The beast’s roar sounds oddly like an alarm clock.",
+      "bgm" : "Morning"
+    },
+    {
+      "text" : "You realize that it wasn’t a beast at all, and was, in fact, your alarm clock."
+    },
+    {
+      "text" : "That’s right, it’s a Monday. You’re supposed to start at your new school today as the new transfer student. ",
+      "location" : "single bedroom_0"
+    },
+    {
+      "text" : "You pick yourself out of bed and quickly throw yourself together, rushing downstairs to the bus."
+    },
+    {
+      "text" : "A day like any other - not a problem in sight. Just you, waiting at the bus stop."
+    },
+    {
+      "name" : "Developer",
+      "text" : "I figured that if I want to focus on storytelling, then I need to focus on the characters. And what better genre to do that than in a dating sim!"
+    },
+    {
+      "text" : "You hear the voice of another in your head. You’re not sure where it's coming from, as there is no one else nearby. Yet, it still sounds so familiar as if you heard it before in another life."
+    },
+    {
+      "text" : "In fact, it's almost like there's two voices. One describes your life, addressing you in second person, while the other talks to you directly."
+    },
+    {
+      "name" : "Developer",
+      "text" : "Well, I guess, this would be the first time I’ve given the player character any kind of personality. Have fun you little lovebird!"
+    },
+    {
+      "text" : "As you listen to the narrating voice in your head, you hear the sounds of the bus screeching to a stop in front of you. This is your ride to school."
+    },
+    {
+      "text" : "You clamber onto the bus behind your friend. As you walk down the aisle, you spot a few available seats.",
+      "location" : "Bus_0"
+    },
+    {
+      "name" : "Familar Voice",
+      "text" : "Hey, c’mon, what’re you waiting for! Come sit by your good old friend Perri and let’s talk about how exciting it is that we both are going to the same school like old times!"
+    },
+    {
+      "text" : "Perri pats the seat next to them near the back, but the bus pulls away and starts shaking, almost making you lose your balance. Maybe it’s best if you take a closer seat. You look to the other available seat right next to you, where you spot a guy in a varsity jacket on the phone."
+    },
+    {
+      "text" : "Amongst the loud voices of students talking to each other, you overhear someone on the other side loudly say the name Rowan, grabbing their attention."
+    },
+    {
+      "text" : "There’s also the seat to your right where an imposing blue figure looms, filling the air with a sense of royalty. You feel a sense of deja vu, despite never having met."
+    },
+    {
+      "text" : "Where will you choose to sit?",
+      "options" : [
+        {
+          "text" : "Carefully make your way to the back next to Perri",
+          "nextSceneArr" : {
+            "sceneArr" : "purpleScenes",
+            "timeslot" : "morning",
+            "startIndex" : 0
+          }
+        },
+        {
+          "text" : "Play it safe and sit next to Rowan",
+          "nextSceneArr" : {
+            "sceneArr" : "redScenes",
+            "timeslot" : "morning",
+            "startIndex" : 0
+          }
+        },
+        {
+          "text" : "Figure out why you’re getting such strong deja vu",
+          "nextSceneArr" : {
+            "sceneArr" : "kingCircleScenes",
+            "timeslot" : "morning",
+            "startIndex" : 0
+          }
+        }
+      ]
+    }    
+  ],
+  "chemistry" : [
+    {
+      "text" : "You wind your way down the halls of Sintax Academy and find your room in the chemistry lab with a few other students.",
+      "bgm" : "Chemistry",
+      "location" : "science_classroom_0"
+    },
+    {
+      "text" : "Navigating this place is like a labyrinth, and by the time you actually arrive, most of the seats are taken, and the professor has already arrived."
+    },
+    {
+      "text" : "You notice the teacher is… the bus driver? Well anyways, he appears to be talking to a shorter, nerdy-looking girl with glasses."
+    },
+    {
+      "text" : "I got everything set up for class. I also put out the elements we had on the countertops for people to look at.",
+      "name" : "Girl with Glasses"
+    },
+    {
+      "name" : "Bus Driver",
+      "text" : "Thank you, Gemini. You can go take your seat now."
+    },
+    {
+      "text" : "He turns to you"
+    },
+    {
+      "text" : "Oh, good, you’re here. *Ahem* Good morning, class, and welcome back to school.",
+      "name" : "Professor Hermit"
+    },
+    {
+      "text" : "As you all probably know, my name is Professor Hermit. I won’t tolerate anyone who doesn’t call me by that name.",
+      "name" : "Professor Hermit"
+    },
+    {
+      "text" : "This year, we have a new transfer student. Why don’t you go ahead and introduce yourself?",
+      "name" : "Professor Hermit"
+    },
+    {
+      "text" : "Actually, never mind, we’ve got a busy class today, so you go ahead and find a seat.",
+      "name" : "Professor Hermit"
+    },
+    {
+      "text" : "You look around at the empty seats."
+    },
+    {
+      "text" : "You notice that fit jock from the bus, Rowan, is here too. Although you don’t know him well, a familiar face is still familiar."
+    },
+    {
+      "text" : "Then again, there is that nerdy girl, Gemini, who could be a great help in this class."
+    },
+    {
+      "text" : "In the back, there’s one more seat. Once again, King Circle dominates the area, noticeably alone."
+    },
+    {
+      "text" : "Who will be your chemistry partner?",
+      "options" : [
+        {
+          "text" : "Ask Gemini for help as your lab partner",
+          "nextSceneArr" : {
+            "sceneArr" : "greenScenes",
+            "timeslot" : "chemistry",
+            "startIndex" : 0
+          }
+        },
+        {
+          "text" : "Take a seat next to Rowan",
+          "nextSceneArr" : {
+            "sceneArr" : "redScenes",
+            "timeslot" : "chemistry",
+            "startIndex" : 0
+          }
+        },
+        {
+          "text" : "Confront King Circle",
+          "nextSceneArr" : {
+            "sceneArr" : "kingCircleScenes",
+            "timeslot" : "chemistry",
+            "startIndex" : 0
+          }
+        }
+      ]
+    }
+  ],
+  "history" : [
+    {
+      "text" : "A look through the doorframe gives you a sense of deja vu. Framing the entire classroom, historical paintings of the Great Shape War tell epic tales of pride and tragedy, victory and remorse.",
+      "bgm" : "History",
+      "location" : "history_classroom_0"
+    },
+    {
+      "text" : "Maps of the continents are plastered in between the paintings, the laminate bubbling near the edges, indicating their age."
+    },
+    {
+      "text" : "You enter near the back of the classroom, next to the bookshelves filled with dusty, unused history books. You take a closer look at them, noticing a few book titles that seem vaguely interesting."
+    },
+    {
+      "text" : "Your lungs are immediately filled with the musty air. You pull back and look towards the windows where the late sunrise rays pour through the far side windows, creating an air of calm."
+    },
+    {
+      "text" : "Light pours over your childhood friend, Perri, who is looking longingly out the window. As you idle in the doorway, Gemini filters in behind you with a few more students and chooses a spot near the front of the classroom."
+    },
+    {
+      "text" : "You look at the clock at the front of the room which tells you that class will be starting soon. The only empty spot is near the middle. "
+    },
+    {
+      "text" : "You set your backpack down next to it and climb into the tiny seat. Professor Hermit picks up some chalk and begins drawing on the board."
+    },
+    {
+      "text" : "To begin this class, I would like to ask you all a question. Why do we study history?",
+      "name" : "Professor Hermit"
+    },
+    {
+      "text" : "A voice mumbles in the back of the classroom."
+    },
+    {
+      "text" : "To learn about my great feats!",
+      "name" : "King Circle"
+    },
+    {
+      "text" : "You swivel in your chair. Somehow, you once again find yourself in the same class as the blue king."
+    },
+    {
+      "text" : "Yes… from a certain angle, history is purely the study of past events, but think deeper. What makes history important to learn? That is the question to keep in mind throughout this semester.",
+      "name" : "Professor Hermit"
+    },
+    {
+      "text" : "Back when I was a young shape, I used to think the same way. I was– ",
+      "name" : "Professor Hermit"
+    },
+    {
+      "text" : "...",
+      "name" :"King Circle"
+    },
+    {
+      "text" : "I don’t recall asking you about your life story.",
+      "name" :"King Circle"
+    },
+    {
+      "text" : "But it could be yours too, because the things that have come to shape my life, now become to shape yours and everyone else’s futures.",
+      "name" : "Professor Hermit"
+    },
+    {
+      "text" : "We all have our own stories, facing difficulties with choice and living through the consequences to be here where we are in the present.",
+      "name" : "Professor Hermit"
+    },
+    {
+      "text" : "Which is why history class is more than a study and lecture, it is the opportunity for you students to forge your own story.",
+      "name" : "Professor Hermit"
+    },
+    {
+      "text" : "Since every story needs to start somewhere, how about you all get into groups of two and introduce yourselves?",
+      "name" : "Professor Hermit"
+    },
+    {
+      "text" : "Who will be in your group?",
+      "options" : [
+        {
+          "text" : "Gemini",
+          "nextSceneArr" : {
+            "sceneArr" : "greenScenes",
+            "timeslot" : "history",
+            "startIndex" : 0
+          }
+        },
+        {
+          "text" : "Perri",
+          "nextSceneArr" : {
+            "sceneArr" : "purpleScenes",
+            "timeslot" : "history",
+            "startIndex" : 0
+          }
+        },
+        {
+          "text" : "King Circle",
+          "nextSceneArr" : {
+            "sceneArr" : "kingCircleScenes",
+            "timeslot" : "history",
+            "startIndex" : 0
+          }
+        }
+      ]
+    }
+  ],
+  "lunch" : [
+    {
+      "text" : "It’s time for lunch. Your stomach has been grumbling forever, and now’s the chance to get some grub. You head into the packed cafeteria.",
+      "bgm" : "Lunch"
+    },
+    {
+      "text" : "Some groups are sitting at the lunch table talking to their friends; a long line forms to get food. You groan at the thought of the wait time, but hey, at least you’re getting food, right?"
+    },
+    {
+      "text" : "You grab a plate and get ready to be handed the first scoop of whatever junk the lunch ladies put into this nutritional meal, until all of a sudden…"
+    },
+    {
+      "text" : "AHHHHHH!!!!"
+    },
+    {
+      "text" : "You hear a scream from the other end of the cafeteria. You drop your plate to see what all the commotion is about, and notice a young student on the ground, their lunch plopped on the floor, ruined. "
+    },
+    {
+      "text" : "Standing above them is none other than that figure that you keep seeing: King Circle. Well, he’s apparently EVERYWHERE."
+    },
+    {
+      "text" : "He was there at the bus, at chemistry, and at history class. Not only that, but time and time again, every time you see him, you feel like you’ve seen him at other times as well."
+    },
+    {
+      "text": "Please… just let me go! What else do you want from me?",
+      "name": "Crying Student"
+    },
+    {
+      "text": "You know <b>EXACTLY</b> what I want from you!",
+      "name": "King Circle"
+    },
+    {
+      "text": "The intimidating figure grabs the girl by the shirt and flings her up from the floor in an instant."
+    },
+    {
+      "text": "Where. Is. My. Homework?!",
+      "name": "King Circle"
+    },
+    {
+      "text": "I don’t know what you’re talking about! You’ve never asked me about doing homework for you!",
+      "name": "Crying Student"
+    },
+    {
+      "text": "Let her go.",
+      "name": "Player"
+    },
+    {
+      "text": "Both of them look at the source of whoever said that, and it turns out to be you who had said that. King Circle lets go of the girl, as she begins to run away from the scene of the crime."
+    },
+    {
+      "text": "What did you say to me? Do you know who you’re talking to?",
+      "name": "King Circle"
+    },
+    {
+      "text": "Yeah, I know who I’m talking to. And to be honest, you seem to be… in a much more sorry sight than usual.",
+      "name": "Player"
+    },
+    {
+      "text": "You feel like someone has possessed you, that someone has taken over, because in no way you never say things like that. But at the same time, it seems like you want to see how this pans out."
+    },
+    {
+      "text": "C’mon, man. Asking people to do YOUR homework? What are we in? A teenager movie? Give me a break. That’s just pathetic.",
+      "name": "Player"
+    },
+    {
+      "text": "Hold on, is this your attempt at trying to talk back at me?… Wait a minute, I’ve seen you before. You were on the bus. You were in my chemistry class. And just a few minutes ago, you were just in my history class as well.",
+      "name": "King Circle"
+    },
+    {
+      "text": "And?",
+      "name": "Player"
+    },
+    {
+      "text": "You trying to get onto me? Because every time I’ve seen you, you always had this weird look… that you like me or something…",
+      "name": "King Circle"
+    },
+    {
+      "text": "Nearly everyone in the cafeteria, who had grouped around in a circle to see what was happening, let out a massive “ooooohhhh” that rang around the school. And deep down inside you, he was right."
+    },
+    {
+      "text": "You did have a crush on him. Maybe it was something in him that you could relate to, but unfortunately, things have changed."
+    },
+    {
+      "text": "You’re right. I did. But now I realize, after seeing this, I don’t have a crush on you anymore.",
+      "name": "Player"
+    },
+    {
+      "text": "And why is that, huh? Is it because you realize there’s no way in hell you’re gonna go on a date with me?",
+      "name": "King Circle"
+    },
+    {
+      "text": "No, not that. It’s because people like you don’t deserve to be in love with anyone.",
+      "name": "Player"
+    },
+    {
+      "text": "Next thing you know, you notice a menacing look glaring at you. It seemed that King Circle did not take too kindly at that comment of yours."
+    },
+    {
+      "text": "You know what?! That’s enough! I’ve had enough of your shenanigans! Get over here!",
+      "name": "King Circle"
+    },
+    {
+      "text": "King Circle begins to charge at you. You notice a jock of a student lunging at speeds you’ve never seen before. But you’re ready. You’re prepared. And ready to kick some spherical ass."
+    }
+  ],
+  "PE" : [],
+  "afterSchool" : [
+    {
+      "text" : "Owwieee. That really hurts, you know. Okay, fine, fine, I admit it… Maybe you are kinda strong… and a little bit cute… I just get nervous when you look at me because… Nevermind.",
+      "name" :"King Circle"
+    },
+    {
+      "text" : "King Circle looks away bashfully"
+    },
+    {
+      "text" : "I... I guess what I’m trying to say is just that...",
+      "name" :"King Circle"
+    },
+    {
+      "text" : "I...",
+      "name" :"King Circle"
+    },
+    {
+      "text" : "I lov--",
+      "name" :"King Circle"
+    },
+    {
+      "name" :"King Circle",
+      "text" : ""
+    },
+    {
+      "text" : "...",
+      "location" :"black_0"
+    },
+    {
+      "name" : "Game Developer",
+      "text" : "WHY DOES THIS KEEP HAPPENING?! I spend so much time pouring my soul into developing these games, just for them to keep crashing. This must be your fault, isn’t it?! "
+    },
+    {
+      "name" : "Game Developer",
+      "text" : "If players just never played my games, my beautiful games would never break."
+    },
+    {
+      "name" : "Game Developer",
+      "text" : "But then… I’m sorry. This isn’t your fault. You know, I’ve actually been really happy to share my games with you. It’s just… frustrating, ya know? "
+    },
+    {
+      "name" : "Game Developer",
+      "text" : "Maybe developing games isn’t for me. Will people even like my games? I just don’t know anymore. Maybe I should just quit..."
+    },
+    {
+      "text" : "!",
+      "options" : [
+        {
+          "text" : "\"I really think you can make great games\""
+        },
+        {
+          "text" : "\"I’ve had a lot of fun, even with the bugs\"",
+          "newIndex" : 13
+        },
+        {
+          "text" : "\"But is quitting what you really want?\"",
+          "newIndex" : 15
+        }
+      ]
+    },
+    {
+      "name" : "Game Developer",
+      "text" : "You know… that actually means a lot to me. I really needed to hear that.",
+      "skip" : 16
+    },
+    {
+      "name" : "Game Developer",
+      "text" : "I guess… I guess I never thought about that."
+    },
+    {
+      "name" : "Game Developer",
+      "text" : "Actually… one of my earliest memories was when I glitched out of the map while playing Sonic Adventure.",
+      "skip" : 16
+    },
+    {
+      "name" : "Game Developer",
+      "text" : "No, but… it’s just so hard. Truthfully, I’ve always wanted to be a game developer."
+    },
+    {
+      "name" : "Game Developer",
+      "text" : "I started making games because of the fun I had playing them. You know, it’s funny how many of us start out that way, isn’t it? We’re all just enthusiastic gamers with ideas."
+    },
+    {
+      "name" : "Game Developer",
+      "text" : "I still have so many cool ideas for games I want to make. "
+    },
+    {
+      "name" : "Game Developer",
+      "text" : "In truth, I only created a dating sim because I thought it would be popular, but if that doesn’t even pan out for me, how can I expect my other ideas to work out?"
+    }
+
+
+    ,
+    {
+      "name" : "Game Developer",
+      "text" : ""
+    }
+    ,
+    {
+      "text" : ""
+    }
+  ],
+  "firstDate" : []
+}

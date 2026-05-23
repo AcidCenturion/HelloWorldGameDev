@@ -1,0 +1,791 @@
+{
+  "morning" : [
+    {
+      "text" : "You decide to sit next to a good-looking student in one of the middle rows of the bus. He’s a pretty fit guy and seems much stronger than the rest of the students. However, he is crowded by a group of people, possibly his friends. "
+    },
+    {
+      "name" : "Student Who Knows Rowan",
+      "text" : "So, are you going to head to his house tonight?"
+    },
+    {
+      "name" : "Student Called Rowan",
+      "text" : "Sorry, I’m kinda busy as of the moment. Rain check?"
+    },
+    {
+      "name" : "Student Who Knows Rowan",
+      "text" : "No worries, dude! But you’re going to miss out on a lot of fun! I’ll see you later in class, alright?"
+    },
+    {
+      "text" : "The group leaves towards the back of the bus, giving you a chance to finally grab that seat. You also notice they were talking on the phone to someone as well."
+    },
+    {
+      "name" :"Student Called Rowan",
+      "text" : "Yeah, I’ll be there once I get to the school. And yeah, I’ll be there at the info meeting on Sunday… wait, you want me to be a speaker for the freshmen? But wouldn’t that take away from…"
+    },
+    {
+      "name" : "Student Called Rowan",
+      "text" : "You sit down next to him, but he seems oblivious to the new student who sat down next to him. Maybe you could try getting their attention?",
+      "options" : [
+        {
+          "text" : "Tap their Shoulder",
+          "points" : 5
+        },
+        {
+          "text" : "You must have your hands full this morning",
+          "points" : 10,
+          "newIndex" : 10
+        },
+        {
+          "text" : "Do nothing and stare at them",
+          "points" : -5,
+          "newIndex" : 14
+        }
+      ]
+    },
+    {
+      "text" : "You weakly tap on their right shoulder, as their eyes shift towards you, and you smile."
+    },
+    {
+      "name" : "Student Called Rowan",
+      "text" : " Uh huh, ok. Actually, you know what? Can we discuss this later during lunch? Sure, that sounds good. Alright, bye. *beep*"
+    },
+    {
+      "name" : "Student Called Rowan",
+      "text" : "Sorry about that, I had a busy morning, and not only that, it’s the first day. I didn’t notice you next to me as well.",
+      "emotion" : "Happy",
+      "skip" : 19
+    },
+    {
+      "text" : "The student looks at you, and for a brief moment, the two of you awkwardly stare at each other."
+    },
+    {
+      "name" : "Student Called Rowan",
+      "text" : "Huh? Oh, sorry, yeah, I got a bit distracted. Can we talk later? I want to discuss this during lunch…. Yeah, sure thing, ok see ya. *beep*"
+    },
+    {
+      "name" : "Student Called Rowan",
+      "text" : "Yeah, already the first day, and I’ve got everything up my ass and more. Honestly, you kinda saved me from speaking to him more. Thanks for that",
+      "emotion" : "Love"
+    },
+    {
+      "text" : "You feel like you’ve made a pretty good first impression.",
+      "skip" : 19
+    },
+    {
+      "text" : "You decide to do nothing and stare at them until they notice. However, it seems they are still focused on the conversation."
+    },
+    {
+      "name" :"Student Called Rowan",
+      "text" : "Yeah, sure thing. So if I reschedule my tryout to later in the evening, then it all works out? (sigh) Could we discuss this later, maybe lunch?  Ok then, I’ll see you soon. *beep*"
+    },
+    {
+      "text" : "They hang up the call and then notice you staring at them 5 inches from his face, and he flinches."
+    },
+    {
+      "name" :"Student Called Rowan",
+      "text" : "HOLY CRAP! Jeez, man, maybe a warning next time? Didn’t need to like, stare into my soul for how long you were staring at me. Don’t need to scare me like that.",
+      "emotion" : "Mad"
+    },
+    {
+      "text" : "You hastily apologize to them, but it seems they will remember it for a while. "
+    },
+    {
+      "text" : "They open up their phone to a video of what seems to be a football game. They watch a play from start to finish, and then rewind it numerous times."
+    },
+    {
+      "name" : "Student Called Rowan",
+      "text" : "He said to watch the cornerback’s motion… but what is it?"
+    },
+    {
+      "text" : "They watch more plays, and once again, the cornerback appears every single time. And on every one of those plays, the cornerback looks like he’s two steps ahead on every play, getting to the running back when it’s a run play, and the receiver when it’s a pass play."
+    },
+    {
+      "name" : "Student Called Rowan",
+      "text" : "Is it something to do with his hands? The way he moves? Everything he does is different! What am I missing here?"
+    },
+    {
+      "text" : "They begin to get frustrated and stop watching. But to you, maybe there’s something that you could pick out that they haven’t. You offer to watch the film on their phone."
+    },
+    {
+      "name" : "Student Called Rowan",
+      "text" : "Huh? You want to watch? Alright then, here you go then. Watch as much as you like. I’m getting a headache just watching them already."
+    },
+    {
+      "name" : "Student Called Rowan",
+      "text" : "They give you the phone and you begin watching play after play, focusing on the cornerback. There could be something with his actions that gives it away.",
+      "options" : [
+        {
+          "text" : "Listen to his voice",
+          "points" : 5
+        },
+        {
+          "text" : "Watch his movement during each play",
+          "points" : -5,
+          "newIndex" : 31
+        },
+        {
+          "text" : "Watch the entire defense",
+          "points" : 10,
+          "newIndex" : 37
+        }
+      ]
+    },
+    {
+      "text" : "You decide to turn your attention away from the cornerback but towards the quarterback’s voice. You notice that the cornerbacks move to a specific position every time a different word the QB makes."
+    },
+    {
+      "name" :"Student Called Rowan",
+      "text" : "Oh? Did you find something useful?",
+      "emotion" : "Happy"
+    },
+    {
+      "text" : "You hand the phone back to them and describe that the voice of the QB is dependent on the cornerback’s motion and their position. However, you weren’t able to detect specifically which goes with what."
+    },
+    {
+      "name" :"Student Called Rowan",
+      "text" : "Ah don’t worry about that, this is actually pretty useful info though. I’ll keep that in mind, thanks for that by the way."
+    },
+    {
+      "text" : "Afterwards he keeps analyzing the video again, retaining the info you taught them in mind. While you didn’t seem to break through fully, it felt like you started to warm up to them.",
+      "skip" : 43
+    },
+    {
+      "text" : "You decide to do what they did earlier: look at the cornerback’s movement every play. Maybe he missed something that wasn’t too obvious, maybe it’s very subtle…"
+    },
+    {
+      "text" : "..."
+    },
+    {
+      "text" : "..."
+    },
+    {
+      "text" : "A few moments pass, and you don’t seem to be making progress. You hand the phone back to them with a defeated look."
+    },
+    {
+      "name" : "Student Called Rowan",
+      "text" : "Oh? You’re done already? I told you, it’s pretty difficult. Don’t worry, if I can’t figure it out, then I don’t expect everyone to find out. But hey, at least you tried your best.",
+      "emotion" : "Sad"
+    },
+    {
+      "text" : "Despite the seemingly encouraging words coming out of their mouth, you still feel a slight embarrassment that you weren’t able to figure out the problem.",
+      "skip" : 43
+    },
+    {
+      "text" : "Instead of watching the cornerback, you decide to watch not just him, but EVERYONE else on the defense. And after each play, you notice that one defensive end taps his right foot on a running play, and taps it once on a passing play."
+    },
+    {
+      "name" : "Student Called Rowan",
+      "text" : "You look locked in. Did you actually figure out what it was?",
+      "emotion" : "Love"
+    },
+    {
+      "text" : "You hand them back the phone and describe the pattern that you saw in the film"
+    },
+    {
+      "name" : "Student Called Rowan",
+      "text" : "His foot? Oh shit, you’re right! That’s what’s happening. I’m actually pretty dumb to not have noticed it."
+    },
+    {
+      "name" :"Student Called Rowan",
+      "text" : "That’s what he said about the cornerback. Not to solely watch him, but to see what was messaged to him. Thanks again! Didn’t know you were a football nerd."
+    },
+    {
+      "text" : "You feel a great sense of pride in your body. Your elite of knowledge of football worked out beautifully, and you feel that you were able to grow a bit deeper with the student."
+    },
+    {
+      "name" :"Student Called Rowan",
+      "text" : "Anyways, you seem like a very nice kid. Usually, many people come up to me thinking I’m a celebrity and all, but you don’t seem to be like one of them. I like that."
+    },
+    {
+      "text" : "They reach out their hand."
+    },
+    {
+      "name" : "Rowan",
+      "text" : "Name’s Rowan, nice to meet you, um… "
+    },
+    {
+      "text" : "Rowan squints their eyes, trying to make the slightly messy handwritten name on your name tag, a bit messier due to your lack of sleep last night."
+    },
+    {
+      "name" : "Rowan",
+      "text" : "Square... right? I think I said that correctly, just want to make sure."
+    },
+    {
+      "text" : "You nod your head nonchalantly, not showing the fact that they got your name right despite the fact that, to your point of view, it looks illegible."
+    },
+    {
+      "text" : "Rowan breathes a sigh of relief"
+    },
+    {
+      "name" : "Rowan",
+      "text" : "Phew, ok then, good to know. I didn’t want to make a bad impression after all. I somehow have a problem with that for some reason, not sure why though..."
+    },
+    {
+      "name" : "Rowan",
+      "text" : "But since you’ve already noticed, I am part of the football team, the quarterback, to be specific. I also play as the point guard and captain on the basketball team, the starting pitcher on the baseball team, and also many other sports that I’m sure you have never heard of before."
+    },
+    {
+      "name" : "Bus Driver Hermit",
+      "text" : "We will be arriving at Sintax Academy very shortly! Please remain in your seats for the time being!"
+    },
+    {
+      "text" : "Moments later, the bus pulls up to the entrance of the school. It is a grand school, with mixes of Art-Deco and modern architecture blended in, evident with the old-school main building and the recently renovated science buildings."
+    },
+    {
+      "name" : "Rowan",
+      "text" : "Hey, just before you go, would you mind taking a look at your schedule? I’m just curious, that’s all."
+    },
+    {
+      "text" : "Without hesitation, you show him a paper of your schedule, partly crumpled up due to being shoved into the bottom of your backpack."
+    },
+    {
+      "name" : "Rowan",
+      "text" : "Hmm… oh it looks like we both have the same chemistry and P.E class, so we'll see each other again later. "
+    },
+    {
+      "name" : "Rowan",
+      "text" : "Well I'm gonna head out now. I need to turn in some paperwork to the conditioning coach for the pre-season, so you can head to class without me! See ya!",
+      "prereq" : {
+        "exists" : true,
+        "isPrereq" : true,
+        "prereqIndex" : 0
+      }
+    },
+    {
+      "text" : "Just as you were about to say goodbye to Rowan, they immediately sprint out the bus and head to who knows where. It’s best not to linger anymore and head to your first period of the day.",
+      "nextSceneArr" : {
+        "sceneArr" : "defaultScenes",
+        "timeslot" : "chemistry",
+        "startIndex" : 0
+      }
+    }
+    
+  ],
+  "chemistry" : [
+    {
+      "text" : "You decide to sit next to Rowan as you’ve already seen them on the bus. A few more students filter into the room slightly late and fill in the remaining seats."
+    },
+    {
+      "name" : "Professor Hermit",
+      "text" : "Well, if everyone has found a partner, let’s get on with today’s class. Today, we’re going to be doing an iodine oscillator experiment to get you all excited for the semester…"
+    },
+    {
+      "name" :"Rowan",
+      "text" : "Hey dude.",
+      "prereq" : {
+        "exists" : true,
+        "isPrereq" : false,
+        "prereqIndex" : 0,
+        "prereqSkip" : 11
+      }
+    },
+    {
+      "name" : "Rowan",
+      "text" : "Guess you’ve decided to sit down with me… I feel like I’ve seen you before…"
+    },
+    {
+      "text" : "Rowan ponders at your appearance with a puzzled look, seemingly trying to figure out if they know you or not."
+    },
+    {
+      "name" : "Rowan",
+      "text" : "<b>snaps their fingers</b> Oh that’s right! You’re that kid that walked past me. I’ve figured you decided not to sit down because I was on the phone."
+    },
+    {
+      "name" : "Rowan",
+      "text" : "Sorry about that, I was talking to my coach, I guess you didn’t want to meddle in that business, don’t worry, I understand that."
+    },
+    {
+      "name" : "Professor Hermit",
+      "text" : "Thankfully, our lovely Gemini prepared 3 types of solutions for each table. Go ahead and grab one of each."
+    },
+    {
+      "name" : "Rowan",
+      "text" : "Don’t worry, this class… It's a breeze I’ll tell you. I’ve mixed Tigerade together before before games, so you can basically say I am a master at this."
+    },
+    {
+      "name" : "Rowan",
+      "text" : "Trust me, I know what I’m doing here. You just need to sit back and relax."
+    },
+    {
+      "text" : "Rowan seems like a very confident person, but perhaps, a bit too confident. You know in your mind that eventually, this is not going to end well for the both of you.",
+      "skip" : 16
+    },
+    {
+      "name" : "Rowan",
+      "text" : "How’s it going! Sorry for running out on you earlier this morning, it’s just that I didn’t think I had more stuff going on than normal."
+    },
+    {
+      "name" : "Rowan",
+      "text" : "Also, thanks for helping out on the bus last time, I appreciated that you tried."
+    },
+    {
+      "name" : "Professor Hermit",
+      "text" : "Thankfully, our lovely Gemini prepared 3 types of solutions for each table. Go ahead and grab one of each."
+    },
+    {
+      "name" : "Rowan",
+      "text" : "Don’t worry, this class… It's a breeze. Iodine clock? Pff, I’ve mixed Tigerade colors together before before games, what’s different here?"
+    },
+    {
+      "text" : "Rowan seems very confident in themselves, but you know full well this isn’t the same as mixing sports drinks together and getting a nice new flavor."
+    },
+    {
+      "name" : "Professor Hermit",
+      "text" : "Now that everyone has acquired the samples, go ahead and turn on the stir plates in front of you."
+    },
+    {
+      "name" : "Professor Hermit",
+      "text" : "You’re going to quickly combine solutions A, B, and C into the beaker in front of you. Then, note down what happens."
+    },
+    {
+      "name" : "Rowan",
+      "text" : "Shoot, we’re meant to take notes? This is a chemistry class, not a writing class. Hang one, give me a second…"
+    },
+    {
+      "text" : "In a flash, Rowan grabs their backpack from underneath their chair and dumps everything out. A mess of crumpled-up papers, pictures, and playbooks fall innocently but forcibly on the floor."
+    },
+    {
+      "text" : "But in the midst of that little chaos, you notice that no pencils nor pens came out of the backpack."
+    },
+    {
+      "name" : "Rowan",
+      "text" : "You serious? Did I forget my pen at home? That’s the 4th one I’ve lost this week. Welp, I guess I can’t write anything down.",
+      "options" : [
+        {
+          "text" : "Offer them one of your pens",
+          "points" : 5
+        },
+        {
+          "text" : "Don't do anything",
+          "points" : -5,
+          "newIndex" : 25
+        },
+        {
+          "text" : "Don’t give them a pencil, but do say they can do the experiment",
+          "points" : 10,
+          "newIndex" : 29
+        }
+      ]
+    },
+    {
+      "text" : "Luckily, you have a neat little pencil pouch that you recently bought a few days ago, so you decide to give Rowan a pencil. You have plenty of them, so what’s the harm of losing one?"
+    },
+    {
+      "name" : "Rowan",
+      "text" : "Oh thanks dude! I mean, I might lose this anyway in a couple of minutes, but thanks for the pencil!",
+      "emotion" : "Happy"
+    },
+    {
+      "text" : "Rowan gives you a smile and begins to write down some notes for the experiment. Now that everyone has a writing utensil, the experiment can now begin. ",
+      "skip" : 33
+    }, 
+    {
+      "text" : "You just sit there while Rowan is still trying to search their backpack, somehow not convinced they forgot their pen at home."
+    }, 
+    {
+      "text" : "You have pens and pencils in your pouch, but you decide to stay quiet and watch Rowan keep struggling"
+    },
+    {
+      "name" : "Rowan",
+      "text" : "You know what? Forget it, notes don’t even count for your grade anyways. Besides, all we do is just pour shit into beakers. We don’t need notes for this anyways.",
+      "emotion" : "Mad"
+    },
+    {
+      "name" : "Rowan",
+      "text" : "You feel Rowan begin to get angry for just the littlest of things. Maybe staying quiet wasn’t the best decision…",
+      "skip" : 33
+    },
+    {
+      "text" : "You suggest something to Rowan. You tell them that they can do the experiment solo, while you could just write down the notes. "
+    },
+    {
+      "text" : "It’s what they say: Divide and Conquer, right?"
+    },
+    {
+      "name" : "Rowan",
+      "text" : "Wait, really? No one has ever asked me to do an experiment ever. Everyone always just tasked me to write down the notes. Don’t worry! I won’t let you down!",
+      "emotion" : "Love"
+    },
+    {
+      "text" : "You feel Rowan’s confidence skyrocket, to the point where there’s stars in his eyes. It seems your encouragement has gotten to him pretty well."
+    },
+    {
+      "text" : "The two of you begin on the experiment, and despite how simple and easy it seems, both of you struggle to even start on it."
+    },
+    {
+      "text" : "<b>40 Minutes Later...</b>"
+    },
+    {
+      "name" : "Rowan",
+      "text" : "Wait, was that called? Hydrogen helium solution? Why would a balloon be in liquid form?"
+    },
+    {
+      "text" : "You correct him and state that it’s a hydrogen peroxide solution, not helium."
+    },
+    {
+      "name" :"Rowan",
+      "text" : "Ohhhhh, ok then. Uh, how many notes have you written down?"
+    },
+    {
+      "text" : "Rowan looks at your notebook, where all you’ve written are your names and the title of the project."
+    },
+    {
+      "name" : "Rowan",
+      "text" : "So… nothing. Great. Jussssttt great…."
+    },
+    {
+      "text" : "After about 40 minutes, everyone in the class but you two have gotten down most of their notes and the experiment results. You look at Rowan, who now starts to panic."
+    },
+    {
+      "name" : "Rowan",
+      "text" : "Damn it! Everyone is done, and we’re not even halfway there! And I don’t want to make up data. I may not be great at this, but at least I have some standards. Let’s see…"
+    },
+    {
+      "text" : "Rowan scans the classroom, looking for something that might help, even the littlest bit. "
+    },
+    {
+      "text" : "Then, out of the corner of your eye, you see Rowan’s pupils widen. It seems he may have found something."
+    },
+    {
+      "name" : "Rowan",
+      "text" : "Wait right here, I have an idea."
+    },
+    {
+      "text" : "Rowan jumps out of his seat and jogs to the other side of the classroom. In the blink of an eye, he returns with… a soft white rock."
+    },
+    {
+      "text" : "You question him. Out of all the things to choose, he chose a rock."
+    },
+    {
+      "name" : "Rowan",
+      "text" : "I don’t know, man, I panicked! It looked shiny, so I’d assumed it was going to be useful. "
+    },
+    {
+      "name" : "Rowan",
+      "text" : "But then again, I’m not sure if this is going to do anything… Anyways, I’m going to put it in the beaker. You ready?"
+    },
+    {
+      "text" : "Rowan waits on your command. On one hand, it feels like nothing has gone well, and you might as well see where this goes."
+    },
+    {
+      "name" : "Rowan",
+      "text" : "<i>But on the other hand, you have this weird tingling feeling that something awfully wrong is going to happen. What would you do?</i>",
+      "options" : [
+        {
+          "text" : "\"Maybe this isn’t a great idea. We should put that back.\"",
+          "points" : -5
+        },
+        {
+          "text" : "\"Go for it! We’ve got nothing to lose anyways!\"",
+          "points" : 10,
+          "newIndex" : 57
+        },
+        {
+          "text" : "Do nothing. Let nature run its course",
+          "points" : 5,
+          "newIndex" : 61
+        }
+      ]
+    },
+    {
+      "text" : "You tell Rowan that whatever this pure white rock or substance or whatever it is, it probably isn’t best to put it into the solution."
+    },
+    {
+      "text" : "Besides, you don’t think an iodine clock solution had rocks being put in. However, Rowan was not so pleased with your response."
+    },
+    {
+      "name" : "Rowan",
+      "text" : "And? Do you have any better ideas? Because what we’re doing right now is going nowhere. ",
+      "emotion" : "Mad"
+    },  
+    {
+      "name" : "Rowan",
+      "text" : "So I’m going to put this in, and you’re going to like this."
+    },
+    {
+      "text" : "You nod silently. Even if it might be a bad idea, you do get the point that this is your guys’ last resort."
+    },
+    {
+      "name" : "Rowan",
+      "text" : "Alright, here we go!",
+      "skip" : 65
+    },
+    {
+      "text" : "You tell Rowan to add it in. Nothing else seems to be working well, so why not have some fun if you’re struggling?"
+    },
+    {
+      "name" : "Rowan",
+      "text" : "Haha, there we go! That’s the spirit! I knew that the moment we met we’d make a good team!",
+      "emotion" : "Love"
+    },
+    {
+      "text" : "Rowan’s enthusiasm and confidence are so sky-high you couldn’t even measure it if you’ve tried."
+    },
+    {
+      "name" : "Rowan",
+      "text" : "Alright, here we go!",
+      "skip" : 65
+    },
+    {
+      "text" : "You decide to say nothing to Rowan. You don’t reject his idea, but you don’t seem to like it at the same time."
+    },
+    {
+      "name" : "Rowan",
+      "text" : "Hello? Well, if you’re going to say nothing, I guess I’ll just put it in anyway. We don’t have time to dilly-dally right now.",
+      "emotion" : "Happy"
+    },
+    {
+      "text" : " It’s settled now. All your faith is going to rest on this jock you’ve just barely known about and this weird white rock that… you’ve also barely known about as well."
+    },
+    {
+      "name" : "Rowan",
+      "text" : "Alright, here we go!"
+    },
+    {
+      "text" : "Rowan, without hesitation, places the rock into the solution. It’s the size of a pebble, so thankfully, he didn’t need to struggle to even put it in it."
+    },
+    {
+      "text" : "But immediately after, a violet flame shoots out of the beaker and into the classroom, and a massive <b>BOOM</b> rings around the lab."
+    },
+    {
+      "text" : "Students are jumpscared out of their seats, while you and Rowan grab a front-row seat to the action."
+    },
+    {
+      "name" :"Professor Hermit",
+      "text" : "WHAT THE HE- <b><i>coughs violently</i></b> AEGHUGH… ahem…. THE HELL WAS THAT?!"
+    },
+    {
+      "name" : "Rowan",
+      "text" : "What the heck was that? How does a rock explode like that? It’s just a rock! A fricking rock!"
+    },
+    {
+      "text" : "As the smoke settles, Professor Hermit looks at you guys immediately, knowing well that you were the culprits behind it."
+    },
+    {
+      "name" :"Professor Hermit",
+      "text" : "Rowan… What on earth did you do this time?"
+    },
+    {
+      "name" : "Rowan",
+      "text" : "Nothing I swear! All I did was just grab this weird white rock from that rock collection and put it in the solution. What’s up with that?"
+    },
+    {
+      "name" :"Professor Hermit",
+      "text" : "What the- ok first- <b>AUGUEGUEGU</b>"
+    },
+    {
+      "text" : "The professor coughs even harder than before."
+    },
+    {
+      "text" : "Saliva spews out from his mouth in all directions as he is still recovering from the massive incident that had just occurred a few moments ago."
+    },
+    {
+      "name" :"Professor Hermit",
+      "text" : "Ahem <b>AHEM…</b> sorry about that students. But… Rowan, first, was there <b>ANY</b> instruction to put <b>ANY</b> rocks in the solution?"
+    },
+    {
+      "name" : "Rowan",
+      "text" : "No"
+    },
+    {
+      "name" :"Professor Hermit",
+      "text" : "Exactly. And second, did you just say you grabbed a white rock?"
+    },
+    {
+      "name" : "Rowan",
+      "text" : "Yeah, white, or maybe a little grey. But either way yeah, a white rock."
+    },
+    {
+      "text" : "Professor Hermit lets out a tired sigh of annoyance and pinches the bridge of his nose."
+    },
+    {
+      "text" : "You get this immediate feeling he’s been through this with Rowan a couple of times. "
+    },
+    {
+      "name" :"Professor Hermit",
+      "text" : "What you just grabbed was potassium. And you know what happens when you put potassium into a solution that has water?"
+    },
+    {
+      "name" : "Rowan",
+      "text" : "It… explodes?"
+    },
+    {
+      "name" :"Professor Hermit",
+      "text" : "Yes, Rowan, it does, and surprisingly, it seems that was the first thing you’ve learned about in chemistry in a long time."
+    },
+    {
+      "name" :"Professor Hermit",
+      "text" : "But… considering you’re the pride and glory of our football team… I guess I’ll let you off with another warning. But next time, things won’t go well, ok?"
+    },
+    {
+      "name" : "Rowan",
+      "text" : "Yes, professor..."
+    },
+    {
+      "text" : "Rowan sulks his head closer to the table, in a defeated state. He looks embarrassed, but around the classroom, no one seems to be laughing at him, nor talking gossip."
+    },
+    {
+      "text" : "You’d expect for such a pretty bad mistake people will be talking about it, but it seems like to the students, nothing ever happened."
+    },
+    {
+      "text" : "<b>RING RING RING RING</b>"
+    },
+    {
+      "name" :"Professor Hermit",
+      "text" : "Well, wow I guess that’s all the time we have for. You won’t have any homework today, so I’ll see you next class. Hope you all have a good rest of the day. "
+    },
+    {
+      "name" :"Professor Hermit",
+      "text" : "And… stay safe, ok? Rowan, can we talk for a bit?"
+    },
+    {
+      "text" : "The students file out of the classroom one by one. As they pile out of the classroom, only the smart green student takes a look back at Rowan."
+    },
+    {
+      "text" : "You, still a bit distraught about the explosion, see Rowan come up to the classroom and have a conversation with the Professor."
+    },
+    {
+      "text" : "Judging by their faces, it seems like, indeed, this wasn’t their first rodeo. Rowan heads back to the table, and grabs their backpack, still bummed out."
+    },
+    {
+      "name" : "Rowan",
+      "text" : "Oh, you’re still here? I thought you’d already left after what I just did. You must’ve thought I was stupid, huh? See the thing is, I’ve never been good at chemistry."
+    },
+    {
+      "name" : "Rowan",
+      "text" : "In fact, I’ve never been good at most classes."
+    },
+    {
+      "name" : "Rowan",
+      "text" : "I know it may be because of the sports and athletics stuff, but generally, even before I got into sports I wasn’t really smart or intelligent at all."
+    },
+    {
+      "name" : "Rowan",
+      "text" : "Remember I said that this class was a \"breeze\"?"
+    },
+    {
+      "text" : "You nod your head."
+    },
+    {
+      "name" : "Rowan",
+      "text" : "Well yeah, that was kinda a lie. The fact is that I've had to retake this class."
+    },
+    {
+      "name" : "Rowan",
+      "text" : "Even if I wasn’t the smartest person on earth, I still was good enough to pass my classes."
+    },
+    {
+      "name" : "Rowan",
+      "text" : "But this is the first time I’ve failed one, and it’s chemistry, and I HATE chemistry, you know? I don’t know… it feels like I’m gonna be stuck here for all of eternity."
+    },
+    {
+      "text" : "You feel a sense of obligation to try and cheer him up. You can’t just leave out your fruition, that feels rude to you and to Rowan as well."
+    },
+    {
+      "text" : "Besides, you’ve known him well for a good while, so maybe this is a good chance to know him more as well.",
+      "name" : "Rowan",
+      "options" : [
+        {
+          "text" : "Cheer Them Up",
+          "points" : 10
+        },
+        {
+          "text" : "\"Accidents happen\"",
+          "points" : 5,
+          "newIndex" : 112
+        },
+        {
+          "text" : "\"Be careful next time\"",
+          "points" : -5,
+          "newIndex" : 115
+        }
+      ]
+    },
+    {
+      "text" : "You cheer Rowan up. While you guys weren’t able to finish the experiment, you tell him that all that matters is that they had fun in the class."
+    },
+    {
+      "name" : "Rowan",
+      "text" : "You did? For real? I… I…",
+      "emotion" : "Love"
+    },
+    {
+      "text" : "Rowan is majorly surprised at what you said. He initially doesn’t know how to react, but eventually he lets out a slight smile."
+    },
+    {
+      "name" : "Rowan",
+      "text" : "Thanks, I do have to admit while we were struggling, this was the most fun I’ve had in a chemistry class, well, ever."
+    },
+    {
+      "name" : "Rowan",
+      "text" : "And that’s coming from someone who despises it to the very end."
+    },
+    {
+      "text" : "You two in the end share a little wholesome moment together, but it seems that Rowan hasn’t forgotten what transpired in the last few minutes."
+    },
+    {
+      "text" : "Eventually, he reverts back to his sulking self.",
+      "skip" : 123
+    },
+    {
+      "text" : "You tell Rowan that this stuff happens all the time, these accidents. They were bound to happen at any point in life."
+    },
+    {
+      "name" : "Rowan",
+      "text" : "I know, it’s just that… I feel like I’ve done them too many times in my life, you know? To the point where I know I’m bound to have one when the time comes.",
+      "emotion" : "Happy"
+    },
+    {
+      "text" : "You and Rowan continue to have a little conversation about the meaning of life, but eventually, you two realise that you are about to be late for your next class.",
+      "skip" : 123
+    },
+    {
+      "text" : "You say to Rowan that it’s best to be careful next time, and being more patient next time."
+    },
+    {
+      "text" : "However, it doesn’t seem that Rowan took that too kindly. He scoffs at your response."
+    },
+    {
+      "name" : "Rowan",
+      "text" : "Yeah, you think I didn’t know that the LAST time I was in this class?",
+      "emotion" : "Mad"
+    },
+    {
+      "name" : "Rowan",
+      "text" : "I sat around doing nothing and looked where it got me? You’d think doing the same thing is gonna be better?!"
+    },
+    {
+      "text" : "You take a step back, intimidated by Rowan’s sudden moment of anger. Rowan notices it immediately and dials it down a bit."
+    },
+    {
+      "name" : "Rowan",
+      "text" : "Oh shoot, did I scare you? Sorry, it’s just I have these mood swings every time some things don’t go my way..."
+    },
+    {
+      "text" : "His voice trails off at his last sentence, and he seems more depressed than ever."
+    },
+    {
+      "text" : "While it wasn’t your initial intention, it seems you made Rowan’s feelings worse."
+    },
+    {
+      "name" : "Rowan",
+      "text" : "Hey, I’ll see you later ok? I… don’t want to be in this classroom much longer anyway. I’ll see you at lunch, alright?"
+    },
+    {
+      "text" : "Rowan leaves the classroom, leaving you and the professor together. You look at the professor, but the next thing you know he is already snoring and asleep, waiting for his next class."
+    },
+    {
+      "text" : "Realizing that you’ve got nothing of use to do in here, you leave the classroom and head to your next class, history.",
+      "nextSceneArr" : {
+        "sceneArr" : "defaultScenes",
+        "timeslot" : "history",
+        "startIndex" : 0
+      }
+    }
+  ],
+  "history" : [],
+  "lunch" : [],
+  "PE" : [],
+  "afterSchool" : [],
+  "firstDate" : []
+}
